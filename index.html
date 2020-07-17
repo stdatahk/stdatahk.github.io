@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>WhatEver Media</title>
+<link rel="icon" type="image/png" href="./favicon.png"/>
+<style>
+.navlink:hover 
+{
+	color: #2DBFCC;
+	text-decoration: underline
+}
+.navlink 
+{
+	color:#2DBFCC;
+	text-decoration:none
+}
+</style>
+<script type="text/javascript" src="script/script.js"></script>
+</head>
+<body style=" margin:0; padding:0; height:100%;">
+
+<table border=0 cellpadding=0 cellspacing=0 width="100%" height="100%">
+	<tr><td height=140>
+		<!--navigation-->
+		<table border=0 width="100%" height=120><tr>
+			<td width=350>
+				<div style="position:relative; left:20px; top:1px;">
+					<img src="img/logo.png" width=350>
+				</div>
+			</td>
+			<td align="right">
+				<font face="Helvetica" color="#2DBFCC" size=5 style="white-space: nowrap;">
+				&nbsp;&ndash;&nbsp; <a id="navLink1" class="navlink" target="content" href="home.html">Home</a> 
+				&nbsp;&ndash;&nbsp; <a id="navLink2" class="navlink" target="content" href="about.html">About Us</a> 
+				&nbsp;&ndash;&nbsp; <a id="navLink3" class="navlink" target="content" href="service.html">Our Service</a> 
+				&nbsp;&ndash;&nbsp; <a id="navLink4" class="navlink" target="content" href="client.html">Our Client</a> 
+				&nbsp;&ndash;&nbsp; <a id="navLink5" class="navlink" target="content" href="showcase.html">Showcase</a> 
+				&nbsp;&ndash;&nbsp; <a id="navLink6" class="navlink" target="content" href="contact.html">Contact Us</a> 
+				&nbsp;&ndash;&nbsp; <a id="navLink7" class="navlink" target="content" href="home.html"><img style="vertical-align:text-top;" width=30 src="img/english.png">English</a> 
+				&nbsp;&ndash;&nbsp;
+				</font>
+			</td>
+		</tr></table>
+		<!--/navigation-->
+	</td></tr>
+	<tr><td align=left valign=top>
+		<iframe name="content" src="home.html" width="100%" style=" margin:0; padding:0; height:100%; position:fixed; display:block; width:100%; border:none;"></iframe>
+	</td></tr>
+</table>
+
+<script type="text/javascript">
+<!--
+var list = "";
+for(var i=1; i <= 7; i++) 
+	list += (",navLink"+i);
+list = list.substring(1).trim();
+fadeTextColor(list);
+//-->
+</script>
+
+</body>
+</html>
