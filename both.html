@@ -441,7 +441,8 @@ function copyButton() {
   
   //adhoc to transfer data to iframe
   var ifm = document.getElementById('theFrame');
-  ifm.document.getElementById('text').value = final_transcript;
+  var innerDoc = ifm.contentDocument || ifm.contentWindow.document;
+  innerDoc.getElementById('text').value = final_transcript;
 }
 
 function emailButton() {
