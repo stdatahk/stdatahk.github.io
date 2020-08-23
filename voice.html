@@ -6,27 +6,29 @@
 <body>
 
 <script language="JavaScript">
-var txt = document.getElementById('text');
-var msg = txt.value;
+function detectMsg() {
+	var txt = document.getElementById('text');
+	var msg = txt.value;
 
-if(msg.indexOf('燈') >= 0) {
-	msg = '好呀主人，我依傢就去開燈，請問夠唔夠光呢?';
+	if(msg.indexOf('燈') >= 0) {
+		msg = '好呀主人，我依傢就去開燈，請問夠唔夠光呢?';
+	}
+	else if(msg.indexOf('冷氣') >= 0) {
+		msg = '好呀主人，我依傢就去開冷氣，請問夠唔夠凍呢?';
+	}
+	else if(msg.indexOf('風扇') >= 0) {
+		msg = '好呀主人，我依傢就去開風扇，請問會唔會太涼呢?';
+	}
+	else if(msg.indexOf('街') >= 0) {
+		msg = '唔好講粗口啦唔該';
+	}
+	txt.value = msg;
 }
-else if(msg.indexOf('冷氣') >= 0) {
-	msg = '好呀主人，我依傢就去開冷氣，請問夠唔夠凍呢?';
-}
-else if(msg.indexOf('風扇') >= 0) {
-	msg = '好呀主人，我依傢就去開風扇，請問會唔會太涼呢?';
-}
-else if(msg.indexOf('街') >= 0) {
-	msg = '唔好講粗口啦唔該';
-}
-txt.value = msg;
 </script>
 
 <p>
     <label>文字
-        <input type="text" id="text" value="你好呀我係軒仔呀123" onchange="detectMsg();"></input>
+        <input type="text" id="text" value="你好呀我係軒仔呀123" onchange="detectMsg();"  onleave="detectMsg();"></input>
     </label>
 </p>
 <p>
