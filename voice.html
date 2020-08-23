@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>TTS</title>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js'></script>
+</head>
+<body>
+
+<p>
+    <label>文字
+        <input type="text" id="text" value="你好呀我係軒仔呀123"></input>
+    </label>
+</p>
+<p>
+    <label>音量
+        <input type="number" id="volume" value="1"></input>
+    </label>
+</p>
+<p>
+    <label>速度
+        <input type="number" id="rate" value="1"></input>
+    </label>
+</p>
+<p>
+    <label>聲調
+        <input type="number" id="pitch" value="1"></input>
+    </label>
+</p>
+<p>
+    <label>語言
+        <select id="voice"></select>
+    </label>
+</p>
+<p>
+    <button type="button">發聲</button>
+</p>
+
+<script language='JavaScript'>
+<!--
+var message = new SpeechSynthesisUtterance($("#text").val());
+var voices = speechSynthesis.getVoices();
+
+$("input").on("change", function () {
+    console.log($(this).attr("id"), $(this).val());
+    message[$(this).attr("id")] = $(this).val();
+});
+
+$("select").on("change", function () {
+    message.voice = voices[$(this).val()];
+});
+
+$("button").on("click", function () {
+    message.voice = voices[$("select").val()];
+    speechSynthesis.speak(message);
+});
+
+// Hack around voices bug
+var interval = setInterval(function () {
+    voices = speechSynthesis.getVoices();
+    if (voices.length) clearInterval(interval); else return;
+
+	//$("select").append("<option selected='' value=\"\"></option>");
+    for (var i = 0; i < voices.length; i++) {
+		//detect cantonese by unicode
+		if(voices[i].name.trim().charCodeAt(7)==31908 && voices[i].name.trim().charCodeAt(8)==35486) {
+			$("select").append("<option SELECTED='SELECTED' value=\"" + i + "\">" + voices[i].name + "</option>");
+			$("select").selectedIndex = i;
+			$("select").value = i;
+			//$("select").options[0].select();
+			break;
+		}
+		//else
+			//$("select").append("<option value=\"" + i + "\">" + voices[i].name + "</option>");
+    }
+	//alert($("select").val())
+}, 10);
+
+//$("select").val() = 20;
+
+//-->
+</script>
+
+</body>
+</html>
