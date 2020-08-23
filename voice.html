@@ -58,23 +58,11 @@ var interval = setInterval(function () {
     voices = speechSynthesis.getVoices();
     if (voices.length) clearInterval(interval); else return;
 
-	//$("select").append("<option selected='' value=\"\"></option>");
     for (var i = 0; i < voices.length; i++) {
 		//detect cantonese by unicode
-		if(voices[i].name.trim().charCodeAt(7)==31908 && voices[i].name.trim().charCodeAt(8)==35486) {
-			$("select").append("<option SELECTED='SELECTED' value=\"" + i + "\">" + voices[i].name + "</option>");
-			$("select").selectedIndex = i;
-			$("select").value = i;
-			//$("select").options[0].select();
-			break;
-		}
-		//else
-			//$("select").append("<option value=\"" + i + "\">" + voices[i].name + "</option>");
+		$("select").append("<option value=\"" + i + "\">" + voices[i].name + "</option>");
     }
-	//alert($("select").val())
 }, 10);
-
-//$("select").val() = 20;
 
 //-->
 </script>
