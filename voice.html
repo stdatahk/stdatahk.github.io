@@ -10,8 +10,11 @@ function detectMsg() {
 	var txt = document.getElementById('text');
 	var msg = txt.value;
 
-	if(msg.indexOf('智科數') >= 0 || msg.indexOf('智能科技數據') >= 0) {
+	if(msg.indexOf('科數') >= 0 || msg.indexOf('智能科技數據') >= 0) {
 		msg = '歡迎返嚟呀, 請問有咩可以幫到你呢?';
+	}
+	else if(msg.toUpperCase().indexOf('ST') >= 0 && msg.toUpperCase().indexOf('DATA') >= 0) {
+		msg = '你好,請問係唔係要管理員系統登入呢? Password 唔該';
 	}
 	else if(msg.indexOf('燈') >= 0) {
 		msg = '好呀主人，我依傢就去開燈，唔知夠唔夠光呢?';
