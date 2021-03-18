@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Smart Home Demo</title>
+</head>
+<body bgcolor="#000000">
+
+<br><br><br><br><br>
+
+<center>
+<img src='wave.png' onmouseover="this.src='wave.gif';doit();" onmouseout="this.src='wave.png';">
+</center>
+
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br>
+
+<textarea id="ta" rows=10 cols=50></textarea>
+<textarea id="ta2" rows=3 cols=50></textarea>
+<br><br>
+<input id='btn' type=button value=" READ " onClick="doRead();">
+<br><br>
+
+<div id='ytfrm' style="position:absolute;top:2000px;left:100px;">
+<iframe id='ifm' width="420" height="345" src="#"></iframe>
+</div>
+
+<audio id="myAudio1"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio2"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio3"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio4"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio5"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio6"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio7"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio8"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio9"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio10"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio11"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio12"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio13"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio14"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio15"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio16"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio17"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio18"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio19"><source src="" type="audio/mpeg"></audio>
+<audio id="myAudio20"><source src="" type="audio/mpeg"></audio>
+
+<script language="JavaScript">
+
+var voiceIndex = 0;
+function doit() {
+
+	if(voiceIndex == 9) {
+		document.getElementById("ifm").src = "https://www.youtube.com/embed/4Ck5f_GUn2w?autoplay=1&mute=1";
+		document.getElementById("ytfrm").style.top = '100px';
+		document.getElementById("ytfrm").style.left = '100px';
+		return true;
+	}
+	if(voiceIndex > 9) retrun true;
+
+	var ary = new Array(9);
+	ary[0] = "你好歡迎回來歡迎使用智能合子"
+	ary[1] = "正在打開廳燈"
+	ary[2] = "正在打開風扇"
+	ary[3] = "正在打開氣分燈" 
+	ary[4] = "正在打開影蝶機"
+	ary[5] = "今日係三月十八號"
+	ary[6] = "依家係香港時間十二點三十五分"
+	ary[7] = "依家氣溫係二十三度，間中會有雨"
+	ary[8] = "多謝使用智能合子再見"
+
+
+	document.getElementById("ta2").value = '';
+	document.getElementById("ta").value = ary[voiceIndex];
+	doRead();
+	voiceIndex ++;
+}
+
+
+function doRead() {
+	var txt = document.getElementById("ta").value;
+	txt = txt.split('，').join('');
+	txt = txt.split('。').join('');
+	txt = txt.split('？').join('');
+	
+	var rst = "";
+	for(var i=0; i < txt.length; i++) {
+		var jp = lookupJyutPing(txt.charAt(i));
+		delaySpeak(jp, 1+i, i*700);
+		rst += jp + " ";
+	}
+	document.getElementById("ta2").value = rst;
+}
+
+var dict = '';
+function json(data) {
+	dict = data;
+}
+</script>
+
+<script type="text/javascript" src="canto.js"></script>
+
+<script language="JavaScript">
+function lookupJyutPing(tchChar) {
+	if(dict[tchChar]) {
+		return dict[tchChar][0];
+	}
+	return null;
+}
+
+function speak(jyutping, sn) {
+	document.getElementById("myAudio"+sn).play(); 
+}
+
+function delaySpeak(jyutping, sn, t) {
+	document.getElementById("myAudio"+sn).src = 'https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/sound/'+ jyutping +'.Mp3';
+	setTimeout("speak('"+ jyutping +"', "+ sn +");", t);
+}
+</script>
+
+</body>
+</html>
