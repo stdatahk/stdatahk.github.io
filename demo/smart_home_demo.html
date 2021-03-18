@@ -51,12 +51,10 @@
 var voiceIndex = 0;
 function doit() {
 
-	if(voiceIndex >= 9) {
-		if(voiceIndex == 9) {
-			document.getElementById("ifm").src = "https://www.youtube.com/embed/4Ck5f_GUn2w?autoplay=1&mute=1";
-			document.getElementById("ytfrm").style.top = '100px';
-			document.getElementById("ytfrm").style.left = '100px';
-		}
+	if(voiceIndex == 8) {
+		document.getElementById("ifm").src = "https://www.youtube.com/embed/4Ck5f_GUn2w?autoplay=1&mute=1";
+		document.getElementById("ytfrm").style.top = '100px';
+		document.getElementById("ytfrm").style.left = '100px';
 		return true;
 	}
 
@@ -69,8 +67,8 @@ function doit() {
 	ary[5] = "今日係三月十八號"
 	ary[6] = "依家係香港時間十二點三十五分"
 	ary[7] = "依家氣溫係二十三度，間中會有雨"
-	ary[8] = "多謝使用智能合子再見"
-
+	ary[8] = ""; //for yt
+	ary[9] = "多謝使用智能合子再見"
 
 	document.getElementById("ta2").value = '';
 	document.getElementById("ta").value = ary[voiceIndex];
