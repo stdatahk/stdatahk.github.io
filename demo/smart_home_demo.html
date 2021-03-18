@@ -51,13 +51,12 @@
 var voiceIndex = 0;
 function doit() {
 
-	if(voiceIndex == 9) {
-		document.getElementById("ifm").src = "https://www.youtube.com/embed/4Ck5f_GUn2w?autoplay=1&mute=1";
-		document.getElementById("ytfrm").style.top = '100px';
-		document.getElementById("ytfrm").style.left = '100px';
-		return true;
-	}
-	if(voiceIndex > 9) {
+	if(voiceIndex >= 9) {
+		if(voiceIndex == 9) {
+			document.getElementById("ifm").src = "https://www.youtube.com/embed/4Ck5f_GUn2w?autoplay=1&mute=1";
+			document.getElementById("ytfrm").style.top = '100px';
+			document.getElementById("ytfrm").style.left = '100px';
+		}
 		return true;
 	}
 
