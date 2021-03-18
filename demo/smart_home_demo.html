@@ -57,7 +57,9 @@ function doit() {
 		document.getElementById("ytfrm").style.left = '100px';
 		return true;
 	}
-	if(voiceIndex > 9) retrun true;
+	if(voiceIndex > 9) {
+		return true;
+	}
 
 	var ary = new Array(9);
 	ary[0] = "你好歡迎回來歡迎使用智能合子"
