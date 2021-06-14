@@ -3,13 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STdataHK - VR Demo</title>
+    <title>A simple example</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
     #panorama {
-        width: 1024px;
-        height: 800px;
+        width: 600px;
+        height: 400px;
     }
     </style>
 </head>
@@ -17,9 +17,15 @@
 
 <div id="panorama"></div>
 <script>
+var imgsrc = "https://www.stdatahk.com/vr/img/1.jpg";
+if(location.href.lastIndexOf('?') > 0) {
+	var param = location.substring(location.href.lastIndexOf('?')+1);
+	imgsrc = "https://www.stdatahk.com/vr/img/"+ param +".jpg";
+}
+
 pannellum.viewer('panorama', {
     "type": "equirectangular",
-    "panorama": "https://stdatahk.com/vr/img/1.jpg"
+    "panorama": imgsrc
 });
 </script>
 
