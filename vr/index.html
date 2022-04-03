@@ -40,9 +40,58 @@ if(location.href.lastIndexOf('?') > 0) {
 	imgsrc = "https://stdatahk.com/vr/img/"+ param +".jpg";
 }
 
-pannellum.viewer('panorama', {
-    "type": "equirectangular",
-    "panorama": imgsrc
+// pannellum.viewer('panorama', {
+//     "type": "equirectangular",
+//     "panorama": imgsrc,
+// 	"autoLoad" : true
+// });
+
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "room1",
+        "author": "STDataHK",
+        "sceneFadeDuration": 1000,
+		"autoLoad" : true
+    },
+
+    "scenes": {
+        "room1": {
+            "title": "客廳",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": imgsrc,
+            "hotSpots": [
+                {
+                    "pitch": -8,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "房間",
+                    "sceneId": "room2"
+                }
+            ]
+        },
+
+        "room2": {
+            "title": "房間",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/img/2.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "洗手間",
+                    "sceneId": "room1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+    }
 });
 </script>
 
