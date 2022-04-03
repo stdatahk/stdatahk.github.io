@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STD - VR 360 Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 1024px;
+        height: 800px;
+    }
+    </style>
+</head>
+<body>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+示範單位：
+[<a href="https://stdatahk.com/vr/index.html?1">1</a>] 
+[<a href="https://stdatahk.com/vr/index.html?2">2</a>] 
+[<a href="https://stdatahk.com/vr/index.html?3">3</a>] 
+[<a href="https://stdatahk.com/vr/index.html?4">4</a>] 
+[<a href="https://stdatahk.com/vr/index.html?5">5</a>] 
+[<a href="https://stdatahk.com/vr/index.html?6">6</a>] 
+[<a href="https://stdatahk.com/vr/index.html?7">7</a>] 
+[<a href="https://stdatahk.com/vr/index.html?8">8</a>] 
+[<a href="https://stdatahk.com/vr/index.html?9">9</a>] 
+[<a href="https://stdatahk.com/vr/index.html?10">10</a>] 
+[<a href="https://stdatahk.com/vr/index.html?11">11</a>] 
+[<a href="https://stdatahk.com/vr/index.html?12">12</a>] 
+[<a href="https://stdatahk.com/vr/index.html?13">13</a>] 
+[<a href="https://stdatahk.com/vr/index.html?14">14</a>] 
+[<a href="https://stdatahk.com/vr/index.html?15">15</a>] 
+<br>
+<div id="panorama"></div>
+<script>
+var imgsrc = "https://stdatahk.com/vr/img/1.jpg";
+if(location.href.lastIndexOf('?') > 0) {
+	var param = location.href.substring(location.href.lastIndexOf('?')+1);
+	imgsrc = "https://stdatahk.com/vr/img/"+ param +".jpg";
+}
+
+// pannellum.viewer('panorama', {
+//     "type": "equirectangular",
+//     "panorama": imgsrc,
+// 	"autoLoad" : true
+// });
+
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "room1",
+        "author": "STDataHK",
+        "sceneFadeDuration": 1000,
+		"autoLoad" : true
+    },
+
+    "scenes": {
+        "room1": {
+            "title": "客廳",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": imgsrc,
+            "hotSpots": [
+                {
+                    "pitch": -8,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "房間",
+                    "sceneId": "room2"
+                }
+            ]
+        },
+
+        "room2": {
+            "title": "房間",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/img/2.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -0.6,
+                    "yaw": 37.1,
+                    "type": "scene",
+                    "text": "洗手間",
+                    "sceneId": "room1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+    }
+});
+</script>
+
+</body>
+</html>
