@@ -5,10 +5,41 @@
 </head>
 <body>
 
+請打印／以電腦／另一部手機以下QR： <br>
+<a href="qr1img.htm">【一號QR碼】</a>
+<a href="qr2img.htm">【二號QR碼】</a>
+<a href="qr3img.htm">【三號QR碼】</a>
+<hr>
 
+
+<div id="reader" width="600px"></div>
+
+<script src="https://unpkg.com/html5-qrcode@2.2.1/html5-qrcode.min.js"></script>
+
+<script language="JavaScript">
+function onScanSuccess(decodedText, decodedResult) {
+  // handle the scanned code as you like, for example:
+  console.log(`Code matched = ${decodedText}`, decodedResult);
+}
+
+function onScanFailure(error) {
+  // handle scan failure, usually better to ignore and keep scanning.
+  // for example:
+  console.warn(`Code scan error = ${error}`);
+}
+
+let html5QrcodeScanner = new Html5QrcodeScanner(
+  "reader",
+  { fps: 10, qrbox: {width: 250, height: 250} },
+  /* verbose= */ false);
+html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+</script>
+
+<hr>
+相片上載測試：
+（還未整合得很完整）
+<br>
 <input type="file" id="input_img" onchange="fileChange()" accept="image/*">
-
-
 <div id="mydiv">...</div>
 
 <script language="JavaScript">
@@ -34,7 +65,10 @@ $.ajax(settings).done(function (response) {
   var jx = JSON.parse(response);
   console.log(jx.data.url);
   
-  document.getElementById("mydiv").innerHTML = "<img src='"+ jx.data.url +"'>";
+  var strhtml = "<img src='"+ jx.data.url +"'>";
+  strhtml += "<br><a href='"+ jx.data.url +"'>[點擊打開高清版圖片]</a>";
+  
+  document.getElementById("mydiv").innerHTML = strhtml;
   
 });
 }
