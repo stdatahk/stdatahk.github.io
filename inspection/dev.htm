@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>FRS | Developer</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<img src="logo.png">
+<br>
+
+<h2 style="font-family:Arial;">FRS DEV LIST:</h2>
+
+<div id="theDiv" style="text-align:right;">
+<input style="width:70px;height:30px;" type=button value="ADD" onclick="location.href='dev_add.htm';">
+&nbsp;&nbsp;
+<input style="width:70px;height:30px;" type=button value="EDIT" onclick="location.href='wip.htm';">
+&nbsp;&nbsp;
+<input style="width:70px;height:30px;" type=button value="DELETE"onclick="location.href='wip.htm';">
+</div>
+<br>
+
+
+<table id='tbl' width='100%' border=1 cellpadding=2 cellspacing=0 style="font-family:Arial;">
+<!-- table header -->
+<tr>
+<td width=150 style="font-weight:bold;font-size:20px;">
+	USAGE
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	KEY/DETAILS
+</td>
+</tr>
+<!-- end table header -->
+<tr id='tr0'>
+<td>
+	Loading...
+</td>
+<td>
+	Loading...
+</td>
+</tr>
+</table>
+
+<!--
+GAS:
+https://script.google.com/d/1qBAZVtgous1OrHGTnQa5v_xVOnBrumfHBElN6rmqQV0cU48V8IqsSIHH/edit
+GDrv:
+https://drive.google.com/drive/folders/1ZlVksQr_RwkoqJhquX1482jFkodqbggP
+GSS:
+https://docs.google.com/spreadsheets/u/0/
+-->
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gssId = "184TCQ7AM-GzBAXLmJaBiDdVnzoE-OLGODjETpA_ELOw"; //for dev page
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETDATA', 
+		id: gssId,  
+		key: 'P@$$w0rd!'
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+
+		if(ary.length > 0) {
+			$("#tr0").remove();
+			$("#tbl").prepend("共 "+ ary.length +" 筆資料");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+		
+			rst += "<tr>";
+			rst += "<td>"+ ary[i][0] +"</td>";
+			rst += "<td>"+ ary[i][1] +"</td>";
+			rst += "</tr>";
+		}
+		$("#tbl").append(rst);
+	  }
+	});
+
+});
+//-->
+</script>
+
+
+
+</body>
+</html>

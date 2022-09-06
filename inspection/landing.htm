@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>FRS | Landing Page</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+請打印／以電腦／另一部手機顯示以下QR： <br>
+<a href="qr1img.htm">【一號QR碼】</a>
+<a href="qr2img.htm">【二號QR碼】</a>
+<a href="qr3img.htm">【三號QR碼】</a>
+<hr>
+
+
+<div id="reader" width="600px"></div>
+
+<script src="https://unpkg.com/html5-qrcode@2.2.1/html5-qrcode.min.js"></script>
+
+<script language="JavaScript">
+function onScanSuccess(decodedText, decodedResult) {
+  // handle the scanned code as you like, for example:
+  console.log(`Code matched = ${decodedText}`, decodedResult);
+  location.href = decodedText;
+}
+
+function onScanFailure(error) {
+  // handle scan failure, usually better to ignore and keep scanning.
+  // for example:
+  console.warn(`Code scan error = ${error}`);
+}
+
+let html5QrcodeScanner = new Html5QrcodeScanner(
+  "reader",
+  { fps: 10, qrbox: {width: 250, height: 250} },
+  /* verbose= */ false);
+html5QrcodeScanner.render(onScanSuccess, onScanFailure);
+</script>
+
+<hr>
+
+樓盤名稱：
+<input id='txt' type=text size=16>
+<br>
+
+Defect Item：
+<select id='sel1'>
+<option>牆身</option>
+<option>天花板</option>
+<option>洗面盆</option>
+</select>
+<br>
+
+Texture：
+<select id='sel2'>
+<option>木紋</option>
+<option>石屎</option>
+<option>不銹鋼</option>
+</select>
+<br>
+
+Defect Description：
+<select id='sel3'>
+<option>有刮花</option>
+<option>剝落</option>
+<option>有凹凸現象</option>
+</select>
+<br>
+
+
+
+相片上載測試：
+（還未整合得很完整）
+<br>
+<input type="file" id="input_img" onchange="fileChange()" accept="image/*">
+<div id="mydiv">...</div>
+
+<script language="JavaScript">
+function fileChange(){
+var file = document.getElementById('input_img');
+var form = new FormData();
+form.append("image", file.files[0])
+
+var date = new Date();
+var ts = ""+ (date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2) );
+
+var di;
+if(document.getElementById('sel1')[0].selected) di=1;
+if(document.getElementById('sel1')[1].selected) di=2;
+if(document.getElementById('sel1')[2].selected) di=3;
+
+var tt;
+if(document.getElementById('sel2')[0].selected) tt=1;
+if(document.getElementById('sel2')[1].selected) tt=2;
+if(document.getElementById('sel2')[2].selected) tt=3;
+
+var dd;
+if(document.getElementById('sel3')[0].selected) dd=1;
+if(document.getElementById('sel3')[1].selected) dd=2;
+if(document.getElementById('sel3')[2].selected) dd=3;
+
+var filename = ts +"_"+ document.getElementById('txt').value +"_DI-"+ di
+                                                             +"_T-" + tt
+                                                             +"_DD-"+ dd;
+alert(filename); //testing			   
+			   
+var apikey = "2773799e6c6f08aacec5b772f43f80fc";
+var settings = {
+  "url": "https://api.imgbb.com/1/upload?key=" + apikey,
+  "method": "POST",
+  "expiration": 604800, //1-week
+  "name": filename,
+  "timeout": 0,
+  "processData": false,
+  "mimeType": "multipart/form-data",
+  "contentType": false,
+  "data": form
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  var jx = JSON.parse(response);
+  console.log(jx.data.url);
+  
+  var strhtml = "<img src='"+ jx.data.url +"'>";
+  strhtml += "<br><a href='"+ jx.data.url +"'>[點擊打開高清版圖片]</a>";
+  
+  document.getElementById("mydiv").innerHTML = strhtml;
+  
+});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>FRS | Admin| To-Do</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<img src="logo.png">
+<br>
+
+<h2 style="font-family:Arial;">FRS TO-DO LIST:</h2>
+
+<div id="theDiv" style="text-align:right;">
+<input style="width:70px;height:30px;" type=button value="ADD" onclick="location.href='todo_add.htm';">
+&nbsp;&nbsp;
+<input style="width:70px;height:30px;" type=button value="EDIT" onclick="location.href='todo_edit.htm';">
+&nbsp;&nbsp;
+<input style="width:70px;height:30px;" type=button value="DELETE"onclick="location.href='todo_del.htm';">
+</div>
+<br>
+
+
+<table id='tbl' width='100%' border=1 cellpadding=2 cellspacing=0 style="font-family:Arial;">
+<!-- table header -->
+<tr>
+<td width=150 style="font-weight:bold;font-size:20px;">
+	功能／項目
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	關於／詳情
+</td>
+</tr>
+<!-- end table header -->
+<tr id='tr0'>
+<td>
+	Loading...
+</td>
+<td>
+	Loading...
+</td>
+</tr>
+</table>
+
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gssId = "1-aFZEOwemMh3ob_ZDqlpWd360aN6MdLraVFPw2V1RS0"; //for todo page
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETDATA', 
+		id: gssId,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+
+		if(ary.length > 0) {
+			$("#tr0").remove();
+			$("#tbl").prepend("共 "+ ary.length +" 筆資料");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+		
+			rst += "<tr>";
+			rst += "<td>"+ ary[i][0] +"</td>";
+			rst += "<td>"+ ary[i][1] +"</td>";
+			rst += "</tr>";
+		}
+		$("#tbl").append(rst);
+	  }
+	});
+
+});
+//-->
+</script>
+
+
+
+</body>
+</html>
