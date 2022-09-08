@@ -1,0 +1,76 @@
+<html>
+<head>
+<title>FRS | Admin| To-Do</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<img src="logo.png">
+<br>
+
+
+<div id="theDiv" style="text-align:right;">
+<input style="width:130px;height:30px;" type=button value="返回 DEV" onclick="location.href='dev.htm';">
+</div>
+<br>
+
+<table border=0 cellpadding=5 cellspacing=10>
+<tr>
+<td colspan=2><b>新增 DEV 條目：</b></td>
+</tr>
+<tr>
+<td>USAGE：</td>
+<td><input id="txtTag" size=50 type=text value=""></td>
+</tr>
+<tr>
+<td>KEY/DETAILS：</td>
+<td>
+	<input id="txtVal" size=50 type=text value="">
+</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+	<input id="btnSubmit" type=button value="新增" 
+	 style="width:160px;height:50px;">
+</td>
+</tr>
+</table>
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gssId = "184TCQ7AM-GzBAXLmJaBiDdVnzoE-OLGODjETpA_ELOw"; //for dev page
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+
+$("#btnSubmit").click(function(){
+	$('#btnSubmit').val('正在儲存數據，請稍後...');
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'STORE', 
+		id: gssId,  
+		key: 'P@$$w0rd!',
+		tag: $('#txtTag').val(),
+		value: $('#txtVal').val()
+	  },
+	  dataType: "html",
+	  success: function(html){
+		var ary = null;
+		html = "ary="+html+";";
+		eval(html);
+		alert("已成功儲存紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
+		location.href = 'dev.htm';
+	  }
+	});
+
+});
+//-->
+</script>
+
+
+
+</body>
+</html>

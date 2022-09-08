@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>FRS | Dev | Create DB</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<img src="logo.png">
+<br>
+
+
+<div style="text-align:right;">
+<input style="width:130px;height:30px;" type=button value="返回 DEV" onclick="location.href='dev.htm';">
+</div>
+<br>
+
+<table border=0 cellpadding=5 cellspacing=10>
+<tr>
+<td colspan=2><b>Create a new Database：</b></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+	<input id="btnSubmit" type=button value="CREATE" 
+	 style="width:160px;height:50px;">
+</td>
+</tr>
+</table>
+
+<div id="theDiv"></div>
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gssId = "184TCQ7AM-GzBAXLmJaBiDdVnzoE-OLGODjETpA_ELOw"; //for dev page
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+
+$("#btnSubmit").click(function(){
+	if(!confirm('Confirm adding new database?')) return;
+	$('#btnSubmit').val('正在儲存數據，請稍後...');
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'CREATE'
+	  },
+	  dataType: "html",
+	  success: function(html){
+		var ary = null;
+		html = "ary="+html+";";
+		eval(html);
+		alert("Database created successfully");
+		var str = 'Please add this record to the DEV list manually:<br>'
+		        + ary[0] +'<br>' + ary[1] +'<br>' + ary[2] +'<br>' + ary[3] +'<br>';
+		$('#theDiv').html(str);
+	  }
+	});
+
+});
+//-->
+</script>
+
+
+
+</body>
+</html>

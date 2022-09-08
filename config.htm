@@ -1,0 +1,241 @@
+<html>
+<head>
+<title>FRS | Admin| Config</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<img src="logo.png">
+<br>
+
+<h2 style="font-family:Arial;">FRS 設置常用Defect描述句語：</h2>
+<font style="font-size:14px;" color=gray>（未來可再擴張，應該是以地點,物料,外觀狀況等作仔細分類）</font>
+
+
+<!--
+  TODO:
+  populate 3 pull down list
+  at the end, allow add
+-->
+
+<br>
+<br>
+
+<table id='tbl' border=1 cellpadding=2 cellspacing=0 style="font-family:Arial;">
+<tr>
+<td>句子部份 1</td>
+<td>句子部份 2</td>
+<td>句子部份 3</td>
+</tr>
+<tr>
+<td valign=top>
+	<table id='tbl1'></table>
+	<input id="txtAdd1" size=25 type=text value=""><br>
+	<input style="width:150px;height:30px;" type=button value="ADD (Phrase Part1)" id="btnAdd1">
+</td>
+<td valign=top>
+	<table id='tbl2'></table>
+	<input id="txtAdd2" size=25 type=text value=""><br>
+	<input style="width:150px;height:30px;" type=button value="ADD (Phrase Part2)" id="btnAdd2">
+</td>
+<td valign=top>
+	<table id='tbl3'></table>
+	<input id="txtAdd3" size=25 type=text value=""><br>
+	<input style="width:150px;height:30px;" type=button value="ADD (Phrase Part3)" id="btnAdd3">
+</td>
+</tr>
+</table>
+<br>
+<br>
+
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+var gssId1 = "1O3PsopEMRniWmazVNX2FNCCt7Dx4ifZH8QXJNjk5nKE"; //for phrase1 db
+var gssId2 = "1TTHqEQHR9biCmnsmJiwxT_r0S5uU6FqzJ-2cXbyLsJs"; //for phrase2 db
+var gssId3 = "1abQxmKQsn45VWmSa_yyFnUtkk3LTBM4m0d7bIZb7y-U"; //for phrase3 db
+
+$("#btnAdd1").click(function(){
+	$('#btnAdd1').val('正在儲存數據，請稍後...');
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'STORE', 
+		id: gssId1,  
+		key: 12345678,
+		tag: $('#txtAdd1').val(),
+		value: $('#txtAdd1').val()
+	  },
+	  dataType: "html",
+	  success: function(html){
+		var ary = null;
+		html = "ary="+html+";";
+		eval(html);
+		alert("已成功儲存紀錄: ["+ ary[1] +"],["+ ary[2]+"] \n\n正在重新載入頁面....");
+		location.reload();
+	  }
+	});
+});
+
+$("#btnAdd2").click(function(){
+	$('#btnAdd2').val('正在儲存數據，請稍後...');
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'STORE', 
+		id: gssId2,  
+		key: 12345678,
+		tag: $('#txtAdd2').val(),
+		value: $('#txtAdd2').val()
+	  },
+	  dataType: "html",
+	  success: function(html){
+		var ary = null;
+		html = "ary="+html+";";
+		eval(html);
+		alert("已成功儲存紀錄: ["+ ary[1] +"],["+ ary[2]+"] \n\n正在重新載入頁面....");
+		location.reload();
+	  }
+	});
+});
+
+$("#btnAdd3").click(function(){
+	$('#btnAdd3').val('正在儲存數據，請稍後...');
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'STORE', 
+		id: gssId3,  
+		key: 12345678,
+		tag: $('#txtAdd3').val(),
+		value: $('#txtAdd3').val()
+	  },
+	  dataType: "html",
+	  success: function(html){
+		var ary = null;
+		html = "ary="+html+";";
+		eval(html);
+		alert("已成功儲存紀錄: ["+ ary[1] +"],["+ ary[2]+"] \n\n正在重新載入頁面....");
+		location.reload();
+	  }
+	});
+});
+
+<!-- populate all 3 lists -->
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETDATA', 
+		id: gssId1,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+
+		if(ary.length > 0) {
+			//$("#tr0").remove();
+			$("#tbl1").prepend("共 "+ ary.length +" 筆資料");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+		
+			rst += "<tr>";
+			rst += "<td>"+ ary[i][0] +"</td>";
+			rst += "</tr>";
+		}
+		$("#tbl1").append(rst);
+	  }
+	});
+
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETDATA', 
+		id: gssId2,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+
+		if(ary.length > 0) {
+			//$("#tr0").remove();
+			$("#tbl2").prepend("共 "+ ary.length +" 筆資料");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+		
+			rst += "<tr>";
+			rst += "<td>"+ ary[i][0] +"</td>";
+			rst += "</tr>";
+		}
+		$("#tbl2").append(rst);
+	  }
+	});
+
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETDATA', 
+		id: gssId3,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+
+		if(ary.length > 0) {
+			//$("#tr0").remove();
+			$("#tbl3").prepend("共 "+ ary.length +" 筆資料");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+		
+			rst += "<tr>";
+			rst += "<td>"+ ary[i][0] +"</td>";
+			rst += "</tr>";
+		}
+		$("#tbl3").append(rst);
+	  }
+	});
+
+});
+//-->
+</script>
+
+
+
+</body>
+</html>
