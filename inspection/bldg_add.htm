@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>FRS | Admin| Building | Add</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<img src="logo.png">
+<br>
+
+
+<div id="theDiv" style="text-align:right;">
+<input style="width:130px;height:30px;" type=button value="返回樓宇大廈清單" onclick="location.href='bldg.htm';">
+</div>
+<br>
+
+<table id='tbl' border=0 cellpadding=5 cellspacing=10>
+<tr>
+<td>
+	<b>新增樓宇大廈：</b><br>
+	（可以批量新增，每行一個）
+</td>
+</tr>
+<tr>
+<td>
+	<textarea id='ta' rows=10 cols=30></textarea>
+</td>
+</tr>
+</tr>
+<tr>
+<td align=right>
+	<input id="btnSubmit" type=button value="新增全部" 
+	 style="width:160px;height:50px;">
+</td>
+</tr>
+</table>
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gssId = "1UIXxABQINMOZkIbErvviFQDIDDlAdjTo7hk3GFqzq70"; //for bldg db
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+
+$("#btnSubmit").click(function(){
+	$('#btnSubmit').val('正在儲存數據，請稍後...');
+	
+	var data = $('#ta').val();
+	data = data.trim().split('\n');
+	for(var i=0;i<data.length;i++) data[i] = data[i].trim();
+	
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'STORE', 
+		id: gssId,  
+		key: 12345678,
+		tag: data[0],
+		value: data[0]
+	  },
+	  dataType: "html",
+	  success: function(html){
+		var ary = null;
+		html = "ary="+html+";";
+		eval(html);
+		var str = ("已成功儲存紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
+		str = "<tr><td>"+str+"</td></tr>";
+		$('#tbl').append(str);
+		
+		//next cycle
+		if(data.length > 1) {
+			data[0] = "";
+			$('#ta').val(data.join('\n').trim());
+			$('#btnSubmit').click();
+		}
+		else {
+			alert("已成功儲存所有紀錄");
+			location.href = 'bldg.htm';
+		}
+	  }
+	});
+
+});
+//-->
+</script>
+
+
+
+</body>
+</html>

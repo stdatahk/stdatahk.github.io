@@ -24,8 +24,6 @@
 	<select id="theSel">
 		<option id='opt0'>載入中...</option>
 	</select>
-
-	<input id="txtTag" size=10 type=text value="">
 </td>
 </tr>
 
@@ -65,7 +63,7 @@ $(document).ready(function(){
 
 		if(ary.length > 0) {
 			$("#opt0").remove();
-			$("#theSel").append("<option>--- 請選擇 ---</option>");
+			$("#theSel").append("<option value=''>--- 請選擇 ---</option>");
 		}
 
 		for(var i=0; i<ary.length; i++) {
@@ -79,6 +77,11 @@ $(document).ready(function(){
 
 //submit to delete
 $("#btnSubmit").click(function(){
+	if($('#theSel').val()=='') {
+		alert("請選擇其中一個項目");
+		return;
+	}
+
 	$('#btnSubmit').val('正在刪除數據，請稍後...');
 	$.ajax({
 	  url: gasUrl,
