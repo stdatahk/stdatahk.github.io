@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>FRS | Admin| Defect List</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<img src="logo.png">
+<br>
+
+<h2 style="font-family:Arial;">FRS - FULL DEFECT LIST:</h2>
+
+<div id="theDiv" style="text-align:right;">
+<input style="width:70px;height:30px;" type=button value="EDIT" onclick="location.href='wip.htm';">
+&nbsp;&nbsp;
+<input style="width:70px;height:30px;" type=button value="DELETE"onclick="location.href='wip.htm';">
+</div>
+<br>
+
+<table id='tbl' width='100%' border=1 cellpadding=2 cellspacing=0 style="font-family:Arial;">
+<!-- table header -->
+<tr>
+<td style="font-weight:bold;font-size:20px;">
+	Defect ID
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	QR Code
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	Defect Photo
+</td>
+
+<td style="font-weight:bold;font-size:20px;">
+	單位平面圖
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	樓盤／大廈
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	座數／樓層／單位
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	Defect形容(1)位置
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	Defect形容(2)材質
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	Defect形容(3)狀況
+</td>
+
+
+
+</tr>
+<!-- end table header -->
+<tr id='tr0'>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+</tr>
+</table>
+
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gssId = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list 
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETDATA', 
+		id: gssId,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+
+		if(ary.length > 0) {
+			$("#tr0").remove();
+			$("#tbl").prepend("共 "+ ary.length +" 筆資料");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			var obj = JSON.parse(ary[i][1]);
+		
+			rst += "<tr>";
+			rst += "<td>"+ ary[i][0] +"</td>";
+			rst += "<td><a target='_blank' href='qr_gen.htm#"+ ary[i][0] +"'><img height=50 src='qr/qr1.png'></a></td>";
+			rst += "<td><a target='_blank' href='"+ obj.url +"'><img height=50 src='"+ obj.url +"'></a></td>";
+			rst += "<td><a target='_blank' href='floorplan.png'><img height=50 src='floorplan.png'></a></td>";
+			rst += "<td>"+ obj.bldg +"</td>";
+			rst += "<td>"+ obj.addr +"</td>";
+			rst += "<td>"+ obj.di +"</td>";
+			rst += "<td>"+ obj.tx +"</td>";
+			rst += "<td>"+ obj.dd +"</td>";
+			rst += "</tr>";
+		}
+		$("#tbl").append(rst);
+	  }
+	});
+
+});
+//-->
+</script>
+
+<br><br>
+<div id="theDiv" style="text-align:right;">
+<input style="width:130px;height:30px;" type=button value="返回" onclick="location.href='admin.htm';">
+</div>
+
+</body>
+</html>

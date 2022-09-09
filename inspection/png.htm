@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>FRS | Admin| Report | PNG</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>Report - PNG Generation</h2>
+
+<div id="theDiv" style="text-align:right;">
+<input style="width:130px;height:30px;" type=button value="返回" onclick="location.href='pdf.htm';">
+</div>
+<br>
+
+
+<font color='gray'>(WIP) Defact listing to choose from....</font>
+<br><br>
+
+
+Color:
+<select id='selColor'>
+<option>Red</option>
+<option>Blue</option>
+<option>Black</option>
+</select>
+<br><br>
+
+Shape:
+<select id='selShape'>
+<option>Square</option>
+<option>Circle</option>
+</select>
+<br><br>
+
+Width/Height:
+<input id='txtWidth' type=text size=2 value=100>
+<br><br>
+
+Place it at position (X,Y):
+<input id='txtX' type=text size=2 value=50>
+<input id='txtY' type=text size=2 value=50>
+<br><br>
+
+
+
+<input id="btnPng" type=button value="生成 PNG 圖像" 
+ style="width:150px;height:50px;">
+
+<br><br>
+
+<script type="text/javascript">
+<!--
+$("#btnPng").click(function(){
+	var canvas = document.createElement("canvas");
+	canvas.width = 400;
+	canvas.height = 600;
+	
+	var ctx = canvas.getContext("2d");
+	ctx.fillStyle = "#FFFFFF";
+	ctx.fillRect(0, 0, 400, 600);
+
+	//draw time string text
+	ctx.font = "30px Arial";
+	const d = new Date();
+	var timeStr = d.toTimeString().split('(').join('\n(');
+	ctx.font = "17px Comic Sans MS";
+	ctx.fillStyle = "black";
+	ctx.fillText(timeStr, 10, 35);	
+	
+	//draw shapes overlay
+	ctx.fillStyle = $('#selColor').val().trim().toLowerCase();
+	if($('#selShape').val() == 'Square') {
+		ctx.fillRect( 1*$('#txtX').val(), 1*$('#txtY').val(), 1*$('#txtWidth').val(), 1*$('#txtWidth').val());
+	}
+	else {
+		ctx.beginPath();
+		ctx.arc(1*$('#txtX').val(), 1*$('#txtY').val(), 1*$('#txtWidth').val(), 0, 2 * Math.PI);
+		ctx.stroke();
+	}
+
+
+
+	$('#txtWidth').val()
+	$('#txtX').val()
+	$('#txtY').val()
+	
+	var url = canvas.toDataURL();
+	var a = document.createElement('a');
+	a.download = 'defect.png';
+	a.href = url;
+	a.textContent = '[Download PNG] ';
+	document.body.appendChild(a);
+});
+//-->
+</script>
+
+</body>
+</html>

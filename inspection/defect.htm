@@ -163,7 +163,7 @@ $.ajax(settings).done(function (response) {
 <td>&nbsp;</td>
 <td>
 	<br>
-	<input id="btnSubmit" type=button value="遞交缺陷資訊" 
+	<input id="btnSubmit" type=button value="提交DEFACT" 
 	 style="width:160px;height:50px;">
 </td>
 </tr>
@@ -186,6 +186,8 @@ var gssId0 = "1UIXxABQINMOZkIbErvviFQDIDDlAdjTo7hk3GFqzq70"; //for bldg db
 var gssId1 = "1O3PsopEMRniWmazVNX2FNCCt7Dx4ifZH8QXJNjk5nKE"; //for phrase1 db
 var gssId2 = "1TTHqEQHR9biCmnsmJiwxT_r0S5uU6FqzJ-2cXbyLsJs"; //for phrase2 db
 var gssId3 = "1abQxmKQsn45VWmSa_yyFnUtkk3LTBM4m0d7bIZb7y-U"; //for phrase3 db
+var gssId4 = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list 
+
 
 //populate pull-down menus
 
@@ -315,11 +317,21 @@ $(document).ready(function(){
 
 //submit to add
 $("#btnSubmit").click(function(){
-	if($('#theSel').val()=='') {
-		alert("請選擇其中一個項目");
+	if($('#txtPhotoUrl').val()=='' ||
+	   $('#txtAddr').val()=='' ||
+	   $('#sel0').val()=='' ||
+	   $('#sel1').val()=='' ||
+	   $('#sel2').val()=='' ||
+	   $('#sel3').val()=='' ) 
+	{
+		alert("請選擇其中一個項目／不能留空");
 		return;
 	}
 
+	var date = new Date();
+	var ts = ""+ (date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2) );
+	var obj = {'url':$('#txtPhotoUrl').val(), 'addr':$('#txtAddr').val(), 'bldg':$('#sel0').val(), 'di':$('#sel1').val(), 'tx':$('#sel2').val(), 'dd':$('#sel3').val()};
+	
 	$('#btnSubmit').val('正在ADD數據，請稍後...');
 	$.ajax({
 	  url: gasUrl,
@@ -327,17 +339,18 @@ $("#btnSubmit").click(function(){
 	  type: "GET",
 	  data: {
 		func: 'STORE', 
-		id: gssId,  
+		id: gssId4,  
 		key: 12345678,
-		tag: $('#theSel').val()
+		tag: ('D'+ts),
+		value: JSON.stringify(obj)
 	  },
 	  dataType: "html",
 	  success: function(html){
 		var ary = null;
 		html = "ary="+html+";";
 		eval(html);
-		alert("已成功刪除紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
-		location.href = 'todo.htm';
+		alert("已成功新增紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
+		location.href = 'defect.htm';
 	  }
 	});
 
