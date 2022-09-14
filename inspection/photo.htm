@@ -62,7 +62,7 @@ camera_button.addEventListener('click', async function() {
 		if (stream.getTracks()[0].getCapabilities) {
 			isBackCamera = stream.getTracks()[0].getCapabilities()?.facingMode?.[0] === 'environment';
 		}
-		if(!isBAckCamera) alert('Using front camera');
+		if(!isBackCamera) alert('Using front camera');
     }
     catch(error) {
     	alert(error.message);
