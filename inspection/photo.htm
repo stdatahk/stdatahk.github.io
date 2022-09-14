@@ -3,21 +3,6 @@
 <title>ImgBB Upload Demo</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style type="text/css">
-
-button {
-    width: 120px;
-    padding: 10px;
-    display: block;
-    margin: 20px auto;
-    border: 2px solid #111111;
-    cursor: pointer;
-    background-color: white;
-}
-
-#start-camera {
-    margin-top: 50px;
-}
-
 #video {
     display: none;
     margin: 50px auto 0 auto;
@@ -36,11 +21,6 @@ button {
     margin: 0 auto 20px auto;
 }
 
-#dataurl-header {
-    text-align: center;
-    font-size: 15px;
-}
-
 #dataurl {
     display: block;
     height: 100px;
@@ -53,23 +33,15 @@ button {
     font-size: 13px;
     box-sizing: border-box;
 }
-
 </style>
 </head>
 <body>
-data:image/png;base64,
 
-    <textarea id="dataurl2"></textarea>
-iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAApgAAAKYB3X3/OAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAANCSURBVEiJtZZPbBtFFMZ/M7ubXdtdb1xSFyeilBapySVU8h8OoFaooFSqiihIVIpQBKci6KEg9Q6H9kovIHoCIVQJJCKE1ENFjnAgcaSGC6rEnxBwA04Tx43t2FnvDAfjkNibxgHxnWb2e/u992bee7tCa00YFsffekFY+nUzFtjW0LrvjRXrCDIAaPLlW0nHL0SsZtVoaF98mLrx3pdhOqLtYPHChahZcYYO7KvPFxvRl5XPp1sN3adWiD1ZAqD6XYK1b/dvE5IWryTt2udLFedwc1+9kLp+vbbpoDh+6TklxBeAi9TL0taeWpdmZzQDry0AcO+jQ12RyohqqoYoo8RDwJrU+qXkjWtfi8Xxt58BdQuwQs9qC/afLwCw8tnQbqYAPsgxE1S6F3EAIXux2oQFKm0ihMsOF71dHYx+f3NND68ghCu1YIoePPQN1pGRABkJ6Bus96CutRZMydTl+TvuiRW1m3n0eDl0vRPcEysqdXn+jsQPsrHMquGeXEaY4Yk4wxWcY5V/9scqOMOVUFthatyTy8QyqwZ+kDURKoMWxNKr2EeqVKcTNOajqKoBgOE28U4tdQl5p5bwCw7BWquaZSzAPlwjlithJtp3pTImSqQRrb2Z8PHGigD4RZuNX6JYj6wj7O4TFLbCO/Mn/m8R+h6rYSUb3ekokRY6f/YukArN979jcW+V/S8g0eT/N3VN3kTqWbQ428m9/8k0P/1aIhF36PccEl6EhOcAUCrXKZXXWS3XKd2vc/TRBG9O5ELC17MmWubD2nKhUKZa26Ba2+D3P+4/MNCFwg59oWVeYhkzgN/JDR8deKBoD7Y+ljEjGZ0sosXVTvbc6RHirr2reNy1OXd6pJsQ+gqjk8VWFYmHrwBzW/n+uMPFiRwHB2I7ih8ciHFxIkd/3Omk5tCDV1t+2nNu5sxxpDFNx+huNhVT3/zMDz8usXC3ddaHBj1GHj/As08fwTS7Kt1HBTmyN29vdwAw+/wbwLVOJ3uAD1wi/dUH7Qei66PfyuRj4Ik9is+hglfbkbfR3cnZm7chlUWLdwmprtCohX4HUtlOcQjLYCu+fzGJH2QRKvP3UNz8bWk1qMxjGTOMThZ3kvgLI5AzFfo379UAAAAASUVORK5CYII=
-	
-	
-
-<button id="start-camera">Start Camera</button>
-<video id="video" width="320" height="240" autoplay></video>
+<button id="start-camera">開啟相機</button>
+<video id="video" width="600" height="800" autoplay></video>
 <button id="click-photo">Click Photo</button>
 <div id="dataurl-container">
-    <canvas id="canvas" width="320" height="240"></canvas>
-    <div id="dataurl-header">Image Data URL</div>
+    <canvas id="canvas" width="600" height="800"></canvas>
     <textarea id="dataurl" readonly></textarea>
 </div>
 
@@ -87,6 +59,10 @@ camera_button.addEventListener('click', async function() {
 
     try {
     	stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
+		if (stream.getTracks()[0].getCapabilities) {
+			isBackCamera = stream.getTracks()[0].getCapabilities()?.facingMode?.[0] === 'environment';
+		}
+		if(!isBAckCamera) alert('Using front camera');
     }
     catch(error) {
     	alert(error.message);
@@ -112,9 +88,7 @@ click_button.addEventListener('click', function() {
 
 <hr>
 
-<input type="file" id="input_img" onchange="fileChange()" accept="image/*">
-
-<input type=button value='SUBMIT' onclick='fileChange();'>
+<input type=button value='上載相片' onclick='fileChange();'>
 
 <div id="mydiv">...</div>
 
@@ -123,10 +97,11 @@ function fileChange(){
 var file = $('#dataurl').val().trim();
 var pos = file.indexOf(';base64,');
 if(pos > 0) file = file.substring(8+pos);
-//var file = document.getElementById('input_img');
 var form = new FormData();
-//form.append("image", file.files[0])
 form.append("image", file);
+
+$('#start-camera').style.visibility = 'hidden';
+$('#video').style.visibility = 'hidden';
 
 var apikey = "2773799e6c6f08aacec5b772f43f80fc";
 var settings = {
