@@ -31,6 +31,8 @@ var gssId = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list
 var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
 
 $("#btnPdf").click(function(){
+	$("#btnPdf").val('生成中，請稍等...');
+
 	//getting data from DB
 	$.ajax({
 	  url: gasUrl,
@@ -65,22 +67,22 @@ $("#btnPdf").click(function(){
 			//lower text info area
 			doc.rect(10, 145, 275, 55);
 
-			//pic 1
+			//pic - defect pic
 			//var img = new Image();
 			//img.src = obj.url;
 			//doc.addImage(img, 'png', 40, 40, 100, 100);
-			//pic 2
+			//pic 2 - floorplan
 			var img = new Image();
 			img.src = 'floorplan.png';
 			doc.addImage(img, 'png', 210, 15, 70, 100);
-			//pic 3
+			//pic 3 - logo
 			var img = new Image();
 			img.src = 'logo.png';
-			doc.addImage(img, 'png', 270, 150, 20, 20);
-			//pic 4
+			doc.addImage(img, 'png', 260, 145, 20, 20);
+			//pic 4 - QR
 			var img = new Image();
 			img.src = 'qr/qr1.png';
-			doc.addImage(img, 'png', 250, 175, 30, 30);
+			doc.addImage(img, 'png', 260, 170, 30, 30);
 
 			doc.text("FRS - Site Inspection Report (Defect ID: "+ ary[i][0] +")", 10, 10);
 			//doc.text("[[[ HD Photo Here ]]]\n   (with markings)", 40, 40);
