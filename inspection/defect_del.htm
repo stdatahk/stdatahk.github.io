@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>FRS | Admin| Defect | Delete</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<img src="logo.png">
+<br>
+
+
+<div id="theDiv" style="text-align:right;">
+<input style="width:130px;height:30px;" type=button value="返回 DEFECT LIST 清單" onclick="location.href='defectlist.htm';">
+</div>
+<br>
+
+<table border=0 cellpadding=5 cellspacing=10>
+<tr>
+<td colspan=2><b>刪除 DEFECT LIST 條目：</b></td>
+</tr>
+<tr>
+<td>功能／項目：</td>
+<td>
+	<select id="theSel">
+		<option id='opt0'>載入中...</option>
+	</select>
+</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td>
+	<input id="btnSubmit" type=button value="刪除" 
+	 style="width:160px;height:50px;">
+</td>
+</tr>
+</table>
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gssId = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list 
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+
+//populate pull-down menu
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#opt0").remove();
+			$("#theSel").append("<option value=''>--- 請選擇 ---</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+		}
+		$("#theSel").append(rst);
+	  }
+	});
+
+});
+
+//submit to delete
+$("#btnSubmit").click(function(){
+	if($('#theSel').val()=='') {
+		alert("請選擇其中一個項目");
+		return;
+	}
+
+	$('#btnSubmit').val('正在刪除數據，請稍後...');
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'DELTAG', 
+		id: gssId,  
+		key: 12345678,
+		tag: $('#theSel').val()
+	  },
+	  dataType: "html",
+	  success: function(html){
+		var ary = null;
+		html = "ary="+html+";";
+		eval(html);
+		alert("已成功刪除紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
+		location.href = 'defectlist.htm';
+	  }
+	});
+
+});
+//-->
+</script>
+
+</body>
+</html>

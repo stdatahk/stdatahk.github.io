@@ -11,11 +11,23 @@
 <h2 style="font-family:Arial;">FRS - FULL DEFECT LIST:</h2>
 
 <div id="theDiv" style="text-align:right;">
+<input style="width:80px;height:30px;" type=button value="REFRESH" onclick="location.reload();">
+&nbsp;&nbsp;
 <input style="width:70px;height:30px;" type=button value="EDIT" onclick="location.href='wip.htm';">
 &nbsp;&nbsp;
-<input style="width:70px;height:30px;" type=button value="DELETE"onclick="location.href='wip.htm';">
+<input style="width:70px;height:30px;" type=button value="DELETE"onclick="location.href='defect_del.htm';">
 </div>
 <br>
+
+<b>篩選條件：</b>
+by <select>
+<option>--- 請選擇 ---</option>
+<option>Defect ID</option>
+<option>樓盤／大廈</option>
+<option>驗樓師</option>
+</select>
+value = <input type=text size=10>
+<br><br>
 
 <table id='tbl' width='100%' border=1 cellpadding=2 cellspacing=0 style="font-family:Arial;">
 <!-- table header -->
@@ -29,9 +41,14 @@
 <td style="font-weight:bold;font-size:20px;">
 	Defect Photo
 </td>
-
+<td style="font-weight:bold;font-size:20px;">
+	Defect(x,y)
+</td>
 <td style="font-weight:bold;font-size:20px;">
 	單位平面圖
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	平面圖(x,y)
 </td>
 <td style="font-weight:bold;font-size:20px;">
 	樓盤／大廈
@@ -48,12 +65,18 @@
 <td style="font-weight:bold;font-size:20px;">
 	Defect形容(3)狀況
 </td>
+<td style="font-weight:bold;font-size:20px;">
+	驗樓師 User ID
+</td>
 
 
 
 </tr>
 <!-- end table header -->
 <tr id='tr0'>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
 <td>Loading...</td>
 <td>Loading...</td>
 <td>Loading...</td>
@@ -104,12 +127,15 @@ $(document).ready(function(){
 			rst += "<td>"+ ary[i][0] +"</td>";
 			rst += "<td><a target='_blank' href='qr_gen.htm#"+ ary[i][0] +"'><img height=50 src='qr/qr1.png'></a></td>";
 			rst += "<td><a target='_blank' href='"+ obj.url +"'><img height=50 src='"+ obj.url +"'></a></td>";
-			rst += "<td><a target='_blank' href='floorplan.htm'>"+ obj.fp +"</a></td>";
+			rst += "<td>("+ obj.fpX +","+ obj.fpY +")</td>";
+			rst += "<td><a target='_blank' href='"+ obj.fp +"'><img height=50 src='"+ obj.fp +"'></a></td>";
+			rst += "<td>("+ obj.fpX +","+ obj.fpY +")</td>";
 			rst += "<td>"+ obj.bldg +"</td>";
 			rst += "<td>"+ obj.addr +"</td>";
 			rst += "<td>"+ obj.di +"</td>";
 			rst += "<td>"+ obj.tx +"</td>";
 			rst += "<td>"+ obj.dd +"</td>";
+			rst += "<td>guest001</td>";
 			rst += "</tr>";
 		}
 		$("#tbl").append(rst);

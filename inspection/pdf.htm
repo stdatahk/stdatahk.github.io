@@ -78,11 +78,11 @@ $("#btnPdf").click(function(){
 			//pic 3 - logo
 			var img = new Image();
 			img.src = 'logo.png';
-			doc.addImage(img, 'png', 265, 150, 20, 20);
+			doc.addImage(img, 'png', 259, 147, 20, 20);
 			//pic 4 - QR
 			var img = new Image();
 			img.src = 'qr/qr1.png';
-			doc.addImage(img, 'png', 255, 168, 30, 30);
+			doc.addImage(img, 'png', 251, 169, 30, 30);
 
 			doc.text("FRS - Site Inspection Report (Defect ID: "+ ary[i][0] +")", 10, 10);
 			//doc.text("[[[ HD Photo Here ]]]\n   (with markings)", 40, 40);

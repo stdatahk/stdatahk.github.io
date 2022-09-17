@@ -134,26 +134,19 @@ $.ajax(settings).done(function (response) {
 <tr>
 <td>選擇單位平面圖：</td>
 <td>
-	<select id="sel5">
+	<select id="sel5" onChange='showFloorplan();'>
 		<option id='sel5op0'>載入中...</option>
 	</select>
 </td>
 </tr>
 <tr>
-<td>平面圖上標記位置：</td>
-<td>
-	<select id="">
-		<option id=''>(製作中)</option>
-		<option>上</option>
-		<option>中</option>
-		<option>下</option>
-		<option>左</option>
-		<option>右</option>
-		<option>左上</option>
-		<option>右上</option>
-		<option>左下</option>
-		<option>右下</option>
-	</select>
+<td colspan=2>
+	平面圖上標記位置：<br>
+	<a name='ancFp'>
+	<div id='divFp'>載入中...</div>
+	x:<input type=text id='fpX' value='-1' size=1>
+	y:<input type=text id='fpY' value='-1' size=1>
+	</a>
 </td>
 </tr>
 
@@ -321,7 +314,7 @@ $(document).ready(function(){
 	  cache: false,
 	  type: "GET",
 	  data: {
-		func: 'GETTAGS', 
+		func: 'GETDATA', 
 		id: gssId5,  
 		key: 12345678
 	  },
@@ -339,7 +332,8 @@ $(document).ready(function(){
 		}
 
 		for(var i=0; i<ary.length; i++) {
-			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+			var json = JSON.parse(ary[i][1]);
+			rst += "<option value='"+ json.url +"'>("+ ary[i][0] +") "+ json.bldg+' '+json.addr +"</option>";
 		}
 		$("#sel5").append(rst);
 	  }
@@ -361,7 +355,7 @@ $("#btnSubmit").click(function(){
 
 	var date = new Date();
 	var ts = ""+ (date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2) );
-	var obj = {'url':$('#txtPhotoUrl').val(), 'fp':$('#sel5').val(), 'addr':$('#txtAddr').val(), 'bldg':$('#sel0').val(), 'di':$('#sel1').val(), 'tx':$('#sel2').val(), 'dd':$('#sel3').val()};
+	var obj = {'url':$('#txtPhotoUrl').val(), 'fp':$('#sel5').val(), 'fpX':$('#fpX').val(), 'fpY':$('#fpY').val(), 'addr':$('#txtAddr').val(), 'bldg':$('#sel0').val(), 'di':$('#sel1').val(), 'tx':$('#sel2').val(), 'dd':$('#sel3').val()};
 	
 	$('#btnSubmit').val('正在ADD數據，請稍後...');
 	$.ajax({
@@ -386,6 +380,22 @@ $("#btnSubmit").click(function(){
 	});
 
 });
+
+//display the selected floorplan, and allow picking arrow position
+function showFloorplan() {
+	var str = "<a href='#ancFp' onClick='getXY(event.pageX-this.offsetLeft, event.pageY-this.offsetTop);'><img id='imgFp' src='"+ $('#sel5').val() +"'></a>";
+	str += "<img id='imgArrow' width=20 src='arrow.png'>";
+	$('#divFp').html(str);
+	
+}
+
+function getXY(x,y) {
+	//$("#imgArrow").parent().css({position: 'relative'});
+	var h = document.getElementById('imgFp').height;
+	$('#fpX').val(x);
+	$('#fpY').val(y);
+	$("#imgArrow").css({top: h+y, left: x, position:'absolute'});
+}
 //-->
 </script>
 
