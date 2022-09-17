@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>ImgBB Upload Demo</title>
+<title>FRS | Admin | HD Photo</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style type="text/css">
 #video {
@@ -30,7 +30,7 @@
 <button id="click-photo">拍攝照片</button>
 <div id="dataurl-container">
     <canvas id="canvas" width="400" height="400"></canvas>
-    <textarea id="dataurl" style="display:block;" readonly></textarea>
+    <textarea id="dataurl"></textarea>
 </div>
 </center>
 
@@ -68,6 +68,10 @@ click_button.addEventListener('click', function() {
     canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
    	let image_data_url = canvas.toDataURL('image/jpeg');
     
+    video.style.display = 'none';
+    camera_button.style.display = 'none';
+    click_button.style.display = 'none';
+
     dataurl.value = image_data_url;
     dataurl_container.style.display = 'block';
 });
@@ -84,17 +88,15 @@ click_button.addEventListener('click', function() {
 
 <script language="JavaScript">
 function fileUpload(){
-alert('hihi');
 var file = $('#dataurl').val().trim();
 var pos = file.indexOf(';base64,');
-alert(pos);
 if(pos > 0) file = file.substring(8+pos);
 var form = new FormData();
 form.append("image", file);
-alert('go');
 
-$('#start-camera').style.display = 'none';
-$('#video').style.display = 'none';
+video.style.display = 'none';
+camera_button.style.display = 'none';
+click_button.style.display = 'none';
 
 var apikey = "2773799e6c6f08aacec5b772f43f80fc";
 var settings = {
