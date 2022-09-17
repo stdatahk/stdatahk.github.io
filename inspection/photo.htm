@@ -77,21 +77,21 @@ click_button.addEventListener('click', function() {
 <hr>
 
 <center>
-<input type=button value='上載相片' onclick='fileChange();'>
+<input type=button value='上載相片' onclick='fileUpload();'>
 
 <div id="mydiv"><font color=white>...</font></div>
 </center>
 
 <script language="JavaScript">
-function fileChange(){
+function fileUpload(){
 var file = $('#dataurl').val().trim();
 var pos = file.indexOf(';base64,');
 if(pos > 0) file = file.substring(8+pos);
 var form = new FormData();
 form.append("image", file);
 
-$('#start-camera').style.visibility = 'hidden';
-$('#video').style.visibility = 'hidden';
+$('#start-camera').style.display = 'none';
+$('#video').style.display = 'none';
 
 var apikey = "2773799e6c6f08aacec5b772f43f80fc";
 var settings = {
