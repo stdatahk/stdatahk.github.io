@@ -20,13 +20,22 @@
 <br>
 
 <b>篩選條件：</b>
-by <select>
-<option>--- 請選擇 ---</option>
-<option>Defect ID</option>
-<option>樓盤／大廈</option>
-<option>驗樓師</option>
+BY 
+<select id="sel1" onchange='filterSel1();'>
+	<option id='sel1op0'>載入中...</option>
 </select>
-value = <input type=text size=10>
+OR 
+<select id="sel2" onchange='filterSel2();'>
+	<option id='sel2op0'>載入中...</option>
+</select>
+OR 
+<select id="sel3">
+	<option id='sel3op0'>驗樓師</option>
+	<option>admin</option>
+	<option>guest001</option>
+	<option>guest002</option>
+	<option>guest003</option>
+</select>
 <br><br>
 
 <table id='tbl' width='100%' border=1 cellpadding=2 cellspacing=0 style="font-family:Arial;">
@@ -93,9 +102,12 @@ value = <input type=text size=10>
 <script language="JavaScript">
 <!--
 var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
-var gssId = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list 
 var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+var gssId = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list 
+var gssId1 = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list 
+var gssId2 = "1UIXxABQINMOZkIbErvviFQDIDDlAdjTo7hk3GFqzq70"; //for bldg db
 
+//render data table content
 $(document).ready(function(){
 	$.ajax({
 	  url: gasUrl,
@@ -123,7 +135,7 @@ $(document).ready(function(){
 		for(var i=0; i<ary.length; i++) {
 			var obj = JSON.parse(ary[i][1]);
 		
-			rst += "<tr>";
+			rst += "<tr id='tr"+ i +"'>";
 			rst += "<td>"+ ary[i][0] +"</td>";
 			rst += "<td><a target='_blank' href='qr_gen.htm#"+ ary[i][0] +"'><img height=50 src='qr/qr1.png'></a></td>";
 			rst += "<td><a target='_blank' href='"+ obj.url +"'><img height=50 src='"+ obj.url +"'></a></td>";
@@ -143,6 +155,114 @@ $(document).ready(function(){
 	});
 
 });
+
+
+//populate pull-down menus
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId1,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+		//process query string param (if any)
+		var url = location.href;
+		var pos = url.lastIndexOf('#?');
+		var params = '';
+		if(pos > 0)	params = url.substring(pos+2);
+
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#sel1op0").remove();
+			$("#sel1").append("<option value=''>Defect ID</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			if(params!='' && params==ary[i])
+				rst += "<option value='"+ ary[i] +"' SELECTED>"+ ary[i] +"</option>";
+			else
+				rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+		}
+		$("#sel1").append(rst);
+	  }
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId2,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#sel2op0").remove();
+			$("#sel2").append("<option value=''>樓盤／大廈</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+		}
+		$("#sel2").append(rst);
+	  }
+	});
+});
+
+//client-side filtering (quick & dirty method)
+function filterSel1() {
+	//get q str params
+	var url = location.href;
+	var pos = url.lastIndexOf('#?');
+	var params = '';
+	if(pos > 0)	params = url.substring(pos+2).trim();
+
+	//re-visit the sel1 list
+	var theSel = document.getElementById('sel1');
+	var idx = -1;
+	for(var i=0; i < theSel.options.length; i++) {
+		if(theSel.options[i].value == params) {
+			idx = i;
+			break;
+		}
+	}
+
+	//remove unwanted tr items
+	idx = idx - 1; //tbl hdr
+	var rst = '';
+	for(var i=0; i < theSel.options.length-1; i++) {
+			if(i!=idx)
+				rst += ('_#tr'+i);
+	}
+	alert(rst)
+	var a = rst.substring(1).split('_');
+	for(var i=0; i < a.length; i++) {
+		$(a[i]).remove();
+	}
+}
+
+function filterSel2() {
+	//TBD
+}
 //-->
 </script>
 
