@@ -84,11 +84,14 @@ click_button.addEventListener('click', function() {
 
 <script language="JavaScript">
 function fileUpload(){
+alert('hihi');
 var file = $('#dataurl').val().trim();
 var pos = file.indexOf(';base64,');
+alert(pos);
 if(pos > 0) file = file.substring(8+pos);
 var form = new FormData();
 form.append("image", file);
+alert('go');
 
 $('#start-camera').style.display = 'none';
 $('#video').style.display = 'none';
