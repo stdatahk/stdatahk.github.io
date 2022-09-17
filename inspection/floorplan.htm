@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>FRS | Floorplan</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode@2.2.1/html5-qrcode.min.js"></script>
+</head>
+<body>
+
+<b>
+<font face='Arial'>Floorplan List:</font><br>
+平面圖列表：<br>
+</b>
+
+<div id="theDiv" style="text-align:right;">
+<input style="width:70px;height:30px;" type=button value="ADD" onclick="location.href='floorplan_add.htm';">
+&nbsp;&nbsp;
+<input style="width:70px;height:30px;" type=button value="EDIT" onclick="location.href='wip.htm';">
+&nbsp;&nbsp;
+<input style="width:70px;height:30px;" type=button value="DELETE"onclick="location.href='wip.htm';">
+</div>
+<br>
+
+<hr>
+
+
+<table id='tbl' width='100%' border=1 cellpadding=2 cellspacing=0 style="font-family:Arial;">
+<!-- table header -->
+<tr>
+<td width=150 style="font-weight:bold;font-size:20px;">
+	平面圖ID
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	平面圖縮圖
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	可套用範圍(樓盤名稱)
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	詳細樓層單位描述
+</td>
+</tr>
+<!-- end table header -->
+<tr id='tr0'>
+<td>
+	Loading...
+</td>
+<td>
+	Loading...
+</td>
+<td>
+	Loading...
+</td>
+<td>
+	Loading...
+</td>
+</tr>
+</table>
+
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gssId = "1sqD_Fr_pfdbCMEpXelyGX2TmmiUCJhn4ECCr_ArgRPg" //for floorplan db 
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETDATA', 
+		id: gssId,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+
+		if(ary.length > 0) {
+			$("#tr0").remove();
+			$("#tbl").prepend("共 "+ ary.length +" 筆資料");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			var obj = JSON.parse(ary[i][1]);
+		
+			rst += "<tr>";
+			rst += "<td>"+ ary[i][0] +"</td>";
+			rst += "<td><a target='_blank' href='"+ obj.url +"'><img height=50 src='"+ obj.url +"'></a></td>";
+			rst += "<td>"+ obj.bldg +"</td>";
+			rst += "<td>"+ obj.addr +"</td>";
+			rst += "</tr>";
+		}
+		$("#tbl").append(rst);
+	  }
+	});
+
+});
+//-->
+</script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<html>
+<head>
+<title>FRS | Floorplan</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode@2.2.1/html5-qrcode.min.js"></script>
+</head>
+<body>
+
+<b>
+<font face='Arial'>Floorplan Upload:</font><br>
+預先上載平面圖：<br>
+<font size=2 color=gray>
+（供驗樓師到時臨場使用）
+</font>
+</b>
+
+<div id="theDiv" style="text-align:right;">
+<input style="width:120px;height:30px;" type=button value="返回平面圖列表" onclick="location.href='floorplan.htm';">
+</div>
+<br>
+
+<hr>
+
+上載平面圖到雲端:
+
+<br><br>
+
+請選擇平面圖的圖片檔案：
+<br>
+<input type="file" id="input_img" onchange="fileChange()" accept="image/*">
+<div id="mydiv">...</div>
+
+<script language="JavaScript">
+<!--
+function fileChange(){
+var file = document.getElementById('input_img');
+var form = new FormData();
+form.append("image", file.files[0])
+
+var date = new Date();
+var ts = ""+ (date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2) );
+var bldg = $('#sel0').val();
+var addr = $('#txtAddr').val();
+var di = $('#sel1').val();
+var tt = $('#sel2').val();
+var dd = $('#sel3').val();
+var filename = "TS-"+ts +"_BD-"+bldg+"_AR-"+addr+"_DI-"+ di +"_T-" + tt +"_DD-"+ dd;
+//alert(filename); //testing			 
+
+var apikey = "2773799e6c6f08aacec5b772f43f80fc";
+var settings = {
+  "url": "https://api.imgbb.com/1/upload?key=" + apikey,
+  "method": "POST",
+  "expiration": 604800, //1-week
+  "name": filename,
+  "timeout": 0,
+  "processData": false,
+  "mimeType": "multipart/form-data",
+  "contentType": false,
+  "data": form
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  var jx = JSON.parse(response);
+  console.log(jx.data.url);
+  var strhtml = "<br>縮圖： <img width=50 src='"+ jx.data.url +"'>";
+  strhtml += "<br><a target='_blank' href='"+ jx.data.url +"'>[點擊打開高清版圖片]</a>";
+  $('#mydiv').html(strhtml);
+  $('#txtPhotoName').val(jx.data.url.substring(jx.data.url.lastIndexOf('/')+1)); //for display
+  $('#txtPhotoUrl').val(jx.data.url); //for submit
+});
+}
+-->
+</script>
+
+<hr>
+描述哪個樓盤單位樓層會使用該平面圖（必填）：
+<br>
+<table border=0>
+<tr>
+<td>相片檔名： </td>
+<td>
+	<input type=text id='txtPhotoName' value='' size=50  DISABLED>
+	<input type=hidden id='txtPhotoUrl' value=''>
+</td>
+<tr>
+<td>樓盤名稱： </td>
+<td>
+	<select id="sel0">
+		<option id='sel0op0'>載入中...</option>
+	</select>
+</td>
+</tr>
+<tr>
+<td>樓層單位： </td>
+<td>
+	<input type=text size=15 id="txtAddr" value="座, 樓, 室">
+</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+	<br>
+	<input id="btnSubmit" type=button value="提交FLOORPLAN" 
+	 style="width:160px;height:50px;">
+</td>
+</tr>
+
+</table>
+<br>
+
+
+
+
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+var gssId0 = "1UIXxABQINMOZkIbErvviFQDIDDlAdjTo7hk3GFqzq70"; //for bldg db
+var gssId = "1sqD_Fr_pfdbCMEpXelyGX2TmmiUCJhn4ECCr_ArgRPg" //for floorplan db 
+
+//populate pull-down menus
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId0,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#sel0op0").remove();
+			$("#sel0").append("<option value=''>--- 請選擇 ---</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+		}
+		$("#sel0").append(rst);
+	  }
+	});
+});
+
+//submit to add
+$("#btnSubmit").click(function(){
+	if($('#txtPhotoUrl').val()=='' ||
+	   $('#txtAddr').val()=='' ||
+	   $('#sel0').val()=='' ||
+	   $('#sel1').val()=='' ||
+	   $('#sel2').val()=='' ||
+	   $('#sel3').val()=='' ) 
+	{
+		alert("請選擇其中一個項目／不能留空");
+		return;
+	}
+
+	var date = new Date();
+	var ts = ""+ (date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2) );
+	var obj = {'url':$('#txtPhotoUrl').val(), 'addr':$('#txtAddr').val(), 'bldg':$('#sel0').val()};
+	
+	$('#btnSubmit').val('正在ADD數據，請稍後...');
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'STORE', 
+		id: gssId,  
+		key: 12345678,
+		tag: ('FP'+ts),
+		value: JSON.stringify(obj)
+	  },
+	  dataType: "html",
+	  success: function(html){
+		var ary = null;
+		html = "ary="+html+";";
+		eval(html);
+		alert("已成功新增紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
+		location.href = 'floorplan.htm';
+	  }
+	});
+
+});
+//-->
+</script>
+
+
+<br><br>
+
+</body>
+</html>

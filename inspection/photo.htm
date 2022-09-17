@@ -30,7 +30,7 @@
 <button id="click-photo">拍攝照片</button>
 <div id="dataurl-container">
     <canvas id="canvas" width="400" height="400"></canvas>
-    <textarea id="dataurl"></textarea>
+    <textarea id="dataurl" style="display:none;"></textarea>
 </div>
 </center>
 
@@ -94,9 +94,8 @@ if(pos > 0) file = file.substring(8+pos);
 var form = new FormData();
 form.append("image", file);
 
-video.style.display = 'none';
-camera_button.style.display = 'none';
-click_button.style.display = 'none';
+document.getElementById("dataurl-container").style.display = 'none';
+document.getElementById("click-photo").style.display = 'none';
 
 var apikey = "2773799e6c6f08aacec5b772f43f80fc";
 var settings = {

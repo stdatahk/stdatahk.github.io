@@ -134,8 +134,8 @@ $.ajax(settings).done(function (response) {
 <tr>
 <td>選擇單位平面圖：</td>
 <td>
-	<select id="">
-		<option id=''>(製作中)</option>
+	<select id="sel5">
+		<option id='sel5op0'>載入中...</option>
 	</select>
 </td>
 </tr>
@@ -186,8 +186,8 @@ var gssId0 = "1UIXxABQINMOZkIbErvviFQDIDDlAdjTo7hk3GFqzq70"; //for bldg db
 var gssId1 = "1O3PsopEMRniWmazVNX2FNCCt7Dx4ifZH8QXJNjk5nKE"; //for phrase1 db
 var gssId2 = "1TTHqEQHR9biCmnsmJiwxT_r0S5uU6FqzJ-2cXbyLsJs"; //for phrase2 db
 var gssId3 = "1abQxmKQsn45VWmSa_yyFnUtkk3LTBM4m0d7bIZb7y-U"; //for phrase3 db
-var gssId4 = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list 
-
+var gssId4 = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list (submit)
+var gssId5 = "1sqD_Fr_pfdbCMEpXelyGX2TmmiUCJhn4ECCr_ArgRPg"; //for floorplan db
 
 //populate pull-down menus
 
@@ -311,6 +311,37 @@ $(document).ready(function(){
 			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
 		}
 		$("#sel3").append(rst);
+	  }
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId5,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#sel5op0").remove();
+			$("#sel5").append("<option value=''>--- 請選擇 ---</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+		}
+		$("#sel5").append(rst);
 	  }
 	});
 });
