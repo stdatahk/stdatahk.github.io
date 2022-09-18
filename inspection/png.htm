@@ -10,47 +10,72 @@
 <div id="theDiv" style="text-align:right;">
 <input style="width:130px;height:30px;" type=button value="返回" onclick="location.href='pdf.htm';">
 </div>
-<br>
+<hr>
 
+<table border=0 cellpadding=5 cellspacing=10>
+<tr>
+<td colspan=2><b>生成 PNG 圖像：</b></td>
+</tr>
+<tr>
+<td>DEFECT ID：</td>
+<td>
+	<select id="theSel">
+		<option id='opt0'>載入中...</option>
+	</select>
+</td>
+</tr>
 
-<font color='gray'>(WIP) Defact listing to choose from....</font>
+<tr>
+<td>&nbsp;</td>
+<td>
+	<input id="btnPng" type=button value="生成 PNG 圖像" 
+	 style="width:150px;height:50px;">
+</td>
+</tr>
+</table>
 <br><br>
-
-
-Color:
-<select id='selColor'>
-<option>Red</option>
-<option>Blue</option>
-<option>Black</option>
-</select>
-<br><br>
-
-Shape:
-<select id='selShape'>
-<option>Square</option>
-<option>Circle</option>
-</select>
-<br><br>
-
-Width/Height:
-<input id='txtWidth' type=text size=2 value=100>
-<br><br>
-
-Place it at position (X,Y):
-<input id='txtX' type=text size=2 value=50>
-<input id='txtY' type=text size=2 value=50>
-<br><br>
-
-
-
-<input id="btnPng" type=button value="生成 PNG 圖像" 
- style="width:150px;height:50px;">
-
 <br><br>
 
 <script type="text/javascript">
 <!--
-$("#btnPng").click(function(){
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gssId = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list 
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+
+//populate pull-down menu
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#opt0").remove();
+			$("#theSel").append("<option value=''>--- 請選擇 ---</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+		}
+		$("#theSel").append(rst);
+	  }
+	});
+
+});
+
+$("#btnPng___").click(function(){
 	var canvas = document.createElement("canvas");
 	canvas.width = 400;
 	canvas.height = 600;
@@ -78,8 +103,6 @@ $("#btnPng").click(function(){
 		ctx.stroke();
 	}
 
-
-
 	$('#txtWidth').val()
 	$('#txtX').val()
 	$('#txtY').val()
@@ -90,6 +113,104 @@ $("#btnPng").click(function(){
 	a.href = url;
 	a.textContent = '[Download PNG] ';
 	document.body.appendChild(a);
+});
+
+$("#btnPng").click(function(){
+	$("#btnPng").val('PNG生成中，請稍等...');
+
+	//getting data from DB
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETDATA', 
+		id: gssId,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		//PNG generation
+		var canvas = document.createElement("canvas");
+		canvas.width = 400;
+		canvas.height = 600;
+		var ctx = canvas.getContext("2d");
+		ctx.fillStyle = "#FFFFFF";
+		ctx.fillRect(0, 0, 400, 600);
+		
+
+		for(var i=0; i<ary.length; i++) {
+			if(ary[i][0] != $('#theSel').val()) continue;
+
+			var obj = JSON.parse(ary[i][1]);
+			
+			//draw time string text
+			ctx.font = "30px Arial";
+			const d = new Date();
+			var timeStr = d.toTimeString().split('(').join('\n(');
+			ctx.font = "17px Comic Sans MS";
+			ctx.fillStyle = "black";
+			ctx.fillText(timeStr, 10, 35);	
+			ctx.fillText("FRS - Site Inspection Report (Defect ID: "+ ary[i][0] +")", 10, 55);
+			ctx.fillText("Location: "+ obj.bldg+' '+obj.addr, 10, 75);
+			ctx.fillText("Defact Description: "+ obj.di+ obj.tx + obj.dd, 10, 95);
+
+			/*
+			//pic - defact pic
+			var img = new Image();
+			img.src = obj.url;
+			document.body.appendChild(img);
+			ctx.drawImage(img, 10, 10, 100, 100);
+			//pic 2 - floorplan
+			var img2 = new Image();
+			img2.src = obj.fp;
+			document.body.appendChild(img2);
+			ctx.drawImage(img2, 10, 10, 70, 100);
+			//pic 3 - logo
+			var img3 = new Image();
+			img3.src = 'logo.png';
+			document.body.appendChild(img3);
+			ctx.drawImage(img3, 10, 10, 20, 20);
+			//pic 4 - QR
+			var img4 = new Image();
+			img4.src = 'qr/qr1.png';
+			document.body.appendChild(img4);
+			ctx.drawImage(img4, 10, 10, 30, 30);
+			*/
+
+			//draw shapes overlay
+			ctx.fillStyle = 'red';
+			ctx.strokeStyle = "#FF0000";
+			//draw circle 
+			ctx.beginPath();
+			ctx.arc(obj.dpX/2, obj.dpY/2, 50, 0, 2 * Math.PI);
+			ctx.stroke();
+			//draw square
+			ctx.strokeRect(obj.fpX/2, obj.fpY/2, 40, 40);
+			ctx.stroke();
+		}
+		
+		//generate timestamp for filename
+		function pad2(n) { return n < 10 ? '0' + n : n }
+		var date = new Date();
+		var ts = ( date.getFullYear().toString() + pad2(date.getMonth() + 1) + pad2( date.getDate()) +'_'+ pad2( date.getHours() ) + pad2( date.getMinutes() ) + pad2( date.getSeconds() ) );
+
+		var url = canvas.toDataURL();
+		var a = document.createElement('a');
+		a.download = "P"+ts+".png";
+		a.href = url;
+		a.textContent = '【 點擊下載PNG 】';
+		document.body.appendChild(a);
+	  }
+	});
+	
+
 });
 //-->
 </script>
