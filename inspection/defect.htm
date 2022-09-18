@@ -69,6 +69,7 @@ $.ajax(settings).done(function (response) {
   $('#mydiv').html(strhtml);
   $('#txtPhotoName').val(jx.data.url.substring(jx.data.url.lastIndexOf('/')+1)); //for display
   $('#txtPhotoUrl').val(jx.data.url); //for submit
+  showDefectPhoto();
 });
 }
 -->
@@ -149,9 +150,24 @@ $.ajax(settings).done(function (response) {
 	</a>
 </td>
 </tr>
-
-
-
+<tr>
+<td colspan=2>
+	<hr>
+	DEFECT相片上標記位置：<br>
+	<a name='ancDp'>
+	<div id='divDp'>載入中...</div>
+	x:<input type=text id='dpX' value='-1' size=1>
+	y:<input type=text id='dpY' value='-1' size=1>
+	<br>
+	Circle size: 
+	<input name='cirSz' type=radio>大 
+	<input name='cirSz' type=radio CHECKED>中 
+	<input name='cirSz' type=radio>小
+	<input type=checkbox>閃動
+	<input type=checkbox>手寫風格
+	</a>
+</td>
+</tr>
 <tr>
 <td>&nbsp;</td>
 <td>
@@ -355,7 +371,11 @@ $("#btnSubmit").click(function(){
 
 	var date = new Date();
 	var ts = ""+ (date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2) );
-	var obj = {'url':$('#txtPhotoUrl').val(), 'fp':$('#sel5').val(), 'fpX':$('#fpX').val(), 'fpY':$('#fpY').val(), 'addr':$('#txtAddr').val(), 'bldg':$('#sel0').val(), 'di':$('#sel1').val(), 'tx':$('#sel2').val(), 'dd':$('#sel3').val()};
+	var obj = { 'url':$('#txtPhotoUrl').val(), 'dpX':$('#dpX').val(), 'dpY':$('#dpY').val(), 
+				'fp':$('#sel5').val(), 'fpX':$('#fpX').val(), 'fpY':$('#fpY').val(), 
+				'addr':$('#txtAddr').val(), 'bldg':$('#sel0').val(), 
+				'di':$('#sel1').val(), 'tx':$('#sel2').val(), 'dd':$('#sel3').val()
+			  };
 	
 	$('#btnSubmit').val('正在ADD數據，請稍後...');
 	$.ajax({
@@ -383,18 +403,29 @@ $("#btnSubmit").click(function(){
 
 //display the selected floorplan, and allow picking arrow position
 function showFloorplan() {
-	var str = "<a href='#ancFp' onClick='getXY(event.pageX-this.offsetLeft, event.pageY-this.offsetTop);'><img id='imgFp' src='"+ $('#sel5').val() +"'></a>";
+	var str = "<a href='#ancFp' onClick='setFloorplanXY(event.pageX-this.offsetLeft, event.pageY-this.offsetTop);'><img id='imgFp' src='"+ $('#sel5').val() +"'></a>";
 	str += "<img id='imgArrow' width=20 src='arrow.png'>";
 	$('#divFp').html(str);
-	
 }
 
-function getXY(x,y) {
-	//$("#imgArrow").parent().css({position: 'relative'});
+function showDefectPhoto() {
+	var str = "<a href='#ancFp' onClick='setDefectPhotoXY(event.pageX-this.offsetLeft, event.pageY-this.offsetTop);'><img id='imgDp' src='"+ $('#txtPhotoUrl').val() +"'></a>";
+	str += "<img id='imgCircle' width=40 src='circle.png'>";
+	$('#divDp').html(str);
+}
+
+function setFloorplanXY(x,y) {
 	var h = document.getElementById('imgFp').height;
 	$('#fpX').val(x);
 	$('#fpY').val(y);
 	$("#imgArrow").css({top: h+y, left: x, position:'absolute'});
+}
+
+function setDefectPhotoXY(x,y) {
+	var h = document.getElementById('imgDp').height;
+	$('#dpX').val(x);
+	$('#dpY').val(y);
+	$("#imgCircle").css({top: h+y, left: x, position:'absolute'});
 }
 //-->
 </script>
