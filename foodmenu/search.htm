@@ -18,13 +18,13 @@ $(document).ready(function(){
 	var apikey = '40dffe26b1dcd6204abe779cec15f8cf349d82d87da8e70feb55e20eba532ccd';
 	
 	$.ajax({
-	  url: 'https://serpapi.com/search.json?tbm=isch&ijn=0&q='+param,
+	  url: 'https://serpapi.com/search.json?tbm=isch&ijn=0&q='+param+'&api_key='+apikey,
 	  cache: false,
 	  type: "GET",
 	  data: null,
 	  dataType: "html",
 	  success: function(json){
-		  alert(json);
+		  alert(json.images_results[0].thumbnail); //original
 	  }
 	});
 	
