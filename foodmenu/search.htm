@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Food Menu Image Search</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+
+
+<script type="text/javascript">
+<!--
+$(document).ready(function(){
+	var param = location.href;
+	var pos = param.lastIndexOf('#?');
+	if(pos > 0) {
+		param = param.substring(pos+2);
+	}
+	var apikey = '40dffe26b1dcd6204abe779cec15f8cf349d82d87da8e70feb55e20eba532ccd';
+	
+	$.ajax({
+	  url: 'https://serpapi.com/search.json?tbm=isch&ijn=0&q='+param,
+	  cache: false,
+	  type: "GET",
+	  data: null,
+	  dataType: "html",
+	  success: function(json){
+		  alert(json);
+	  }
+	});
+	
+
+});
+//-->
+</script>
+
+</body>
+</html>
