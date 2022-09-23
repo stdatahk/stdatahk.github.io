@@ -24,29 +24,28 @@
 <!-- table header -->
 <tr>
 <td width=150 style="font-weight:bold;font-size:20px;">
-	功能／項目
+	<nobr>功能／項目</nobr>
 </td>
 <td style="font-weight:bold;font-size:20px;">
-	關於／詳情
+	<nobr>關於／詳情</nobr>
 </td>
 <td style="font-weight:bold;font-size:20px;">
-	優先
+	<nobr>優先</nobr>
 </td>
 <td style="font-weight:bold;font-size:20px;">
-	發起人/日期
+	<nobr>發起人/日期</nobr>
 </td>
 <td style="font-weight:bold;font-size:20px;">
-	狀態
+	<nobr>狀態</nobr>
 </td>
 </tr>
 <!-- end table header -->
 <tr id='tr0'>
-<td>
-	Loading...
-</td>
-<td>
-	Loading...
-</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
 </tr>
 </table>
 
@@ -86,6 +85,9 @@ $(document).ready(function(){
 			rst += "<tr>";
 			rst += "<td>"+ ary[i][0] +"</td>";
 			rst += "<td>"+ ary[i][1] +"</td>";
+			rst += "<td>"+ "(n/a)" +"</td>";
+			rst += "<td>"+ "(n/a)" +"</td>";
+			rst += "<td>"+ "(n/a)" +"</td>";
 			rst += "</tr>";
 		}
 		$("#tbl").append(rst);
