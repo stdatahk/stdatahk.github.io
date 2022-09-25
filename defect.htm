@@ -1,0 +1,455 @@
+<html>
+<head>
+<title>FRS | Landing Page</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode@2.2.1/html5-qrcode.min.js"></script>
+</head>
+<body>
+
+<!--moved to head(test)-->
+<!--<script src="https://unpkg.com/html5-qrcode@2.2.1/html5-qrcode.min.js"></script>-->
+
+<b>
+<font face='Arial'>Defect Reporting:</font><br>
+匯報缺陷：
+</b>
+<hr>
+
+<font color=blue><b>【第一步】</b></font>
+以手機自帶的內建軟件拍照（即預設照相方式）
+
+<hr>
+
+<font color=blue><b>【第二步】</b></font>
+上載剛才拍好的照片到雲端
+
+<br><br>
+
+請選擇手機相簿內的相片檔案：
+<br>
+<input type="file" id="input_img" onchange="fileChange()" accept="image/*">
+<div id="mydiv">...</div>
+
+<script language="JavaScript">
+<!--
+function fileChange(){
+var file = document.getElementById('input_img');
+var form = new FormData();
+form.append("image", file.files[0])
+
+var date = new Date();
+var ts = ""+ (date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2) );
+var bldg = $('#sel0').val();
+var addr = $('#txtAddr').val();
+var di = $('#sel1').val();
+var tt = $('#sel2').val();
+var dd = $('#sel3').val();
+var filename = "TS-"+ts +"_BD-"+bldg+"_AR-"+addr+"_DI-"+ di +"_T-" + tt +"_DD-"+ dd;
+//alert(filename); //testing			 
+
+var apikey = "2773799e6c6f08aacec5b772f43f80fc";
+var settings = {
+  "url": "https://api.imgbb.com/1/upload?key=" + apikey,
+  "method": "POST",
+  "expiration": 604800, //1-week
+  "name": filename,
+  "timeout": 0,
+  "processData": false,
+  "mimeType": "multipart/form-data",
+  "contentType": false,
+  "data": form
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  var jx = JSON.parse(response);
+  console.log(jx.data.url);
+  var strhtml = "<br>縮圖： <img width=50 src='"+ jx.data.url +"'>";
+  strhtml += "<br><a target='_blank' href='"+ jx.data.url +"'>[點擊打開高清版圖片]</a>";
+  $('#mydiv').html(strhtml);
+  $('#txtPhotoName').val(jx.data.url.substring(jx.data.url.lastIndexOf('/')+1)); //for display
+  $('#txtPhotoUrl').val(jx.data.url); //for submit
+  showDefectPhoto();
+});
+}
+-->
+</script>
+
+<hr>
+
+<font color=blue><b>【第三步】</b></font>
+填寫好下列表格並提交到系統
+<br><br>
+
+<table border=0>
+<tr>
+<td>相片檔名： </td>
+<td>
+	<input type=text id='txtPhotoName' value='' size=50  DISABLED>
+	<input type=hidden id='txtPhotoUrl' value=''>
+</td>
+<tr>
+<td>驗樓人員： </td>
+<td>
+	<input type=text value='guest001' size=8  DISABLED>
+</td>
+</tr>
+<tr>
+<td>樓盤名稱： </td>
+<td>
+	<select id="sel0">
+		<option id='sel0op0'>載入中...</option>
+	</select>
+</td>
+</tr>
+<tr>
+<td>樓層單位： </td>
+<td>
+	<input type=text size=15 id="txtAddr" value="座, 樓, 室">
+</td>
+</tr>
+<tr>
+<td>Defect Item：</td>
+<td>
+	<select id="sel1">
+		<option id='sel1op0'>載入中...</option>
+	</select>
+</td>
+</tr>
+<tr>
+<td>Texture：</td>
+<td>
+	<select id="sel2">
+		<option id='sel2op0'>載入中...</option>
+	</select>
+</td>
+</tr>
+<tr>
+<td>Defect Description：</td>
+<td>
+	<select id="sel3">
+		<option id='sel3op0'>載入中...</option>
+	</select>
+</td>
+</tr>
+<tr>
+<td>選擇單位平面圖：</td>
+<td>
+	<select id="sel5" onChange='showFloorplan();'>
+		<option id='sel5op0'>載入中...</option>
+	</select>
+</td>
+</tr>
+<tr>
+<td colspan=2>
+	平面圖上標記位置：<br>
+	<a name='ancFp'>
+	<div id='divFp'>載入中...</div>
+	x:<input type=text id='fpX' value='-1' size=1>
+	y:<input type=text id='fpY' value='-1' size=1>
+	</a>
+	<br>
+	<table border=0>
+	<tr>
+		<td align=right><input type=button value='↖'></td>
+		<td><input type=button value='↑'></td>
+		<td><input type=button value='↗'></td>
+	</tr>
+	<tr>
+		<td><input type=button value='←'></td>
+		<td><input align=middle type=button value='  '></td>
+		<td><input type=button value='→'></td>
+	</tr>
+	<tr>
+		<td align=right><input type=button value='↙'></td>
+		<td><input type=button value='↓'></td>
+		<td><input type=button value='↘'></td>
+	</tr>
+	</table>
+</td>
+</tr>
+<tr>
+<td colspan=2>
+	<hr>
+	DEFECT相片上標記位置：<br>
+	<a name='ancDp'>
+	<div id='divDp'>載入中...</div>
+	x:<input type=text id='dpX' value='-1' size=1>
+	y:<input type=text id='dpY' value='-1' size=1>
+	<br>
+	Circle size: 
+	<input name='cirSz' type=radio>大 
+	<input name='cirSz' type=radio CHECKED>中 
+	<input name='cirSz' type=radio>小
+	<input type=checkbox>閃動
+	<input type=checkbox>手寫風格
+	</a>
+</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>
+	<br>
+	<input id="btnSubmit" type=button value="提交DEFACT" 
+	 style="width:160px;height:50px;">
+</td>
+</tr>
+
+</table>
+<br>
+
+<font size=2 color=gray>
+（還未整合得很完整，可以改進得更流暢和方便使用）
+</font>
+
+
+
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+var gssId0 = "1UIXxABQINMOZkIbErvviFQDIDDlAdjTo7hk3GFqzq70"; //for bldg db
+var gssId1 = "1O3PsopEMRniWmazVNX2FNCCt7Dx4ifZH8QXJNjk5nKE"; //for phrase1 db
+var gssId2 = "1TTHqEQHR9biCmnsmJiwxT_r0S5uU6FqzJ-2cXbyLsJs"; //for phrase2 db
+var gssId3 = "1abQxmKQsn45VWmSa_yyFnUtkk3LTBM4m0d7bIZb7y-U"; //for phrase3 db
+var gssId4 = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list (submit)
+var gssId5 = "1sqD_Fr_pfdbCMEpXelyGX2TmmiUCJhn4ECCr_ArgRPg"; //for floorplan db
+
+//populate pull-down menus
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId0,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#sel0op0").remove();
+			$("#sel0").append("<option value=''>--- 請選擇 ---</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+		}
+		$("#sel0").append(rst);
+	  }
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId1,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#sel1op0").remove();
+			$("#sel1").append("<option value=''>--- 請選擇 ---</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+		}
+		$("#sel1").append(rst);
+	  }
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId2,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#sel2op0").remove();
+			$("#sel2").append("<option value=''>--- 請選擇 ---</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+		}
+		$("#sel2").append(rst);
+	  }
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId3,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#sel3op0").remove();
+			$("#sel3").append("<option value=''>--- 請選擇 ---</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+		}
+		$("#sel3").append(rst);
+	  }
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETDATA', 
+		id: gssId5,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#sel5op0").remove();
+			$("#sel5").append("<option value=''>--- 請選擇 ---</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			var json = JSON.parse(ary[i][1]);
+			rst += "<option value='"+ json.url +"'>("+ ary[i][0] +") "+ json.bldg+' '+json.addr +"</option>";
+		}
+		$("#sel5").append(rst);
+	  }
+	});
+});
+
+//submit to add
+$("#btnSubmit").click(function(){
+	if($('#txtPhotoUrl').val()=='' ||
+	   $('#txtAddr').val()=='' ||
+	   $('#sel0').val()=='' ||
+	   $('#sel1').val()=='' ||
+	   $('#sel2').val()=='' ||
+	   $('#sel3').val()=='' ) 
+	{
+		alert("請選擇其中一個項目／不能留空");
+		return;
+	}
+
+	var date = new Date();
+	var ts = ""+ (date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2) );
+	var obj = { 'url':$('#txtPhotoUrl').val(), 'dpX':$('#dpX').val(), 'dpY':$('#dpY').val(), 
+				'fp':$('#sel5').val(), 'fpX':$('#fpX').val(), 'fpY':$('#fpY').val(), 
+				'addr':$('#txtAddr').val(), 'bldg':$('#sel0').val(), 
+				'di':$('#sel1').val(), 'tx':$('#sel2').val(), 'dd':$('#sel3').val()
+			  };
+	
+	$('#btnSubmit').val('正在ADD數據，請稍後...');
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'STORE', 
+		id: gssId4,  
+		key: 12345678,
+		tag: ('D'+ts),
+		value: JSON.stringify(obj)
+	  },
+	  dataType: "html",
+	  success: function(html){
+		var ary = null;
+		html = "ary="+html+";";
+		eval(html);
+		alert("已成功新增紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
+		location.href = 'defect.htm';
+	  }
+	});
+
+});
+
+//display the selected floorplan, and allow picking arrow position
+function showFloorplan() {
+	var str = "<a href='#ancFp' onClick='setFloorplanXY(event.pageX-this.offsetLeft, event.pageY-this.offsetTop);'><img id='imgFp' src='"+ $('#sel5').val() +"'></a>";
+	str += "<img id='imgArrow' width=20 src='arrow.png'>";
+	$('#divFp').html(str);
+}
+
+function showDefectPhoto() {
+	var str = "<a href='#ancFp' onClick='setDefectPhotoXY(event.pageX-this.offsetLeft, event.pageY-this.offsetTop);'><img id='imgDp' src='"+ $('#txtPhotoUrl').val() +"'></a>";
+	str += "<img id='imgCircle' width=40 src='circle.png'>";
+	$('#divDp').html(str);
+}
+
+function setFloorplanXY(x,y) {
+	var h = document.getElementById('imgFp').height;
+	$('#fpX').val(x);
+	$('#fpY').val(y);
+	$("#imgArrow").css({top: h+y, left: x, position:'absolute'});
+}
+
+function setDefectPhotoXY(x,y) {
+	var h = document.getElementById('imgDp').height;
+	$('#dpX').val(x);
+	$('#dpY').val(y);
+	$("#imgCircle").css({top: h+y, left: x, position:'absolute'});
+}
+//-->
+</script>
+
+
+<br><br>
+
+</body>
+</html>
