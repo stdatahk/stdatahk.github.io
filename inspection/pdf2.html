@@ -70,7 +70,9 @@ $("#btnPdf").click(function(){
 
 			//pic - defect pic
 			var img = new Image();
-			img.src = obj.url;
+			var imgurl = obj.url;
+			imgurl = imgurl.substring(imgurl.lastIndexOf('/')+1);
+			img.src = imgurl;
 			doc.addImage(img, 'png', 40, 40, 100, 100);
 			//pic 2 - floorplan
 			var img = new Image();
