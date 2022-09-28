@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>FRS | Upload</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<img src="logo.png">
+<br>
+
+<form id="form">
+  <input name="file" id="uploadfile" type="file" />
+  <input id="submit" type="submit" />
+</form>
+
+<script>
+function doDisplay(obj) {
+	var str = JSON.stringify(obj);
+	var node = document.createTextNode(str);
+	$('body').append(node);
+}
+
+  const form = document.getElementById("form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const file = form.file.files[0];
+    const fr = new FileReader();
+    fr.readAsArrayBuffer(file);
+    fr.onload = (f) => {
+      const url = "https://script.google.com/macros/s/AKfycbzwjDa3II0zXKbJEpFX3wHoPApaHg55kgoFzkZVaAiE6PZTVttb/exec";
+
+      const qs = new URLSearchParams({
+        filename: file.name,
+        mimeType: file.type,
+      });
+      fetch(`${url}?${qs}`, {
+        method: "POST",
+        body: JSON.stringify([...new Int8Array(f.target.result)]),
+      })
+        .then((res) => res.json())
+        .then(doDisplay) //console.log
+        .catch(console.log);
+    };
+  });
+</script>
+
+</body>
+</html>
