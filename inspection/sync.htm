@@ -1,0 +1,274 @@
+<html>
+<head>
+<title>FRS | Admin| Defect List</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<form id="form">
+
+
+<img src="logo.png">
+<br>
+
+<h2 style="font-family:Arial;">FRS - FULL DEFECT LIST:</h2>
+
+<div id="theDiv" style="text-align:right;">
+<input style="width:80px;height:30px;" type=button value="REFRESH" onclick="location.reload();">
+&nbsp;&nbsp;
+<input style="width:70px;height:30px;" type=button value="EDIT" onclick="location.href='wip.htm';">
+&nbsp;&nbsp;
+<input style="width:70px;height:30px;" type=button value="DELETE"onclick="location.href='defect_del.htm';">
+</div>
+<br>
+
+<b>篩選條件：</b>
+BY 
+<select id="sel1" onchange='filterSel1();'>
+	<option id='sel1op0'>載入中...</option>
+</select>
+<br><br>
+
+<table id='tbl' width='100%' border=1 cellpadding=2 cellspacing=0 style="font-family:Arial;">
+<!-- table header -->
+<tr>
+<td style="font-weight:bold;font-size:20px;">
+	Defect ID
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	QR Code
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	Defect Photo (imgBB)
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	平面圖 (imgBB)
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	Defect Photo (GDrive)
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	平面圖 (GDrive)
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	同步鍵
+</td>
+</tr>
+<!-- end table header -->
+<tr id='tr0'>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+<td>Loading...</td>
+</tr>
+</table>
+
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+var gssId = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list 
+var gssId1 = "14kr-iLsi2Ubot0wq8xHiH5ST-KYIzF5KCsl8AW8hJDk" //for defects list 
+var gssId2 = "1UIXxABQINMOZkIbErvviFQDIDDlAdjTo7hk3GFqzq70"; //for bldg db
+
+//render data table content
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETDATA', 
+		id: gssId,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+
+		if(ary.length > 0) {
+			$("#tr0").remove();
+			$("#tbl").prepend("共 "+ ary.length +" 筆資料");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			var obj = JSON.parse(ary[i][1]);
+		
+			//obtain img filename from url
+			var dpName = obj.url.substring(1+obj.url.lastIndexOf('/')).trim();
+			var fpName = obj.fp.substring(1+obj.fp.lastIndexOf('/')).trim();
+			var gDriveUrl = 'https://stdatahk-fast-reporting-system-pdf.on.drv.tw/fps_pdf/';
+		
+			rst += "<tr id='tr"+ i +"'>";
+			rst += "<td>"+ ary[i][0] +"</td>";
+			rst += "<td><a target='_blank' href='qr_gen.htm#"+ ary[i][0] +"'><img height=50 src='qr/qr1.png'></a></td>";
+			rst += "<td><a target='_blank' href='"+ obj.url +"'><img height=50 src='"+ obj.url +"'></a></td>";
+			rst += "<td><a target='_blank' href='"+ obj.fp +"'><img height=50 src='"+ obj.fp +"'></a></td>";
+			rst += "<td><a target='_blank' href='"+ gDriveUrl+dpName +"'><img height=50 src='"+ gDriveUrl+dpName +"'></a></td>";
+			rst += "<td><a target='_blank' href='"+ gDriveUrl+fpName +"'><img height=50 src='"+ gDriveUrl+fpName +"'></a></td>";
+			rst += '<td><input name="file" id="uploadfile" type="file"><input id="submit" type="submit" value="同步"></td>';
+			rst += "</tr>";
+		}
+		$("#tbl").append(rst);
+	  }
+	});
+
+});
+
+
+//populate pull-down menus
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId1,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+		//process query string param (if any)
+		var url = location.href;
+		var pos = url.lastIndexOf('#?');
+		var params = '';
+		if(pos > 0)	params = url.substring(pos+2);
+
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#sel1op0").remove();
+			$("#sel1").append("<option value=''>Defect ID</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			if(params!='' && params==ary[i])
+				rst += "<option value='"+ ary[i] +"' SELECTED>"+ ary[i] +"</option>";
+			else
+				rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+		}
+		$("#sel1").append(rst);
+	  }
+	});
+});
+
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId2,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		if(ary.length > 0) {
+			$("#sel2op0").remove();
+			$("#sel2").append("<option value=''>樓盤／大廈</option>");
+		}
+
+		for(var i=0; i<ary.length; i++) {
+			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+		}
+		$("#sel2").append(rst);
+	  }
+	});
+});
+
+//client-side filtering (quick & dirty method)
+function filterSel1() {
+	//get q str params
+	var url = location.href;
+	var pos = url.lastIndexOf('#?');
+	var params = '';
+	if(pos > 0)	params = url.substring(pos+2).trim();
+
+	//re-visit the sel1 list
+	var theSel = document.getElementById('sel1');
+	var idx = -1;
+	for(var i=0; i < theSel.options.length; i++) {
+		if(theSel.options[i].value == params) {
+			idx = i;
+			break;
+		}
+	}
+
+	//remove unwanted tr items
+	idx = idx - 1; //tbl hdr
+	var rst = '';
+	for(var i=0; i < theSel.options.length-1; i++) {
+			if(i!=idx)
+				rst += ('_#tr'+i);
+	}
+	alert(rst)
+	var a = rst.substring(1).split('_');
+	for(var i=0; i < a.length; i++) {
+		$(a[i]).remove();
+	}
+}
+
+function filterSel2() {
+	//TBD
+}
+//-->
+</script>
+
+<br><br>
+<div id="theDiv" style="text-align:right;">
+<input style="width:130px;height:30px;" type=button value="返回" onclick="location.href='admin.htm';">
+</div>
+</form>
+
+<script>
+function doDisplay(obj) {
+	var str = JSON.stringify(obj);
+	var node = document.createTextNode(str);
+	$('body').append(node);
+}
+
+  const form = document.getElementById("form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const file = form.file.files[0];
+    const fr = new FileReader();
+    fr.readAsArrayBuffer(file);
+    fr.onload = (f) => {
+      const url = "https://script.google.com/macros/s/AKfycbzwjDa3II0zXKbJEpFX3wHoPApaHg55kgoFzkZVaAiE6PZTVttb/exec";
+
+      const qs = new URLSearchParams({
+        filename: file.name,
+        mimeType: file.type,
+      });
+      fetch(`${url}?${qs}`, {
+        method: "POST",
+        body: JSON.stringify([...new Int8Array(f.target.result)]),
+      })
+        .then((res) => res.json())
+        .then(doDisplay) //console.log
+        .catch(console.log);
+    };
+  });
+</script>
+
+</body>
+</html>
