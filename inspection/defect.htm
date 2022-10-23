@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>FRS | Landing Page</title>
+<meta charset="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://unpkg.com/html5-qrcode@2.2.1/html5-qrcode.min.js"></script>
 </head>
@@ -36,11 +37,12 @@
 <script>
 <!--
 function doDisplay(jx) {
-	var strhtml = "<br>縮圖： <img width=50 src='"+ jx.fileUrl +"'>";
+	var proxyName = 'https://stdatahk-fast-reporting-system-pdf.on.drv.tw/fps_pdf/' + jx.filename;
+	var strhtml = "<br>縮圖： <img width=50 src='"+ proxyName +"'>";
 	strhtml += "<br><a target='_blank' href='"+ jx.fileUrl +"'>[點擊打開高清版圖片]</a>";
 	$('#mydiv').html(strhtml);
-	$('#txtPhotoName').val(jx.fileUrl.substring(jx.fileUrl.lastIndexOf('/')+1)); //for display
-	$('#txtPhotoUrl').val(jx.fileUrl); //for submit
+	$('#txtPhotoName').val(jx.filename); //for display
+	$('#txtPhotoUrl').val(proxyName); //for submit
 	showDefectPhoto();
 }
 
