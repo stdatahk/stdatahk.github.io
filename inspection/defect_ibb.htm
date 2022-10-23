@@ -27,46 +27,52 @@
 
 請選擇手機相簿內的相片檔案：
 <br>
-<form id="theForm">
-  <input name="theFile" id="uploadfile" type="file"  accept="image/*" />
-  <input id="btnUploadFile" type="submit" value="上傳相片" />
-</form>
+<input type="file" id="input_img" onchange="fileChange()" accept="image/*">
 <div id="mydiv">...</div>
 
-<script>
+<script language="JavaScript">
 <!--
-function doDisplay(jx) {
-	var strhtml = "<br>縮圖： <img width=50 src='"+ jx.fileUrl +"'>";
-	strhtml += "<br><a target='_blank' href='"+ jx.fileUrl +"'>[點擊打開高清版圖片]</a>";
-	$('#mydiv').html(strhtml);
-	$('#txtPhotoName').val(jx.fileUrl.substring(jx.fileUrl.lastIndexOf('/')+1)); //for display
-	$('#txtPhotoUrl').val(jx.fileUrl); //for submit
-	showDefectPhoto();
-}
+function fileChange(){
+var file = document.getElementById('input_img');
+var form = new FormData();
+form.append("image", file.files[0])
 
-const form = document.getElementById("theForm");
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const file = form.theFile.files[0];
-    const fr = new FileReader();
-    fr.readAsArrayBuffer(file);
-    fr.onload = (f) => {
-        const url = "https://script.google.com/macros/s/AKfycbzwjDa3II0zXKbJEpFX3wHoPApaHg55kgoFzkZVaAiE6PZTVttb/exec";
-	    
-        const qs = new URLSearchParams({
-            filename: file.name,
-            mimeType: file.type,
-        });
-        fetch(`${url}?${qs}`, {
-            method: "POST",
-            body: JSON.stringify([...new Int8Array(f.target.result)]),
-        })
-            .then((res) => res.json())
-            .then(doDisplay)
-            .catch(console.log);
-    };
+var date = new Date();
+var ts = ""+ (date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2) );
+var bldg = $('#sel0').val();
+var addr = $('#txtAddr').val();
+var di = $('#sel1').val();
+var tt = $('#sel2').val();
+var dd = $('#sel3').val();
+var filename = "TS-"+ts +"_BD-"+bldg+"_AR-"+addr+"_DI-"+ di +"_T-" + tt +"_DD-"+ dd;
+//alert(filename); //testing			 
+
+var apikey = "2773799e6c6f08aacec5b772f43f80fc";
+var settings = {
+  "url": "https://api.imgbb.com/1/upload?key=" + apikey,
+  "method": "POST",
+  "expiration": 604800, //1-week
+  "name": filename,
+  "timeout": 0,
+  "processData": false,
+  "mimeType": "multipart/form-data",
+  "contentType": false,
+  "data": form
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  var jx = JSON.parse(response);
+  console.log(jx.data.url);
+  var strhtml = "<br>縮圖： <img width=50 src='"+ jx.data.url +"'>";
+  strhtml += "<br><a target='_blank' href='"+ jx.data.url +"'>[點擊打開高清版圖片]</a>";
+  $('#mydiv').html(strhtml);
+  $('#txtPhotoName').val(jx.data.url.substring(jx.data.url.lastIndexOf('/')+1)); //for display
+  $('#txtPhotoUrl').val(jx.data.url); //for submit
+  showDefectPhoto();
 });
-//-->
+}
+-->
 </script>
 
 <hr>
