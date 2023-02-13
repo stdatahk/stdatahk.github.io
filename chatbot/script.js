@@ -1,4 +1,5 @@
-let bot = new RiveScript();
+let bot = new RiveScript({utf8: true});
+//let bot = new RiveScript();
 
 const message_container = document.querySelector('.messages');
 const form = document.querySelector('form');
