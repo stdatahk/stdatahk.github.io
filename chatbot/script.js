@@ -5,7 +5,7 @@ const form = document.querySelector('form');
 const input_box = document.querySelector('input');
 
 const brains = [
-  'https://stdatahk.github.io/chatbot/brain.rive'
+  'https://stdatahk.com/chatbot/brain.rive'
 ];
 
 bot.loadFile(brains).then(botReady).catch(botNotReady);
