@@ -11,13 +11,12 @@
 <!--<script src="https://unpkg.com/html5-qrcode@2.2.1/html5-qrcode.min.js"></script>-->
 
 <b>
-<font face='Arial'>Defect Reporting:</font><br>
-匯報缺陷：
+<font face='Arial'>匯報DEFECT：</font><br>
 </b>
 <hr>
 
 <font color=blue><b>【第一步】</b></font>
-以手機自帶的內建軟件拍照（即預設照相方式）
+以手機自帶的內建軟件拍照
 
 <hr>
 
@@ -29,10 +28,12 @@
 請選擇手機相簿內的相片檔案：
 <br>
 <form id="theForm">
-  <input name="theFile" id="uploadfile" type="file"  accept="image/*" />
-  <input id="btnUploadFile" type="submit" value="上傳相片" />
+  <button style="display:inline;width:120px; height:30px;" onclick="document.getElementById('uploadfile').click()">按此選擇相片</button>
+  <input type="file" title=" text" name="theFile" id="uploadfile" accept="image/*"  style="display:none" />
+  &nbsp;&nbsp;
+  <input type="submit" id="btnUploadFile" value="上傳相片"  style="display:inline;height:30px;" />
 </form>
-<div id="mydiv">...</div>
+<div id="mydiv"><font size=2>(等待相片中....)</font></div>
 
 <script>
 <!--
@@ -140,28 +141,11 @@ form.addEventListener("submit", (e) => {
 <td colspan=2>
 	平面圖上標記位置：<br>
 	<a name='ancFp'>
-	<div id='divFp'>載入中...</div>
+	<div id='divFp'><font size=2>(平面圖載入中...)</font></div>
 	x:<input type=text id='fpX' value='-1' size=1>
 	y:<input type=text id='fpY' value='-1' size=1>
 	</a>
 	<br>
-	<table border=0>
-	<tr>
-		<td align=right><input type=button value='↖' onclick="$('#imgArrow').attr('src','arrow.png');"></td>
-		<td><input type=button value='↑'></td>
-		<td><input type=button value='↗' onclick="$('#imgArrow').attr('src','arrow2.png');"></td>
-	</tr>
-	<tr>
-		<td><input type=button value='←'></td>
-		<td><input align=middle type=button value='  '></td>
-		<td><input type=button value='→'></td>
-	</tr>
-	<tr>
-		<td align=right><input type=button value='↙' onclick="$('#imgArrow').attr('src','arrow4.png');"></td>
-		<td><input type=button value='↓'></td>
-		<td><input type=button value='↘' onclick="$('#imgArrow').attr('src','arrow3.png');"></td>
-	</tr>
-	</table>
 </td>
 </tr>
 <tr>
@@ -177,8 +161,6 @@ form.addEventListener("submit", (e) => {
 	<input name='cirSz' type=radio>大 
 	<input name='cirSz' type=radio CHECKED>中 
 	<input name='cirSz' type=radio>小
-	<input type=checkbox>閃動
-	<input type=checkbox>手寫風格
 	</a>
 </td>
 </tr>
@@ -193,12 +175,6 @@ form.addEventListener("submit", (e) => {
 
 </table>
 <br>
-
-<font size=2 color=gray>
-（還未整合得很完整，可以改進得更流暢和方便使用）
-</font>
-
-
 
 
 <script language="JavaScript">
