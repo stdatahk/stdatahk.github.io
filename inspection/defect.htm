@@ -44,7 +44,7 @@ function doDisplay(jx) {
 	$('#mydiv').html(strhtml);
 	$('#txtPhotoName').val(jx.filename); //for display
 	$('#txtPhotoUrl').val(proxyName); //for submit
-	showDefectPhoto();
+	showDefectPhoto(proxyName);
 }
 
 const form = document.getElementById("theForm");
@@ -106,7 +106,7 @@ form.addEventListener("submit", (e) => {
 </td>
 </tr>
 <tr>
-<td>Defect Item：</td>
+<td>位置：</td>
 <td>
 	<select id="sel1">
 		<option id='sel1op0'>載入中...</option>
@@ -114,7 +114,7 @@ form.addEventListener("submit", (e) => {
 </td>
 </tr>
 <tr>
-<td>Texture：</td>
+<td>工種：</td>
 <td>
 	<select id="sel2">
 		<option id='sel2op0'>載入中...</option>
@@ -122,13 +122,14 @@ form.addEventListener("submit", (e) => {
 </td>
 </tr>
 <tr>
-<td>Defect Description：</td>
+<td>詳細項目：</td>
 <td>
 	<select id="sel3">
 		<option id='sel3op0'>載入中...</option>
 	</select>
 </td>
 </tr>
+<tr><td colspan=2><hr></td></tr>
 <tr>
 <td>選擇單位平面圖：</td>
 <td>
@@ -141,7 +142,7 @@ form.addEventListener("submit", (e) => {
 <td colspan=2>
 	平面圖上標記位置：<br>
 	<a name='ancFp'>
-	<div id='divFp'><font size=2>(平面圖載入中...)</font></div>
+	<div id='divFp'><font size=2>(等待平面圖中...)</font></div>
 	x:<input type=text id='fpX' value='-1' size=1>
 	y:<input type=text id='fpY' value='-1' size=1>
 	</a>
@@ -153,14 +154,14 @@ form.addEventListener("submit", (e) => {
 	<hr>
 	DEFECT相片上標記位置：<br>
 	<a name='ancDp'>
-	<div id='divDp'>載入中...</div>
+	<div id='divDp'><font size=2>(等待DEFECT相片中...)</font></div>
 	x:<input type=text id='dpX' value='-1' size=1>
 	y:<input type=text id='dpY' value='-1' size=1>
 	<br>
-	Circle size: 
-	<input name='cirSz' type=radio>大 
-	<input name='cirSz' type=radio CHECKED>中 
-	<input name='cirSz' type=radio>小
+	圓形標記: 
+	<input name='cirSz' type=radio onclick="imgCircle.width=50;" CHECKED>小
+	<input name='cirSz' type=radio onclick="imgCircle.width=75;">中 
+	<input name='cirSz' type=radio onclick="imgCircle.width=100;">大 
 	</a>
 </td>
 </tr>
@@ -168,7 +169,7 @@ form.addEventListener("submit", (e) => {
 <td>&nbsp;</td>
 <td>
 	<br>
-	<input id="btnSubmit" type=button value="提交DEFACT" 
+	<input id="btnSubmit" type=button value="提交DEFECT" 
 	 style="width:160px;height:50px;">
 </td>
 </tr>
@@ -393,29 +394,42 @@ $("#btnSubmit").click(function(){
 
 //display the selected floorplan, and allow picking arrow position
 function showFloorplan() {
-	var str = "<a href='#ancFp' onClick='setFloorplanXY(event.pageX-this.offsetLeft, event.pageY-this.offsetTop);'><img id='imgFp' src='"+ $('#sel5').val() +"'></a>";
-	str += "<img id='imgArrow' width=20 src='arrow.png'>";
+	var str = "<a href='#ancFp' onClick='setFloorplanXY(event.pageX-this.offsetLeft, event.pageY-this.offsetTop);'><img id='imgFp' ismap src='"+ $('#sel5').val() +"'></a>";
+	str += "<img id='imgArrow'  width=15 height=17 src='arrow.gif'>";
 	$('#divFp').html(str);
 }
 
-function showDefectPhoto() {
-	var str = "<a href='#ancFp' onClick='setDefectPhotoXY(event.pageX-this.offsetLeft, event.pageY-this.offsetTop);'><img id='imgDp' src='"+ $('#txtPhotoUrl').val() +"'></a>";
-	str += "<img id='imgCircle' width=40 src='circle.png'>";
+function showDefectPhoto(picUrl) {
+	var str = "<a href='#ancDf' onClick='setDefectPhotoXY(event.pageX-this.offsetLeft, event.pageY-this.offsetTop);'><img id='imgDp' ismap src='"+ picUrl +"'></a>";
+	str += "<img id='imgCircle' width=30 src='circle.gif'>";
 	$('#divDp').html(str);
 }
 
 function setFloorplanXY(x,y) {
 	var h = document.getElementById('imgFp').height;
+	var imgAbsY = getOffset( document.getElementById('imgFp') ).top; 
 	$('#fpX').val(x);
-	$('#fpY').val(y);
+	$('#fpY').val(h+y-imgAbsY);
 	$("#imgArrow").css({top: h+y, left: x, position:'absolute'});
 }
 
 function setDefectPhotoXY(x,y) {
 	var h = document.getElementById('imgDp').height;
+	var imgAbsY = getOffset( document.getElementById('imgDp') ).top; 
 	$('#dpX').val(x);
 	$('#dpY').val(y);
 	$("#imgCircle").css({top: h+y, left: x, position:'absolute'});
+}
+
+function getOffset( el ) {
+    var _x = 0;
+    var _y = 0;
+    while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
+        _x += el.offsetLeft - el.scrollLeft;
+        _y += el.offsetTop - el.scrollTop;
+        el = el.offsetParent;
+    }
+    return { top: _y, left: _x };
 }
 //-->
 </script>
