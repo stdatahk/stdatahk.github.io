@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>FRS | Counter | Add</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="theDiv">&nbsp;</div>
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gssId = "1t2t3-4NyY6K8xbCROzusEhvaZO0aeuLFgArrrHeFuvk"; //for counter
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+
+//get the latest visitor count
+$(document).ready(function(){
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'GETTAGS', 
+		id: gssId,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+	  
+		var ary = null;
+		var rst = "";
+		html = "ary="+html+";";
+	    eval(html);
+
+		var max = 1*ary[0];
+		for(var i=1; i<ary.length; i++) {
+			if(1*ary[i] > max)
+				max = 1*ary[i];
+		}
+		var count = 1+max;
+		$("#theDiv").html("第"+ count +"位訪客");
+
+		//update counter to +1
+		$.ajax({
+		  url: gasUrl,
+		  cache: false,
+		  type: "GET",
+		  data: {
+			func: 'STORE', 
+			id: gssId,  
+			key: 12345678,
+			tag: count,
+			value: JSON.stringify( {'t': new Date()} )
+		  },
+		  dataType: "html",
+		  success: function(html){
+		  }
+		});
+		
+	  }
+	});
+
+});
+//-->
+</script>
+
+</body>
+</html>
