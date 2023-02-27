@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>FRS | Landing Page</title>
+<title>FRS | Reporting Page</title>
 <meta charset="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://unpkg.com/html5-qrcode@2.2.1/html5-qrcode.min.js"></script>
@@ -149,10 +149,15 @@ form.addEventListener("submit", (e) => {
 	平面圖上標記位置：<br>
 	<a name='ancFp'>
 	<div id='divFp'><font size=2>(等待平面圖中...)</font></div>
+	</a>
 	x:<input type=text id='fpX' value='-1' size=1>
 	y:<input type=text id='fpY' value='-1' size=1>
-	</a>
 	<br>
+	箭咀方向: 
+	<input id='arwDir' name='arwDir' type=radio value='tl' onclick="imgArrow.src='arrow_tl.gif';" CHECKED>左上
+	<input id='arwDir' name='arwDir' type=radio value='tr' onclick="imgArrow.src='arrow_tr.gif';">右上
+	<input id='arwDir' name='arwDir' type=radio value='bl' onclick="imgArrow.src='arrow_bl.gif';">左下
+	<input id='arwDir' name='arwDir' type=radio value='br' onclick="imgArrow.src='arrow_br.gif';">右下 
 </td>
 </tr>
 <tr>
@@ -161,14 +166,14 @@ form.addEventListener("submit", (e) => {
 	DEFECT相片上標記位置：<br>
 	<a name='ancDp'>
 	<div id='divDp'><font size=2>(等待DEFECT相片中...)</font></div>
+	</a>
 	x:<input type=text id='dpX' value='-1' size=1>
 	y:<input type=text id='dpY' value='-1' size=1>
 	<br>
-	圓形標記: 
-	<input name='cirSz' type=radio onclick="imgCircle.width=50;" CHECKED>小
-	<input name='cirSz' type=radio onclick="imgCircle.width=75;">中 
-	<input name='cirSz' type=radio onclick="imgCircle.width=100;">大 
-	</a>
+	圖示標記: 
+	<input id='cirSz' name='cirSz' type=radio value='S' onclick="imgCircle.width=50;" CHECKED>小
+	<input id='cirSz' name='cirSz' type=radio value='M' onclick="imgCircle.width=75;">中 
+	<input id='cirSz' name='cirSz' type=radio value='L' onclick="imgCircle.width=100;">大 
 </td>
 </tr>
 <tr>
@@ -371,7 +376,8 @@ $("#btnSubmit").click(function(){
 	var obj = { 'url':$('#txtPhotoUrl').val(), 'dpX':$('#dpX').val(), 'dpY':$('#dpY').val(), 
 				'fp':$('#sel5').val(), 'fpX':$('#fpX').val(), 'fpY':$('#fpY').val(), 
 				'addr':$('#txtAddr').val(), 'bldg':$('#sel0').val(), 
-				'di':$('#sel1').val(), 'tx':$('#sel2').val(), 'dd':$('#sel3').val()
+				'di':$('#sel1').val(), 'tx':$('#sel2').val(), 'dd':$('#sel3').val(),
+				'ad':$('#arwDir').value, 'cz':$('#cirSz').value
 			  };
 	
 	$('#btnSubmit').val('正在ADD數據，請稍後...');
@@ -401,7 +407,7 @@ $("#btnSubmit").click(function(){
 //display the selected floorplan, and allow picking arrow position
 function showFloorplan() {
 	var str = "<a href='#ancFp' onClick='setFloorplanXY(event.pageX-this.offsetLeft, event.pageY-this.offsetTop);'><img id='imgFp' ismap src='"+ $('#sel5').val() +"'></a>";
-	str += "<img id='imgArrow'  width=15 height=17 src='arrow.gif'>";
+	str += "<img id='imgArrow' width=15 height=17 src='arrow.gif'>";
 	$('#divFp').html(str);
 }
 
