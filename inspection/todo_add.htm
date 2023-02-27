@@ -32,7 +32,7 @@
 <tr>
 <td>Priority：</td>
 <td>
-	<select>
+	<select id='selPrio'>
 	<option>Must Have</option>
 	<option>Nice To Have</option>
 	<option>Suggestion</option>
@@ -47,7 +47,7 @@
 <tr>
 <td>Status：</td>
 <td>
-	<select>
+	<select id='selStatus'>
 	<option>Open</option>
 	<option>Closed</option>
 	<option>Done</option>
@@ -57,7 +57,7 @@
 <tr>
 <td>by who：</td>
 <td>
-	<input size=30 type=text value="user001">
+	<input id='txtWho' size=30 type=text value="user001">
 </td>
 </tr>
 <tr>
@@ -97,7 +97,11 @@ $("#btnSubmit").click(function(){
 		id: gssId,  
 		key: 12345678,
 		tag: $('#txtTag').val(),
-		value: $('#txtVal').val()
+		value: JSON.stringify( { 'dtl':$('#txtVal').val().trim(), 
+								 'prty': $("#selPrio option:selected").text().trim(), 
+								 'sts': $("#selStatus option:selected").text().trim(), 
+								 'n': $('#txtWho').val().trim(), 
+								 't': $('#txtNow').val().trim()} )
 	  },
 	  dataType: "html",
 	  success: function(html){

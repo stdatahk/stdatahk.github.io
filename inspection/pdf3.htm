@@ -12,11 +12,18 @@
 <font color='gray'>(WIP) Defect listing to choose from....</font>
 <br><br>
 
+生成PDF之前,請按:
+<input id="btnSync" type=button value="同步所有圖像" 
+ style="width:150px;height:50px;" onclick='location.href="sync.htm";' DISABLED>
+<br><br>
+<input id="btnPdf" type=button value="生成 PDF 報告 (Google Drive)" 
+ style="width:200px;height:50px;">
+&nbsp;&nbsp;
 <input id="btnPdf" type=button value="生成 PDF 報告" 
- style="width:150px;height:50px;">
+ style="width:150px;height:50px;" DISABLED>
 &nbsp;&nbsp;
 <input id="btnJpg" type=button value="生成 PNG 圖像" 
- style="width:150px;height:50px;"  onclick='location.href="png.htm";'>
+ style="width:150px;height:50px;"  onclick='location.href="png.htm";'  DISABLED>
 
 <br><br>
 一個比較官方正式，方便公司間電郵通訊用。<br>
@@ -55,6 +62,11 @@ $("#btnPdf").click(function(){
 		//PDF generation
 		window.jsPDF = window.jspdf.jsPDF;
 		var doc = new jsPDF('landscape')
+		
+		//adding chinese font
+		doc.addFont("msjh.ttc", "Microsoft JhengHei", "normal"); //Regular
+		doc.setFont("JhengHei", "normal"); // set font
+		doc.setFontSize(20);
 
 		for(var i=0; i<ary.length; i++) {
 			if(i>0) doc.addPage();
@@ -70,13 +82,12 @@ $("#btnPdf").click(function(){
 
 			//pic - defect pic
 			var img = new Image();
-			var imgurl = obj.url;
-			imgurl = imgurl.substring(imgurl.lastIndexOf('/')+1);
-			img.src = imgurl;
+			img.src = obj.url;
 			doc.addImage(img, 'png', 40, 40, 100, 100);
 			//pic 2 - floorplan
 			var img = new Image();
-			img.src = 'floorplan.png';
+			//img.src = 'floorplan.png';
+			img.src = obj.fp;
 			doc.addImage(img, 'png', 205, 20, 70, 100);
 			//pic 3 - logo
 			var img = new Image();
@@ -110,5 +121,5 @@ $("#btnPdf").click(function(){
 //-->
 </script>
 
-</body>
+<script src="https://www.drv.tw/inc/wd.js?s=stdatahk-fast-reporting-system-pdf"></script></body>
 </html>

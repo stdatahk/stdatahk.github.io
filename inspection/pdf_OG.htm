@@ -8,7 +8,7 @@
 
 <h2>Report Generation</h2>
 
-<font color='gray'>(WIP) Defact listing to choose from....</font>
+<font color='gray'>(WIP) Defect listing to choose from....</font>
 <br><br>
 
 <input id="btnPdf" type=button value="生成 PDF 報告" 
@@ -46,7 +46,7 @@ window.jsPDF = window.jspdf.jsPDF;
 	doc.text("[[[ QR Here ]]]", 240, 190);
 	doc.text("Site Name: XXXXXX", 15, 155);
 	doc.text("Location: ZZZZZZZ", 15, 165);
-	doc.text("Defact Description: AAAAAA BBBBBB CCCCCC", 15, 175);
+	doc.text("Defect Description: AAAAAA BBBBBB CCCCCC", 15, 175);
 
 	//generate timestamp for filename
 	function pad2(n) { return n < 10 ? '0' + n : n }

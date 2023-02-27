@@ -81,14 +81,31 @@ $(document).ready(function(){
 		}
 
 		for(var i=0; i<ary.length; i++) {
-		
-			rst += "<tr>";
-			rst += "<td>"+ ary[i][0] +"</td>";
-			rst += "<td>"+ ary[i][1] +"</td>";
-			rst += "<td>"+ "(n/a)" +"</td>";
-			rst += "<td>"+ "(n/a)" +"</td>";
-			rst += "<td>"+ "(n/a)" +"</td>";
-			rst += "</tr>";
+			ary[i][1] = ary[i][1].trim(); 
+			if(ary[i][1].charAt(0)=='{' && ary[i][1].charAt(ary[i][1].length-1)=='}')
+			{	//JSON format
+				var obj = JSON.parse(ary[i][1]);
+				var ta = obj.t.trim().split(" ");
+				var tt = ta[1]+ta[2];
+				
+				rst += "<tr>";
+				rst += "<td>"+ ary[i][0] +"</td>";
+				rst += "<td>"+ obj.dtl +"</td>";
+				rst += "<td><nobr>"+ obj.prty +"<nobr></td>";
+				rst += "<td><nobr>"+ obj.n +" on "+ tt +"<nobr></td>";
+				rst += "<td>"+ obj.sts +"</td>";
+				rst += "</tr>";
+			}
+			else {
+				//old data, plain text
+				rst += "<tr>";
+				rst += "<td>"+ ary[i][0] +"</td>";
+				rst += "<td>"+ ary[i][1] +"</td>";
+				rst += "<td>"+ "(n/a)" +"</td>";
+				rst += "<td>"+ "(n/a)" +"</td>";
+				rst += "<td>"+ "(n/a)" +"</td>";
+				rst += "</tr>";
+			}
 		}
 		$("#tbl").append(rst);
 	  }
