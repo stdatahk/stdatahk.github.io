@@ -230,22 +230,14 @@ $(document).ready(function(){
 
 //client-side filtering (quick & dirty method)
 function filterSel1() {
-	//get q str params
-	var url = location.href;
-	var pos = url.lastIndexOf('#?');
-	var params = '';
-	if(pos > 0)	params = url.substring(pos+2).trim();
-
-	//re-visit the sel1 list
 	var theSel = document.getElementById('sel1');
 	var idx = -1;
 	for(var i=0; i < theSel.options.length; i++) {
-		if(theSel.options[i].value == params) {
+		if(theSel.options[i].selected) {
 			idx = i;
 			break;
 		}
 	}
-
 	//remove unwanted tr items
 	idx = idx - 1; //tbl hdr
 	var rst = '';
@@ -253,7 +245,6 @@ function filterSel1() {
 			if(i!=idx)
 				rst += ('_#tr'+i);
 	}
-	alert(rst)
 	var a = rst.substring(1).split('_');
 	for(var i=0; i < a.length; i++) {
 		$(a[i]).remove();
@@ -261,7 +252,28 @@ function filterSel1() {
 }
 
 function filterSel2() {
-	//TBD
+	var theSel = document.getElementById('sel2');
+	var idx = "";
+	for(var i=0; i < theSel.options.length; i++) {
+		if(theSel.options[i].selected) {
+			idx = theSel.options[i].value;
+			break;
+		}
+	}
+	//remove unwanted tr items
+	var rst = '';
+	var theSel1 = document.getElementById('sel2');
+	for(var i=0; i < theSel1.options.length-1; i++) {
+		var theTr = ('tr'+i);
+		if(!document.getElementById(theTr)) continue;
+		var txt = document.getElementById(theTr).childNodes[6].innerHTML; //6th-col
+		if(txt != idx)
+			rst += ('_#tr'+i);
+	}
+	var a = rst.substring(1).split('_');
+	for(var i=0; i < a.length; i++) {
+		$(a[i]).remove();
+	}
 }
 //-->
 </script>
