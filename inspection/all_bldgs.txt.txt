@@ -1,0 +1,2216 @@
+葵青		偉景花園		Broadview Garden
+葵青		嘉翠園		Greenknoll Court
+葵青		寶星中心		Po Sing Centre
+葵青		德大閣		Tak Tai Court
+葵青		怡峰苑		Yi Fung Court
+葵青		恒景花園		Hang King Garden
+葵青		悅麗苑		Yuet Lai Court
+葵青		新葵興花園		Sun Kwai Hing Gardens
+葵青		新葵芳花園		New Kwai Fong Gardens
+葵青		昌宏大廈		Cheong Wang Mansion
+葵青		曉峰園		Mount Haven
+葵青		月海灣		Horizon Place
+葵青		浩景臺		Highland Park
+葵青		海峰花園		Regency Park
+葵青		海悅花園		Serene Garden
+葵青		海欣花園		Grand Horizon
+葵青		濠勝閣		Victory Court
+葵青		灝景灣		Villa Esplanada
+葵青		盈暉臺		Nob Hill
+葵青		盈翠半島		Tierra Verde
+葵青		福蔭大廈		Fortune House
+葵青		美景花園		Mayfair Gardens
+葵青		翠怡花園		Greenfield Garden
+葵青		翠瑤苑		Tsui Yiu Court
+葵青		芊紅居		Hibiscus Park
+葵青		荔欣苑		Lai Yan Court
+葵青		荔灣花園		Laichikok Bay Garden
+葵青		華景山莊		Wonderland Villas
+葵青		華豐園		Wah Fung Garden
+葵青		葵俊苑		Kwai Chun Court
+葵青		葵康苑		Kwai Hong Court
+葵青		葵星中心		Kwai Sing Centre
+葵青		葵涌中心		Kwai Chung Centre
+葵青		葵涌廣場		Kwai Chung Plaza
+葵青		葵芳閣		Kwai Fong Terrace
+葵青		葵賢苑		Kwai Yin Court
+葵青		藍澄灣		Rambler Crest
+葵青		賢麗苑		Yin Lai Court
+葵青		雍雅軒		The Apex
+葵青		青宏苑		Ching Wang Court
+葵青		青怡花園		Tsing Yi Garden
+葵青		青泰苑		Ching Tai Court
+葵青		青盛苑		Ching Shing Court
+葵青		青華苑		Ching Wah Court
+葵青		青雅苑		Ching Nga Court
+黃大仙		匯豪山		The Forest Hills
+黃大仙		嘉強苑		Ka Keung Court
+黃大仙		天宏苑		Tin Wang Court
+黃大仙		天馬苑		Tin Ma Court
+黃大仙		威豪花園		Bay View Garden
+黃大仙		宏景花園		Grand View Garden
+黃大仙		富強苑		Fu Keung Court
+黃大仙		寶發大廈		Po Fat Building
+黃大仙		寶翠大廈		Po Tsui Mansion
+黃大仙		帝峰豪苑		Regent On The Hill
+黃大仙		康強苑		Hong Keung Court
+黃大仙		彩峰苑		Choi Fung Court
+黃大仙		德強苑		Tak Keung Court
+黃大仙		怡富花園		Wealth Garden
+黃大仙		怡庭居		The Vista
+黃大仙		怡發花園		Fortune Garden
+黃大仙		恆安大廈		Hang On Building
+黃大仙		悅庭軒		Bel Air Heights
+黃大仙		慈安苑		Tsz On Court
+黃大仙		慈愛苑		Tsz Oi Court
+黃大仙		新光中心		Hsin Kuang Centre
+黃大仙		新蒲崗廣埸		San Po Kong Plaza
+黃大仙		新麗花園		Sun Lai Garden
+黃大仙		星河明居		Galaxia
+黃大仙		曉暉花園		Scenic View
+黃大仙		海港花園		Hilltop Gardens
+黃大仙		海鴻大廈		Hoi Hung Building
+黃大仙		清水灣道8號		No.8 Clear Water Bay Road
+黃大仙		爵祿居		Wealth Court
+黃大仙		瓊山苑		King Shan Court
+黃大仙		瓊麗苑		King Lai Court
+黃大仙		百利軒		Baily Court
+黃大仙		盈利大廈		Profit Mansion
+黃大仙		盈福苑		Ying Fuk Court
+黃大仙		秀芳花園		Silver Garden
+黃大仙		翠竹花園		Tsui Chuk Garden
+黃大仙		華基大樓		Wah Kay House
+黃大仙		譽港灣		The Latitude
+黃大仙		豪園		Tropicana Gardens
+黃大仙		越秀廣埸		Yue Xiu Plaza
+黃大仙		采頤花園		Rhythm Garden
+黃大仙		鳳禮苑		Fung Lai Court
+黃大仙		鳳鑽苑		Fung Chuen Court
+黃大仙		鳴鳳閣		Ming Fung Court
+黃大仙		鵬程苑		Pang Ching Court
+黃大仙		龍蟠苑		Lung Poon Court
+荃灣		千里台		Sheeny Terrace
+荃灣		名逸居		New Haven
+荃灣		家興大廈		Joyful Building
+荃灣		富華中心		Fou Wah Centre
+荃灣		富麗花園		Wealthy Garden
+荃灣		寶石大廈		Bo Shek Mansion
+荃灣		寶雲滙		The Cliveden
+荃灣		康睦庭園		Harmony Garden
+荃灣		御凱		The Dynasty
+荃灣		怡景園		Fairview Garden
+荃灣		恒麗園		Hanley Villa
+荃灣		愉景新城		Discovery Park
+荃灣		新麗苑		Sunny Villa
+荃灣		朗逸峯		The Cairnhill
+荃灣		東亞花園		East Asia Gardens
+荃灣		樂悠居		Indihome
+荃灣		浪翠園		Sea Crest Villa
+荃灣		海天豪苑		The Blue Yard
+荃灣		海晴軒		Brighton Place
+荃灣		海濤花園		Long Beach Gardens
+荃灣		海濱花園		Riviera Gardens
+荃灣		海灣花園		Waterside Plaza
+荃灣		海雲軒		Anglers' Bay
+荃灣		海韻臺		Rhine Terrace
+荃灣		海韻花園		Rhine Garden
+荃灣		灣景廣場		Skyline Plaza
+荃灣		灣景花園		Bayview Garden
+荃灣		爵悅庭		Chelsea Court
+荃灣		珀麗灣		Park Island
+荃灣		疊翠苑		Keymount Lodge
+荃灣		碧堤半島		Bellagio
+荃灣		祈德尊新村		Clague Garden Estate
+荃灣		立坊		H Cube
+荃灣		綠楊新村		Luk Yeung Sun Chuen
+荃灣		縉庭山		Primrose Hill
+荃灣		縉皇居		Ocean Pointe
+荃灣		翠景台		Greenview Terrace
+荃灣		翠濤閣		Greenview Court
+荃灣		翠豐臺		Summit Terrace
+荃灣		翡翠廣場		Jade Plaza
+荃灣		荃威花園		Allway Gardens
+荃灣		荃德花園		Tsuen Tak Gardens
+荃灣		荃昌中心		Tsuen Cheong Centre
+荃灣		荃景花園		Tsuen King Garden
+荃灣		荃灣中心		Tsuen Wan Centre
+荃灣		荃灣城市廣埸		Town Square
+荃灣		荃灣廣場		Tsuen Wan Plaza
+荃灣		荃灣花園		Tsuen Wan Garden
+荃灣		荃發大廈		Tsuen Fat Building
+荃灣		荃豐中心		Tsuen Fung Centre
+荃灣		荃豐大廈		Tsuen Fung Building
+荃灣		荃錦中心		Tsuen Kam Centre
+荃灣		華都中心		Waldorf Centre
+荃灣		萬景峯		Vision City
+荃灣		蔚景花園		The Panorama
+荃灣		豪景花園		Hongkong Garden
+荃灣		豪輝花園		Ho Fai Garden
+荃灣		金豐閣		Kam Fung Court
+荃灣		金麗苑		Golden Villa
+荃灣		錦豐園		Kam Fung Garden
+荃灣		韻濤居		Serenade Cove
+荃灣		麗城花園		Belvedere Garden
+荃灣		麗都花園		Lido Garden
+深水埗		ONE MADISON		One Madison
+深水埗		ONE NEW YORK		One New York
+深水埗		一號銀海		One Silversea
+深水埗		九洲大廈		Kiu Chau Building
+深水埗		亞洲大廈		Asian Building
+深水埗		仁寶大廈		Ample Building
+深水埗		依時大廈		Easey Building
+深水埗		健基閣		Kinga Court
+深水埗		僑輝大廈		Kiu Fai Building
+深水埗		兆昌大廈		Siu Cheong Building
+深水埗		凱帆軒		Hampton Place
+深水埗		力生居		Lik Sang Court
+深水埗		南昌中心		Nam Cheong Centre
+深水埗		南昌苑		Nam Cheong Mansion
+深水埗		又一居		Parc Oasis
+深水埗		又一村花園		Village Gardens
+深水埗		君凱豪庭		Sea Panorama Court
+深水埗		喜居		Hey Home
+深水埗		嘉利閣		Career Court
+深水埗		嘉威大廈		Galloway Mansion
+深水埗		嘉珀山		The Caldecott
+深水埗		嘉美中心		Grammy Centre
+深水埗		嘉裕居		City Regalia
+深水埗		嘉都大廈		Ka To Building
+深水埗		嘉順大廈		Ka Shun Building
+深水埗		園景大廈		Gardenview Building
+深水埗		大興大廈		Tai Hing Building
+深水埗		太子中心		Prince Centre
+深水埗		好時閣		Houston Court
+深水埗		如意大廈		Gracious Mansion
+深水埗		威信大廈		Wei Sun Building
+深水埗		宇晴軒		The Pacifica
+深水埗		家家發大廈		Ever Wealth Building
+深水埗		富昌大廈		Fu Cheong Building
+深水埗		富洲大廈		Fu Chau Building
+深水埗		富華廣場		Florence Plaza
+深水埗		富裕大廈		Fortune Building
+深水埗		富裕居		Wealth House
+深水埗		寶安閣		Po On Court
+深水埗		寶榮大廈		Po Wing Building
+深水埗		寶熙苑		Po Hei Court
+深水埗		寶華閣		Po Wah Court
+深水埗		寶麗苑		Po Lai Court
+深水埗		尚南天		Southern Lodge
+深水埗		帝景峰		Dynasty Heights
+深水埗		幸俊苑		Hang Chun Court
+深水埗		康富樓		Hong Fu House
+深水埗		康福樓		Hong Fook Building
+深水埗		康輝大廈		Hong Fai Building
+深水埗		德富大廈		Tak Fu Building
+深水埗		德旺大廈		Tak Wong Building
+深水埗		怡景閣		Yee King Court
+深水埗		怡華閣		Yee Wah Court
+深水埗		怡閣苑		Yee Kok Court
+深水埗		怡靖苑		Yee Ching Court
+深水埗		恒威閣		Hand Wai Court
+深水埗		悅海軒		Oceanic View
+深水埗		愉翠苑		Joyful Garden
+深水埗		成都大廈		Shing To Building
+深水埗		新寧閣		Sunning Court
+深水埗		新寶大廈		Sun Po Building
+深水埗		新明閣		Sun Ming Court
+深水埗		新豪大廈		Sun Ho House
+深水埗		昇悅居		Liberte
+深水埗		昌暉大廈		Cheung Fai Building
+深水埗		昌華閣		Cheung Wah Court
+深水埗		昌輝大廈		Cheong Fai Building
+深水埗		星匯居		The Sparkle
+深水埗		春暉大廈		Springwide Mansion
+深水埗		時尚華庭		The Prominence
+深水埗		景翠苑		Fairview Garden
+深水埗		景輝閣		King Fai Court
+深水埗		曼克頓山		Manhattan Hill
+深水埗		東寧大廈		Tonning Mansion
+深水埗		東景大廈		Tone King Building
+深水埗		東蘭閣		Eastland Towers
+深水埗		桃苑		To Yuen Mansion
+深水埗		樂年花園		Cronin Garden
+深水埗		樂意居		Delight Court
+深水埗		樂滿大廈		Lok Moon Building
+深水埗		永寧大廈		Wing Ning Building
+深水埗		永華大廈		Wing Wah Mansion
+深水埗		泓景臺		Banyan Garden
+深水埗		浪澄灣		The Long Beach
+深水埗		海壇大廈		Hai Tan Mansion
+深水埗		海天大廈		Hai Tan Mansion
+深水埗		海峰		Vista
+深水埗		海祥大廈		Hoi Cheung Building
+深水埗		清麗苑		Ching Lai Court
+深水埗		潤發大廈		Yun Fat Building
+深水埗		爾登華庭		Villa Carlton
+深水埗		爾登豪庭		Monte Carlton
+深水埗		瑰麗新村		Grandeur Villa
+深水埗		田豐樓		Tin Fung House
+深水埗		畢架山花園		Beacon Heights
+深水埗		白玉樓		Pak Yuk House
+深水埗		碧海藍天		Aquamarine
+深水埗		祥賢大廈		Cheung Yin Building
+深水埗		祥輝大廈		Cheung Fai Mansion
+深水埗		福年大廈		Lucky Time Building
+深水埗		福怡大廈		Fuk Yee Building
+深水埗		福昇大廈		Fuk Shing Building
+深水埗		福榮街238號		238 Fuk Wing Street
+深水埗		福田大廈		Fook Tin Building
+深水埗		福華閣		Fuk Wa Court
+深水埗		福隆大廈		Fuk Lung Building
+深水埗		秀怡閣		Scenic Court
+深水埗		米蘭軒		Milan Place
+深水埗		維港灣		Island Harbourview
+深水埗		美孚新村		Mei Foo Sun Chuen
+深水埗		美居中心		Manor Centre
+深水埗		耀輝大廈		Yiu Fai Mansion
+深水埗		聯康大廈		Luen Hong Building
+深水埗		花圃別墅		Fa Po Villa
+深水埗		菁盈雅軒		Greenrich Mansion
+深水埗		華盛大廈		Wah Shing Building
+深水埗		華麗廣埸		Welland Plaza
+深水埗		萬和大廈		Man Woo Building
+深水埗		豐溢閣		Fung Yat Court
+深水埗		豐盛居		Beacon Lodge
+深水埗		逸華軒		The Merrylands
+深水埗		郝德傑山		Caldecott Hill
+深水埗		金山樓		Kam Shan House
+深水埗		金濤閣		Kent Place
+深水埗		金玉大廈		Kam Yuck Building
+深水埗		金盟大廈		Golden League Building
+深水埗		金碧閣		Golden Jade Heights
+深水埗		銀海大廈		Ngun Hoi Mansion
+深水埗		長盛豪苑		Charming Garden
+深水埗		長華大廈		Joywise Mansion
+深水埗		雅怡居		Art Court
+深水埗		雅麗苑		Elite Villa
+深水埗		青華閣		Green Court
+深水埗		順安閣		Richmond Court
+深水埗		順寧大廈		Shun Ning Building
+深水埗		順寧居		Shining Court
+深水埗		順寧苑		Peaceful Mansion
+深水埗		順年閣		Good Year Court
+深水埗		順康居		Chelsea Court
+深水埗		順怡閣		Sun Yee Mansion
+深水埗		順景華庭		The Sorentino
+深水埗		順發大廈		Shun Fat Building
+深水埗		順發居		Fulham Court
+深水埗		順興閣		Shining Court
+深水埗		騏昌大廈		Kai Cheong House
+深水埗		高明大廈		Gold Ming Building
+深水埗		麗寶花園		Lai Bo Garden
+深水埗		麗群閣		Lai Kwan Court
+深水埗		黃金大廈		Golden Building
+深水埗		黃金閣		Golden Court
+深水埗		龍華大廈		Lung Wa Building
+九龍城		22居		Parc 22
+九龍城		九龍塘花園		Kowloon Tong Garden
+九龍城		仁儀苑		Yen Yee Mansion
+九龍城		仁禮花園		The Crescent
+九龍城		何文田山一號		No.1 Ho Man Tin Hill
+九龍城		俊暉華庭		Palatial Stand
+九龍城		俊民苑		Chun Man Court
+九龍城		信達閣		Fessenden Court
+九龍城		偉恆昌新村		Wyler Gardens
+九龍城		偉錦園		Welcome Gardens
+九龍城		傲雲峰		Sky Tower
+九龍城		兆寶閣		Billion Court
+九龍城		兆豐閣		Siu Fung Court
+九龍城		光明閣		Brilliant Court
+九龍城		光輝園		Kwong Fai Court
+九龍城		典雅大廈		Classic Mansion
+九龍城		冠熹苑		Kwun Hei Court
+九龍城		凱旋居		Triumph Terrace
+九龍城		利榮大廈		Lee Wing Building
+九龍城		利高大廈		Lee Ko Building
+九龍城		勝裕閣		Rich Court
+九龍城		半山壹號		Celestial Heights
+九龍城		協輝大廈		Hip Fai Building
+九龍城		博林軒		Oxford Heights
+九龍城		同興花園		Harmony Garden
+九龍城		名人花園		Celebrity Garden
+九龍城		君逸山		Carmel-On-The-Hill
+九龍城		嘉多利豪園		Grand Excelsior
+九龍城		嘉威閣		Ka Wai Court
+九龍城		嘉景花園		Grandview Garden
+九龍城		嘉朗豪庭		Carlton Court
+九龍城		嘉皇臺		The Palace
+九龍城		嘉福閣		Comfort Court
+九龍城		嘉苑		Grampian Crest
+九龍城		嘉豪軒		The Montebello
+九龍城		嘉輝台		Greenfield Terrace
+九龍城		城南道10號		No.10 South Wall Road
+九龍城		基安大廈		Crayon Building
+九龍城		大利大廈		Berkeley Building
+九龍城		天樂園		Joy Garden
+九龍城		太子匯		Prince Ritz
+九龍城		太平居		Peace Tower
+九龍城		太平花園		Peace Garden
+九龍城		好運樓		Lucky Mansion
+九龍城		學林軒		Cambridge Heights
+九龍城		富威花園		Fair Way Garden
+九龍城		富康大廈		Fu Hong Building
+九龍城		富怡閣		Faerie Court
+九龍城		富恆閣		Full Hang Court
+九龍城		富業大廈		Fu Yip Building
+九龍城		富民閣		Fu Men Mansion
+九龍城		富臨閣		Forum Court
+九龍城		富運大廈		Full Wing Building
+九龍城		富邦大廈		Fortuna Building
+九龍城		富都大廈		Fu Tao Building
+九龍城		寶利閣		Polly Court
+九龍城		寶威大廈		Po Wai Building
+九龍城		寶峰大廈		Pau Chung Building
+九龍城		寶怡大廈		Bowie Mansion
+九龍城		寶新大廈		Po Sun Mansion
+九龍城		寶暉大廈		Po Fai Building
+九龍城		寶能閣		Boland Court
+九龍城		寶雲閣		Balwin Court
+九龍城		寶馬閣		Braemar Court
+九龍城		崇華閣		Shung Wah Court
+九龍城		巴富花園		Perth Garden
+九龍城		帝庭豪園		Majestic Park
+九龍城		康富大廈		Hong Fu Mansion
+九龍城		康寧花園		Besthing Garden
+九龍城		康年閣		Honour Court
+九龍城		康樂閣		Comfort Court
+九龍城		康泰閣		Carlton Court
+九龍城		康麗花園		Colonnades
+九龍城		建豐閣		Kin Fung Court
+九龍城		得利閣		Tak Lee Court
+九龍城		御龍居		Dragon View
+九龍城		德光閣		Blue Haven
+九龍城		德勝大廈		Tak Shing Mansion
+九龍城		德寶大廈		Double Mansion
+九龍城		德民樓		Tak Man Building
+九龍城		德裕閣		Tak Yue Mansion
+九龍城		怡安閣		Yee On Court
+九龍城		怡富大廈		Yee Fu Building
+九龍城		怡富閣		Riches Court
+九龍城		怡德花園		Tang Court
+九龍城		怡景大廈		Yee King Building
+九龍城		愷悌閣		Deltec Court
+九龍城		慧園		Westland Heights
+九龍城		慶祥大廈		Hing Cheung Building
+九龍城		懿薈		Forfar
+九龍城		成龍居		Genius Court
+九龍城		文安大廈		Menon Mansion
+九龍城		文德苑		Manor Place
+九龍城		文翠閣		Mansion Court
+九龍城		文豪閣		Mountain Court
+九龍城		文雅閣		Manner Court
+九龍城		新利大廈		Boundary Crest
+九龍城		新城中心		Sun Shing Centre
+九龍城		新雅閣		Sunfield Court
+九龍城		新麟閣		Sunland Court
+九龍城		旭日豪庭		Sunrise Villa
+九龍城		昌蔚苑		Lilac Court
+九龍城		昌隆閣		Cheron Court
+九龍城		明苑閣		Ming Yuen Court
+九龍城		星輝豪庭		Peninsula Heights
+九龍城		晨曦樓		Morning Ray Mansion
+九龍城		曉暉華庭		Hillville Terrace
+九龍城		東海雅園		Bakerview
+九龍城		柏德豪廷		Padek Palace
+九龍城		根德閣		Kent Court
+九龍城		榮輝大廈		Wing Fai Mansion
+九龍城		樂古花園		Lockoo Gardens
+九龍城		樂意居		Delight Court
+九龍城		欣圖軒		Cascades
+九龍城		欣榮花園		Jubilant Place
+九龍城		毅廬		Arran Court
+九龍城		永和大廈		Wing Wo Building
+九龍城		永安台		Wing On Court
+九龍城		浩文苑		Homan Villa
+九龍城		浩明雅苑		Homing Terrace
+九龍城		海名軒		Harbourfront Landmark
+九龍城		海德豪苑		Top Growth Court
+九龍城		海悅豪庭		Horae Place
+九龍城		海潤大廈		Ocean Mansion
+九龍城		海逸豪園		Laguna Verde
+九龍城		海青閣		Greenland Court
+九龍城		港景苑		View Court
+九龍城		潮樓		In House
+九龍城		灝畋峰		15 Homantin Hill
+九龍城		獅子石道一號		No.1 Lion Rock Road
+九龍城		珍寶閣		Jumbo Court
+九龍城		瑞麟閣		Sharon Court
+九龍城		瓊林別墅		Kingsland Villa
+九龍城		畢架山一號		One Beacon Hill
+九龍城		畢架山峰		Mount Beacon
+九龍城		百樂園		Broadway Towers
+九龍城		百美花園		Faber Garden
+九龍城		皆富閣		Garfield Court
+九龍城		碧佳閣		Peony Height
+九龍城		碧殿閣		Belvedere Heights
+九龍城		碧滿閣		Belmont heights
+九龍城		碧華花園		Beverly Villas
+九龍城		碧華閣		Beverley Heights
+九龍城		碧麗園		Palace Garden
+九龍城		碧麗花園		Bailey Garden
+九龍城		碧麗閣		Belaire Heights
+九龍城		福祥大廈		Fortune Building
+九龍城		紅磡灣中心		Hunghom Bay Centre
+九龍城		紅磡花園		Hung Hom Gardens
+九龍城		維景雅軒		Harbourview Garden
+九龍城		美善閣		Maid Shine Court
+九龍城		美嘉大廈		Mega Building
+九龍城		美安樓		Million Building
+九龍城		美輪閣		Merlin Court
+九龍城		翔龍灣		Grand Waterfront
+九龍城		翠德閣		Joy Take Court
+九龍城		翠林雅軒		Park Horizon
+九龍城		翠華園		Fairyland Garden
+九龍城		翠麗苑		Twilight Court
+九龍城		翰林苑		University Court
+九龍城		聚賢大廈		Wisdom Building
+九龍城		聯景閣		Luen King Mansion
+九龍城		興基豪園		Kingsgate
+九龍城		華欣閣		Valiant Court
+九龍城		華蕙閣		Wealthy Court
+九龍城		萬基樓		Man Kay Mansion
+九龍城		萬寶閣		Marple Court
+九龍城		萬發樓		Man Fat House
+九龍城		蔚景樓		Wei King Building
+九龍城		豪華之家		Maison Deluxe
+九龍城		豪門		Le Billionnaire
+九龍城		賀龍居		Parc Regal
+九龍城		農圃道18號		No.18 Farm Road
+九龍城		運通大廈		Wan Tung Building
+九龍城		達運閣		Devon Court
+九龍城		都會151		City 151
+九龍城		金城大廈		Kensington House
+九龍城		金慧閣		Goldview Court
+九龍城		金時閣		Goldtone Court
+九龍城		金碧大廈		Kam Bit Building
+九龍城		金運閣		Lucky Court
+九龍城		金達閣		Golden Court
+九龍城		鉅基閣		Kui Ga Corut
+九龍城		陶源		The Bloomsville
+九龍城		陽光廣場		Sunshine Plaza
+九龍城		隆基大樓		Loong King Mansion
+九龍城		雅利德樺臺		Ellery Terrace
+九龍城		雅士花園		The Astoria
+九龍城		雅景軒		Grand Villa
+九龍城		雅樂園		Happy Garden
+九龍城		雅緻園		Angie Court
+九龍城		雅芳園		Avon Court
+九龍城		雅華閣		Ava Court
+九龍城		雅閣花園		The Arcadia House
+九龍城		雅麗園		Alice Court
+九龍城		雅麗居		The Astrid
+九龍城		集貴大廈		Coin Organize Building
+九龍城		霞明閣		Charmain Heights
+九龍城		順麗閣		Sunny Court
+九龍城		馬可尼大廈		Marconi Court
+九龍城		麗豪閣		Regal Court
+九龍城		黃埔新村		Whampoa Estate
+九龍城		黃埔花園		Whampoa Garden
+九龍城		龍柏花園		Cypress Garden
+九龍城		龍翔別墅		Lung Cheung Villa
+九龍城		龍華閣		Lung Wah Court
+屯門		仁愛大廈		Yan Oi Building
+屯門		倚嶺南庭		South Hillcrest
+屯門		偉景花園		Grandeur Gardens
+屯門		兆安苑		Siu On Court
+屯門		兆山苑		Siu Shan Court
+屯門		兆康苑		Siu Hong Court
+屯門		兆畦苑		Siu Kwai Court
+屯門		兆禧苑		Siu Hei Court
+屯門		兆軒苑		Siu Hin Court
+屯門		兆邦苑		Siu Pong Court
+屯門		兆隆苑		Siu Lung Court
+屯門		兆麟苑		Siu Lun Court
+屯門		冠峰園		Alpine Garden
+屯門		凱德花園		Hoi Tak Gardens
+屯門		利寶大廈		Lee Bo Building
+屯門		力生大廈		Lakeshore Building
+屯門		卓爾居		Chelsea Heights
+屯門		協邦大廈		Hip Pont Building
+屯門		南光樓		Nam Kwong Building
+屯門		南浪海灣		Nerine Cove
+屯門		名賢居		Napa Valley
+屯門		啟豐園		Richland Garden
+屯門		嘉喜利大廈		Kai Hei Land Building
+屯門		嘉悅半島		The Seacrest
+屯門		嘉熙大廈		Ka Hay Building
+屯門		嘉華大廈		Kar Wah Building
+屯門		大興花園		Tai Hing Gardens
+屯門		好勝大廈		Victory Building
+屯門		好發大廈		Rich Building
+屯門		容龍居		Dragon Inn Court
+屯門		富健花園		Glorious Garden
+屯門		富華大廈		Forward Mansion
+屯門		富麗大廈		Florence Mansion
+屯門		寶怡花園		Blossom Garden
+屯門		屯景大廈		Tuen King Building
+屯門		屯門市廣場		Tuen Mun Town Plaza
+屯門		屯門花園		Tuen Mun Fa Yuen
+屯門		帝濤灣		Palatial Coast
+屯門		康德花園		Hong Tak Gardens
+屯門		康景花園		Hong King Garden
+屯門		康麗花園		Hong Lai Garden
+屯門		彩暉花園		Brilliant Garden
+屯門		彩華花園		Rainbow Garden
+屯門		怡峰園		Villa Tiara
+屯門		怡樂花園		Elegance Gardens
+屯門		恆福花園		Hanford Garden
+屯門		恆順園		Handsome Court
+屯門		恒豐園		Harvest Garden
+屯門		悅湖山莊		Yuet Wu Villa
+屯門		愛琴海岸		Aegean Coast
+屯門		慧景閣		Parkview Court
+屯門		慧豐園		Marina Garden
+屯門		新圍苑		San Wai Court
+屯門		新屯門中心		Sun Tuen Mun Centre
+屯門		新都大廈		New Town Mansion
+屯門		春和海景花園		Spring Seaview Terrace
+屯門		時代廣場		Trend Plaza
+屯門		景峰花園		Prime View Garden
+屯門		景峰豪庭		Noble Place
+屯門		東威閣		Tung Wai Court
+屯門		棕月灣		Palm Beach
+屯門		浪濤灣		Aqua Blue
+屯門		海典軒		Oceania Heights
+屯門		海慧花園		Aquamarine Garden
+屯門		海景花園		Seaview Garden
+屯門		海澄軒		Villa Sapphire
+屯門		海盈花園		The Cafeteria
+屯門		海盛大廈		Hoi Shing Building
+屯門		海翠花園		Pierhead Garden
+屯門		海麗花園		Venice Gardens
+屯門		澤豐花園		Affluence Garden
+屯門		玫瑰花園		Rosedale Gardens
+屯門		瑜翠園		Peridot Court
+屯門		疊茵庭		Parkland Villas
+屯門		盈豐園		Goodrich Garden
+屯門		碧翠花園		Bayview Terrace
+屯門		祥隆大廈		Cheung Lung Building
+屯門		綠怡居		Botania Villa
+屯門		置樂花園		Chi Lok Fa Yuen
+屯門		美基樓		Mai Kei Building
+屯門		美樂花園		Melody Garden
+屯門		翠寧花園		Tsui Ning Garden
+屯門		翠峰小築		Verdant Villa
+屯門		翠林花園		Greenland Garden
+屯門		翠濤居		Palm Cove
+屯門		聚康山莊		Beneville
+屯門		興發樓		Hing Fat Building
+屯門		華樂大廈		Wah Lok Mansion
+屯門		華都花園		Waldorf Garden
+屯門		萬寶大廈		Man Bo Building
+屯門		豐景園		Goodview Garden
+屯門		豫豐花園		The Sherwood
+屯門		邁亞美海灣		Miami Beach Towers
+屯門		金安大廈		Come On Building
+屯門		金邦大廈		Common Bond Building
+屯門		金銘大廈		Kam Men Mansion
+屯門		錦暉花園		Kam Fai Garden
+屯門		錦發大廈		Kam Fat Building
+屯門		錦興大廈		Kam Hing Building
+屯門		錦華花園		Kam Wah Garden
+屯門		雅德苑		Faraday House
+屯門		雅翠苑		Elegant Villa
+屯門		雅都花園		Eldo Court
+屯門		雅麗花園		Elite Garden
+屯門		雍景園		Yonking Garden
+屯門		青山別墅		Castle Peak Villas
+屯門		青榕台		Tsing Yung Terrace
+屯門		香港黃金海岸		Hong Kong Gold Coast
+屯門		鹿苑		Look Yuen
+屯門		麗寶大廈		Lai Bo Building
+屯門		麗日閣		Sun Court
+屯門		龍成花園		Jc Place
+屯門		龍珠島花園		Pearl Island Garden
+屯門		龍門居		Lung Mun Oasis
+觀塘		利基大廈		Lee Kee Building
+觀塘		功樂大廈		Kung Lok Building
+觀塘		匯景花園		Sceneway Garden
+觀塘		南康大廈		Nam Hong Building
+觀塘		啟泰苑		Kai Tai Court
+觀塘		啟田大廈		Kai Tin Towers
+觀塘		嘉和園		Jade Field Garden
+觀塘		嘉賢居		The Spectacle
+觀塘		安基苑		On Kay Court
+觀塘		宏光樓		Wang Kwong Building
+觀塘		定興大廈		Ting Hing Building
+觀塘		宜安中心		Yee On Centre
+觀塘		家利閣		Kathy'S Court
+觀塘		富麗花園		Fulrich Garden
+觀塘		寶峰大廈		Bo Fung Building
+觀塘		寶恩大廈		Bo Yan Building
+觀塘		寶珮苑		Po Pui Court
+觀塘		康寧閣		Hong Ning Court
+觀塘		康柏苑		Hong Pak Court
+觀塘		康濤閣		Hamden Court
+觀塘		康瑞苑		Hong Shui Court
+觀塘		康田苑		Hong Tin Court
+觀塘		康盈苑		Hong Ying Court
+觀塘		康華苑		Hong Wah Court
+觀塘		康逸苑		Hong Yat Court
+觀塘		康雅苑		Hong Nga Court
+觀塘		康麗園		Connie Towers
+觀塘		得寶花園		Tak Bo Garden
+觀塘		德福花園		Telford Gardens
+觀塘		振華苑		Chun Wah Court
+觀塘		曉光閣		Hiu Kwong Court
+觀塘		曉明閣		Hiu Ming Court
+觀塘		曉麗苑		Hiu Lai Court
+觀塘		樂雅苑		Lok Nga Court
+觀塘		油塘中心		Yau Tong Centre
+觀塘		海天園		The Verandah Garden
+觀塘		淘大花園		Amoy Gardens
+觀塘		百富閣		Park Mansion
+觀塘		碧麗苑		Belleve Garden
+觀塘		祥和苑		Cheung Wo Court
+觀塘		興順大廈		Hing Shun Mansion
+觀塘		裕民中心		Yue Man Centre
+觀塘		金僑華廈		Cambridge Building
+觀塘		順緻苑		Shun Chi Court
+觀塘		高俊苑		Ko Chun Court
+觀塘		鯉安苑		Lei On Court
+觀塘		鯉灣天下		Canaryside
+觀塘		鳳儀大廈		Louisa Building
+觀塘		麗晶花園		Richland Gardens
+觀塘		麗港城		Laguna City
+觀塘		麗裕大廈		Lai Yue Building
+油尖旺		I-HOME		I-Home
+油尖旺		MOD 595		Mod 595
+油尖旺		SKY-GARDEN		Sky-Garden
+油尖旺		乾隆閣		King'S Court
+油尖旺		京士柏山		King'S Park Hill
+油尖旺		亮賢居		Shining Heights
+油尖旺		伯爵園		Earl Garden
+油尖旺		俊逸豪園		Jolly Garden
+油尖旺		儉德大廈		Kim Tak Building
+油尖旺		兆豐大廈		Shui Fung Building
+油尖旺		公爵閣		Duchy Heights
+油尖旺		凱旋門		The Arch
+油尖旺		別樹華軒		Bijou Apartments
+油尖旺		利來洋樓		Lee Loy Mansion
+油尖旺		利源閣		Lauren Court
+油尖旺		利金閣		Pilkem Court
+油尖旺		半島豪庭		Royal Peninsula
+油尖旺		南京大廈		Nanking Building
+油尖旺		名鑄		The Masterpiece
+油尖旺		君滙港		Harbour Green
+油尖旺		君臨天下		The Harbourside
+油尖旺		君頤峰		Parc Palais
+油尖旺		啟儀閣		Kai Yee Court
+油尖旺		喜滿懷大廈		Hilmanway Mansion
+油尖旺		嘉信樓		Ka Shun House
+油尖旺		嘉和大廈		Ka Woo Building
+油尖旺		嘉寶大廈		Carlton Building
+油尖旺		嘉德大廈		Kadak Building
+油尖旺		嘉怡大廈		Ka Yee Mansion
+油尖旺		嘉慶苑		Garden Heights
+油尖旺		嘉文花園		Carmen'S Garden
+油尖旺		嘉新大廈		Carson Mansion
+油尖旺		嘉業大廈		Carprio Mansion
+油尖旺		嘉樂苑		Clifton Tower
+油尖旺		嘉樂閣		Crowfields Court
+油尖旺		嘉爵園		Imperial Garden
+油尖旺		嘉福中心		Godfrey Centre
+油尖旺		嘉興閣		Ka Hing Court
+油尖旺		嘉運閣		Grandwin Court
+油尖旺		嘉韻閣		Kar Wun Court
+油尖旺		夏蕙閣		Hart Avenue Court
+油尖旺		多富閣		Dorfu Court
+油尖旺		多福大廈		Dolford Mansion
+油尖旺		大同新村		Cosmopolitan Estate
+油尖旺		天文台閣		Tin Man Toy Mansion
+油尖旺		天璽		The Cullinan
+油尖旺		太子花苑		Prince Edward Park
+油尖旺		太子閣		Prince'S Heights
+油尖旺		好世界洋樓		Good World Building
+油尖旺		威發大廈		Wai Fat Building
+油尖旺		安康大廈		On Hong Building
+油尖旺		安英大廈		On Ying Mansion
+油尖旺		宏景樓		Grandview Building
+油尖旺		富亨閣		Flatiron Court
+油尖旺		富多來新村		Fu Tor Loy Sun Chuen
+油尖旺		富威閣		Fortune Court
+油尖旺		富安大廈		Fu On Mansion
+油尖旺		富寧閣		Fulland Court
+油尖旺		富昌大廈		Fu Cheong Building
+油尖旺		富景		Richview Mansion
+油尖旺		富榮花園		Charming Garden
+油尖旺		富益閣		Fullic Court
+油尖旺		富裕臺		Fortune Terrace
+油尖旺		富達大廈		Foo Tat Building
+油尖旺		富邦樓		Full Pont House
+油尖旺		富麗閣		Fortune Court
+油尖旺		寶亨大廈		Po Hang Building
+油尖旺		寶來閣		Pobjoy Court
+油尖旺		寶倫大廈		Bo Lun Building
+油尖旺		寶堡大廈		Grandco Mansion
+油尖旺		寶安大廈		Bow On Building
+油尖旺		寶發大廈		Po Fat Building
+油尖旺		寶華大樓		Bowa House
+油尖旺		寶齡大廈		Portland Building
+油尖旺		山林閣		Diamond Court
+油尖旺		帝庭園		King'S Park Villa
+油尖旺		帝柏海灣		Central Park
+油尖旺		幸運閣		Lucky Court
+油尖旺		康信大廈		Hong Shun Building
+油尖旺		康和閣		Konwall Court
+油尖旺		廣基大廈		Top Jade Mansion
+油尖旺		廣發大廈		Comfort Mansion
+油尖旺		廣輝大廈		Kwong Fai Mansion
+油尖旺		御景臺		Emperor Height
+油尖旺		德利大廈		Tak Lee Building
+油尖旺		德成軒		City 18
+油尖旺		德昇大廈		Dickson Building
+油尖旺		德昌閣		Tak Cheong Court
+油尖旺		德福閣		Tivoli Court
+油尖旺		怡寧閣		Elaine Court
+油尖旺		怡興閣		Yee Hing Court
+油尖旺		怡齡閣		Ealing Court
+油尖旺		恆利大廈		Hanley Mansion
+油尖旺		恆昌大廈		Han Cheong Building
+油尖旺		恆星樓		Star Mansion
+油尖旺		恆福大廈		Hang Fook Building
+油尖旺		恒裕閣		Hang Yue Court
+油尖旺		恩佳大廈		Yun Kai Building
+油尖旺		愛華大廈		Edward Mansion
+油尖旺		愛華苑		Prince Edward Towers
+油尖旺		愛華閣		Edwardian Heights
+油尖旺		慧林苑		Wayne Place
+油尖旺		擎天半島		Sorrento
+油尖旺		文苑樓		Man Yuen Building
+油尖旺		文英樓		Man Ying Building
+油尖旺		文華閣		Mandarin Court
+油尖旺		文華閣		Mandarin Court
+油尖旺		文蔚閣		Mansfield Court
+油尖旺		新利大廈		Sun Lee Building
+油尖旺		新利大廈		Sun Lee Mansion
+油尖旺		新港豪庭		Metroregalia
+油尖旺		新興大廈		Sun Hing Building
+油尖旺		新萬利大廈		New Man Lee Building
+油尖旺		日和閣		Sunpeace Court
+油尖旺		旺角廣場		Mongkok Plaza
+油尖旺		昌和閣		Cheerworld Court
+油尖旺		昌明大廈		Cheong Ming Building
+油尖旺		昌發大廈		Cheong Fat Mansion
+油尖旺		昌茂大廈		Cheong Mow Building
+油尖旺		昌邦閣		Cheerbond Court
+油尖旺		明園		Ming Garden
+油尖旺		明威閣		Mainway Court
+油尖旺		時勝大廈		Chee Sing Building
+油尖旺		時安大廈		Chee On Building
+油尖旺		時新大廈		Chee Sun Building
+油尖旺		曉翠閣		Greenery Court
+油尖旺		朗廷軒		Legend Court
+油尖旺		東方花園		Oriental Gardens
+油尖旺		東興大樓		Tung Hing Building
+油尖旺		柏景灣		Park Avenue
+油尖旺		柏豐28		Bedford 28
+油尖旺		榮富苑		Greenfield Garden
+油尖旺		永光花園		Circle Garden
+油尖旺		永富大廈		Wing Fu Mansion
+油尖旺		永泰大廈		Wing Tai Building
+油尖旺		永發大廈		Wing Fat Mansion
+油尖旺		泰園		Tai Gardens
+油尖旺		泰安閣		Tai On Court
+油尖旺		海信大廈		Hai Xin Building
+油尖旺		海倫苑		Helena Garden
+油尖旺		海康大廈		Hoi Hong Buildings
+油尖旺		海德中心		Hydan Place
+油尖旺		海桃灣		Florient Rise
+油尖旺		海溢閣		Hayon Building
+油尖旺		海濱南岸		Harbour Place
+油尖旺		港景峯		The Victoria Towers
+油尖旺		港灣豪庭		Metro Harbour View
+油尖旺		漾日居		The Waterfront
+油尖旺		爵士花園		The Regalia
+油尖旺		甘芳大廈		Kam Fong Mansion
+油尖旺		界限街大樓		Boundary Building
+油尖旺		百利達廣場		Paradise Square
+油尖旺		百勝大廈		Pak Sing Building
+油尖旺		百匯軒		Cite' 33
+油尖旺		皇子花園		Prince Park
+油尖旺		碧廬		The Homestead
+油尖旺		祐安閣		Yau On Court
+油尖旺		福祿大廈		Fook Luk Building
+油尖旺		福群大廈		Folkland Mansion
+油尖旺		福苑		Fortune Crest
+油尖旺		秀華閣		Luna Court
+油尖旺		窩打老道8號		8 Waterloo Road
+油尖旺		美佳大廈		Miami Mansion
+油尖旺		翠庭閣		Greenview Court
+油尖旺		翠景閣		Green View Court
+油尖旺		耀邦大廈		Yiu Pont House
+油尖旺		興發大廈		Hing Fat Building
+油尖旺		花園廣場		Fa Yuen Plaza
+油尖旺		荔塘大廈		Lai Tong Building
+油尖旺		華偉大廈		Wah Wai Mansion
+油尖旺		華園閣		Rejoice Court
+油尖旺		華富園		Wah Fu Mansion
+油尖旺		華志大廈		Wah Chi Mansion
+油尖旺		華暉大廈		Wah Fai Mansion
+油尖旺		華苑		Walton Mansion
+油尖旺		萬安大廈		Man On Building
+油尖旺		萬新大廈		Mansun House
+油尖旺		萬盛閣		Prosperity Court
+油尖旺		萬豪閣		Marvel Court
+油尖旺		蕙寧閣		Welland Court
+油尖旺		蕙逸居		Sunningdale
+油尖旺		蘭亭閣		Latin Court
+油尖旺		衛理苑		Wylie Court
+油尖旺		豐盛樓		Harvest Building
+油尖旺		賀賢居		Nelson Court
+油尖旺		通發大廈		Tung Fat Building
+油尖旺		運泰大廈		Right Time Building
+油尖旺		都會軒		The Metropolis Residence
+油尖旺		金國中心		The Platinum
+油尖旺		金基大廈		Kamga Mansion
+油尖旺		金堂閣		King Tong Heights
+油尖旺		金威廣場		Kensington Plaza
+油尖旺		金巴利道26號		Kimberley 26
+油尖旺		金旺閣		King Wang Heights
+油尖旺		金柏閣		Passkon Court
+油尖旺		金楓雅閣		Maple Court
+油尖旺		金淞大廈		Kam Chung Building
+油尖旺		金滿閣		King Moon Heights
+油尖旺		金輝閣		Brilliant Court
+油尖旺		金都中心		Golden Plaza
+油尖旺		金風閣		Fair Wind Court
+油尖旺		錦魁樓		Kam Fai Building
+油尖旺		鐘山閣		Stephen Mansion
+油尖旺		長旺雅苑		Flourish Mansion
+油尖旺		雅寶大廈		Arts Mansion
+油尖旺		靄華閣		Ever Court
+油尖旺		青雲閣		Vision Court
+油尖旺		順利大廈		Shun Lee Building
+油尖旺		順景大廈		Shun King Building
+油尖旺		順興大廈		Shun Hing Building
+油尖旺		順豐大廈		Shun Fung Building
+油尖旺		順輝大廈		Shun Fai Building
+油尖旺		頌賢花園		June Garden
+油尖旺		頤園大廈		Yee Yuen Mansion
+油尖旺		頤樂居		Keswest Mansion
+油尖旺		顯發大廈		Haven Mansion
+油尖旺		駿發花園		Prosperous Garden
+油尖旺		騏邦大廈		Kay Pont Building
+油尖旺		高基大廈		Ko Kie Building
+油尖旺		高明大廈		Dominion Court
+油尖旺		鴻光大廈		Hung Kwong Building
+油尖旺		鴻威大廈		Hung Wai Building
+油尖旺		鴻祥大廈		Hung Cheung Building
+油尖旺		鴻禧大廈		Hung Hay Building
+油尖旺		鴻輝大廈		Hung Fai Building
+油尖旺		鴻達樓		Hung Tat Building
+油尖旺		鴻都大廈		Concord Building
+油尖旺		麒麟閣		Gallant Court
+油尖旺		麗寶大廈		Lai Po Building
+油尖旺		麗明大廈		Lai Ming Building
+油尖旺		麗華大廈		Lever Building
+油尖旺		麗華閣		Mayfair Mansion
+離島		坪麗苑		Peng Lai Court
+離島		愉景灣		Discovery Bay
+離島		映灣園		Caribbean Coast
+離島		東堤灣畔		Tung Chung Crescent
+離島		海堤灣畔		Seaview Crescent
+離島		藍天海岸		Coastal Skyline
+離島		裕東苑		Yu Tung Court
+北區		上水中心		Sheung Shui Centre
+北區		上水名都		Sheungshui Town Center
+北區		嘉兆軒		Kensington Green
+北區		嘉和軒		The Cornwall
+北區		嘉宏中心		Grand Tower
+北區		嘉盛苑		Ka Shing Court
+北區		奕翠園		Woodland Crest
+北區		威尼斯花園		Venice Garden
+北區		安盛苑		On Shing Court
+北區		富好閣		Foo Hoo Court
+北區		富康園		Wealthy Villas
+北區		富榮大廈		Fu Wing Mansion
+北區		帝庭軒		Regentville
+北區		廣福苑		Fortune House
+北區		彩蒲苑		Choi Po Court
+北區		御庭軒		Grand Regentville
+北區		御景峰		8 Royal Green
+北區		御皇庭		Royal Green
+北區		新都廣場		Metropolis Plaza
+北區		旭蒲苑		Yuk Po Court
+北區		昌盛苑		Cheong Shing Court
+北區		明珠華軒		Pearl Vista
+北區		景盛苑		King Shing Court
+北區		榮熙閣		Wing Hay Court
+北區		榮福中心		Wing Fok Centre
+北區		榮輝中心		Wing Fai Centre
+北區		欣盛苑		Yan Shing Court
+北區		欣翠花園		Cheerful Park
+北區		海禧華庭		Royal Jubilee
+北區		海聯廣場		Union Plaza
+北區		牽晴間		Dawning Views
+北區		皇府山		Noble Hill
+北區		碧湖花園		Avon Park
+北區		粉嶺中心		Fanling Centre
+北區		粉嶺名都		Fanling Town Center
+北區		粉嶺花園		Fanling Garden
+北區		綠悠軒		Belair Monte
+北區		維也納花園		Vienna Gardens
+北區		翠麗花園		Tsui Lai Garden
+北區		花都廣場		Flora Plaza
+北區		蔚翠花園		Greenpark Villa
+北區		豪峰嶺		Royal Knoll
+北區		金湖居		Kentwood Place
+北區		順欣花園		Sunningdale Garden
+北區		顯峯		Glorious Peak
+北區		高爾夫景園		Golf Parkview
+北區		龍豐花園		Lung Fung Garden
+元朗		YOHO TOWN		Yoho Town
+元朗		丹桂軒		The Verdancy
+元朗		信發大廈		Shun Fat Building
+元朗		信發大樓		Shun Fat Building
+元朗		偉發大廈		Wai Fat Building
+元朗		元朗廣場		Yuen Long Plaza
+元朗		冠豐大廈		Champion Building
+元朗		南天大廈		Nan Tin Mansion
+元朗		原築		La Grove
+元朗		合益中心		Hop Yick Centre
+元朗		合益廣場		Hop Yick Plaza
+元朗		同益大廈		Tung Yik Building
+元朗		啟欣軒		Kisland Villa
+元朗		喜利大廈		Healey Building
+元朗		嘉湖山莊		Kingswood Villas
+元朗		大福大廈		Tai Fook Building
+元朗		天富苑		Tin Fu Court
+元朗		天愛苑		Tin Oi Court
+元朗		天盛苑		Tin Shing Court
+元朗		天祐苑		Tin Yau Court
+元朗		天頌苑		Tin Chung Court
+元朗		天麗苑		Tin Lai Court
+元朗		好彩洋樓		Ho Choi Building
+元朗		好發洋樓		Ho Fat Building
+元朗		好盛洋樓		Ho Sing Building
+元朗		好順意大廈		Ho Shun Yee Building
+元朗		好順泰大廈		Ho Shun Tai Building
+元朗		好順福大廈		Ho Shun Fook Building
+元朗		宏豐大廈		Wang Fung Building
+元朗		富祐閣		Full Yau Court
+元朗		富興樓		Fu Hing Building
+元朗		富萊花園		Fu Loy Garden
+元朗		富達廣場		Manhattan Plaza
+元朗		寶珊園		Curio Court
+元朗		帝庭居		Imperial Villas
+元朗		年發大廈		Lin Fat Building
+元朗		康德閣		Orion Court
+元朗		建威大廈		Kin Wai Building
+元朗		建輝大廈		Kin Fai Building
+元朗		御庭居		Springdale Villas
+元朗		御景園		Scenic Gardens
+元朗		御豪山莊		Park Royale
+元朗		怡康大廈		Yee Hong Building
+元朗		怡豐花園		Yee Fung Garden
+元朗		恆富大廈		Hang Fu Building
+元朗		恆發樓		Hang Fat Mansion
+元朗		慧景軒		Vianni Cove
+元朗		新元朗中心		Sun Yuen Long Centre
+元朗		新基大廈		Sun Ga Building
+元朗		昌威大廈		Cheong Wai Mansion
+元朗		昌發大廈		Cheong Fat Building
+元朗		昌盛大廈		Cheong Sing Building
+元朗		明雲閣		Ming Wan Court
+元朗		時景花園		Chee King Garden
+元朗		朗峰園		Symphony Garden
+元朗		朗庭園		Villa By The Park
+元朗		朗怡居		Villa Premiere
+元朗		朗景台		Crystal Park
+元朗		朗晴居		Grand Del Sol
+元朗		柏麗豪園		Parkside Villa
+元朗		栢慧豪園		Central Park Towers Ii
+元朗		榮光大廈		Wing Light Building
+元朗		民康大廈		Man Hong Mansion
+元朗		永富閣		Wing Fu Mansion
+元朗		永豐樓		Wing Fung Building
+元朗		深灣畔		Deep Bay Grove
+元朗		玉桂園		Osmanthus Garden
+元朗		瑋珊園		Jasper Court
+元朗		瑞豐華庭		Sheffield Villas
+元朗		益利大廈		Yick Lee Mansion
+元朗		益發大廈		Yik Fat Building
+元朗		益輝大廈		Yick Fai Building
+元朗		盛發大廈		Shing Fat Building
+元朗		祥發大廈		Cheung Fat Building
+元朗		紫珊園		Coral Gardens
+元朗		綠悅		Fiori
+元朗		置富中心		Chi Fu Centre
+元朗		翠珊園		Treasure Court
+元朗		翠疊軒		Evergreen Place
+元朗		翠韻華庭		Greenery Place
+元朗		翹翠峰		Emerald Green
+元朗		興隆中心		Prosper Centre
+元朗		芙蓉園		Green Orchid
+元朗		菁雅居		Meadowlands
+元朗		華翠豪園		Covent Garden
+元朗		萬豐大廈		Man Fung Building
+元朗		藝典居		Villa Art Deco
+元朗		蝶翠峰		Sereno Verde
+元朗		裕發大樓		Yue Fat Building
+元朗		豐裕軒		Opulence Height
+元朗		逸翠軒		Greenville Residence
+元朗		采茵軒		Recours La Serre
+元朗		采葉庭		The Parcville
+元朗		金安閣		Kam On Building
+元朗		金寶大廈		Campbell House
+元朗		金碧花園		The Eldorado
+元朗		金福閣		Kam Fook Court
+元朗		金禧樓		Kam Hei House
+元朗		金莎花園		Windsor Villa
+元朗		金豐大廈		Kam Fung Building
+元朗		金閣豪園		Casa De Oro
+元朗		金馬大廈		Comet Mansion
+元朗		金龍樓		Kam Lung Mansion
+元朗		鉅發大廈		Kui Fat Building
+元朗		錦珊園		Coronet Court
+元朗		雅珊園		Aster Court
+元朗		雍翠豪園		Greenfields
+元朗		順發大廈		Shun Fat Building
+元朗		順豐大廈		Shun Fung Building
+元朗		鳳翔大廈		Fung Cheung Building
+元朗		鴻運中心		Fortune Centre
+元朗		麗珊園		Beauty Court
+元朗		麗虹花園		Lai Hung Garden
+大埔		中嘉閣		Central Plaza
+大埔		八號花園		Eightland Gardens
+大埔		利達大廈		Leader Building
+大埔		嘉豐花園		Richwood Park
+大埔		大埔中心		Tai Po Centre
+大埔		大埔寶馬山		Grand Palisades
+大埔		大埔廣場		Tai Po Plaza
+大埔		大埔花園		Tai Po Garden
+大埔		太和中心		Tai Wo Centre
+大埔		太湖花園		Serenity Park
+大埔		宏福苑		Wang Fuk Court
+大埔		富善花園		Full Scene Garden
+大埔		富萊花園		Fuller Gardens
+大埔		富雅花園		Elegance Garden
+大埔		寶湖花園		Plover Cove Garden
+大埔		寶雅苑		Po Nga Court
+大埔		帝欣苑		Parc Versailles
+大埔		帝琴灣		Symphony Bay
+大埔		德雅苑		Tak Nga Court
+大埔		怡雅苑		Yee Nga Court
+大埔		悠然山莊		The Paragon
+大埔		新峰花園		Classical Gardens
+大埔		新興花園		Sun Hing Garden
+大埔		新達廣場		Uptown Plaza
+大埔		昌運中心		Fortune Plaza
+大埔		明雅苑		Ming Nga Court
+大埔		景雅苑		King Nga Court
+大埔		榮麗苑		Winnye Tower
+大埔		樂賢居		Riviera Lodge
+大埔		汀雅苑		Ting Nga Court
+大埔		海寶花園		Treasure Garden
+大埔		滌濤山		Constellation Cove
+大埔		疊翠豪庭		Emerald Palace
+大埔		盈峰翠邸		The Paramount
+大埔		美菱居		Merit Place
+大埔		美豐花園		Beautiful Garden
+大埔		翠屏花園		Jade Plaza
+大埔		翠怡花園		Greenery Plaza
+大埔		翠林閣		Evergreen Court
+大埔		翠河花園		Jade Garden
+大埔		翡翠花園		Savanna Garden
+大埔		菁泉雅居		La Fontaine
+大埔		逸雅苑		Yat Nga Court
+大埔		順景樓		Shun King Building
+大埔		頌雅苑		Chung Nga Court
+大埔		鹿茵山莊		Deerhill Bay
+大埔		麗和閣		Reve Plaza
+大埔		麗湖閣		Lagoon Court
+大埔		龍成堡		JC Castle
+沙田		世界花園		World-Wide Gardens
+沙田		偉華中心		Wai Wah Centre
+沙田		全輝中心		Chuen Fai Centre
+沙田		勵城花園		Lai Shing Garden
+沙田		嘉徑苑		Ka Keng Court
+沙田		嘉御山		The Great Hill
+沙田		嘉田苑		Ka Tin Court
+沙田		嘉華星濤灣		La Costa
+沙田		好運中心		Lucky Plaza
+沙田		安康樓		On Hong Building
+沙田		安泰樓		On Tai Building
+沙田		富嘉花園		Grandway Garden
+沙田		富安花園		Chevalier Garden
+沙田		富寶花園		Saddle Ridge Garden
+沙田		富豪花園		Belair Gardens
+沙田		富輝花園		Fu Fai Garden
+沙田		嵐岸		Sausalito
+沙田		希爾頓中心		Hilton Plaza
+沙田		帝堡城		Castello
+沙田		康林苑		Hong Lam Court
+沙田		廣林苑		Kwong Lam Court
+沙田		御林峰		Royal Forest
+沙田		御龍山		The Palazzo
+沙田		怡翠花園		Eden Gardens
+沙田		恆峰花園		Granville Garden
+沙田		愉城苑		Yue Shing Court
+沙田		愉景花園		Greenview Garden
+沙田		愉田苑		Yue Tin Court
+沙田		愉翠苑		Yu Chui Court
+沙田		文禮閣		Manlai Court
+沙田		新城市廣場		New Town Plaza
+沙田		新港城		Sunshine City
+沙田		春暉花園		Springfield Garden
+沙田		晉名峰		The Grandville
+沙田		景田苑		King Tin Court
+沙田		晴碧花園		Sunshine Grove
+沙田		曉峯灣畔		Mountain Shore
+沙田		曉翠山莊		Pristine Villa
+沙田		榕翠園		Ficus Garden
+沙田		樂林園		Lok Lam Garden
+沙田		欣廷軒		Prima Villa
+沙田		沙田中心		Shatin Centre
+沙田		沙田廣埸		Shatin Plaza
+沙田		沙田第一城		City One Shatin
+沙田		沙田花園		Shatin Heights
+沙田		河畔花園		Garden Rivera
+沙田		海典居		Villa Oceania
+沙田		海典灣		Ocean View
+沙田		海柏花園		Bayshore Towers
+沙田		海福花園		Holford Gardens
+沙田		湖景花園		Lakeview Garden
+沙田		濱景花園		Ravana Garden
+沙田		瑞峰花園		Julimount Garden
+沙田		田園閣		Greenfield Court
+沙田		皇御居		Kingston Lodge
+沙田		益富閣		Rich Court
+沙田		碧濤花園		Pictorial Garden
+沙田		碧霞花園		Sha Tin 33
+沙田		祥雲閣		Cloudview Mansion
+沙田		福安花園		Fok On Garden
+沙田		積健樓		Chik Kin Mansion
+沙田		積富樓		Chik Fu Mansion
+沙田		穗禾苑		Sui Wo Court
+沙田		美城苑		May Shing Court
+沙田		美松苑		Mei Chung Court
+沙田		翠擁華庭		Monte Vista
+沙田		翠景花園		Park View Garden
+沙田		翠湖花園		Garden Vista
+沙田		翠華花園		Greenwood Garden
+沙田		翠麗花園		Green Leaves Garden
+沙田		聚龍居		Parc Royale
+沙田		聽濤雅苑		Vista Paradiso
+沙田		花園城		Shatinpark
+沙田		華翠園		Greenwood Terrace
+沙田		蔚景園		Scenery Court
+沙田		觀瀾雅軒		Baycrest
+沙田		豐景花園		Scenery Garden
+沙田		豐盛苑		Fung Shing Court
+沙田		迎濤灣		Marbella
+沙田		金獅花園		Golden Lion Garden
+沙田		金禧花園		Grandeur Garden
+沙田		金輝樓		Kam Fai Building
+沙田		金輝花園		Glamour Garden
+沙田		銀湖天峰		Lake Silver
+沙田		銀禧花園		Jubilee Garden
+沙田		錦泰苑		Kam Tai Court
+沙田		錦禧苑		Kam Hay Court
+沙田		錦英苑		Kam Ying Court
+沙田		錦豐苑		Kam Fung Court
+沙田		錦鞍苑		Kam On Court
+沙田		錦龍苑		Kam Lung Court
+沙田		雅典居		Villa Athena
+沙田		雅濤居		The Waterside
+沙田		雲疊花園		Carado Garden
+沙田		雲頂峰		Sky One
+沙田		馬鞍山中心		Ma On Shan Centre
+沙田		駿景園		Royal Ascot
+東區		CASA 880		Casa 880
+東區		中華大廈		China Tower
+東區		丹拿花園		Tanner Garden
+東區		乘龍閣		Shing Loong Court
+東區		仁寶閣		Yen Po Court
+東區		佳景大廈		Belle House
+東區		佳翠苑		Kai Tsui Court
+東區		俊文樓		Raymond Court
+東區		偉文大廈		Wiseman Building
+東區		健威花園		Healthy Gardens
+東區		健康村		Healthy Village
+東區		傲龍軒		Dragon Pride
+東區		僑英大廈		Kiu Ying Building
+東區		僑裕大廈		Gain Yu Building
+東區		兆年大廈		Siu Nin Building
+東區		兆文樓		Siu Man Court
+東區		兆景大廈		Siu King Building
+東區		兆華大廈		Siu Wah Building
+東區		光超台		Kwong Chiu Terrace
+東區		利基大廈		Lee Ga Building
+東區		利景閣		Lee King Mansion
+東區		創福苑		Comfort Heights
+東區		匯豪峰		Splendid Place
+東區		千禧閣		Millennium Court
+東區		協和大廈		Hip Wo Mansion
+東區		南珠大廈		Nan Chu Mansion
+東區		南豐新村		Nan Fung Sun Chuen
+東區		友福園		Yalford Building
+東區		合偉大廈		Eternal Building
+東區		君悅華庭		Grand Villa
+東區		君悅軒		Grand Garden
+東區		和富中心		Provident Centre
+東區		和富豪庭		The Wharf
+東區		啟協大廈		Kenthill Mansion
+東區		啟禮閣		Kailey Court
+東區		嘉亨灣		Grand Promenade
+東區		嘉兆大廈		Casio Mansion
+東區		嘉威大廈		Ka Wai Building
+東區		嘉安苑		Kar On House
+東區		嘉富大廈		Kar Fu Building
+東區		嘉文樓		Kar Man Court
+東區		嘉榮大廈		Ka Wing Building
+東區		嘉興大廈		Ka Hing Building
+東區		嘉華洋樓		Kava Mansion
+東區		嘉裕大廈		Ka Yue Building
+東區		嘉運大廈		Kar Wan Building
+東區		國賓大廈		Odeon Building
+東區		城市花園		City Garden
+東區		大來大廈		Dollar Building
+東區		天寶大廈		Tempo Court
+東區		天順樓		Chaton House
+東區		太古城		Taikoo Shing
+東區		太安樓		Tai On Building
+東區		好景樓		Ho King Building
+東區		威德閣		Victor Court
+東區		威明閣		Wilmont Court
+東區		威景臺		Viking Villas
+東區		安業大廈		On Yip Building
+東區		安樂樓		On Lok Building
+東區		宏德居		Walton Estate
+東區		宏華閣		Wan Wah Mansion
+東區		宣協大廈		Swanhill Mansion
+東區		富家閣		Wealthy Court
+東區		富怡花園		Cheerful Garden
+東區		富景花園		Fullview Garden
+東區		富景閣		Grandview Court
+東區		富景閣		Fu King Court
+東區		富欣花園		Harmony Garden
+東區		富欣閣		Fu Yan Court
+東區		富澤花園		Fortress Garden
+東區		富澤軒		Fortress Heights
+東區		富蘭苑		Fulham Court
+東區		富豪閣		Beverley Heights
+東區		富邦大廈		Fu Bong Mansion
+東區		富雅花園		Full Wealth Gardens
+東區		寶峰園		Bo Fung Gardens
+東區		寶文大廈		Po Man Building
+東區		寶明閣		Bo Ming Court
+東區		寶榮大廈		Po Wing Building
+東區		寶福大廈		Po Fuk Building
+東區		寶華大廈		Po Wah Building
+東區		寶馬山花園		Pacific Palisades
+東區		寶馬臺		Braemar Terrace
+東區		寶馬花園		Marble Garden
+東區		山河大廈		San Ho Building
+東區		山翠苑		Shan Tsui Court
+東區		峰景大廈		Hilltop Mansion
+東區		峻峰花園		Perfect Mount Gardens
+東區		康威大廈		Everwin Building
+東區		康山花園		Kornhill
+東區		康平閣		Vicky Court
+東區		康怡花園		Kornhill
+東區		康明苑		Cumine Court
+東區		康景花園		Mount Parker Lodge
+東區		康澤花園		Fortress Metro Tower
+東區		康盛苑		Suncliffe Place
+東區		康福園		Comfort Gardens
+東區		康翠臺		Greenwood Terrace
+東區		康華大廈		Hong Wah Mansion
+東區		康蕙花園		Kornville
+東區		康麗苑		Cornell Court
+東區		建基大廈		Kin Ga Building
+東區		建康花園		Cannon Garden
+東區		建業大廈		Kin Yip Mansion
+東區		建華花園		Kingsway Garden
+東區		建邦大廈		Kin Bong Building
+東區		形品		Lime Habitat
+東區		得發大廈		Tak Fat Building
+東區		御景軒		Scenic Horizon
+東區		御皇臺		Royal Terrace
+東區		德福樓		Tak Fook Building
+東區		怡家洋樓		Elgar Mansion
+東區		怡寶洋樓		Yeebo Mansion
+東區		怡新洋樓		Sunshine Mansion
+東區		怡昇洋樓		Delightful Mansion
+東區		怡翠苑		Yee Tsui Court
+東區		恒昌閣		Hand Cheong Court
+東區		悅翠苑		Yuet Chui Court
+東區		惠安苑		Westlands Gardens
+東區		惠芳閣		Wai Fong Court
+東區		愛琴軒		Melody Court
+東區		愛蝶灣		Aldrich Garden
+東區		慧雅閣		Willshire Towers
+東區		慧雲峯		La Place De Victoria
+東區		新和富大廈		New Wealth Mansion
+東區		新威園		Sunway Gardens
+東區		新德樓		Sun Tak House
+東區		新成中心		Sun Sing Centre
+東區		新成大樓		Sun Sing Building
+東區		新翠花園		New Jade Gardens
+東區		新達大廈		Sentact Building
+東區		旭威閣		Yu Wai Mansion
+東區		昌盛洋樓		Cheong Shing Mansion
+東區		昌輝閣		Fairview Court
+東區		明園閣		Ming Court
+東區		明威大廈		Mainway Building
+東區		明暉大廈		Ming Fai Building
+東區		明月大廈		Ming Yuet Building
+東區		明苑中心		Ming Yuen Centre
+東區		明軒		Villa Claire
+東區		星灣峯		The Oakridge
+東區		景愉居		King Yu Court
+東區		景暉閣		King Fai Court
+東區		景翠苑		King Tsui Court
+東區		景興閣		Kings Court
+東區		曉翠苑		Hiu Tsui Court
+東區		木蘭苑		Merlin Garden
+東區		杏翠苑		Hang Tsui Court
+東區		杏花村		Heng Fa Chuen
+東區		東安大廈		Tung On Building
+東區		東寶大廈		Tung Po Mansion
+東區		東寶大廈		Tung Po Building
+東區		東強大廈		Tung Keung Building
+東區		東旭苑		Tung Yuk Court
+東區		東旺樓		Tung Wong House
+東區		東明樓		Tung Ming Lau
+東區		東欣苑		Tung Yan Court
+東區		東泰大廈		Tung Tai Building
+東區		東濤苑		Tung To Court
+東區		東灣閣		The Eastborne
+東區		東熹苑		Tung Hei Court
+東區		東盛苑		Tung Shing Court
+東區		東興大廈		Tung Hing Building
+東區		東豪大廈		Tung Ho Building
+東區		東輝大廈		Tung Fai Building
+東區		東霖苑		Tung Lam Court
+東區		東駿苑		Tung Chun Court
+東區		柏景臺		Park Towers
+東區		柏蕙苑		Park Vale
+東區		柴灣戲院大廈		Chai Wan Cinema Building
+東區		楓林花園		Maple Gardens
+東區		樂嘉中心		Roca Centre
+東區		樂翠臺		Neptune Terrace
+東區		樂軒臺		Lok Hin Terrace
+東區		欣景花園		Felicity Garden
+東區		永光閣		Circle Court
+東區		永利中心		Winner Centre
+東區		永寶大廈		Wing Po Mansion
+東區		永德大廈		Win Tack Building
+東區		永興大廈		Wing Hing Building
+東區		永華大廈		Winner Mansion
+東區		永順大廈		Wing Shun Mansion
+東區		泰安閣		Tai On Court
+東區		海光苑		Hoi Kwong Court
+東區		海利大廈		Hoi Lee Building
+東區		海和苑		Hollywood Court
+東區		海天峰		Sky Horizon
+東區		海安大廈		Hoi On Building
+東區		海寧大廈		Hoi Ning Building
+東區		海峰中心		Hoi Fung Centre
+東區		海峰園		Harbour Heights
+東區		海新大廈		Hoi Sun Building
+東區		海景台		Seaview Garden
+東區		海景軒		Grand Seaview Height
+東區		海灣華庭		Marina Lodge
+東區		海福花園		Seaview Garden
+東區		海興大廈		Hoi Hing Building
+東區		海順大廈		Hoi Shun Building
+東區		添金閣		Teemko Court
+東區		清暉臺		Ching Fai Terrace
+東區		清華大廈		Ching Wah Building
+東區		港濤軒		Island Lodge
+東區		港輝豪庭		Rica Victoria
+東區		港逸軒		Glory Rise
+東區		港運城		Island Place
+東區		漢威大廈		Hon Way Mansion
+東區		濱海大廈		Riviera Mansion
+東區		灣景園		Bayview Park
+東區		珊瑚閣		Coral Court
+東區		瑞興閣		Shui Hing Court
+東區		百佳閣		Parker'S Court
+東區		百利居		Fortune Court
+東區		百福花園		Bedford Gardens
+東區		盈富閣		Fortune Court
+東區		益新洋樓		Aik San Mansion
+東區		碧麗閣		Belleve Court
+東區		福怡大廈		Fortune Mansion
+東區		福昇大廈		Fok Sing Building
+東區		福英大廈		Fok Ying Building
+東區		筲箕灣中心		Shaukiwan Centre
+東區		筲箕灣廣場		Shaukeiwan Plaza
+東區		維多利中心		Victoria Centre
+東區		維景臺		Victoria Tower
+東區		維景花園		Viking Garden
+東區		維順閣		Wilson Court
+東區		縉景臺		Jupiter Terrace
+東區		美東大廈		Mei Tung Building
+東區		耀明大廈		Yiu Ming Building
+東區		耀星華庭		Supernova Stand
+東區		聚龍閣		Trillion Court
+東區		胡日皆大廈		Foo Yet Kai Building
+東區		興民大廈		Hing Man Mansion
+東區		興漢大廈		Hing Hon Building
+東區		英皇中心		King'S Centre
+東區		英輝大廈		Kingsfield Mansion
+東區		英麗閣		King'S View Court
+東區		茵翠苑		Yan Tsui Court
+東區		莊士維港軒		The Harbourside
+東區		莊士軒		Chuang'S Heights
+東區		莊苑		Chuang'S-On-The-Park
+東區		華信大廈		Vincent Mansion
+東區		華信花園		Wah Shun Gardens
+東區		華健大廈		Wah Kin Mansion
+東區		華凱大廈		Wah Hoi Mansion
+東區		華堂大廈		Wah Tong Building
+東區		華寶大廈		Wah Po Building
+東區		華康大廈		Wah Hong Mansion
+東區		華昇大廈		Wah Sing Building
+東區		華曦大廈		Wah Hai Mansion
+東區		華泰大廈		Wah Tai Mansion
+東區		華盛樓		Wah Shing Mansion
+東區		華禮大廈		Wah Lai Mansion
+東區		華蘭花園		Westlands Court
+東區		萬寶大廈		Marvel Building
+東區		藍灣半島		Island Resort
+東區		裕益大廈		Yue Yick Building
+東區		西灣大廈		Sai Wan Building
+東區		西灣河大廈		Saiwanho Building
+東區		西灣閣		Sai Wan Court
+東區		豐昌大廈		Fung Cheong Building
+東區		豐林閣		Overthorpe
+東區		豐榮苑		Richview Villa
+東區		豪廷峰		Le Sommet
+東區		賽西湖大廈		Braemar Hill Mansions
+東區		逸意居		The Floridian
+東區		逸樺園		The Orchards
+東區		逸濤灣		Les Saisons
+東區		金寶大廈		Golden Mansion
+東區		金山閣		Kuisum Court
+東區		金海樓		Kam Hoi Building
+東區		金源洋樓		Gold Mine Building
+東區		金發大廈		Kim Fat Mansion
+東區		金舫大廈		Show Boat Mansion
+東區		金運大廈		King'S Way Mansion
+東區		金龍大廈		Dragon Court
+東區		鉅利大廈		Kui Lee Building
+東區		銀河廣場		Galaxy Plaza
+東區		陽安大廈		Yeung On Building
+東區		雅利閣		Alice Court
+東區		雅景臺		Broadview Terrace
+東區		雅歌苑		Melody Court
+東區		雅麗閣		Artland Court
+東區		雲峰大廈		Summit Court
+東區		雲景台		Evelyn Towers
+東區		馬寶閣		Marble Court
+東區		高威閣		Koway Court
+東區		高發大廈		Goldfield Mansion
+東區		鯉景大廈		Lei King Mansion
+東區		鯉景灣		Lei King Wan
+東區		鴻恩大廈		Hung Yan Building
+東區		鴻日大廈		Hung Yat Building
+東區		麗東海景豪苑		Newton Harbour View
+東區		龍峰閣		Dragon Peak
+東區		龍心閣		Dragon Heart Court
+東區		龍景大廈		Dragon View House
+東區		龍景花園		Dragon View Garden
+中西區		AQUA 33		Aqua 33
+中西區		MANHATTAN AVENUE		Manhattan Avenue
+中西區		SOHO 38		Soho 38
+中西區		THE MAYFAIR		The Mayfair
+中西區		世紀大廈		Century Tower
+中西區		中源中心		Midland Centre
+中西區		中發大廈		Felicity Building
+中西區		中興閣		Chung Hing Court
+中西區		亨富閣		Huncliff Court
+中西區		亨順閣		Hansen Court
+中西區		仁信大廈		Yen Shun Mansion
+中西區		仁福大廈		Yen Fook Mansion
+中西區		佳景閣		Jadeview Court
+中西區		俊傑花園		Scholastic Garden
+中西區		俊威閣		Charmview Court
+中西區		俊庭居		Imperial Terrace
+中西區		俊賢花園		Lyttelton Garden
+中西區		俊賢閣		Intelligent Court
+中西區		俊陞華庭		Elite'S Place
+中西區		保基大廈		Poga Building
+中西區		信怡閣		Seymour Place
+中西區		倚雲閣		Ewan Court
+中西區		偉景閣		Viking Court
+中西區		傲翔灣畔		The Sail At Victoria
+中西區		兆和軒		Villa Serene
+中西區		兆景閣		Shiu King Court
+中西區		兆禧閣		Graceful Court
+中西區		光前大廈		Kong Chian Tower
+中西區		八達大廈		Federate Building
+中西區		再輝大廈		Joyful Building
+中西區		利德大廈		Right Mansion
+中西區		利華大廈		Lee Wah Mansion
+中西區		創業中心		Chong Yip Centre
+中西區		加惠臺		Cayman Rise
+中西區		匡景居		Dawning Height
+中西區		匯豪閣		Winsome Park
+中西區		南海大廈		Nan Hai Mansion
+中西區		南雄大廈		Namhung Mansion
+中西區		博仕臺		Grand Scholar
+中西區		卿旺大廈		Hing Wong Building
+中西區		君德閣		Conduit Tower
+中西區		啟成大廈		Kensington Mansion
+中西區		嘉倫軒		Woodlands Terrace
+中西區		嘉兆臺		The Grand Panorama
+中西區		嘉和苑		Glory Heights
+中西區		嘉安大廈		Ka On Building
+中西區		嘉富大廈		Ka Fu Building
+中西區		嘉富臺		Prosperous Height
+中西區		嘉富麗苑		Clovelly Court
+中西區		嘉寶大廈		Carbo Mansion
+中西區		嘉怡閣		Ka Yee Court
+中西區		嘉景臺		Corona Tower
+中西區		嘉盛閣		Charming Court
+中西區		嘉美閣		Beverly Court
+中西區		嘉苑		Greenville Gardens
+中西區		嘉豪大廈		Kar Ho Building
+中西區		嘉輝花園		Smithfield Terrace
+中西區		嘉麗苑		Skylight Tower
+中西區		國基大廈		Kwok Ga Building
+中西區		地利根德閣		Tregunter
+中西區		城暉大廈		Kennedy Town Building
+中西區		域多利道60號		No.60 Victoria Road
+中西區		堅城中心		Kennedy Town Centre
+中西區		堅尼閣		Kenny Court
+中西區		堅都大廈		Caine Mansion
+中西區		堅麗閣		Kennedy Heights
+中西區		天匯		39 Conduit Road
+中西區		天悅閣		Smiling Court
+中西區		太康大廈		Tai Hong Building
+中西區		太白居		Tai Pak Terrace
+中西區		好利閣		Hollywood Heights
+中西區		威豪閣		Wealthy Heights
+中西區		威都閣		Villa Veneto
+中西區		學士臺		Academic Terrace
+中西區		學林雅軒		Hilary Court
+中西區		安景閣		Fairview Court
+中西區		安達中心		Andes Plaza
+中西區		宜順大廈		Yee Shun Mansion
+中西區		家安大廈		Grace Mansion
+中西區		家樂花園		Marco Garden
+中西區		富基大廈		Fu Ga Building
+中西區		富山苑		Fortune Villa
+中西區		富景花園		Scenic Heights
+中西區		富滙豪庭		Regence Royale
+中西區		富滿大廈		Fu Moon Building
+中西區		寧養台		Ning Yeung Terrace
+中西區		寶園		Po Garden
+中西區		寶如玉大廈		Po Yue Yuk Building
+中西區		寶威閣		Parkway Court
+中西區		寶恆苑		Bonham Court
+中西區		寶恆閣		Bonham Crest
+中西區		寶時大廈		Peace Tower
+中西區		寶林閣		Po Lam Court
+中西區		寶樺臺		Birchwood Place
+中西區		寶玉閣		Jadestone Court
+中西區		寶珊道一號		No.1 Po Shan Road
+中西區		寶瑜閣		Bowie Court
+中西區		寶翠園		The Belcher'S
+中西區		寶翠閣		Belcher Court
+中西區		寶華軒		Casa Bella
+中西區		寶雲山莊		Fairlane Towers
+中西區		寶雲閣		Bowen Place
+中西區		尼斯花園		Nice Garden
+中西區		居仁閣		Kui Yan Court
+中西區		展鴻閣		Chin Hom Court
+中西區		崑廬		Mountain Lodge
+中西區		巴威大廈		The Babington
+中西區		帝后華庭		Queen'S Terrace
+中西區		帝景園		Dynasty Court
+中西區		帝華臺		The Rednaxela
+中西區		帝豪閣		Imperial Court
+中西區		康和花園		Goodwill Garden
+中西區		康威花園		Hongway Garden
+中西區		康福閣		Comfort Court
+中西區		廣堅大廈		Caine Building
+中西區		廣豐台		Kwong Fung Terrace
+中西區		得利大廈		Tak Lee Building
+中西區		御景臺		Scenic Rise
+中西區		御林豪庭		The Bellevue Place
+中西區		怡基閣		Yee Ga Court
+中西區		怡富閣		Rich Court
+中西區		怡峯		Mount Davis 33
+中西區		怡景花園		Elegant Garden
+中西區		怡豐閣		Yee Fung Court
+中西區		恆昌泰大廈		Hang Cheong Tai Building
+中西區		恆柏園		Park View Court
+中西區		恆翠園		Greenland Court
+中西區		恒龍閣		Dragon Court
+中西區		愛都大廈		Estoril Court
+中西區		慧明苑		Elegant Terrace
+中西區		慧景臺		Grandview Tower
+中西區		慧林閣		Sherwood Court
+中西區		慧源閣		Cameo Court
+中西區		慧苑		Wisdom Court
+中西區		慧華閣		Wai Wah Court
+中西區		慧豪閣		Vantage Park
+中西區		應彪大廈		Ying Piu Mansion
+中西區		懿峰		Seymour
+中西區		承德山莊		Scenecliff
+中西區		持平大廈		Chi Ping Building
+中西區		文光閣		Man Kwong Court
+中西區		文華新村		Mandarin Villa
+中西區		文豪花園		Scholar Court
+中西區		新昇大廈		New Start Building
+中西區		昌景閣		Cheong King Court
+中西區		昌榮閣		Cheong Wing Court
+中西區		昌運大廈		Cheong Wan Mansion
+中西區		明德軒		Reading Place
+中西區		時樂花園		Cheery Garden
+中西區		普慶閣		Po Hing Court
+中西區		普頓臺		Princeton Tower
+中西區		景怡居		Caine Tower
+中西區		景翠園		Greenview Gardens
+中西區		景輝大廈		Kingsfield Tower
+中西區		景雅花園		Panorama Gardens
+中西區		曉山閣		Hill Court
+中西區		曉峰閣		Hillsborough Court
+中西區		曉輝大廈		Sunglow Building
+中西區		曉順閣		Houston Court
+中西區		杏彤苑		Hatton Place
+中西區		東蔚苑		Tung Wai Garden
+中西區		楊華閣		Aspen Court
+中西區		榮昇閣		Wing Sing Court
+中西區		榮華大廈		Wing Wa Mansion
+中西區		榮華閣		Winner Court
+中西區		樂信臺		Robinson Heights
+中西區		樂怡閣		Roc Ye Court
+中西區		樂欣大廈		Ryan Mansion
+中西區		樂賢閣		Rowen Court
+中西區		欣翠閣		Goodview Court
+中西區		正豐大廈		General Building
+中西區		殷榮閣		Flourish Court
+中西區		殷樺花園		Blessings Garden
+中西區		殷豪閣		Yukon Court
+中西區		毓明閣		Yuk Ming Towers
+中西區		永福閣		Wing Fook Court
+中西區		泓都		The Merton
+中西區		活倫閣		Woodlands Court
+中西區		海傍大廈		Sea View Mansion
+中西區		海怡花園		Harbour View Garden
+中西區		海昇大廈		Hoi Sing Building
+中西區		海明苑		Hoi Ming Court
+中西區		海雅閣		Sussex Court
+中西區		添寶閣		Tim Po Court
+中西區		源輝閣		Yuen Fai Court
+中西區		滿峰台		Monticello
+中西區		滿輝大廈		Moon Fair Mansion
+中西區		澤安閣		Chester Court
+中西區		珍珠閣		Pearl Court
+中西區		瑞華閣		Silver Court
+中西區		瓊峰台		Kingsford Height
+中西區		百合苑		All Fit Garden
+中西區		百年順大廈		Park Mansions
+中西區		百麗花園		Bel Mount Garden
+中西區		盈基花園		Ying Ga Garden
+中西區		盈峰一號		One Pacific Heights
+中西區		益豐花園		Yick Fung Garden
+中西區		真光大廈		True Light Building
+中西區		碧翠園		Greenland Garden
+中西區		碧華閣		Bic Wah Court
+中西區		祥暉大廈		Cheung Fai Building
+中西區		祺安大廈		Kee On Building
+中西區		福滿大廈		Fook Moon Building
+中西區		福澤花園		Fortune Gardens
+中西區		福熙苑		Floral Tower
+中西區		福臨閣		Woodland Court
+中西區		福苑		Scenic Garden
+中西區		福陞閣		Fook Sing Court
+中西區		禧利大廈		Hillier Building
+中西區		禮頓苑		Losion Villa
+中西區		秀麗閣		Serene Court
+中西區		穎章大廈		Wing Cheung Court
+中西區		綠意居		Ivy On Belcher'S
+中西區		羅便臣道31號		31 Robinson Road
+中西區		羅便臣道80號		No.80 Robinson Road
+中西區		美意居		Medal Court
+中西區		美暉大廈		Markfield Building
+中西區		美樂閣		Maxluck Court
+中西區		美菲閣		Smithfield Court
+中西區		美蘭閣		Midland Court
+中西區		美麗村		Miramar Villa
+中西區		翠安閣		Tsui On Court
+中西區		翠怡閣		Greenville
+中西區		翠景閣		Tsui King Court
+中西區		翠荷苑		Jade Lotus Garden
+中西區		翠麗苑		Tresend Garden
+中西區		翠麗軒		Cherry Crest
+中西區		翰庭軒		Honor Villa
+中西區		翰林軒		University Heights
+中西區		聚安樓		Silvercrest
+中西區		聚賢逸居		Westview Height
+中西區		肇輝臺花園		Shiu Fai Terrace Garden
+中西區		般含臺		Bonham Terrace
+中西區		般柏苑		Parksdale
+中西區		良基大廈		Liang Ga Building
+中西區		花園臺		Garden Terrace
+中西區		英華閣		Ying Wa Court
+中西區		英賢閣		Ying Yin Mansion
+中西區		英輝閣		Ying Fai Court
+中西區		荷李活華庭		Hollywood Terrace
+中西區		華利樓		Wah Lee Building
+中西區		華庭閣		Skyview Cliff
+中西區		華明中心		Wah Ming Centre
+中西區		華輝大廈		Wah Fai House
+中西區		華輝閣		Wah Fai Court
+中西區		萬城閣		Million City
+中西區		蔚山花園		Visalia Garden
+中西區		蔚巒閣		Peaksville
+中西區		蔚庭軒		Wilton Place
+中西區		蔚皇居		Valverde
+中西區		蔚華閣		Primrose Court
+中西區		蔚豪苑		Nicholson Tower
+中西區		薈萃苑		Regal Crest
+中西區		衛城閣		Windsor Court
+中西區		裕利大廈		Evora Building
+中西區		裕新大廈		Yue Sun Mansion
+中西區		裕福大廈		Grand Fortune Mansion
+中西區		裕豐花園		Richsun Garden
+中西區		西寧閣		Serene Court
+中西區		豐景閣		Fung King Court
+中西區		豐樂閣		Albron Court
+中西區		豐盛大廈		Fung Shing Building
+中西區		豐裕大廈		Fung Yu Building
+中西區		豐逸大廈		Fung Yat Building
+中西區		豪景閣		Good View Court
+中西區		豪華大廈		Hoover Mansion
+中西區		豫苑		Euston Court
+中西區		輝煌臺		Fairview Height
+中西區		輝煌豪園		Palatial Crest
+中西區		輝鴻閣		Excelsior Court
+中西區		達隆名居		Talon Tower
+中西區		采文軒		The Bonham Mansion
+中西區		采逸軒		La Maison Du Nord
+中西區		金寧大廈		Kam Ning Mansion
+中西區		金寶閣		Treasure Court
+中西區		金帝軒		Golden Lodge
+中西區		金庭居		Golden Pavillon
+中西區		金櫻閣		Sakura Court
+中西區		金碧閣		Cimbria Court
+中西區		金荷大廈		Kam Ho Mansion
+中西區		金莉大廈		Kam Lei Building
+中西區		金裕大廈		Kam Yu Mansion
+中西區		金風大廈		Kam Fung Mansion
+中西區		金鳳閣		Golden Phoenix Court
+中西區		錦明閣		King Ming Mansion
+中西區		錦翠園		Kenyon Court
+中西區		錦興大廈		Kam Hing Building
+中西區		隆基大樓		Lungga Mansion
+中西區		雅景大廈		Green Field Court
+中西區		雅福台		Axeford Villa
+中西區		雅緻大廈		Arts Building
+中西區		雅苑		Beauty Court
+中西區		雅賢軒		Elite Court
+中西區		雍慧閣		Bon-Point
+中西區		雍景臺		Robinson Place
+中西區		雍翠台		Grandview Garden
+中西區		雨時大廈		St. Louis Mansion
+中西區		順安大廈		Shun On Building
+中西區		順景雅庭		View Villa
+中西區		順暉大廈		Shun Fai Building
+中西區		順泰大廈		Shun Tai Building
+中西區		順興大廈		Shun Hing Building
+中西區		香港花園		Hong Kong Garden
+中西區		駿豪閣		Valiant Park
+中西區		騰黃閣		United Mansion
+中西區		高宏閣		Ko Wang Court
+中西區		高樂花園		Connaught Garden
+中西區		高逸華軒		Manhattan Heights
+中西區		高陞軒		Urbana 38
+中西區		高雅閣		Ko Nga Court
+中西區		高雋閣		Ko Chun Court
+中西區		高雲台		Goldwin Heights
+中西區		麗怡閣		Beaudry Tower
+中西區		麗恩閣		Lechler Court
+中西區		麗景閣		Lai King Court
+中西區		麗湖花園		Regent Height
+中西區		麗豪閣		Good View Court
+中西區		麗賢閣		Lai Yin Court
+中西區		麥當奴大廈		Macdonnell House Quarters
+中西區		龍暉花園		Dragonfair Garden
+中西區		龍翔花園		Lung Cheung Garden
+中西區		龍豐閣		Lun Fung Court
+中西區		龍騰閣		Dragonview Court
+灣仔		Y.I		Y. I
+灣仔		YORK PLACE		York Place
+灣仔		三元大廈		Sam Yuen Mansion
+灣仔		京城大廈		Capital Building
+灣仔		仁文大廈		Yen Men Building
+灣仔		仁英大廈		Yen Ying Building
+灣仔		仁麗苑		Yen Lai Building
+灣仔		伊利莎伯大廈		Elizabeth House
+灣仔		修頓花園		Southorn Garden
+灣仔		優雅閣		The Elegance
+灣仔		兆威閣		Silvervale Mansion
+灣仔		兆豐大廈		Siu Fung Buliding
+灣仔		光明台		Illumination Terrace
+灣仔		冬青閣		Holly Court
+灣仔		利來大廈		Lee Loy Building
+灣仔		利文樓		Newman House
+灣仔		利發大廈		Lee Fat Building
+灣仔		利華閣		La Vogue Court
+灣仔		力生軒		Silverwood
+灣仔		加路連花園		Caroline Garden
+灣仔		加達樓		Cactus Mansion
+灣仔		匯文樓		Tsui Man Court
+灣仔		匯星壹號		No.1 Star Street
+灣仔		匯翠台		Greenway Terrace
+灣仔		千葉居		Billion Terrace
+灣仔		南榮大廈		Nam Wing Building
+灣仔		名仕花園		Malibu Garden
+灣仔		名仕閣		Ming'S Court
+灣仔		名門		The Legend
+灣仔		啟蔭閣		Kai Yam Building
+灣仔		嘉崙臺		The Colonnade
+灣仔		嘉景臺		Gardenview Heights
+灣仔		嘉樂居		Claymore Lodge
+灣仔		嘉薈軒		J Residence
+灣仔		嘉蘭閣		Grand Court
+灣仔		嘉蘭閣		Caroline Height
+灣仔		嘉雲臺		Cavendish Heights
+灣仔		國泰新宇		Cathay Lodge
+灣仔		基利大廈		Kelly House
+灣仔		堅安大廈		Kin On Building
+灣仔		大坑台		Tai Hang Terrace
+灣仔		大坑道1號		No.1 Tai Hang Road
+灣仔		太源閣		Tai Yuen Court
+灣仔		威利閣		The Valley View
+灣仔		學談花園		Hoc Tam Garden
+灣仔		富利大廈		Fully Building
+灣仔		富嘉大廈		Fu Kar Building
+灣仔		富寶閣		Rich Garden
+灣仔		富怡閣		Fu Yee Court
+灣仔		富榮閣		Fu Wing Court
+灣仔		富苑		Fu Yuen
+灣仔		寶德大廈		Po Tak Mansion
+灣仔		寶業大廈		Pao Yip Building
+灣仔		寶藝花園		Po Ngai Garden
+灣仔		寶輝大廈		Portfield Building
+灣仔		尚翹峰		The Zenith
+灣仔		山勝大廈		Shan Shing Building
+灣仔		山景閣		Sun View Court
+灣仔		山村大廈		Village Tower
+灣仔		山村閣		Village Court
+灣仔		崇德大廈		Zenith Mansion
+灣仔		帝后臺		Grand Deco Tower
+灣仔		帝城大廈		Kingstown Mansion
+灣仔		帝華閣		Majestic Court
+灣仔		年威閣		Linway Court
+灣仔		康富大廈		Hong Fu Building
+灣仔		康蘭苑		Holland Garden
+灣仔		康馨園		Carnation Court
+灣仔		廣生行大廈		Kwong Sang Hong Building
+灣仔		建利大廈		Kin Lee Building
+灣仔		建安樓		Kin On House
+灣仔		建華閣		Greenland House
+灣仔		建雅花園		Venice Garden
+灣仔		御花園		Regent On The Park
+灣仔		德信花園		Richery Garden
+灣仔		快添大廈		Fasteem Mansion
+灣仔		怡康大廈		Yee Hong Building
+灣仔		怡明閣		Eastman Court
+灣仔		怡景閣		Fairview Court
+灣仔		怡發大廈		Yee Fat Mansion
+灣仔		怡豐大廈		Yee Fung Building
+灣仔		怡輝苑		Mayfair Court
+灣仔		恆信大廈		Hang Shun Mansions
+灣仔		恆安大廈		Diamond Building
+灣仔		恆豐大廈		Hang Fung Mansion
+灣仔		悅華閣		Yuet Wah Court
+灣仔		愉富大廈		Elm Tree Towers
+灣仔		愉寶大廈		Horace Court
+灣仔		愉昇閣		Cheerful Court
+灣仔		慧利苑		Village Garden
+灣仔		慧景園		Flora Garden
+灣仔		慧蘭閣		Valiant Court
+灣仔		慧賢軒		Brilliant Court
+灣仔		摘星閣		The Notting Hill
+灣仔		敬誠閣		Keswick Court
+灣仔		文石大廈		Besthing Building
+灣仔		新春園大廈		New Spring Garden Mansion
+灣仔		新豪閣		Sun Ho Court
+灣仔		旭逸閣		Unique Tower
+灣仔		昍逵閣		Morengo Court
+灣仔		星域軒		Starcrest
+灣仔		星月閣		Moonstar Court
+灣仔		晉寶大廈		Silverstone Mansion
+灣仔		景光樓		King Kwong Mansion
+灣仔		景怡大廈		King-Inn Mansion
+灣仔		景星樓		King Sing House
+灣仔		會景閣		Convention Plaza
+灣仔		月陶居		Crescent Heights
+灣仔		李節花園		Li Chit Garden
+灣仔		杜智臺		Tonnochy Towers
+灣仔		東基大廈		Tung Kai Building
+灣仔		東曦大廈		Tung Hey Building
+灣仔		柏園		Park Garden
+灣仔		柏樂苑		Broadwood Park
+灣仔		柏莉園		Pioneer Court
+灣仔		柏麗園		Butler Towers
+灣仔		桂濤苑		Suncrest Tower
+灣仔		樂景園		Broadview Villa
+灣仔		樂景大樓		Lucky House
+灣仔		樂榮閣		Rockwin Court
+灣仔		樂活台		The Broadville
+灣仔		樂滿大廈		Lok Moon Mansion
+灣仔		樂翠台		Villa Rocha
+灣仔		樂聲大廈		Lok Sing Centre
+灣仔		樂陶苑		Villa Lotto
+灣仔		毓成大廈		Yuk Sing Building
+灣仔		比華利山		Beverly Hill
+灣仔		永光苑		Fortuna Court
+灣仔		永威閣		Winway Court
+灣仔		永安新村		Wing On Lodge
+灣仔		永安閣		Wing On Towers
+灣仔		永德大廈		Wing Tak Building
+灣仔		永豐大樓		Wing Fung Building
+灣仔		泰和大廈		Tai Wo Mansion
+灣仔		泰苑		Tai Yuen
+灣仔		浣紗花園		Wun Sha Tower
+灣仔		浣紗閣		Wunsha Court
+灣仔		浩利大廈		Hooley Mansion
+灣仔		海怡閣		Happy Court
+灣仔		海源中心		Yanville
+灣仔		海聯大廈		Hyde Centre
+灣仔		海華苑		Hoover Towers
+灣仔		海麗軒		Intelligent Court
+灣仔		渣甸豪庭		Jardine Summit
+灣仔		灣景中心		Causeway Centre
+灣仔		煜康臺		Yukon Heights
+灣仔		熙華大廈		Hay Wah Building
+灣仔		玉山大廈		Giok San Building
+灣仔		珠城大廈		Pearl City Mansion
+灣仔		登龍閣		Dragon Rise
+灣仔		百旺都中心		Hundred City Centre
+灣仔		皇朝閣		Royal Court
+灣仔		碧蘭閣		Bellevue Heights
+灣仔		福和大廈		Fook Wo Building
+灣仔		福興閣		Fook Hing Court
+灣仔		禮頓山		The Leighton Hill
+灣仔		竹麗苑		Jolly Villas
+灣仔		第一閣		The First Mansion
+灣仔		維新大廈		Wai Sun Building
+灣仔		美暉大廈		Mei Fai Mansion
+灣仔		美華閣		May Mansion
+灣仔		翠景樓		Green View Mansion
+灣仔		翠璧		Greencliff
+灣仔		翠谷樓		Green Valley Mansion
+灣仔		聖佛蘭士大廈		St. Francis Mansion
+灣仔		聚安閣		Palm Court
+灣仔		聚文樓		Tsui Man Court
+灣仔		聯利大廈		Luen Lee Building
+灣仔		聯發大廈		Luen Fat Mansion
+灣仔		肇明大廈		Shining Building
+灣仔		肇輝臺8號		No. 8 Shiu Fai Terrace
+灣仔		興旺閣		Hing Wong Court
+灣仔		興邦大廈		Hing Bong Mansion
+灣仔		茗苑		Mint Garden
+灣仔		荷塘苑		Hawthorn Garden
+灣仔		華峰樓		Wah Fung Mansion
+灣仔		華欣閣		Wah Yan Court
+灣仔		華發大廈		Wah Fat Mansion
+灣仔		華翠臺		Jade Terrace
+灣仔		華苑		Elegant Court
+灣仔		華英大廈		Wah Ying Mansion
+灣仔		萬俊花園		Mannie Garden
+灣仔		萬信台		Monmouth Place
+灣仔		萬豪閣		Manrich Court
+灣仔		蔚雲閣		Celeste Court
+灣仔		藍塘大廈		Blue Pool Mansion
+灣仔		蟠龍苑		Broom Garden
+灣仔		誠和閣		Sherwood Court
+灣仔		豐和苑		Formwell Garden
+灣仔		豐盛苑		Richview Villa
+灣仔		豪軒		Elegance Tower
+灣仔		軒寧大廈		Henning Mansion
+灣仔		逸怡居		The Gracedale
+灣仔		采怡閣		The Grandeur
+灣仔		金光大廈		Kam Kwong Mansion
+灣仔		金勝大廈		Kam Shing Building
+灣仔		金山花園		San Francisco Towers
+灣仔		金樂居		The Jolly House
+灣仔		金毓大廈		Kam Yuk Mansion
+灣仔		金福大廈		Kam Fook Mansion
+灣仔		金聲大廈		Kam Sing Mansion
+灣仔		銀星閣		Silver Star Court
+灣仔		銳興樓		Wealthy Mansion
+灣仔		雅園		Ngai Yuen
+灣仔		雅怡閣		Elegance Court
+灣仔		雅景軒		Avalon
+灣仔		雅緻苑		Rosedale Garden
+灣仔		雅詩大廈		Arts Mansion
+灣仔		雅谷大廈		Amigo Mansion
+灣仔		雅閣苑		Ascot Mansion
+灣仔		雍藝軒		Villa D Arte
+灣仔		雙喜樓		112 Johnston Road
+灣仔		雲地利台		Ventris Place
+灣仔		雲地利大廈		The Ventris
+灣仔		雲暉大廈		Winfield Building
+灣仔		頂旺大廈		Pinnacle Building
+灣仔		駿愉居		Le Village
+灣仔		駿逸峰		The Morrison
+灣仔		駿馬閣		Race Tower
+灣仔		騰黃閣		Royal Court
+灣仔		高威樓		Causeway Tower
+灣仔		高寧大廈		Gold Ning Mansion
+灣仔		高景大廈		Gold King Mansion
+灣仔		鳳凰閣		Phoenix Court
+灣仔		鵬麗閣		Panny Court
+灣仔		麗成大廈		Lai Sing Building
+灣仔		麗都大廈		Rialto Building
+灣仔		龍園		Dragon Garden
+灣仔		龍濤苑		Dragon Centre
+灣仔		龍華花園		Ronsdale Garden
+西貢		匡湖居		Marina Cove
+西貢		南豐廣場		Nan Fung Plaza
+西貢		君傲灣		The Grandiose
+西貢		和明苑		Wo Ming Court
+西貢		唐明苑		Tong Ming Court
+西貢		嘉林別墅		Hiram'S Villa
+西貢		安寧花園		On Ning Garden
+西貢		富寧花園		Fu Ning Garden
+西貢		富康花園		Beverly Garden
+西貢		富麗花園		Finery Park
+西貢		寶明苑		Po Ming Court
+西貢		寶盈花園		Bauhinia Garden
+西貢		將軍澳中心		Park Central
+西貢		將軍澳廣場		Tseung Kwan O Plaza
+西貢		康盛花園		Hong Sing Garden
+西貢		廣明苑		Kwong Ming Court
+西貢		彩明苑		Choi Ming Court
+西貢		怡心園		Serenity Place
+西貢		慧安園		Well On Garden
+西貢		新寶城		La Cite Noble
+西貢		新都城		Metro City
+西貢		旭輝臺		Radiant Towers
+西貢		景明苑		King Ming Court
+西貢		曉嵐閣		Hillview Court
+西貢		東港城		East Point City
+西貢		欣明苑		Yan Ming Court
+西貢		浩明苑		Ho Ming Court
+西貢		海悅豪園		Maritime Bay
+西貢		清水灣半島		Oscar By The Sea
+西貢		煜明苑		Yuk Ming Court
+西貢		疊翠軒		The Pinnacle
+西貢		維景灣畔		Ocean Shores
+西貢		英明苑		Ying Ming Court
+西貢		茵怡花園		Verbena Heights
+西貢		蔚藍灣畔		Residence Oasis
+西貢		裕明苑		Yu Ming Court
+西貢		西貢花園		Sai Kung Garden
+西貢		都會駅		Metro Town
+西貢		銀海山莊		Casa Bella
+西貢		頌明苑		Chung Ming Court
+西貢		顯明苑		Hin Ming Court
+西貢		首都		The Capitol
+南區		GROSVENOR PLACE		Grosvenor Place
+南區		仁勝大廈		Yen Shing Mansion
+南區		仁正大廈		Yen Ching Building
+南區		偉景大廈		Wai King Mansion
+南區		僑民大廈		Command Tower
+南區		兆暉大廈		Silver Mansion
+南區		兆群大廈		Siu Kwan Mansion
+南區		冠園		Ridge Court
+南區		利嘉大廈		La Clare Mansion
+南區		利是大廈		Fortune Mansion
+南區		利港中心		Port Centre
+南區		利豐大廈		Billion Court
+南區		協勝大廈		Hip Sing Mansion
+南區		南景花園		South View Garden
+南區		南濤閣		South Wave Court
+南區		南灣大廈		South Bay Towers
+南區		南灣御園		Jadewater
+南區		南灣御苑		South Bay Palace
+南區		南灣花園		South Bay Garden
+南區		嘉瑜園		Emerald Garden
+南區		嘉福閣		Ka Fook Court
+南區		嘉禾大廈		Ka Wo Building
+南區		嘉隆苑		Ka Lung Court
+南區		嘉麟閣		Ruby Court
+南區		安泰大廈		On Tai Building
+南區		富澤大廈		Full Jade Mansion
+南區		富臨軒		Pokfulam Terrace
+南區		崇新閣		Sunny Court
+南區		帝柏園		Regent Palisades
+南區		年豐大廈		Ning Fung Mansion
+南區		建輝大廈		Kin Fai Building
+南區		德偉閣		Talloway Court
+南區		怡峰		The Somerset
+南區		怡慶大廈		Yee Hing Building
+南區		怡林閣		Greenery Garden
+南區		悅海華庭		Marina Habitat
+南區		旭逸居		Stanford Villa
+南區		景惠花園		Jing Hui Garden
+南區		東寶閣		Toho Court
+南區		松苑		Pine Crest
+南區		永穩大廈		Ever Secure Mansion
+南區		浪琴園		Pacific View
+南區		海光閣		Seaview Court
+南區		海利大廈		Hoi Lee Building
+南區		海峰華軒		Bayshore Apartments
+南區		海怡半島		South Horizons
+南區		海暉大廈		Hoi Fai Mansion
+南區		海洋大廈		Ocean House
+南區		深灣軒		Sham Wan Towers
+南區		淺水灣新村		Repulse Bay Garden
+南區		淺水灣道37號		No.37 Repulse Bay Road
+南區		淺水灣道3號		No.3 Repulse Bay Road
+南區		港基大廈		Kong Kai Building
+南區		港暉中心		Comfort Centre
+南區		港麗豪園		Waterfront South
+南區		漁安苑		Yue On Court
+南區		漁暉苑		Yue Fai Court
+南區		珍寶大廈		Jumbo Building
+南區		田灣畔		Tin Wan Court
+南區		百良大廈		Pat Leung Building
+南區		益添大廈		Yee Tiam Building
+南區		碧瑤灣		Baguio Villa
+南區		碧麗大廈		Pelene Mansion
+南區		福群大樓		Abba House
+南區		紅山半島		Redhill Peninsula
+南區		置富花園		Chi Fu Fa Yuen
+南區		美倫閣		May Court
+南區		美景臺		Scenic Villas
+南區		美琳苑		Cnt Bisney
+南區		聚豪居		Royal Garden
+南區		華利大廈		Wah Lee Building
+南區		華景園		Grand Garden
+南區		萬景樓		Man King Building
+南區		蔚峰園		The Brentwood
+南區		薄扶林花園		Pokfulam Gardens
+南區		豪峰		Royalton
+南區		豪峰二期		Royalton II
+南區		貝沙灣		Residence Bel-Air
+南區		輝百閣		Faber Court
+南區		逸港居		Ocean Court
+南區		金利豐大廈		Kingston Mansion
+南區		金寶花園		Grandview Garden
+南區		金豐大廈		Kam Fung Building
+南區		銀豐大廈		Ngan Fung Building
+南區		陽明山莊		Hong Kong Parkview
+南區		雅柏苑		Park Place
+南區		雅濤閣		Broadview Court
+南區		雅鑾閣		Albany Court
+南區		順景閣		Shun King Court
+南區		順豐大廈		Shun Fung Court
+南區		香港仔中心		Aberdeen Centre
+南區		高寶閣		Coble Court
+南區		鴨利洲中心		Ap Lei Chau Centre
+南區		鴻勝大廈		Hungshing Building
+南區		鴻福苑		Hung Fuk Court
+南區		鴻福閣		Hung Fook Court
+南區		龍德苑		Lung Tak Court
+南區		龍欣苑		Lung Yan Court
+				
+				
+				
+				
+				
+				
