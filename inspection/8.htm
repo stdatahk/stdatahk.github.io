@@ -10,21 +10,14 @@
 
 <h2>Report Generation</h2>
 
-<font color='gray'>(WIP) Defect listing to choose from....</font>
+<font color='gray'>(WIP) Defact listing to choose from....</font>
 <br><br>
 
-生成PDF之前,請按:
-<input id="btnSync" type=button value="同步所有圖像" 
- style="width:150px;height:50px;" onclick='location.href="sync.htm";' DISABLED>
-<br><br>
-<input id="btnPdf" type=button value="生成 PDF 報告 (Google Drive)" 
+<input id="btnPdf" type=button value="生成 PDF 報告" 
  style="width:200px;height:50px;">
 &nbsp;&nbsp;
-<input id="btnPdf" type=button value="生成 PDF 報告" 
- style="width:150px;height:50px;" DISABLED>
-&nbsp;&nbsp;
 <input id="btnJpg" type=button value="生成 PNG 圖像" 
- style="width:150px;height:50px;"  onclick='location.href="png.htm";'  DISABLED>
+ style="width:150px;height:50px;"  onclick='location.href="png.htm";'>
 
 <br><br>
 一個比較官方正式，方便公司間電郵通訊用。<br>
@@ -114,7 +107,7 @@ doc.setFont('SimHei');
 			//doc.text("[[[ QR Here ]]]", 240, 190);
 			doc.text("Site Name: "+ obj.bldg, 15, 155);
 			doc.text("Location: "+ obj.addr, 15, 165);
-			doc.text("Defect Description: "+ obj.di+ obj.tx + obj.dd, 15, 175);
+			doc.text("Defact Description: "+ obj.di+ obj.tx + obj.dd, 15, 175);
 		}
 		
 		//generate timestamp for filename
