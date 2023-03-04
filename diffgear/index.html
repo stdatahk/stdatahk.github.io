@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial- scale=1.0" />
+    <title>Three.js</title>
+  </head>
+  <body style="margin: 0; padding: 0">
+    
+	Gear A: 
+	<input type=button value="CW rotation" onclick="document.getElementById('geara').value='reverse'";>
+	<input type=button value="CCW rotation" onclick="document.getElementById('geara').value='not reverse'";>
+	<input type=button value="stop" onclick="document.getElementById('geara').value='stop'";>
+	<input type=text id='geara' value='stop'>
+	<br>
+	Gear B: 
+	<input type=button value="CW rotation" onclick="document.getElementById('gearb').value='reverse'";>
+	<input type=button value="CCW rotation" onclick="document.getElementById('gearb').value='not reverse'";>
+	<input type=button value="stop" onclick="document.getElementById('gearb').value='stop'";>
+	<input type=text id='gearb' value='stop'>
+	<br>
+	Gear C: 
+	<input type=button value="CW rotation" onclick="document.getElementById('gearc').value='reverse'";>
+	<input type=button value="CCW rotation" onclick="document.getElementById('gearc').value='not reverse'";>
+	<input type=button value="stop" onclick="document.getElementById('gearc').value='stop'";>
+	<input type=text id='gearc' value='stop'>
+	<br>
+	Carrier: 
+	<input type=button value="CW rotation" onclick="document.getElementById('carr').value='reverse'";>
+	<input type=button value="CCW rotation" onclick="document.getElementById('carr').value='not reverse'";>
+	<input type=button value="stop" onclick="document.getElementById('carr').value='stop'";>
+	<input type=text id='carr' value='stop'>
+	
+	<input type=button value="MODE1" onclick="doit('not reverse,reverse,stop,not reverse');";>
+	<input type=button value="MODE2" onclick="doit('reverse,not reverse,stop,reverse');";>
+	<input type=button value="MODE3" onclick="doit('reverse,reverse,reverse,stop');";>
+	<input type=button value="MODE4" onclick="doit('not reverse,not reverse,not reverse,stop');";>
+	<input type=button value="MODE5" onclick="doit('not reverse,stop,not reverse,not reverse');";>
+	<input type=button value="MODE6" onclick="doit('reverse,stop,reverse,reverse');";>
+	<input type=button value="MODE7" onclick="doit('stop,not reverse,not reverse,not reverse');";>
+	<input type=button value="MODE8" onclick="doit('stop,reverse,reverse,reverse');";>
+	
+	<br>
+	<table border=0>
+	<tr>
+		<td>CAM tilt:</td>
+		<td>
+		<table border=0>
+		<tr>
+			<td>&nbsp;</td>
+			<td><input type=button value='UP' onclick="document.getElementById('cam').value='up'";></td>
+			<td>&nbsp;</td>
+		<tr>
+		<tr>
+			<td><input type=button value='<<' onclick="document.getElementById('cam').value='left'";></td>
+			<td><input type=button value=' O '></td>
+			<td><input type=button value='>>' onclick="document.getElementById('cam').value='right'";></td>
+		<tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td><input type=button value='DN' onclick="document.getElementById('cam').value='down'";></td>
+			<td>&nbsp;</td>
+		<tr>
+		</table>
+		</td>
+		<td><input type=text id='cam'></td>
+	<tr>
+	</table>
+
+	<script language='JavaScript'>
+	function doit(params) {
+		var a = params.split(",");
+		document.getElementById('geara').value= a[0].trim();	
+		document.getElementById('gearb').value= a[1].trim();	
+		document.getElementById('gearc').value= a[2].trim();	
+		document.getElementById('carr').value = a[3].trim();	
+	}
+	</script>	
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.js"></script>
+    <script defer src="./script.js"></script>
+  </body>
+</html>
