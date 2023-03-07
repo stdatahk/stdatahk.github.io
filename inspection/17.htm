@@ -186,63 +186,33 @@ $("#btnPdf").click(function(){
 				//footer line
 				doc.rect(40, 160, 245, 0);
 				doc.setFontSize(13);
-				doc.text("Defects Report", 40, 158);
+				doc.text("Defects Report", 36, 160);
 
 				var date = new Date();
 				var ddmmyyyy = ( date.getFullYear().toString() +'/'+ pad2(date.getMonth() + 1) +'/'+ pad2( date.getDate()) );
 				doc.text(ddmmyyyy, 40, 165);
 				
-				doc.setFontSize(13);
+				doc.setFontSize(17);
 				isFirst = false;
 			}
 			doc.addPage(); //new page
 
-			//defect photo area
-			doc.rect(10, 15, 200, 125);
-			//LHS lower text info area
-			doc.rect(10, 140, 200, 60);
-			doc.rect(50, 140, 0, 60); //vert line
-			doc.rect(10, 150, 200, 0); //horz line
-			doc.rect(10, 160, 200, 0); //horz line
-			doc.rect(10, 170, 200, 0); //horz line
-			doc.rect(10, 180, 200, 0); //horz line
-			doc.rect(10, 190, 200, 0); //horz line
-			//RHS lower text info area
-			var sx=215; var sy=95; //start xy
-			var ex=290; var ey=200 ; //end xy
-			var h = Math.floor((ey-sy)/13);
-			doc.rect(sx,    sy, ex-sx, ey-sy);
-			doc.rect(sx+25, sy, 0, ey-sy); //vert line
-			doc.rect(sx,    sy+h*1, ex-sx, 0); //horz line
-			doc.rect(sx+25, sy+h*2, ex-sx-25, 0); //horz line
-			doc.rect(sx,    sy+h*3, ex-sx, 0); //horz line
-			doc.rect(sx+25, sy+h*4, ex-sx-25, 0); //horz line
-			doc.rect(sx,    sy+h*5, ex-sx, 0); //horz line
-			doc.rect(sx+25, sy+h*6, ex-sx-25, 0); //horz line
-			doc.rect(sx,    sy+h*7, ex-sx, 0); //horz line
-			doc.rect(sx+25, sy+h*8, ex-sx-25, 0); //horz line
-			doc.rect(sx,    sy+h*9, ex-sx, 0); //horz line
-			doc.rect(sx+25, sy+h*10, ex-sx-25, 0); //horz line
-			doc.rect(sx,    sy+h*11, ex-sx, 0); //horz line
-			doc.rect(sx+25, sy+h*12, ex-sx-25, 0); //horz line
-
-			doc.text("Item No.",                               12, 146);
-			doc.text("Date of Record",                         12, 156);
-			doc.text("Location/Floor/House",                   12, 166);
-			doc.text("Defects were Rectified by",              12, 176);
-			doc.text("Defects as Identified By Representtive", 12, 186);
-			doc.text("Others",                                 12, 196);
-			
+			//boundary
+			doc.rect(10, 15, 275, 185);
+			//photo area
+			doc.rect(10, 15, 190, 130);
+			//lower text info area
+			doc.rect(10, 145, 275, 55);
 
 			//pic - defect pic
 			var img = new Image();
 			img.src = obj.url;
-			doc.addImage(img, 'png', 40, 20, 100, 100);
+			doc.addImage(img, 'png', 40, 40, 100, 100);
 			//pic 2 - floorplan
 			var img = new Image();
 			//img.src = 'floorplan.png';
 			img.src = obj.fp;
-			doc.addImage(img, 'png', 220, 15, 50, 80);
+			doc.addImage(img, 'png', 205, 20, 70, 100);
 			//pic 3 - logo
 			//var img = new Image();
 			//img.src = 'logo.png';
@@ -257,9 +227,9 @@ $("#btnPdf").click(function(){
 			//doc.text("[[[ Floorplan Here ]]]\n   (with overlay)", 210, 60);
 			//doc.text("[[[ Company Logo Here ]]]", 220, 150);
 			//doc.text("[[[ QR Here ]]]", 240, 190);
-			doc.text(obj.bldg, 55, 155);
-			doc.text(obj.addr, 55, 165);
-			doc.text(obj.di+ obj.tx + obj.dd, 55, 175);
+			doc.text("Site Name: "+ obj.bldg, 15, 155);
+			doc.text("Location: "+ obj.addr, 15, 165);
+			doc.text("Defact Description: "+ obj.di+ obj.tx + obj.dd, 15, 175);
 		}
 		
 		//generate timestamp for filename
