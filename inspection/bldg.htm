@@ -12,22 +12,28 @@
 &nbsp;&nbsp;
 <input style="width:70px;height:30px;" type=button value="EDIT" onclick="location.href='wip.htm';">
 &nbsp;&nbsp;
-<input style="width:70px;height:30px;" type=button value="DELETE"onclick="location.href='wip.htm';">
+<input style="width:70px;height:30px;" type=button value="DELETE"onclick="location.href='bldg_del.htm';">
 </div>
 <br>
 
-參考: <a href='all_bldgs.txt'>香港全部樓宇.txt</a>
+參考: <a href='hot50_bldgs.txt'>香港50熱門樓宇.txt</a>
 <br><br>
 
-<table id='tbl' width=150 border=1 cellpadding=2 cellspacing=0 style="font-family:Arial;">
+<table id='tbl' border=1 cellpadding=2 cellspacing=0 style="font-family:Arial;">
 <!-- table header -->
 <tr>
-<td width=150 style="font-weight:bold;font-size:20px;">
-	樓宇大廈名稱
+<td width=100 style="font-weight:bold;font-size:20px;">
+	<nobr>樓宇大廈名稱</nobr>
+</td>
+<td style="font-weight:bold;font-size:20px;">
+	地區分區
 </td>
 </tr>
 <!-- end table header -->
 <tr id='tr0'>
+<td>
+	Loading...
+</td>
 <td>
 	Loading...
 </td>
@@ -47,7 +53,7 @@ $(document).ready(function(){
 	  cache: false,
 	  type: "GET",
 	  data: {
-		func: 'GETTAGS', 
+		func: 'GETDATA',  //GETTAGS
 		id: gssId,  
 		key: 12345678
 	  },
@@ -68,7 +74,8 @@ $(document).ready(function(){
 		for(var i=0; i<ary.length; i++) {
 		
 			rst += "<tr>";
-			rst += "<td>"+ ary[i] +"</td>";
+			rst += "<td>"+ ary[i][0] +"</td>";
+			rst += "<td><nobr>"+ ary[i][1] +"</nobr></td>";
 			rst += "</tr>";
 		}
 		$("#tbl").append(rst);

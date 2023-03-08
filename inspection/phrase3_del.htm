@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>FRS | Admin| Building | Add</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="theDiv" style="text-align:right;">
+<input style="width:130px;height:30px;" type=button value="返回樓DEFECT設定" onclick="location.href='config.htm';">
+</div>
+<br>
+
+<table id='tbl' border=0 cellpadding=5 cellspacing=10>
+<tr>
+<td>
+	<font color='red'><b>(注意!!!!)</b></font><br>
+	<b>清除所有DEFECT<詳細項目>：</b>
+	<br><br>
+	<input id='cb1' type=checkbox> <b>Confirm </b><br>
+	<input id='cb2' type=checkbox> <b>Double confirm </b><br>
+</td>
+</tr>
+<tr>
+<td align=right>
+	<input id="btnSubmit" type=button value="清除全部DEFECT<詳細項目>數據" 
+	 style="width:160px;height:50px;">
+</td>
+</tr>
+</table>
+
+<script language="JavaScript">
+<!--
+var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
+var gssId = "1abQxmKQsn45VWmSa_yyFnUtkk3LTBM4m0d7bIZb7y-U"; //for phrase3 db
+var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
+
+$("#btnSubmit").click(function(){
+	if(!document.getElementById('cb1').checked || !document.getElementById('cb1').checked ) {
+		alert("錯誤: 需要雙重確認");
+		return;
+	}
+
+	$('#btnSubmit').val('正在儲存數據，請稍後...');
+	$.ajax({
+	  url: gasUrl,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: 'EMPTY', 
+		id: gssId,  
+		key: 12345678
+	  },
+	  dataType: "html",
+	  success: function(html){
+		var ary = null;
+		html = "ary="+html+";";
+		eval(html);
+		var str = ("已成功清除所有紀錄.");
+		str = "<tr><td>"+str+"</td></tr>";
+		$('#tbl').append(str);
+		
+		alert("已成功儲存所有紀錄");
+		location.href = 'bldg.htm';
+	  }
+	});
+
+});
+//-->
+</script>
+
+
+
+</body>
+</html>

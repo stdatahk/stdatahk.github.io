@@ -13,21 +13,16 @@
 <table id='tbl' border=0 cellpadding=5 cellspacing=10>
 <tr>
 <td>
-	<b>新增樓宇大廈：</b><br>
-	（可以批量新增，每行一個）<br>
-	格式範例: 深水埗&lt;tab&gt;黃金大廈&lt;tab&gt;Golden Building<br>
-	參考: <a href='all_bldgs.txt'>香港全部樓宇.txt</a>
+	<font color='red'><b>(注意!!!!)</b></font><br>
+	<b>清除所有樓宇大廈：</b>
+	<br><br>
+	<input id='cb1' type=checkbox> <b>Confirm </b><br>
+	<input id='cb2' type=checkbox> <b>Double confirm </b><br>
 </td>
-</tr>
-<tr>
-<td>
-	<textarea id='ta' rows=10 cols=50></textarea>
-</td>
-</tr>
 </tr>
 <tr>
 <td align=right>
-	<input id="btnSubmit" type=button value="新增全部" 
+	<input id="btnSubmit" type=button value="清除全部樓宇數據" 
 	 style="width:160px;height:50px;">
 </td>
 </tr>
@@ -40,45 +35,32 @@ var gssId = "1UIXxABQINMOZkIbErvviFQDIDDlAdjTo7hk3GFqzq70"; //for bldg db
 var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
 
 $("#btnSubmit").click(function(){
-	$('#btnSubmit').val('正在儲存數據，請稍後...');
-	
-	var data = $('#ta').val();
-	data = data.trim().split('\n');
-	for(var i=0;i<data.length;i++) data[i] = data[i].trim();
-	for(var i=0;i<3;i++) data[0] = data[0].split('\t\t').join('\t');
-	data[0] = data[0].split('\t');
+	if(!document.getElementById('cb1').checked || !document.getElementById('cb1').checked ) {
+		alert("錯誤: 需要雙重確認");
+		return;
+	}
 
+	$('#btnSubmit').val('正在儲存數據，請稍後...');
 	$.ajax({
 	  url: gasUrl,
 	  cache: false,
 	  type: "GET",
 	  data: {
-		func: 'STORE', 
+		func: 'EMPTY', 
 		id: gssId,  
-		key: 12345678,
-		tag: data[0][1],
-		value: data[0][0]
-		//data[i][1],data[i][2] are chi/eng names
+		key: 12345678
 	  },
 	  dataType: "html",
 	  success: function(html){
 		var ary = null;
 		html = "ary="+html+";";
 		eval(html);
-		var str = ("已成功儲存紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
+		var str = ("已成功清除所有紀錄.");
 		str = "<tr><td>"+str+"</td></tr>";
 		$('#tbl').append(str);
 		
-		//next cycle
-		if(data.length > 1) {
-			data[0] = "";
-			$('#ta').val(data.join('\n').trim());
-			$('#btnSubmit').click();
-		}
-		else {
-			alert("已成功儲存所有紀錄");
-			location.href = 'bldg.htm';
-		}
+		alert("已成功儲存所有紀錄");
+		location.href = 'bldg.htm';
 	  }
 	});
 
