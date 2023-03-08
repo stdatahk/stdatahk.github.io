@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h2 style="font-family:Arial;">FRS - FULL DEFECT LIST:</h2>
+<h2 style="font-family:Arial;">FRS - QR SCAN RESULT:</h2>
 
 <div id="theDiv" style="text-align:right;">
 <input style="width:80px;height:30px;" type=button value="REFRESH" onclick="location.reload();">
@@ -16,31 +16,6 @@
 <input style="width:70px;height:30px;" type=button value="DELETE"onclick="location.href='defect_del.htm';">
 </div>
 <br>
-
-<b>篩選條件：</b>
-BY 
-<select id="sel1" onchange='filterSel1();'>
-	<option id='sel1op0'>載入中...</option>
-</select>
-OR 
-<select id="sel2" onchange='filterSel2();'>
-	<option id='sel2op0'>載入中...</option>
-</select>
-<select id="sel3" onchange='filterSel3();'>
-	<option id='sel3op0'>載入中...</option>
-</select>
-<select id="sel4" onchange='filterSel4();'>
-	<option id='sel4op0'>載入中...</option>
-</select>
-OR 
-<select id="sel5">
-	<option id='sel5op0'>驗樓師</option>
-	<option>admin</option>
-	<option>guest001</option>
-	<option>guest002</option>
-	<option>guest003</option>
-</select>
-<br><br>
 
 <table id='tbl' width='100%' border=1 cellpadding=2 cellspacing=0 style="font-family:Arial;">
 <!-- table header -->
@@ -113,50 +88,60 @@ var gssId2 = "1UIXxABQINMOZkIbErvviFQDIDDlAdjTo7hk3GFqzq70"; //for bldg db
 
 //render data table content
 $(document).ready(function(){
-	$.ajax({
-	  url: gasUrl,
-	  cache: false,
-	  type: "GET",
-	  data: {
-		func: 'GETDATA', 
-		id: gssId,  
-		key: 12345678
-	  },
-	  dataType: "html",
-	  success: function(html){
-	  
-		var ary = null;
-		var rst = "";
-		html = "ary="+html+";";
-	    eval(html);
+	if(location.href.indexOf('?#') > 0) {
+		var pos = location.href.indexOf('?#');
+		var param = location.href.substring(pos+2).trim();
 
+		$.ajax({
+		  url: gasUrl,
+		  cache: false,
+		  type: "GET",
+		  data: {
+			func: 'GET', 
+			id: gssId,  
+			key: 12345678,
+			tag: param
+		  },
+		  dataType: "html",
+		  success: function(html){
+			var ary = null;
+			var rst = "";
+			html = "obj="+html+";";
+			eval(html);
+			var ary = [""];
+			ary[0] = "_,_".split(',');
+			ary[0][0] = param;
+			ary[0][1] = obj;
 
-		if(ary.length > 0) {
-			$("#tr0").remove();
-			$("#tbl").prepend("共 "+ ary.length +" 筆資料");
-		}
+			if(ary.length > 0) {
+				$("#tr0").remove();
+				$("#tbl").prepend("共 "+ ary.length +" 筆資料");
+			}
 
-		for(var i=0; i<ary.length; i++) {
-			var obj = JSON.parse(ary[i][1]);
-		
-			rst += "<tr id='tr"+ i +"'>";
-			rst += "<td>"+ ary[i][0] +"</td>";
-			rst += "<td><a target='_blank' href='qr_gen.htm#"+ ary[i][0] +"'><img height=50 src='qr/qr1.png'></a></td>";
-			rst += "<td><a target='_blank' href='"+ obj.url +"'><img height=50 src='"+ obj.url +"'></a></td>";
-			rst += "<td>("+ obj.dpX +","+ obj.dpY +")</td>";
-			rst += "<td><a target='_blank' href='"+ obj.fp +"'><img height=50 src='"+ obj.fp +"'></a></td>";
-			rst += "<td>("+ obj.fpX +","+ obj.fpY +")</td>";
-			rst += "<td>"+ obj.bldg +"</td>";
-			rst += "<td>"+ obj.addr +"</td>";
-			rst += "<td>"+ obj.di +"</td>";
-			rst += "<td>"+ obj.tx +"</td>";
-			rst += "<td>"+ obj.dd +"</td>";
-			rst += "<td>guest001</td>";
-			rst += "</tr>";
-		}
-		$("#tbl").append(rst);
-	  }
-	});
+			for(var i=0; i<ary.length; i++) {
+				var obj = JSON.parse(ary[i][1]);
+			
+				rst += "<tr id='tr"+ i +"'>";
+				rst += "<td>"+ ary[i][0] +"</td>";
+				rst += "<td><a target='_blank' href='qr_gen.htm#"+ ary[i][0] +"'><img height=50 src='qr/qr1.png'></a></td>";
+				rst += "<td><a target='_blank' href='"+ obj.url +"'><img height=50 src='"+ obj.url +"'></a></td>";
+				rst += "<td>("+ obj.dpX +","+ obj.dpY +")</td>";
+				rst += "<td><a target='_blank' href='"+ obj.fp +"'><img height=50 src='"+ obj.fp +"'></a></td>";
+				rst += "<td>("+ obj.fpX +","+ obj.fpY +")</td>";
+				rst += "<td>"+ obj.bldg +"</td>";
+				rst += "<td>"+ obj.addr +"</td>";
+				rst += "<td>"+ obj.di +"</td>";
+				rst += "<td>"+ obj.tx +"</td>";
+				rst += "<td>"+ obj.dd +"</td>";
+				rst += "<td>guest001</td>";
+				rst += "</tr>";
+			}
+			$("#tbl").append(rst);
+		  }
+		});
+
+	
+	}
 
 });
 

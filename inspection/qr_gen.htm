@@ -8,7 +8,8 @@
 <div style='position:absolute;top:31px;left:22px;z-Index:999;'>
 	<table border=0 width=600 cellpadding=5 cellspacing=5 style='font-family:Helvetica;'>
 		<tr><td colspan=2 style='font-size:15pt;font-weight:bold;'>
-		QR條碼生成器：
+		QR條碼生成器： <input id='defectid' type=text size=13>
+		<input type=button value='提交' onclick="location.href='qr_gen.htm#'+defectid.value+'&t=4';location.reload();">
 		<br><br>
 		
 		<!-- QR Codes -->
@@ -46,6 +47,7 @@ if(pos > 0) {
 	qrStyle = qstr.substring(pos+3).trim();
 }
 if(uuid.charAt(0)=='D') {
+	document.getElementById('defectid').value = uuid;
 	var myColor = '#000000'; //black
 	if(qrStyle==1 || qrStyle==2) myColor = '#0B0B45';  
 	                             //#f5a02a <- matched logo orange
@@ -63,7 +65,7 @@ if(uuid.charAt(0)=='D') {
 	//process overlays
 	if(qrStyle==2 || qrStyle==3) {
 		var imgElm = document.createElement('IMG');
-		imgElm.setAttribute('src', 'logo.png');
+		imgElm.setAttribute('src', 'qrlogo.png');
 		imgElm.setAttribute('id', 'qrLogo');
 		imgElm.setAttribute('width', 42);
 		imgElm.setAttribute('height', 42);
@@ -73,7 +75,7 @@ if(uuid.charAt(0)=='D') {
 	else if(qrStyle==1) {
 		//QR corner logos (1of3)
 		imgElm = document.createElement('IMG');
-		imgElm.setAttribute('src', 'logo.png');
+		imgElm.setAttribute('src', 'qrlogo.png');
 		imgElm.setAttribute('id', 'qrCorner1');
 		imgElm.setAttribute('width', 34);
 		imgElm.setAttribute('height', 34);
@@ -82,7 +84,7 @@ if(uuid.charAt(0)=='D') {
 		
 		//QR corner logos (2of3)
 		imgElm = document.createElement('IMG');
-		imgElm.setAttribute('src', 'logo.png');
+		imgElm.setAttribute('src', 'qrlogo.png');
 		imgElm.setAttribute('id', 'qrCorner2');
 		imgElm.setAttribute('width', 34);
 		imgElm.setAttribute('height', 34);
@@ -91,7 +93,7 @@ if(uuid.charAt(0)=='D') {
 		
 		//QR corner logos (3of3)
 		imgElm = document.createElement('IMG');
-		imgElm.setAttribute('src', 'logo.png');
+		imgElm.setAttribute('src', 'qrlogo.png');
 		imgElm.setAttribute('id', 'qrCorner3');
 		imgElm.setAttribute('width', 34);
 		imgElm.setAttribute('height', 34);
