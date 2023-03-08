@@ -5,12 +5,36 @@
 </head>
 <body>
 
-<img src="logo.png">
-<br>
 
 <h2 style="font-family:Arial;">FRS TO-DO LIST:</h2>
 
+<b>篩選條件：</b>
+BY 
+<select id="sel1" onchange='filterSel1();'>
+	<option>優先程度</option>
+	<option>Must Have</option>
+	<option>Nice To Have</option>
+	<option>Suggestion</option>
+	<option>Urgent</option>
+	<option>BUG</option>
+	<option>Critical</option>
+	<option>TBC</option>
+	<option>TBD</option>
+	<option>Show ALL</option>
+</select> 
+OR 
+<select id="sel2" onchange='filterSel2();'>
+	<option>發起人</option>
+	<option>Andy</option>
+	<option>Howard</option>
+	<option>Show ALL</option>
+</select>
+
+<input type=hidden id='hTotal' value=''>
+
 <div id="theDiv" style="text-align:right;">
+<input style="width:80px;height:30px;" type=button value="REFRESH" onclick="location.reload();">
+&nbsp;&nbsp;
 <input style="width:70px;height:30px;" type=button value="ADD" onclick="location.href='todo_add.htm';">
 &nbsp;&nbsp;
 <input style="width:70px;height:30px;" type=button value="EDIT" onclick="location.href='todo_edit.htm';">
@@ -74,6 +98,7 @@ $(document).ready(function(){
 		html = "ary="+html+";";
 	    eval(html);
 
+		document.getElementById('hTotal').value = ary.length;
 
 		if(ary.length > 0) {
 			$("#tr0").remove();
@@ -88,7 +113,7 @@ $(document).ready(function(){
 				var ta = obj.t.trim().split(" ");
 				var tt = ta[1]+ta[2];
 				
-				rst += "<tr>";
+				rst += "<tr id='tr"+i+"'>";
 				rst += "<td>"+ ary[i][0] +"</td>";
 				rst += "<td>"+ obj.dtl +"</td>";
 				rst += "<td><nobr>"+ obj.prty +"<nobr></td>";
@@ -98,7 +123,7 @@ $(document).ready(function(){
 			}
 			else {
 				//old data, plain text
-				rst += "<tr>";
+				rst += "<tr id='tr"+i+"'>";
 				rst += "<td>"+ ary[i][0] +"</td>";
 				rst += "<td>"+ ary[i][1] +"</td>";
 				rst += "<td>"+ "(n/a)" +"</td>";
@@ -110,8 +135,50 @@ $(document).ready(function(){
 		$("#tbl").append(rst);
 	  }
 	});
-
 });
+
+function filterSel1() {
+	var theSel = document.getElementById('sel1');
+	var idx = $("#sel1 option:selected").text().trim();
+	if(idx=='Show ALL') location.reload();
+
+	//remove unwanted tr items
+	var rst = '';
+	var total = document.getElementById('hTotal').value;
+	for(var i=0; i < total; i++) {
+		var theTr = ('tr'+i);
+		if(!document.getElementById(theTr)) continue;
+		var txt = document.getElementById(theTr).childNodes[2].innerText; //3rd-col
+		if(txt != idx)
+			rst += ('_#tr'+i);
+	}
+	var a = rst.substring(1).split('_');
+	for(var i=0; i < a.length; i++) {
+		$(a[i]).remove();
+	}
+}
+
+function filterSel2() {
+	var theSel = document.getElementById('sel2');
+	var idx = $("#sel2 option:selected").text().trim().toLowerCase();
+	if(idx=='Show ALL') location.reload();
+
+	//remove unwanted tr items
+	var rst = '';
+	var total = document.getElementById('hTotal').value;
+	for(var i=0; i < total; i++) {
+		var theTr = ('tr'+i);
+		if(!document.getElementById(theTr)) continue;
+		var txt = document.getElementById(theTr).childNodes[3].innerText; //4th-col
+		txt = txt.split(' on ')[0].trim().toLowerCase();
+		if(txt != idx)
+			rst += ('_#tr'+i);
+	}
+	var a = rst.substring(1).split('_');
+	for(var i=0; i < a.length; i++) {
+		$(a[i]).remove();
+	}
+}
 //-->
 </script>
 
