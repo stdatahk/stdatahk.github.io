@@ -23,17 +23,17 @@ BY
 	<option id='sel1op0'>載入中...</option>
 </select>
 OR 
-<select id="sel2" onchange='filterSel2();'>
+<select id="sel2">
 	<option id='sel2op0'>載入中...</option>
 </select>
-<select id="sel3" onchange='filterSel3();'>
+<select id="sel3">
 	<option id='sel3op0'>載入中...</option>
 </select>
 <select id="sel4" onchange='filterSel4();'>
 	<option id='sel4op0'>載入中...</option>
 </select>
 OR 
-<select id="sel5">
+<select id="sel5" onchange='filterSel5();'>
 	<option id='sel5op0'>驗樓師</option>
 	<option>admin</option>
 	<option>guest001</option>
@@ -55,7 +55,7 @@ OR
 	Defect Photo
 </td>
 <td style="font-weight:bold;font-size:20px;">
-	Defect(x,y)
+	Photo(x,y)
 </td>
 <td style="font-weight:bold;font-size:20px;">
 	單位平面圖
@@ -220,29 +220,27 @@ $("#sel2").change(function(){
 	}
 	var rst = "";
 	for(var i=0; i < D18.length; i++) {
-		if($("#sel2").val()!=D18[i][0]) {
-			
+		if($("#sel2").val()!=D18[i][0])
 			continue;
-		}
 		rst += "<option value='"+ D18[i][1] +"'>"+ D18[i][1] +"</option>";
 	}
 	$("#sel3").append(rst);
 });
 
 $("#sel3").change(function(){
+	$("#sel4").find('option:not(:first)').remove();
 	$.ajax({
 	  url: gasUrl,
 	  cache: false,
 	  type: "GET",
 	  data: {
-		func: 'GETTAGS', 
+		func: 'GETDATA', 
 		id: gssId2,  
 		key: 12345678
 	  },
 	  dataType: "html",
 	  success: function(html){
-	  
-		var ary = null;
+  		var ary = null;
 		var rst = "";
 		html = "ary="+html+";";
 	    eval(html);
@@ -253,7 +251,8 @@ $("#sel3").change(function(){
 		}
 
 		for(var i=0; i<ary.length; i++) {
-			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+			if(ary[i][1] != $("#sel3 option:selected").text()) continue;
+			rst += "<option value='"+ ary[i][0] +"'>"+ ary[i][0] +"</option>";
 		}
 		$("#sel4").append(rst);
 	  }
@@ -299,6 +298,26 @@ function filterSel4() {
 		var theTr = ('tr'+i);
 		if(!document.getElementById(theTr)) continue;
 		var txt = document.getElementById(theTr).childNodes[6].innerHTML; //6th-col
+		if(txt != idx)
+			rst += ('_#tr'+i);
+	}
+	var a = rst.substring(1).split('_');
+	for(var i=0; i < a.length; i++) {
+		$(a[i]).remove();
+	}
+}
+
+function filterSel5() {
+	var theSel = document.getElementById('sel5');
+	var idx = $("#sel5 option:selected").text().trim();
+
+	//remove unwanted tr items
+	var rst = '';
+	var theSel1 = document.getElementById('sel1');
+	for(var i=0; i < theSel1.options.length-1; i++) {
+		var theTr = ('tr'+i);
+		if(!document.getElementById(theTr)) continue;
+		var txt = document.getElementById(theTr).childNodes[11].innerHTML; //11th-col
 		if(txt != idx)
 			rst += ('_#tr'+i);
 	}
