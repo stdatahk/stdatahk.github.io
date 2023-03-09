@@ -3,6 +3,7 @@
 <title>FRS | Floorplan</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://unpkg.com/html5-qrcode@2.2.1/html5-qrcode.min.js"></script>
+<script src="districts.js"></script>
 </head>
 <body>
 
@@ -39,13 +40,9 @@ form.append("image", file.files[0])
 
 var date = new Date();
 var ts = ""+ (date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2) );
-var bldg = $('#sel0').val();
+var bldg = $('#sel4').val();
 var addr = $('#txtAddr').val();
-var di = $('#sel1').val();
-var tt = $('#sel2').val();
-var dd = $('#sel3').val();
-var filename = "TS-"+ts +"_BD-"+bldg+"_AR-"+addr+"_DI-"+ di +"_T-" + tt +"_DD-"+ dd;
-//alert(filename); //testing			 
+var filename = "TS-"+ts +"_BD-"+bldg+"_AR-"+addr;
 
 var apikey = "2773799e6c6f08aacec5b772f43f80fc";
 var settings = {
@@ -85,10 +82,21 @@ $.ajax(settings).done(function (response) {
 	<input type=hidden id='txtPhotoUrl' value=''>
 </td>
 <tr>
+<td>地域分區： </td>
+<td>
+	<select id="sel2">
+		<option id='sel2op0'>載入中...</option>
+	</select>
+	<select id="sel3" DISABLED>
+		<option id='sel3op0'>載入中...</option>
+	</select>
+</td>
+</tr>
+<tr>
 <td>樓盤名稱： </td>
 <td>
-	<select id="sel0">
-		<option id='sel0op0'>載入中...</option>
+	<select id="sel4" DISABLED>
+		<option id='sel4op0'>載入中...</option>
 	</select>
 </td>
 </tr>
@@ -118,49 +126,78 @@ $.ajax(settings).done(function (response) {
 <!--
 var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
 var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
-var gssId0 = "1UIXxABQINMOZkIbErvviFQDIDDlAdjTo7hk3GFqzq70"; //for bldg db
 var gssId = "1sqD_Fr_pfdbCMEpXelyGX2TmmiUCJhn4ECCr_ArgRPg" //for floorplan db 
+var gssId2 = "1UIXxABQINMOZkIbErvviFQDIDDlAdjTo7hk3GFqzq70"; //for bldg db
 
 //populate pull-down menus
 $(document).ready(function(){
+	$("#sel2op0").remove();
+	$("#sel2").append("<option value=''>地區</option>");
+	var rst = "";
+	for(var i=0; i < D18.length; i++) {
+		if(i>0 && D18[i][0]==D18[i-1][0]) continue;
+		rst += "<option value='"+ D18[i][0] +"'>"+ D18[i][0] +"</option>";
+	}
+	$("#sel2").append(rst);
+});
+	
+$("#sel2").change(function(){
+	document.getElementById('sel3').disabled = false;
+	$("#sel3").find('option:not(:first)').remove();
+	if($("#sel3op0").length) {
+		$("#sel3op0").remove();
+		$("#sel3").append("<option value=''>分區</option>");
+	}
+	var rst = "";
+	for(var i=0; i < D18.length; i++) {
+		if($("#sel2").val()!=D18[i][0])
+			continue;
+		rst += "<option value='"+ D18[i][1] +"'>"+ D18[i][1] +"</option>";
+	}
+	$("#sel3").append(rst);
+});
+
+$("#sel3").change(function(){
+	document.getElementById('sel4').disabled = false;
+	$("#sel4").find('option:not(:first)').remove();
 	$.ajax({
 	  url: gasUrl,
 	  cache: false,
 	  type: "GET",
 	  data: {
-		func: 'GETTAGS', 
-		id: gssId0,  
+		func: 'GETDATA', 
+		id: gssId2,  
 		key: 12345678
 	  },
 	  dataType: "html",
 	  success: function(html){
-	  
-		var ary = null;
+  		var ary = null;
 		var rst = "";
 		html = "ary="+html+";";
 	    eval(html);
 
 		if(ary.length > 0) {
-			$("#sel0op0").remove();
-			$("#sel0").append("<option value=''>--- 請選擇 ---</option>");
+			$("#sel4op0").remove();
+			$("#sel4").append("<option value=''>樓盤／大廈</option>");
 		}
 
 		for(var i=0; i<ary.length; i++) {
-			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+			if(ary[i][1] != $("#sel3 option:selected").text()) continue;
+			rst += "<option value='"+ ary[i][0] +"'>"+ ary[i][0] +"</option>";
 		}
-		$("#sel0").append(rst);
+		$("#sel4").append(rst);
 	  }
 	});
 });
+
 
 //submit to add
 $("#btnSubmit").click(function(){
 	if($('#txtPhotoUrl').val()=='' ||
 	   $('#txtAddr').val()=='' ||
-	   $('#sel0').val()=='' ||
-	   $('#sel1').val()=='' ||
 	   $('#sel2').val()=='' ||
-	   $('#sel3').val()=='' ) 
+	   $('#sel3').val()=='' ||
+	   $('#sel4').val()=='' ) 
 	{
 		alert("請選擇其中一個項目／不能留空");
 		return;
@@ -168,7 +205,7 @@ $("#btnSubmit").click(function(){
 
 	var date = new Date();
 	var ts = ""+ (date.getFullYear() + ("0" + (date.getMonth() + 1)).slice(-2) + ("0" + date.getDate()).slice(-2) + ("0" + date.getHours() ).slice(-2) + ("0" + date.getMinutes()).slice(-2) + ("0" + date.getSeconds()).slice(-2) );
-	var obj = {'url':$('#txtPhotoUrl').val(), 'addr':$('#txtAddr').val(), 'bldg':$('#sel0').val()};
+	var obj = {'url':$('#txtPhotoUrl').val(), 'addr':$('#txtAddr').val(), 'bldg':$('#sel4').val()};
 	
 	$('#btnSubmit').val('正在ADD數據，請稍後...');
 	$.ajax({
