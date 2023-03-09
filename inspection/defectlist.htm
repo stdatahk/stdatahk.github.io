@@ -26,10 +26,10 @@ OR
 <select id="sel2">
 	<option id='sel2op0'>載入中...</option>
 </select>
-<select id="sel3">
+<select id="sel3" DISABLED>
 	<option id='sel3op0'>載入中...</option>
 </select>
-<select id="sel4" onchange='filterSel4();'>
+<select id="sel4" DISABLED onchange='filterSel4();'>
 	<option id='sel4op0'>載入中...</option>
 </select>
 OR 
@@ -213,6 +213,7 @@ $(document).ready(function(){
 });
 	
 $("#sel2").change(function(){
+	document.getElementById('sel3').disabled = false;
 	$("#sel3").find('option:not(:first)').remove();
 	if($("#sel3op0").length) {
 		$("#sel3op0").remove();
@@ -228,6 +229,7 @@ $("#sel2").change(function(){
 });
 
 $("#sel3").change(function(){
+	document.getElementById('sel4').disabled = false;
 	$("#sel4").find('option:not(:first)').remove();
 	$.ajax({
 	  url: gasUrl,

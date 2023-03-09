@@ -5,6 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://stdatahk-fast-reporting-system-pdf.on.drv.tw/fps_pdf/SimHei-normal.js"></script>
+<script src="https://stdatahk.com/inspection/districts.js"></script>
 </head>
 <body>
 
@@ -18,14 +19,19 @@
 
 <b>篩選條件：</b>
 BY 
-<select id="sel1">
+<select id="sel1" onchange='filterSel1();'>
 	<option id='sel1op0'>載入中...</option>
 </select>
 OR 
 <select id="sel2">
 	<option id='sel2op0'>載入中...</option>
 </select>
-
+<select id="sel3" DISABLED>
+	<option id='sel3op0'>載入中...</option>
+</select>
+<select id="sel4" DISABLED onchange='filterSel4();'>
+	<option id='sel4op0'>載入中...</option>
+</select>
 <br><br>
 
 <input id="btnPdf" type=button value="生成 PDF 報告" 
@@ -90,34 +96,63 @@ $(document).ready(function(){
 	});
 });
 
-//populate pull-down menu (Defect ID list)
+
 $(document).ready(function(){
+	$("#sel2op0").remove();
+	$("#sel2").append("<option value=''>地區</option>");
+	var rst = "";
+	for(var i=0; i < D18.length; i++) {
+		if(i>0 && D18[i][0]==D18[i-1][0]) continue;
+		rst += "<option value='"+ D18[i][0] +"'>"+ D18[i][0] +"</option>";
+	}
+	$("#sel2").append(rst);
+});
+	
+$("#sel2").change(function(){
+	document.getElementById('sel3').disabled = false;
+	$("#sel3").find('option:not(:first)').remove();
+	if($("#sel3op0").length) {
+		$("#sel3op0").remove();
+		$("#sel3").append("<option value=''>分區</option>");
+	}
+	var rst = "";
+	for(var i=0; i < D18.length; i++) {
+		if($("#sel2").val()!=D18[i][0])
+			continue;
+		rst += "<option value='"+ D18[i][1] +"'>"+ D18[i][1] +"</option>";
+	}
+	$("#sel3").append(rst);
+});
+
+$("#sel3").change(function(){
+	document.getElementById('sel4').disabled = false;
+	$("#sel4").find('option:not(:first)').remove();
 	$.ajax({
 	  url: gasUrl,
 	  cache: false,
 	  type: "GET",
 	  data: {
-		func: 'GETTAGS', 
+		func: 'GETDATA', 
 		id: gssId2,  
 		key: 12345678
 	  },
 	  dataType: "html",
 	  success: function(html){
-	  
-		var ary = null;
+  		var ary = null;
 		var rst = "";
 		html = "ary="+html+";";
 	    eval(html);
 
 		if(ary.length > 0) {
-			$("#sel2op0").remove();
-			$("#sel2").append("<option value=''>樓盤／大廈</option>");
+			$("#sel4op0").remove();
+			$("#sel4").append("<option value=''>樓盤／大廈</option>");
 		}
 
 		for(var i=0; i<ary.length; i++) {
-			rst += "<option value='"+ ary[i] +"'>"+ ary[i] +"</option>";
+			if(ary[i][1] != $("#sel3 option:selected").text()) continue;
+			rst += "<option value='"+ ary[i][0] +"'>"+ ary[i][0] +"</option>";
 		}
-		$("#sel2").append(rst);
+		$("#sel4").append(rst);
 	  }
 	});
 });
@@ -160,11 +195,11 @@ $("#btnPdf").click(function(){
 		//doc.setFontSize(20);
 
 		var theSel1 = document.getElementById('sel1');
-		var theSel2 = document.getElementById('sel2');
+		var theSel4 = document.getElementById('sel4');
 		var isSelected1 = true;
 		var isSelected2 = true;
 		if(!theSel1.options[0].selected) isSelected1 = false;
-		if(!theSel2.options[0].selected) isSelected2 = false;
+		if(!theSel4.options[0].selected) isSelected2 = false;
 		
 		var isFirst = true;
 		for(var i=0; i<ary.length; i++) {
@@ -174,9 +209,8 @@ $("#btnPdf").click(function(){
 				if($("#sel1 option:selected").text() != ary[i][0]) 
 					continue; //skip for defect id
 			}
-
-			if(!document.getElementById('sel2').options[0].selected) {
-				if($("#sel2 option:selected").text() != obj.bldg) 
+			if(!document.getElementById('sel4').options[0].selected) {
+				if($("#sel4 option:selected").text() != obj.bldg) 
 					continue; //skip for bldg name
 			}
 		

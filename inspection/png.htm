@@ -7,9 +7,6 @@
 
 <h2>Report - PNG Generation</h2>
 
-<font color='gray'>(WIP)....</font>
-<br><br>
-
 <div id="theDiv" style="text-align:right;">
 <input style="width:130px;height:30px;" type=button value="返回" onclick="location.href='pdf.htm';">
 </div>
@@ -22,7 +19,7 @@
 <tr>
 <td>DEFECT ID：</td>
 <td>
-	<select id="theSel">
+	<select id="theSel" onclick="document.getElementById('btnPng').value='生成 PNG 圖像';">
 		<option id='opt0'>載入中...</option>
 	</select>
 </td>
@@ -157,12 +154,37 @@ $("#btnPng").click(function(){
 			ctx.font = "30px Arial";
 			const d = new Date();
 			var timeStr = d.toTimeString().split('(').join('\n(');
+			var ln = 35; //line
+			var s = 20; //spacing
 			ctx.font = "17px Comic Sans MS";
 			ctx.fillStyle = "black";
-			ctx.fillText(timeStr, 10, 35);	
-			ctx.fillText("FRS - Site Inspection Report (Defect ID: "+ ary[i][0] +")", 10, 55);
-			ctx.fillText("Location: "+ obj.bldg+' '+obj.addr, 10, 75);
-			ctx.fillText("Defect Description: "+ obj.di+ obj.tx + obj.dd, 10, 95);
+			ctx.fillText(timeStr.split('(')[0], 10, ln);	
+			ctx.fillText('('+timeStr.split('(')[1], 10, ln+=s);
+			
+			ctx.fillText("FRS - Site Inspection Report", 10, ln+=2*s);
+			ctx.fillText("Defect ID:", 10, ln+=2*s);
+			ctx.fillText(ary[i][0], 10, ln+=s);
+
+			ctx.fillText("Location:", 10, ln+=2*s);
+			ctx.fillText(obj.bldg+' '+obj.addr, 10, ln+=s);
+
+			ctx.fillText("Defect Description:", 10, ln+=2*s);
+			ctx.fillText(obj.di+ obj.tx + obj.dd, 10, ln+=s);
+
+
+			var dpUrl = obj.url.substring(obj.url.lastIndexOf('/')+1);
+			if(dpUrl.length > 38)
+				dpUrl = dpUrl.substring(0,15) +"...."+ dpUrl.substring(0,15);
+			ctx.fillText("Defect Photo:", 10, ln+=2*s);
+			ctx.fillText(dpUrl, 10, ln+=s);
+			ctx.fillText("(x,y) at ("+obj.dpX+","+obj.dpY+")", 10, ln+=s);
+
+			var fpUrl = obj.fp.substring(obj.fp.lastIndexOf('/')+1);
+			if(fpUrl.length > 38)
+				fpUrl = fpUrl.substring(0,15) +"...."+ fpUrl.substring(0,15);
+			ctx.fillText("Florplan:", 10, ln+=2*s);
+			ctx.fillText(fpUrl, 10, ln+=s);
+			ctx.fillText("(x,y) at ("+obj.fpX+","+obj.fpY+")", 10, ln+=s);
 
 			/*
 			//pic - defect pic
@@ -188,28 +210,31 @@ $("#btnPng").click(function(){
 			*/
 
 			//draw shapes overlay
-			ctx.fillStyle = 'red';
-			ctx.strokeStyle = "#FF0000";
+			//ctx.fillStyle = 'red';
+			//ctx.strokeStyle = "#FF0000";
 			//draw circle 
-			ctx.beginPath();
-			ctx.arc(obj.dpX/2, obj.dpY/2, 50, 0, 2 * Math.PI);
-			ctx.stroke();
+			//ctx.beginPath();
+			//ctx.arc(obj.dpX/2, obj.dpY/2, 50, 0, 2 * Math.PI);
+			//ctx.stroke();
 			//draw square
-			ctx.strokeRect(obj.fpX/2, obj.fpY/2, 40, 40);
-			ctx.stroke();
+			//ctx.strokeRect(obj.fpX/2, obj.fpY/2, 40, 40);
+			//ctx.stroke();
 		}
 		
 		//generate timestamp for filename
 		function pad2(n) { return n < 10 ? '0' + n : n }
 		var date = new Date();
 		var ts = ( date.getFullYear().toString() + pad2(date.getMonth() + 1) + pad2( date.getDate()) +'_'+ pad2( date.getHours() ) + pad2( date.getMinutes() ) + pad2( date.getSeconds() ) );
+		var ts2 = pad2( date.getHours() ) +':'+ pad2( date.getMinutes() ) +':'+ pad2( date.getSeconds() );
 
 		var url = canvas.toDataURL();
 		var a = document.createElement('a');
 		a.download = "P"+ts+".png";
 		a.href = url;
-		a.textContent = '【 點擊下載PNG 】';
+		a.textContent = '【 點擊下載PNG 】 ('+ts2+')';
 		document.body.appendChild(a);
+		var br = document.createElement('br');
+		document.body.appendChild(br);
 	  }
 	});
 	
