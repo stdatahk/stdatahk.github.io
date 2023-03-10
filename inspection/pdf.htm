@@ -218,13 +218,15 @@ $("#btnPdf").click(function(){
 				doc.setFontSize(32);
 				doc.text("Defect Report", 110, 105);
 				//footer line
-				doc.rect(40, 160, 245, 0);
+				doc.setLineWidth(1.0);
+				doc.line(40, 160, 285, 160);
 				doc.setFontSize(13);
 				doc.text("Defects Report", 40, 158);
+				doc.setLineWidth(0.25);
 
 				var date = new Date();
 				var ddmmyyyy = ( date.getFullYear().toString() +'/'+ pad2(date.getMonth() + 1) +'/'+ pad2( date.getDate()) );
-				doc.text(ddmmyyyy, 40, 165);
+				doc.text(ddmmyyyy, 40, 166);
 				
 				doc.setFontSize(13);
 				isFirst = false;
@@ -235,65 +237,99 @@ $("#btnPdf").click(function(){
 			doc.rect(10, 15, 200, 125);
 			//LHS lower text info area
 			doc.rect(10, 140, 200, 60);
-			doc.rect(50, 140, 0, 60); //vert line
+			doc.rect(58, 140, 0, 60); //vert line
+			//doc.line
 			doc.rect(10, 150, 200, 0); //horz line
 			doc.rect(10, 160, 200, 0); //horz line
 			doc.rect(10, 170, 200, 0); //horz line
 			doc.rect(10, 180, 200, 0); //horz line
 			doc.rect(10, 190, 200, 0); //horz line
-			//RHS lower text info area
+			
+			//RHS lower text info area (lines)
 			var sx=215; var sy=95; //start xy
 			var ex=290; var ey=200 ; //end xy
 			var h = Math.floor((ey-sy)/13);
+			var tx=1; var ty=3; //text x y offset
+			var sos=3; //seperator offset
 			doc.rect(sx,    sy, ex-sx, ey-sy);
 			doc.rect(sx+25, sy, 0, ey-sy); //vert line
 			doc.rect(sx,    sy+h*1, ex-sx, 0); //horz line
-			doc.rect(sx+25, sy+h*2, ex-sx-25, 0); //horz line
+			doc.rect(sx+25, sy+h*2+sos, ex-sx-25, 0); //horz line sep
 			doc.rect(sx,    sy+h*3, ex-sx, 0); //horz line
-			doc.rect(sx+25, sy+h*4, ex-sx-25, 0); //horz line
+			doc.rect(sx+25, sy+h*4+sos, ex-sx-25, 0); //horz line sep
 			doc.rect(sx,    sy+h*5, ex-sx, 0); //horz line
-			doc.rect(sx+25, sy+h*6, ex-sx-25, 0); //horz line
+			doc.rect(sx+25, sy+h*6+sos, ex-sx-25, 0); //horz line sep
 			doc.rect(sx,    sy+h*7, ex-sx, 0); //horz line
-			doc.rect(sx+25, sy+h*8, ex-sx-25, 0); //horz line
+			doc.rect(sx+25, sy+h*8+sos, ex-sx-25, 0); //horz line sep
 			doc.rect(sx,    sy+h*9, ex-sx, 0); //horz line
-			doc.rect(sx+25, sy+h*10, ex-sx-25, 0); //horz line
+			doc.rect(sx+25, sy+h*10+sos, ex-sx-25, 0); //horz line sep
 			doc.rect(sx,    sy+h*11, ex-sx, 0); //horz line
-			doc.rect(sx+25, sy+h*12, ex-sx-25, 0); //horz line
+			doc.rect(sx+25, sy+h*12+sos, ex-sx-25, 0); //horz line sep
 
-			doc.text("Item No.",                               12, 146);
-			doc.text("Date of Record",                         12, 156);
-			doc.text("Location/Floor/House",                   12, 166);
-			doc.text("Defects were Rectified by",              12, 176);
-			doc.text("Defects as Identified By Representtive", 12, 186);
-			doc.text("Others",                                 12, 196);
+			//RHS lower text info area (words)
+			doc.setFontSize(11);
+			doc.text("Inspection", sx+tx,  sy+h*1-ty-1);
+			doc.text("Period",     sx+tx+0.5,    sy+h*1-ty+2);
+			doc.text("Date:",      sx+25+tx, sy+h*1-ty);
+			doc.text("Name & Signature:", sx+25+tx, sy+h*2-ty);
+			doc.text("Date:",             sx+25+tx, sy+h*3-ty+2);
+			doc.text("Name & Signature:", sx+25+tx, sy+h*4-ty);
+			doc.text("Date:",             sx+25+tx, sy+h*5-ty+2);
+			doc.text("Name & Signature:", sx+25+tx, sy+h*6-ty);
+			doc.text("Date:",             sx+25+tx, sy+h*7-ty+2);
+			doc.text("Name & Signature:", sx+25+tx, sy+h*8-ty);
+			doc.text("Date:",             sx+25+tx, sy+h*9-ty+2);
+			doc.text("Name & Signature:", sx+25+tx, sy+h*10-ty);
+			doc.text("Date:",             sx+25+tx, sy+h*11-ty+2);
+			doc.text("Name & Signature:", sx+25+tx, sy+h*12-ty);
+			doc.text("Date:",             sx+25+tx, sy+h*13-ty+3);
+
+
+			//LHS lower text
+			doc.setFontSize(12);
+			doc.text("Item No.",              12, 146);
+			doc.text("Date of Record",        12, 156);
+			doc.text("Location/Floor/House",  12, 166);
+			doc.text("Defects were ",         12, 176-2);
+			doc.text("Rectified by",          12, 176+2);
+			doc.text("Defects as Identified", 12, 186-2);
+			doc.text("By Representtive",      12, 186+2);
+			doc.text("Others",                12, 196);
 			
-
 			//pic - defect pic
 			var img = new Image();
 			img.src = obj.url;
 			doc.addImage(img, 'png', 40, 20, 100, 100);
 			//pic 2 - floorplan
 			var img = new Image();
-			//img.src = 'floorplan.png';
 			img.src = obj.fp;
-			doc.addImage(img, 'png', 220, 15, 50, 80);
-			//pic 3 - logo
-			//var img = new Image();
-			//img.src = 'logo.png';
-			//doc.addImage(img, 'png', 259, 147, 20, 20);
-			//pic 4 - QR
-			//var img = new Image();
-			//img.src = 'qr/qr1.png';
-			//doc.addImage(img, 'png', 251, 169, 30, 30);
+			doc.addImage(img, 'png', 225, 15, 50, 70);
 
-			doc.text("FRS - Site Inspection Report (Defect ID: "+ ary[i][0] +")", 10, 10);
-			//doc.text("[[[ HD Photo Here ]]]\n   (with markings)", 40, 40);
-			//doc.text("[[[ Floorplan Here ]]]\n   (with overlay)", 210, 60);
-			//doc.text("[[[ Company Logo Here ]]]", 220, 150);
-			//doc.text("[[[ QR Here ]]]", 240, 190);
-			doc.text(obj.bldg, 55, 155);
-			doc.text(obj.addr, 55, 165);
-			doc.text(obj.di+ obj.tx + obj.dd, 55, 175);
+			//drawing overlay legend (todo)
+			doc.setLineWidth(2.0); 
+			doc.setDrawColor(255,0,0);
+			doc.rect(80, 50, 25, 22);
+			//draw arrow
+			var asx=249; var asy=55;
+			var aw=7;
+			doc.line(asx,asy, asx+aw,asy+aw*2);
+			doc.line(asx,asy, asx+aw,asy+3);
+			doc.line(asx,asy, asx-2,asy+aw);
+
+			var dfid = ary[i][0];
+			var dfDate = dfid.trim().substring(1,9);
+			dfDate = dfDate.substring(6,8)+'-'+dfDate.substring(4,6)+'-'+dfDate.substring(0,4);
+			doc.text("FRS - Site Inspection Report", 10, 10);
+			doc.text(dfid,                             60, 146);
+			doc.text(dfDate,                           60, 156);
+			doc.text(obj.bldg+'   '+obj.addr,          60, 166);
+			doc.text(obj.di+' - '+obj.tx+' - '+obj.dd, 60, 186);
+			
+			//drawing color boxes
+			doc.setLineWidth(2.0); 
+			doc.setDrawColor(51,153,102);  doc.rect(186, 172, 20, 6);
+			doc.setDrawColor(255,0,0);	   doc.rect(186, 182, 20, 6);
+			doc.setDrawColor(255,102,255); doc.rect(186, 192, 20, 6);
 		}
 		
 		//generate timestamp for filename
