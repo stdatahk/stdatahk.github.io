@@ -9,11 +9,11 @@
 <h2 style="font-family:Arial;">FRS - FULL DEFECT LIST:</h2>
 
 <div id="theDiv" style="text-align:right;">
-<input style="width:80px;height:30px;" type=button value="REFRESH" onclick="location.reload();">
+<img src='icons/refresh.png' valign=middle><input style="width:80px;height:30px;" type=button value="REFRESH" onclick="location.reload();">
 &nbsp;&nbsp;
-<input style="width:70px;height:30px;" type=button value="EDIT" onclick="location.href='wip.htm';">
+<img src='icons/edit.png' valign=middle><input style="width:70px;height:30px;" type=button value="EDIT" onclick="location.href='wip.htm';">
 &nbsp;&nbsp;
-<input style="width:70px;height:30px;" type=button value="DELETE"onclick="location.href='defect_del.htm';">
+<img src='icons/delete.png' valign=middle><input style="width:70px;height:30px;" type=button value="DELETE"onclick="location.href='defect_del.htm';">
 </div>
 <br>
 
@@ -21,17 +21,20 @@
 BY 
 <select id="sel1" onchange='filterSel1();'>
 	<option id='sel1op0'>載入中...</option>
-</select>
+</select><img src='icons/filter.png' valign=bottom>
+
 OR 
 <select id="sel2">
 	<option id='sel2op0'>載入中...</option>
 </select>
+
 <select id="sel3" DISABLED>
 	<option id='sel3op0'>載入中...</option>
 </select>
 <select id="sel4" DISABLED onchange='filterSel4();'>
 	<option id='sel4op0'>載入中...</option>
-</select>
+</select><img src='icons/filter.png' valign=bottom>
+
 OR 
 <select id="sel5" onchange='filterSel5();'>
 	<option id='sel5op0'>驗樓師</option>
@@ -39,7 +42,7 @@ OR
 	<option>guest001</option>
 	<option>guest002</option>
 	<option>guest003</option>
-</select>
+</select><img src='icons/filter.png' valign=bottom>
 <br><br>
 
 <table id='tbl' width='100%' border=1 cellpadding=2 cellspacing=0 style="font-family:Arial;">
@@ -141,7 +144,7 @@ $(document).ready(function(){
 		
 			rst += "<tr id='tr"+ i +"'>";
 			rst += "<td>"+ ary[i][0] +"</td>";
-			rst += "<td><a target='_blank' href='qr_gen.htm#"+ ary[i][0] +"'><img height=50 src='qr/qr1.png'></a></td>";
+			rst += "<td align=center><a target='_blank' href='qr_gen.htm#"+ ary[i][0] +"'><img src='icons/qr.png'></a></td>";
 			rst += "<td><a target='_blank' href='"+ obj.url +"'><img height=50 src='"+ obj.url +"'></a></td>";
 			rst += "<td>("+ obj.dpX +","+ obj.dpY +")</td>";
 			rst += "<td><a target='_blank' href='"+ obj.fp +"'><img height=50 src='"+ obj.fp +"'></a></td>";
