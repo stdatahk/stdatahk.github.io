@@ -186,6 +186,12 @@ $("#btnPng").click(function(){
 			ctx.fillText(fpUrl, 10, ln+=s);
 			ctx.fillText("(x,y) at ("+obj.fpX+","+obj.fpY+")", 10, ln+=s);
 
+			var img = new Image();
+			img = document.createElement("img");
+			img.src = "https://stdatahk.com/inspection/icons/qr.png";
+			ctx.drawImage(img, 10, 10, 100, 100);
+
+
 			/*
 			//pic - defect pic
 			var img = new Image();
