@@ -320,7 +320,8 @@ $("#btnPdf").click(function(){
 			var dfDate = dfid.trim().substring(1,9);
 			dfDate = dfDate.substring(6,8)+'-'+dfDate.substring(4,6)+'-'+dfDate.substring(0,4);
 			doc.text("FRS - Site Inspection Report", 10, 10);
-			doc.text(dfid,                             60, 146);
+			//doc.text(dfid,                             60, 146);
+			doc.text(obj.addr +"-"+ (i+1),               60, 146);
 			doc.text(dfDate,                           60, 156);
 			doc.text(obj.bldg+'   '+obj.addr,          60, 166);
 			doc.text(obj.di+' - '+obj.tx+' - '+obj.dd, 60, 186);
