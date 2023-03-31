@@ -46,7 +46,8 @@
         };
 
         (async () => {
-            const nlp = await setupNLP('https://raw.githubusercontent.com/jesus-seijas-sp/nlpjs-examples/master/01.quickstart/02.filecorpus/corpus-en.json');
+            //const nlp = await setupNLP('https://raw.githubusercontent.com/jesus-seijas-sp/nlpjs-examples/master/01.quickstart/02.filecorpus/corpus-en.json');
+            const nlp = await setupNLP('https://raw.githubusercontent.com/stdatahk/stdatahk.github.io/master/chatnlp/corpus-ch.json');
             const chatForm = document.getElementById('chatbotForm');
             chatForm.addEventListener('submit', onChatSubmit(nlp));
         })();
