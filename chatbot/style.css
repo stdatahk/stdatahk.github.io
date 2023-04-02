@@ -38,7 +38,7 @@
 .messages .bot {
   text-align: left;
   margin-right: auto;
-  background: lightblue;
+  background: #25D366; //lightblue
 }
 
 .messages .self {
