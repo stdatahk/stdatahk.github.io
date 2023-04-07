@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Breakdown & Lookup</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+
+<input type=text id='txt' size=30 value='你好嗎吃飯了沒'>
+<input type=button id='btn' value='SUBMIT'>
+
+<script>
+$("btn").click(function() {  
+  var url = "https://zh.wikipedia.org/w/api.php?action=query&format=json&list=search&formatversion=2&srsearch=";
+  url += $('txt').val();
+  url = 'https://json2jsonp.com/?url='+ encodeURIComponent(url) +'&callback=json';
+  $.ajax({
+      url: 'https://api.translate.zvo.cn/translate.json',
+      dataType: 'json',
+      type: 'get',
+      contentType: 'application/json',
+      processData: false,
+      success: function( data, textStatus, jQxhr ){
+          //$('#response pre').html( JSON.stringify( data ) );
+          alert(data);
+      },
+      error: function( jqXhr, textStatus, err ){
+          console.log( err );
+      }
+  });
+});    
+</script>
+  
+</body>
+</html>
