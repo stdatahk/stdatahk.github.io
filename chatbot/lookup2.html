@@ -9,7 +9,8 @@
 <input type=button id='btn' value='SUBMIT'>
 
 <script>
-$("btn").click(function() {  
+$("btn").click(function() {
+  alert(234324);
   var url = "https://zh.wikipedia.org/w/api.php?action=query&format=json&list=search&formatversion=2&srsearch=";
   url += $('txt').val();
   url = 'https://json2jsonp.com/?url='+ encodeURIComponent(url) +'&callback=json';
