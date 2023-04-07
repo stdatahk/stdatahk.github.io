@@ -12,15 +12,10 @@
 $(document).ready(function() {
 // $("btn").click(function() {
    $.ajax({
-     url: 'https://api.translate.zvo.cn/translate.json',
+     url: 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+$('txt').val(),
      dataType: 'json',
      type: 'post',
      contentType: 'application/json',
-     data: JSON.stringify({
-       from: "chinese_simplified",
-       to: "chinese_traditional",
-       text: $('txt').val()
-     }),
      processData: false,
      success: function(data, textStatus, jQxhr) {
        //$('#response pre').html( JSON.stringify( data ) );
