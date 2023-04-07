@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<input type=text id='txt' size=30>
+<input type=text id='txt' size=30 value='你好嗎吃飯了沒'>
 <input type=button id='btn' value='SUBMIT'>
 
 <script>
@@ -18,7 +18,7 @@ $("btn").click(function() {
       data: JSON.stringify({
                             from: "chinese_simplified", 
                             to:"chinese_traditional", 
-                            text: $('txt').val();
+                            text: $('txt').val()
                           }),
       processData: false,
       success: function( data, textStatus, jQxhr ){
