@@ -9,27 +9,29 @@
 <input type=button id='btn' value='SUBMIT'>
 
 <script>
-$("btn").click(function() {  
-  $.ajax({
-      url: 'https://api.translate.zvo.cn/translate.json',
-      dataType: 'json',
-      type: 'post',
-      contentType: 'application/json',
-      data: JSON.stringify({
-                            from: "chinese_simplified", 
-                            to:"chinese_traditional", 
-                            text: $('txt').val()
-                          }),
-      processData: false,
-      success: function( data, textStatus, jQxhr ){
-          //$('#response pre').html( JSON.stringify( data ) );
-          alert(data);
-      },
-      error: function( jqXhr, textStatus, err ){
-          console.log( err );
-      }
-  });
-});    
+$(document).ready(function() {
+ $("btn").click(function() {
+   $.ajax({
+     url: 'https://api.translate.zvo.cn/translate.json',
+     dataType: 'json',
+     type: 'post',
+     contentType: 'application/json',
+     data: JSON.stringify({
+       from: "chinese_simplified",
+       to: "chinese_traditional",
+       text: $('txt').val()
+     }),
+     processData: false,
+     success: function(data, textStatus, jQxhr) {
+       //$('#response pre').html( JSON.stringify( data ) );
+       alert(data);
+     },
+     error: function(jqXhr, textStatus, err) {
+       console.log(err);
+     }
+   });
+ });
+});
 </script>
   
 </body>
