@@ -10,11 +10,11 @@
 
 <script>
  $(document).ready(function() {
-     var url = "https://zh.wikipedia.org/w/api.php?action=query&format=json&list=search&formatversion=2&srsearch=";
-     url += $('txt').val();
-     url = 'https://json2jsonp.com/?url=' + encodeURIComponent(url) + '&callback=json';
+     var url0 = "https://zh.wikipedia.org/w/api.php?action=query&format=json&list=search&formatversion=2&srsearch=";
+     url0 += $('txt').val();
+     url0 = 'https://json2jsonp.com/?url=' + encodeURIComponent(url0) + '&callback=json';
      $.ajax({
-       url: 'https://api.translate.zvo.cn/translate.json',
+       url: url0,
        dataType: 'json',
        type: 'get',
        contentType: 'application/json',
