@@ -1,0 +1,322 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STD - VR 360 Demo (TL)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 1024px;
+        height: 800px;
+    }
+    </style>
+</head>
+<body>
+<!--
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+示範單位：
+[<a href="index.html?1">1</a>] 
+[<a href="index.html?2">入屋</a>] 
+[<a href="index.html?3">3</a>] 
+[<a href="index.html?4">4</a>] 
+[<a href="index.html?5">5</a>] 
+[<a href="index.html?6">6</a>] 
+[<a href="index.html?7">7</a>] 
+[<a href="index.html?8">8</a>] 
+[<a href="index.html?9">9</a>] 
+[<a href="index.html?10">10</a>] 
+[<a href="index.html?11">11</a>] 
+[<a href="index.html?12">12</a>] 
+[<a href="index.html?13">13</a>] 
+[<a href="index.html?14">14</a>] 
+[<a href="index.html?15">15</a>] 
+[<a href="index.html?16">16</a>] 
+[<a href="index.html?17">17</a>] 
+[<a href="index.html?18">18</a>] 
+[<a href="index.html?19">19</a>] 
+[<a href="index.html?20">20</a>] 
+[<a href="index.html?21">21</a>] 
+[<a href="index.html?22">22</a>] 
+[<a href="index.html?23">23</a>] 
+[<a href="index.html?24">24</a>] 
+[<a href="index.html?25">25</a>] 
+<br>
+-->
+<div id="panorama"></div>
+<script>
+var imgsrc = "https://stdatahk.com/vr/img/1.jpg";
+if(location.href.lastIndexOf('?') > 0) {
+	var param = location.href.substring(location.href.lastIndexOf('?')+1);
+	imgsrc = "https://stdatahk.com/vr/img/TL"+ param +".jpg";
+}
+
+// pannellum.viewer('panorama', {
+//     "type": "equirectangular",
+//     "panorama": imgsrc,
+// 	"autoLoad" : true
+// });
+
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "livingroom1",
+        "author": "STDataHK",
+        "sceneFadeDuration": 1000,
+		"autoLoad" : true
+    },
+
+    "scenes": {
+        "livingroom1": {
+            "title": "長樂大廈（共居）",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": imgsrc,
+            "hotSpots": [
+                {
+                    "pitch": -15,
+                    "yaw": 190,
+                    "type": "info",
+                    "text": "正門\n（離開）",
+                    "URL": "https://www.google.com/maps/place/Cheong+Lok+Building,+191-203+Cheung+Sha+Wan+Rd,+Sham+Shui+Po/@22.3302259,114.1628758,3a,75y,247.32h,94.67t/data=!3m6!1e1!3m4!1saKTHj8gJL2e9z9QM0p1cyQ!2e0!7i16384!8i8192!4m5!3m4!1s0x340400b48ef3e2e9:0x1dafbd67f2895c3a!8m2!3d22.3300766!4d114.1627462" 
+                },
+                {
+                    "pitch": -15,
+                    "yaw": 80,
+                    "type": "scene",
+                    "text": "客房1",
+                    "sceneId": "room1"  
+                },
+                {
+                    "pitch": -15,
+                    "yaw": 20,
+                    "type": "scene",
+                    "text": "客廳",
+                    "sceneId": "livingroom2"  
+                }
+            ]
+        },
+
+        "livingroom2": {
+            "title": "長樂大廈（共居）",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/img/TL5.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -30,
+                    "yaw": 120,
+                    "type": "scene",
+                    "text": "廚房（開放式）",
+                    "sceneId": "kitchen" 
+                },
+                {
+                    "pitch": -20,
+                    "yaw": 165,
+                    "type": "scene",
+                    "text": "廁所",
+                    "sceneId": "toilet" 
+                },
+                {
+                    "pitch": -15,
+                    "yaw": 4,
+                    "type": "scene",
+                    "text": "客房3,4",
+                    "sceneId": "room34"  
+                },
+                {
+                    "pitch": -15,
+                    "yaw": 55,
+                    "type": "scene",
+                    "text": "套房",
+                    "sceneId": "room2"  
+                }
+            ]
+        },
+
+        "room1": {
+            "title": "客房1",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/img/TL24.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": 210,
+                    "type": "scene",
+                    "text": "入屋玄關",
+                    "sceneId": "livingroom1",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+		
+        "room2": {
+            "title": "套房",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/img/TL18.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": 205,
+                    "type": "scene",
+                    "text": "客廳",
+                    "sceneId": "livingroom2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -25,
+                    "yaw": 140,
+                    "type": "scene",
+                    "text": "套廁",
+                    "sceneId": "toilet2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -3,
+                    "yaw": 15,
+                    "type": "scene",
+                    "text": "套房（景觀）",
+                    "sceneId": "room2view",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+		
+        "room2view": {
+            "title": "套房（景觀）",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/img/TL16.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 188,
+                    "type": "scene",
+                    "text": "套房（門口）",
+                    "sceneId": "room2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 175,
+                    "type": "scene",
+                    "text": "套廁",
+                    "sceneId": "toilet2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+		
+        "room34": {
+            "title": "客房3,4",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/img/TL7.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": 190,
+                    "type": "scene",
+                    "text": "客廳",
+                    "sceneId": "livingroom2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -23,
+                    "yaw": 45,
+                    "type": "info",
+                    "text": "客房3\n（有人）\n（未能拍攝）",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -25,
+                    "yaw": -20,
+                    "type": "info",
+                    "text": "客房4\n（有人）\n（未能拍攝）",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+		
+        "toilet": {
+            "title": "廁所",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/img/TL11.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": 190,
+                    "type": "scene",
+                    "text": "客廳",
+                    "sceneId": "livingroom2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+		
+        "toilet2": {
+            "title": "套廁",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/img/TL13.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "套房",
+                    "sceneId": "room2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+		
+        "kitchen": {
+            "title": "廚房（開放式）",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/img/TL9.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": 190,
+                    "type": "scene",
+                    "text": "客廳",
+                    "sceneId": "livingroom2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+    }
+});
+</script>
+
+</body>
+</html>
