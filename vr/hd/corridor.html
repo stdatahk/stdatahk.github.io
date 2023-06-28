@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STD - VR 360 Demo (TL)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 1024px;
+        height: 800px;
+    }
+    </style>
+</head>
+<body>
+<a href="corridor.html">走廊</a> , 
+<a href="index.html">其他位置</a>   
+<br>
+<div id="panorama"></div>
+<script>
+var imgsrc = "https://stdatahk.com/vr/hd/img/P3.jpg";
+if(location.href.lastIndexOf('?') > 0) {
+	var param = location.href.substring(location.href.lastIndexOf('?')+1);
+	imgsrc = "https://stdatahk.com/vr/hd/img/P"+ param +".jpg";
+}
+
+// pannellum.viewer('panorama', {
+//     "type": "equirectangular",
+//     "panorama": imgsrc,
+// 	"autoLoad" : true
+// });
+
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "liftlobby",
+        "author": "STDataHK",
+        "sceneFadeDuration": 1000,
+		"autoLoad" : true
+    },
+
+    "scenes": {
+        "liftlobby": {
+            "title": "某屋邨（走廊）",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": imgsrc,
+            "hotSpots": [
+                {
+                    "pitch": 7,
+                    "yaw": 58,
+                    "type": "info",
+                    "text": "升降機\n（離開）",
+                    "URL": "https://www.otis.com/zh/hk/" 
+                },
+                {
+                    "pitch": 4,
+                    "yaw": 140,
+                    "type": "info",
+                    "text": "升降機\n（離開）",
+                    "URL": "https://www.otis.com/zh/hk/" 
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 185,
+                    "type": "scene",
+                    "text": "進內",
+                    "sceneId": "corridor"  
+                },
+                {
+                    "pitch": 2,
+                    "yaw": 18,
+                    "type": "scene",
+                    "text": "進內",
+                    "sceneId": "liftlobby2"  
+                }
+            ]
+        },
+
+        "liftlobby2": {
+            "title": "某屋邨（走廊）",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/hd/img/P6.jpg",
+            "hotSpots": [
+                {
+                    "pitch": 7,
+                    "yaw": 74,
+                    "type": "info",
+                    "text": "升降機\n（離開）",
+                    "URL": "https://www.otis.com/zh/hk/" 
+                },
+                {
+                    "pitch": 4,
+                    "yaw": 147,
+                    "type": "info",
+                    "text": "升降機\n（離開）",
+                    "URL": "https://www.otis.com/zh/hk/" 
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "返回",
+                    "sceneId": "liftlobby" 
+                }
+            ]
+        },
+
+        "corridor": {
+            "title": "某屋邨（走廊）",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/hd/img/P4.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -8,
+                    "yaw": 205,
+                    "type": "scene",
+                    "text": "升降機大堂",
+                    "sceneId": "liftlobby",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 5,
+                    "type": "scene",
+                    "text": "進內",
+                    "sceneId": "door"  
+                }
+            ]
+        },
+		
+        "door": {
+            "title": "某屋邨（走廊）",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/hd/img/P24.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 248,
+                    "type": "scene",
+                    "text": "防煙門",
+                    "sceneId": "backside",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -10,
+                    "yaw": 190,
+                    "type": "scene",
+                    "text": "返回",
+                    "sceneId": "corridor" 
+                }
+            ]
+        },
+		
+        "backside": {
+            "title": "某屋邨（後樓梯）",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/hd/img/P5.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -10,
+                    "yaw": 180,
+                    "type": "scene",
+                    "text": "返回",
+                    "sceneId": "door",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -30,
+                    "yaw": -2,
+                    "type": "scene",
+                    "text": "落一層",
+                    "sceneId": "backside2",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        },
+		
+        "backside2": {
+            "title": "某屋邨（後樓梯）",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/hd/img/P7.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -20,
+                    "yaw": 200,
+                    "type": "scene",
+                    "text": "上一層",
+                    "sceneId": "backside",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                }
+            ]
+        }
+    }
+});
+</script>
+
+</body>
+</html>
