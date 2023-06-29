@@ -27,7 +27,7 @@
 <br>
 <div id="panorama"></div>
 <script>
-var imgsrc = "https://stdatahk.com/vr/hd/img/P14.jpg";
+var imgsrc = "https://stdatahk.com/vr/hd/img/P15.jpg";
 if(location.href.lastIndexOf('?') > 0) {
 	var param = location.href.substring(location.href.lastIndexOf('?')+1);
 	imgsrc = "https://stdatahk.com/vr/hd/img/P"+ param +".jpg";
@@ -57,59 +57,29 @@ pannellum.viewer('panorama', {
             "panorama": imgsrc,
             "hotSpots": [
                 {
-                    "pitch": -60,
-                    "yaw": 80,
+                    "pitch": -6,
+                    "yaw": 263,
                     "type": "scene",
-                    "text": "前進",
+                    "text": "開門",
                     "sceneId": "room2"  
-                },
-                {
-                    "pitch": -12,
-                    "yaw": 315,
-                    "type": "scene",
-                    "text": "洗手間",
-                    "sceneId": "toilet"  
                 }
             ]
         },
-        "toilet": {
-            "title": "某共居（天台）",
-            "hfov": 110,
-            "pitch": -3,
-            "yaw": 117,
-            "type": "equirectangular",
-            "panorama": "https://stdatahk.com/vr/hd/img/P30.jpg",
-            "hotSpots": [
-                {
-                    "pitch": -25,
-                    "yaw": 252,
-                    "type": "scene",
-                    "text": "返回",
-                    "sceneId": "room" 
-                }
-            ]
-        },
+
         "room2": {
             "title": "某共居（天台）",
             "hfov": 110,
             "pitch": -3,
-            "yaw": 117,
+            "yaw": 116,
             "type": "equirectangular",
-            "panorama": "https://stdatahk.com/vr/hd/img/P17.jpg",
+            "panorama": "https://stdatahk.com/vr/hd/img/P13.jpg",
             "hotSpots": [
                 {
-                    "pitch": -40,
-                    "yaw": 240,
+                    "pitch": -7,
+                    "yaw": 252,
                     "type": "scene",
-                    "text": "返回",
+                    "text": "關門",
                     "sceneId": "room"  
-                },
-                {
-                    "pitch": -10,
-                    "yaw": 280,
-                    "type": "scene",
-                    "text": "洗手間",
-                    "sceneId": "toilet"  
                 }
             ]
         }
