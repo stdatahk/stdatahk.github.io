@@ -69,7 +69,7 @@ pannellum.viewer('panorama', {
                 },
                 {
                     "pitch": -5,
-                    "yaw": 185,
+                    "yaw": 181,
                     "type": "scene",
                     "text": "進內",
                     "sceneId": "corridor"  
@@ -133,15 +133,41 @@ pannellum.viewer('panorama', {
                     "targetPitch": 2
                 },
                 {
-                    "pitch": -5,
-                    "yaw": 5,
+                    "pitch": -8,
+                    "yaw": 357,
                     "type": "scene",
                     "text": "進內",
-                    "sceneId": "door"  
+                    "sceneId": "corridor2"  
                 }
             ]
         },
 		
+        "corridor2": {
+            "title": "某屋邨（走廊）",
+            "hfov": 110,
+            "yaw": 5,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/hd/img/P19.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -1,
+                    "yaw": 327,
+                    "type": "scene",
+                    "text": "進內",
+                    "sceneId": "door",
+                    "targetYaw": -23,
+                    "targetPitch": 2
+                },
+                {
+                    "pitch": -5,
+                    "yaw": 149,
+                    "type": "scene",
+                    "text": "返回",
+                    "sceneId": "corridor" 
+                }
+            ]
+        },
+
         "door": {
             "title": "某屋邨（走廊）",
             "hfov": 110,
@@ -163,7 +189,7 @@ pannellum.viewer('panorama', {
                     "yaw": 190,
                     "type": "scene",
                     "text": "返回",
-                    "sceneId": "corridor" 
+                    "sceneId": "corridor2" 
                 }
             ]
         },
