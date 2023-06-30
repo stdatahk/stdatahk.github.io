@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STD - VR 360 Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 800px;
+        height: 800px;
+    }
+    #panorama2 {
+        width: 800px;
+        height: 800px;
+    }
+    </style>
+</head>
+<body bgcolor='black'>
+<table border=0 cellpadding=0 cellspacing=0><tr>
+<td><div id="panorama"></div></td>
+<td><div id="panorama2"></div></td>
+</tr></table>
+
+<script>
+var imgsrc = "https://stdatahk.com/vr/hd/img/P40.jpg";
+if(location.href.lastIndexOf('?') > 0) {
+	var param = location.href.substring(location.href.lastIndexOf('?')+1);
+	imgsrc = "https://stdatahk.com/vr/hd/img/P"+ param +".jpg";
+}
+
+// pannellum.viewer('panorama', {
+//     "type": "equirectangular",
+//     "panorama": imgsrc,
+// 	"autoLoad" : true
+// });
+
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "room",
+        "author": "STDataHK",
+        "sceneFadeDuration": 1000,
+		"autoLoad" : true
+    },
+
+    "scenes": {
+        "room": {
+            "title": "得如樓大廈（共居）",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": imgsrc,
+            "hotSpots": [
+                {
+                    "pitch": -32,
+                    "yaw": 270,
+                    "type": "scene",
+                    "text": "前進",
+                    "sceneId": "room2"  
+                },
+                {
+                    "pitch": -17,
+                    "yaw": 357,
+                    "type": "scene",
+                    "text": "洗手間",
+                    "sceneId": "toilet"  
+                }
+            ]
+        },
+        "toilet": {
+            "title": "得如樓大廈（共居）",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/hd/img/P35.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -28,
+                    "yaw": 360,
+                    "type": "scene",
+                    "text": "返回",
+                    "sceneId": "room" 
+                }
+            ]
+        },
+        "room2": {
+            "title": "得如樓大廈（共居）",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/hd/img/P12.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -40,
+                    "yaw": 105,
+                    "type": "scene",
+                    "text": "返回",
+                    "sceneId": "room"  
+                }
+            ]
+        }
+    }
+});
+</script>
+
+<script>
+var imgsrc = "https://stdatahk.com/vr/hd/img/P40.jpg";
+if(location.href.lastIndexOf('?') > 0) {
+	var param = location.href.substring(location.href.lastIndexOf('?')+1);
+	imgsrc = "https://stdatahk.com/vr/hd/img/P"+ param +".jpg";
+}
+
+// pannellum.viewer('panorama', {
+//     "type": "equirectangular",
+//     "panorama": imgsrc,
+// 	"autoLoad" : true
+// });
+
+pannellum.viewer('panorama2', {   
+    "default": {
+        "firstScene": "room",
+        "author": "STDataHK",
+        "sceneFadeDuration": 1000,
+		"autoLoad" : true
+    },
+
+    "scenes": {
+        "room": {
+            "title": "得如樓大廈（共居）",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": imgsrc,
+            "hotSpots": [
+                {
+                    "pitch": -32,
+                    "yaw": 270,
+                    "type": "scene",
+                    "text": "前進",
+                    "sceneId": "room2"  
+                },
+                {
+                    "pitch": -17,
+                    "yaw": 357,
+                    "type": "scene",
+                    "text": "洗手間",
+                    "sceneId": "toilet"  
+                }
+            ]
+        },
+        "toilet": {
+            "title": "得如樓大廈（共居）",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/hd/img/P35.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -28,
+                    "yaw": 360,
+                    "type": "scene",
+                    "text": "返回",
+                    "sceneId": "room" 
+                }
+            ]
+        },
+        "room2": {
+            "title": "得如樓大廈（共居）",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": "https://stdatahk.com/vr/hd/img/P12.jpg",
+            "hotSpots": [
+                {
+                    "pitch": -40,
+                    "yaw": 105,
+                    "type": "scene",
+                    "text": "返回",
+                    "sceneId": "room"  
+                }
+            ]
+        }
+    }
+});
+</script>
+
+
+</body>
+</html>
