@@ -21,6 +21,14 @@
 <table border=0 cellpadding=0 cellspacing=0><tr>
 <td><div id="panorama"></div></td>
 <td><div id="panorama2"></div></td>
+<td valign=top>
+	<input type=button value='Pan(-)'  style="width:100px;" onclick='panM();'><br>
+	<input type=button value='Pan(+)'  style="width:100px;" onclick='panP();'><br><br>
+	<input type=button value='Tilt(-)' style="width:100px;" onclick='tiltM();'><br>
+	<input type=button value='Tilt(+)' style="width:100px;" onclick='tiltP();'><br><br>
+	<input type=button value='Zoom(-)' style="width:100px;" onclick='zoomM();'><br>
+	<input type=button value='Zoom(+)' style="width:100px;" onclick='zoomP();'>
+</td>
 </tr></table>
 
 <script>
@@ -36,7 +44,7 @@ if(location.href.lastIndexOf('?') > 0) {
 // 	"autoLoad" : true
 // });
 
-pannellum.viewer('panorama', {   
+var myviewer = pannellum.viewer('panorama', {   
     "default": {
         "firstScene": "room",
         "author": "STDataHK",
@@ -105,10 +113,11 @@ pannellum.viewer('panorama', {
         }
     }
 });
-</script>
 
-<script>
-var imgsrc = "https://stdatahk.com/vr/hd/img/P40.jpg";
+//==============================================================
+
+
+var imgsrc2 = "https://stdatahk.com/vr/hd/img/P40.jpg";
 if(location.href.lastIndexOf('?') > 0) {
 	var param = location.href.substring(location.href.lastIndexOf('?')+1);
 	imgsrc = "https://stdatahk.com/vr/hd/img/P"+ param +".jpg";
@@ -120,7 +129,7 @@ if(location.href.lastIndexOf('?') > 0) {
 // 	"autoLoad" : true
 // });
 
-pannellum.viewer('panorama2', {   
+var myviewer2 = pannellum.viewer('panorama2', {   
     "default": {
         "firstScene": "room",
         "author": "STDataHK",
@@ -135,7 +144,7 @@ pannellum.viewer('panorama2', {
             "pitch": -3,
             "yaw": 117,
             "type": "equirectangular",
-            "panorama": imgsrc,
+            "panorama": imgsrc2,
             "hotSpots": [
                 {
                     "pitch": -32,
@@ -189,6 +198,64 @@ pannellum.viewer('panorama2', {
         }
     }
 });
+
+//=============================================
+
+function panM() {
+	myviewer.setYaw( myviewer.getYaw() -10);
+	myviewer2.setYaw(myviewer2.getYaw()-10);
+}
+
+function panP() {
+	myviewer.setYaw( myviewer.getYaw() +10);
+	myviewer2.setYaw(myviewer2.getYaw()+10);
+}
+
+function tiltM() {
+	myviewer.setPitch( myviewer.getPitch() -10);
+	myviewer2.setPitch(myviewer2.getPitch()-10);
+}
+
+function tiltP() {
+	myviewer.setPitch( myviewer.getPitch() +10);
+	myviewer2.setPitch(myviewer2.getPitch()+10);
+}
+
+function zoomM() {
+	myviewer.setHfov( myviewer.getHfov() +10);
+	myviewer2.setHfov(myviewer2.getHfov()+10);
+}
+
+function zoomP() {
+	myviewer.setHfov( myviewer.getHfov() -10);
+	myviewer2.setHfov(myviewer2.getHfov()-10);
+}
+
+
+document.onkeydown = detectKeyboard;
+function detectKeyboard(e) {
+    e = e || window.event;
+
+    if (e.keyCode == '65') { //'A'
+		zoomM();
+    }
+    if (e.keyCode == '90') { //'Z'
+		zoomP();
+    }
+    else if (e.keyCode == '38') { //UP
+		tiltP();
+    }
+    else if (e.keyCode == '40') { //DN
+		tiltM();
+    }
+    else if (e.keyCode == '37') { //L
+		panM();
+    }
+    else if (e.keyCode == '39') { //R
+		panP();
+    }
+}
+
 </script>
 
 
