@@ -31,10 +31,10 @@
 
 		<div id="container"></div>
 		<div id="info">
-			<a href="http://threejs.org" target="_blank">three.js webgl</a> - dualfisheye panorama.
+			dualfisheye demo
 		</div>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+		<script src="https://techbrood.com/threejs/build/three.js"></script>
 
 		<script>
 
@@ -95,6 +95,7 @@
 				//
 				var texture = new THREE.TextureLoader().load( 'stdatahk.github.io/vr/dualfisheye.jpg' );
 				//var texture = new THREE.TextureLoader().load( 'https://techbrood.com/threejs/examples/textures/ricoh_theta_s.jpg' );
+
 				texture.format = THREE.RGBFormat;
 
 				var material   = new THREE.MeshBasicMaterial( { map: texture } );
