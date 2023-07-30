@@ -17,7 +17,7 @@
 
 <script>
 var locNames = "客廳1|客廳2|客廳3|客廳4|走廊1|走廊2|廚房1|廚房2|廁所1|廁所2|走廊3|細房1|細房2|房間1|房間2";
-locNames.split("|");
+locNames = locNames.split("|");
 	
 document.write("<a href='ymt.html?1'>"+ (locNames[0]=='_'?1:locNames[0]) +"</a>");
 for(var i=2; i<=15; i++) {
