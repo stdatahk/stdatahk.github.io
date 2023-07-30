@@ -16,9 +16,15 @@
 <body>
 
 <script>
-document.write("<a href='ymt.html?1'>1</a>");
+var locNames = "客廳1|客廳2|客廳3|客廳4|";
+locNames.split("|");
+	
+document.write("<a href='ymt.html?1'>"+ (locNames[0]=='_'?1:locNames[0]) +"</a>");
 for(var i=2; i<=15; i++) {
-	document.write(" , <a href='ymt.html?"+ i +"'>"+ i +"</a>");
+	if(locNames[i-1]=='_')
+		document.write(" , <a href='ymt.html?"+ i +"'>"+ i +"</a>");
+	else
+		document.write(" , <a href='ymt.html?"+ i +"'>"+ locNames[i-1] +"</a>");
 }
 </script>
 <br>
