@@ -16,6 +16,9 @@
 <body>
 
 <script>
+function isIphone() {return (['iPad','iPhone','iPod'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document));}
+if(isIphone) {alert("系統判斷到 iOS 用戶. 需要最適化畫面大小嗎? (實驗中)")}
+
 document.write("<a href='kts.html?1'>1</a>");
 for(var i=2; i<=26; i++) {
 	document.write(" , <a href='kts.html?"+ i +"'>"+ i +"</a>");

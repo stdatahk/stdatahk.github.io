@@ -16,6 +16,9 @@
 <body>
 
 <script>
+function isIphone() {return (['iPad','iPhone','iPod'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document));}
+if(isIphone) {alert("系統判斷到 iOS 用戶. 需要最適化畫面大小嗎? (實驗中)")}
+
 var locNames = "客廳1|客廳2|客廳3|客廳4|走廊1|走廊2|廚房1|廚房2|廁所1|廁所2|走廊3|細房1|細房2|房間1|房間2";
 locNames = locNames.split("|");
 	
