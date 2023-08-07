@@ -34,7 +34,11 @@ if(isIphone()) {alert("系統判斷到 iOS 用戶. 需要最適化畫面大小�
 
 document.write("<a href='kts.html?1'>1</a>");
 for(var i=2; i<=26; i++) {
-	document.write(" , <a href='kts.html?"+ i +"'>"+ i +"</a>");
+	if(i==20) continue;
+	if(i > 20)
+		document.write(" , <a href='kts.html?"+ i +"'>"+ (i-1) +"</a>");
+	else
+		document.write(" , <a href='kts.html?"+ i +"'>"+ i +"</a>");
 }
 </script>
 <br>
