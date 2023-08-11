@@ -19,22 +19,22 @@
 function isIphone() {return (['iPad','iPhone','iPod'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document));}
 if(isIphone()) {alert("系統判斷到 iOS 用戶. 需要最適化畫面大小嗎? (實驗中)")}
 
-document.write("<a href='kts.html?1'>1</a>");
+document.write("<a href='ue.html?1'>1</a>");
 for(var i=2; i<=26; i++) {
 	if(i==20) continue;
 	if(i > 20)
-		document.write(" , <a href='kts.html?"+ i +"'>"+ (i-1) +"</a>");
+		document.write(" , <a href='ue.html?"+ i +"'>"+ (i-1) +"</a>");
 	else
-		document.write(" , <a href='kts.html?"+ i +"'>"+ i +"</a>");
+		document.write(" , <a href='ue.html?"+ i +"'>"+ i +"</a>");
 }
 </script>
 <br>
 <div id="panorama"></div>
 <script>
-var imgsrc = "https://stdatahk.com/vr/hd/img/kts/1.jpg";
+var imgsrc = "https://stdatahk.com/vr/hd/img/ue/1.jpg";
 if(location.href.lastIndexOf('?') > 0) {
 	var param = location.href.substring(location.href.lastIndexOf('?')+1);
-	imgsrc = "https://stdatahk.com/vr/hd/img/kts/"+ param +".jpg";
+	imgsrc = "https://stdatahk.com/vr/hd/img/ue/"+ param +".jpg";
 }
 
 // pannellum.viewer('panorama', {
@@ -77,7 +77,7 @@ pannellum.viewer('panorama', {
 <img width=200 style="position:absolute;left:828px;top:703px;"
  onmouseover="this.width=500;this.style.left='528px';this.style.top='313px';" 
  onmouseout="this.width=200;this.style.left='828px';this.style.top='703px';" 
- src="https://stdatahk.com/vr/hd/img/kts/floorplan_kautoshan.png">
+ src="https://stdatahk.com/vr/hd/img/ue/floorplan_kautoshan.png">
  
 </body>
 </html>
