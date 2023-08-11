@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STD - VR 360 Demo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+    #panorama {
+        width: 1024px;
+        height: 800px;
+    }
+    </style>
+</head>
+<body>
+
+todo:
+大門口玄關|
+ 客飯廳|
+ 走廊|
+ 睡房1|
+睡房2|
+主人睡房|
+ 主人浴室|
+客人浴室|
+廚房|
+工人房和工人浴室
+<br>
+	
+<script>
+function isIphone() {return (['iPad','iPhone','iPod'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document));}
+if(isIphone()) {alert("系統判斷到 iOS 用戶. 需要最適化畫面大小嗎? (實驗中)")}
+
+document.write("<a href='kts.html?1'>1</a>");
+for(var i=2; i<=26; i++) {
+	if(i==20) continue;
+	if(i > 20)
+		document.write(" , <a href='kts.html?"+ i +"'>"+ (i-1) +"</a>");
+	else
+		document.write(" , <a href='kts.html?"+ i +"'>"+ i +"</a>");
+}
+</script>
+<br>
+<div id="panorama"></div>
+<script>
+var imgsrc = "https://stdatahk.com/vr/hd/img/kts/1.jpg";
+if(location.href.lastIndexOf('?') > 0) {
+	var param = location.href.substring(location.href.lastIndexOf('?')+1);
+	imgsrc = "https://stdatahk.com/vr/hd/img/kts/"+ param +".jpg";
+}
+
+// pannellum.viewer('panorama', {
+//     "type": "equirectangular",
+//     "panorama": imgsrc,
+// 	"autoLoad" : true
+// });
+
+pannellum.viewer('panorama', {   
+    "default": {
+        "firstScene": "room1",
+        "author": "STDataHK",
+        "sceneFadeDuration": 1000,
+		"autoLoad" : true
+    },
+
+    "scenes": {
+        "room1": {
+            "title": "九肚山",
+            "hfov": 110,
+            "pitch": -3,
+            "yaw": 117,
+            "type": "equirectangular",
+            "panorama": imgsrc,
+            "hotSpots": [
+                {
+                    "pitch": 4,
+                    "yaw": 28,
+                    "type": "scene",
+                    "text": "hotspot",
+                    "sceneId": "room2"  
+                }
+            ]
+        }
+
+    }
+});
+</script>
+
+<img width=200 style="position:absolute;left:828px;top:703px;"
+ onmouseover="this.width=500;this.style.left='528px';this.style.top='313px';" 
+ onmouseout="this.width=200;this.style.left='828px';this.style.top='703px';" 
+ src="https://stdatahk.com/vr/hd/img/kts/floorplan_kautoshan.png">
+ 
+</body>
+</html>
