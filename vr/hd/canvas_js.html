@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Test Canvas</h1>
+
+<p>Image to use:</p>
+
+<img id="scream" width="220" height="277" src="img/so/q360_20230823_201133_000000.JPG" alt="The Scream">
+
+<p>Canvas:</p>
+
+<canvas id="myCanvas" width="240" height="297" style="border:1px solid grey;"></canvas>
+
+<script>
+window.onload = function() {
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+  const img = document.getElementById("scream");
+  ctx.drawImage(img, 10, 10);
+};
+</script>
+
+</body>
+</html>
+
