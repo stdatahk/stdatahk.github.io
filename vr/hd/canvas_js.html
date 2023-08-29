@@ -16,9 +16,9 @@ window.onload = function() {
   const canvas = document.getElementById("myCanvas");
   const ctx = canvas.getContext("2d");
   const img = document.getElementById("myImg");
-  ctx.drawImage(img, 10, 10);
-  ctx.rotate(180 * Math.PI / 180);
-
+  ctx.drawImage(img, 0, 0, 4320/2, 2160, 0,0 500, 500);
+  ctx.rotate(180 * Math.PI / 180);  
+  //4320x2160
   //context.drawImage(img, sx, sy, swidth, sheight, x, y, width, height)
 
 };
