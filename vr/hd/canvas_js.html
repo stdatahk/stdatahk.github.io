@@ -5,7 +5,7 @@
 
 <p>Image to use:</p>
 
-<img id="scream" width="220" height="277" src="https://stdatahk.com/vr/hd/img/so/201133_000000-1.jpg" alt="The Scream">
+<img id="myImg" width="220" height="277" src="https://stdatahk.com/vr/hd/img/so/201133_000000-1.jpg">
 
 <p>Canvas:</p>
 
@@ -15,8 +15,10 @@
 window.onload = function() {
   const canvas = document.getElementById("myCanvas");
   const ctx = canvas.getContext("2d");
-  const img = document.getElementById("scream");
+  const img = document.getElementById("myImg");
   ctx.drawImage(img, 10, 10);
+  ctx.rotate(20 * Math.PI / 180);
+
 };
 </script>
 
