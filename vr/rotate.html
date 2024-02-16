@@ -5,23 +5,25 @@
 <body style="font-family:Arial;">
 <form>
 Image Location: <input name='ImgUrl' type=text size=45 value='https://stdatahk.com/vr/dualfisheye.jpg'><br>
-<input type=button value=" SHOW " onClick="document.theImg.width=300;document.theImg.src=document.forms[0].ImgUrl.value;">
+<input type=button value=" SHOW " onClick="document.theImg.src=document.forms[0].ImgUrl.value;">
 Preview:<br>
-<img name='theImg' id='theImg' width=1 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+L+U4T8ABu8CpCYJ1DQAAAAASUVORK5CYII=">
+<img name='theImg' id='theImg' src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAA1JREFUGFdj+L+U4T8ABu8CpCYJ1DQAAAAASUVORK5CYII=">
 
 <hr>              
 
 <p>Canvas:</p>
-<canvas id="theCanvas" width="250" height="300" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="theCanvas" width="1" height="1" style="border:1px solid #d3d3d3;"></canvas>
 
-<input type=button onclick="doRotate();" value=" ROTATE ">
+<br><input type=button onclick="doRotate();" value=" ROTATE ">
 
 <script>
 function doRotate() {
   var c = document.getElementById("theCanvas");
   var ctx = c.getContext("2d");
   var img = document.getElementById("theImg");
-  ctx.drawImage(img,10,10);
+  c.width = img.width;
+  c.height = img.height;
+  ctx.drawImage(img,10,10);  
 }
 </script>
               
