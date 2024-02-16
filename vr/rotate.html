@@ -12,13 +12,13 @@ Preview:<br>
 <hr>              
 
 <p>Canvas:</p>
-<canvas id="myCanvas" width="250" height="300" style="border:1px solid #d3d3d3;"></canvas>
+<canvas id="theCanvas" width="250" height="300" style="border:1px solid #d3d3d3;"></canvas>
 
-<p><button onclick="myCanvas()"> ROTATE </button></p>
+<p><button onclick="doRotate()"> ROTATE </button></p>
 
 <script>
-function myCanvas() {
-  var c = document.getElementById("myCanvas");
+function doRotate() {
+  var c = document.getElementById("theCanvas");
   var ctx = c.getContext("2d");
   var img = document.getElementById("theImg");
   ctx.drawImage(img,10,10);
