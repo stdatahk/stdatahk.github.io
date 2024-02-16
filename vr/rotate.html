@@ -2,11 +2,28 @@
 <head>
 <title>Tool for Quick Fixing VR360 Raw Photo</title>
 </head>
-<body>
+<body style="font-family:Arial;">
 <form>
-Image Location: <input name='ImgUrl' type=text size=15 value='https://stdatahk.com/vr/dualfisheye.jpg'>  
+Image Location: <input name='ImgUrl' type=text size=45 value='https://stdatahk.com/vr/dualfisheye.jpg'>  
 <br><input type=button value=" SHOW " onClick="document.theImg.src=document.forms[0].ImgUrl.value;">
-<img name='theImg" src="#">
+Preview:<br><img name='theImg" id="theImg" src="#" width=150>
+
+<hr>              
+
+<p>Canvas:</p>
+<canvas id="myCanvas" width="250" height="300" style="border:1px solid #d3d3d3;"></canvas>
+
+<p><button onclick="myCanvas()"> ROTATE </button></p>
+
+<script>
+function myCanvas() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("theImg");
+  ctx.drawImage(img,10,10);
+}
+</script>
+              
 </form>
 </body>
 </html>
