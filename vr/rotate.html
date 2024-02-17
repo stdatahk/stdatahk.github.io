@@ -27,10 +27,10 @@ function doRotate() {
   //img.height = Math.round(img.height*300/img.width);
   //img.width = 300;
 
-  drawRotated(ctx,180,img, 0,0,img.width/2,img.height, 0,0,img.width/2,img.height);
+  drawRotated(c,ctx,180,img, 0,0,img.width/2,img.height, 0,0,img.width/2,img.height);
 }
   
-function drawRotated(context, degrees, image, sx,sy,sw,sh,dx,dy,dw,dh){
+function drawRotated(canvas, context, degrees, image, sx,sy,sw,sh,dx,dy,dw,dh){
     context.clearRect(0,0,canvas.width,canvas.height);
     context.save();
     context.translate(canvas.width/2,canvas.height/2);
