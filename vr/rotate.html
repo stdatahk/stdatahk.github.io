@@ -11,6 +11,7 @@ Image Location: <input name='ImgUrl' type=text size=45 value='https://stdatahk.c
 <hr>              
 
 <br><input type=button onclick="doRotate();" value=" ROTATE ">
+<br><button onclick="DownloadCanvasAsImage()">Download</button>
 <p>Canvas:</p>
 <canvas id="theCanvas" width="1" height="1" style="border:1px solid #d3d3d3;"></canvas>
 
@@ -43,6 +44,16 @@ function drawRotated(canvas, context, degrees, image, sx,sy,sw,sh,dx,dy,dw,dh){
     context.drawImage(image,sx,sy,sw,sh,dx+2160,dy,dw,dh); //hardcode
     context.restore();
 }
+
+function DownloadCanvasAsImage() {
+	let downloadLink = document.createElement('a');
+	downloadLink.setAttribute('download', 'FlippedImage.png');
+	let canvas = document.getElementById('theCanvas');
+  let dataURL = canvas.toDataURL('image/png');
+  let url = dataURL.replace(/^data:image\/png/,'data:application/octet-stream');
+	downloadLink.setAttribute('href',url);
+	downloadLink.click();
+}  
 </script>
               
 </form>
