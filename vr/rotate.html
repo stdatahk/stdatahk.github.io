@@ -24,10 +24,10 @@ function doRotate() {
   c.width = img.width;
   c.height = img.height;
   ctx.drawImage(img,0,0);  
-  //img.height = Math.round(img.height*300/img.width);
-  //img.width = 300;
 
   drawRotated(c,ctx,180,img, 0,0,img.width/2,img.height, 0,0,img.width/2,img.height);
+  img.height = Math.round(img.height*300/img.width);
+  img.width = 300;
 }
   
 function drawRotated(canvas, context, degrees, image, sx,sy,sw,sh,dx,dy,dw,dh){
