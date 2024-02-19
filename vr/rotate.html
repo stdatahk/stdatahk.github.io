@@ -8,14 +8,11 @@ Image Location: <input name='ImgUrl' type=text size=45 value='https://stdatahk.c
 <input type=button value=" SHOW " onClick="document.theImg.src=document.forms[0].ImgUrl.value;">
 <br>Preview:<br>
 <img name='theImg' id='theImg' src="https://stdatahk.com/vr/dualfisheye.jpg">
-<img name='theImg2' id='theImg2' src="https://stdatahk.com/vr/dualfisheye.jpg" style="-webkit-transform: scaleX(-1);transform: scaleX(-1);">
-
 <hr>              
 
+<br><input type=button onclick="doRotate();" value=" ROTATE ">
 <p>Canvas:</p>
 <canvas id="theCanvas" width="1" height="1" style="border:1px solid #d3d3d3;"></canvas>
-
-<br><input type=button onclick="doRotate();" value=" ROTATE ">
 
 <script>
 function doRotate() {
@@ -25,8 +22,12 @@ function doRotate() {
   var img2 = document.getElementById("theImg2");
   c.width = img.width;
   c.height = img.height;
-  ctx.drawImage(img2,0,0);  
-  //ctx.drawImage(img2, img.width/2,0,img.width,img.height, 0,0,img.width/2,img.height);  
+
+  ctx.scale(-1, 1);
+  ctx.drawImage(img, -img.width, -img.height, img.width, img.height);
+  
+  //ctx.drawImage(img,0,0);  
+  //ctx.drawImage(img, img.width/2,0,img.width,img.height, 0,0,img.width/2,img.height);  
   
   //drawRotated(c,ctx,180,img, 0,0,img.width/2,img.height, 0,0,img.width/2,img.height);
   img.height = Math.round(img.height*300/img.width);
