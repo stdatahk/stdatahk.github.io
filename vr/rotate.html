@@ -5,13 +5,14 @@
 <body style="font-family:Arial;">
 <form>
 Image Location: <input name='ImgUrl' type=text size=45 value='https://stdatahk.com/vr/dualfisheye.jpg'><br>
-<input type=button value=" SHOW " onClick="document.theImg.src=document.forms[0].ImgUrl.value;">
-<br>Preview:<br>
+<input type=button value=" SHOW " onClick="document.theImg.src=document.forms[0].ImgUrl.value;">&nbsp;&nbsp;&nbsp;&nbsp;	
+<input type=button onclick="doRotate();" value=" FLIP/ROTATE ">&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="DownloadCanvasAsImage()"> DOWNLOAD </button>
+
+<br><br>Preview:<br>
 <img name='theImg' id='theImg' src="https://stdatahk.com/vr/dualfisheye.jpg">
 <hr>              
 
-<br><input type=button onclick="doRotate();" value=" ROTATE ">
-<br><button onclick="DownloadCanvasAsImage()">Download</button>
 <p>Canvas:</p>
 <canvas id="theCanvas" width="1" height="1" style="border:1px solid #d3d3d3;"></canvas>
 
