@@ -100,8 +100,9 @@
 
 				geometry.rotateZ( - Math.PI / 2 );
 
-				var texture = new THREE.TextureLoader().load( 'https://stdatahk.com/vr/flipped.png' );
-				//var texture = new THREE.TextureLoader().load( 'https://techbrood.com/threejs/examples/textures/ricoh_theta_s.jpg' );
+				var imgUrl = 'https://stdatahk.com/vr/flipped.png';
+				if(location.href.indexOf('?')>0) imgUrl = location.href.substring(location.href.indexOf(?u=)+3);
+				var texture = new THREE.TextureLoader().load(  );
 
 				texture.format = THREE.RGBFormat;
 
