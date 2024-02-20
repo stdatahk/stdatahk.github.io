@@ -30,7 +30,8 @@
 	<body>
 
     <div id='inputBox'>
-      Image URL: <input type='text' size=25>
+      Image URL: <input id='url' type='text' size=35>
+      <input type='button value=' PREVIEW ' onClick="location.href+=document.getElementById('url').value;">
     </div>
     <script>
       if(locationl.href.indexOf('?')<0)
