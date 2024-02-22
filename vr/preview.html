@@ -102,7 +102,8 @@
 				geometry.rotateZ( - Math.PI / 2 );
 
 				var imgUrl = 'https://stdatahk.com/vr/flipped.png';
-				if(location.href.indexOf('?')>0) imgUrl = location.href.substring(location.href.indexOf(?u=)+3);
+				if(location.href.indexOf('?') > 0) 
+					imgUrl = location.href.substring(location.href.indexOf('?u=')+3);
 				var texture = new THREE.TextureLoader().load( imgUrl );
 
 				texture.format = THREE.RGBFormat;
