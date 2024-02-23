@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>three.js webgl - dual fisheye panorama</title>
+		<title>Tool for Previewing Raw VR360 Image</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
@@ -29,6 +29,15 @@
 	</head>
 	<body>
 
+    <div id='inputBox'>
+      <font color='white'>Image URL:</font> <input id='url' type='text' size=35>
+      <input type='button' value=' PREVIEW ' onClick="location.href+='?'+document.getElementById('url').value;">
+    </div>
+    <script>
+      if(location.href.indexOf('?')>0)
+        document.getElementById('inputBox').style.visibility = 'hidden';
+    </script>
+    
 		<div id="container"></div>
 		<div id="info">
 			 
@@ -92,9 +101,10 @@
 
 				geometry.rotateZ( - Math.PI / 2 );
 
-				//
-				var texture = new THREE.TextureLoader().load( 'https://stdatahk.com/vr/hd/img/so/201133_000000-1.jpg' );
-				//var texture = new THREE.TextureLoader().load( 'https://techbrood.com/threejs/examples/textures/ricoh_theta_s.jpg' );
+				var imgUrl = 'https://stdatahk.com/vr/flipped.png';
+				if(location.href.indexOf('?') > 0) 
+					imgUrl = location.href.substring(location.href.indexOf('?u=')+3);
+				var texture = new THREE.TextureLoader().load( imgUrl );
 
 				texture.format = THREE.RGBFormat;
 
