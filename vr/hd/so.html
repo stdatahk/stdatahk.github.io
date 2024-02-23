@@ -29,6 +29,22 @@
 	</head>
 	<body>
 
+<script>
+function isIphone() {return (['iPad','iPhone','iPod'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document));}
+if(isIphone()) {alert("系統判斷到 iOS 用戶. 需要最適化畫面大小嗎? (實驗中)")}
+
+var locNames = "玄關|客/飯廳|廳/房(正中央,關窗簾)|窗簾傍|廁所玄關(開門)|廁所玄關(關門)|廳/房(正中央,開窗簾)|窗口泳池景觀(正中央)|窗口景觀(右)|窗口景觀(左)|開放式廚房|玄關位(開櫃門)|洗手間(開櫃門)|浴室(開門)|浴室(關門)";
+locNames = locNames.split("|");
+	
+document.write("<a href='ue.html?1'>"+ (locNames[0]=='_'?1:locNames[0]) +"</a>");
+for(var i=2; i<=16; i++) {
+	if(locNames[i-1]=='_')
+		document.write(" , <a href='ue.html?"+ i +"'>"+ i +"</a>");
+	else
+		document.write(" , <a href='ue.html?"+ i +"'>"+ locNames[i-1] +"</a>");
+}
+</script>
+		
     <div id='inputBox'>
       <font color='white'>Image URL:</font> <input id='url' type='text' size=35>
       <input type='button' value=' PREVIEW ' onClick="location.href+='?'+document.getElementById('url').value;">
