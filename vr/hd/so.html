@@ -36,12 +36,12 @@ if(isIphone()) {alert("系統判斷到 iOS 用戶. 需要最適化畫面大小�
 var locNames = "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25)";
 locNames = locNames.split("|");
 	
-document.write("<a href='ue.html?1'>"+ (locNames[0]=='_'?1:locNames[0]) +"</a>");
+document.write("<a href='so.html?1'>"+ (locNames[0]=='_'?1:locNames[0]) +"</a>");
 for(var i=2; i<=24; i++) {
 	if(locNames[i-1]=='_')
-		document.write(" , <a href='ue.html?"+ i +"'>"+ i +"</a>");
+		document.write(" , <a href='so.html?"+ i +"'>"+ i +"</a>");
 	else
-		document.write(" , <a href='ue.html?"+ i +"'>"+ locNames[i-1] +"</a>");
+		document.write(" , <a href='so.html?"+ i +"'>"+ locNames[i-1] +"</a>");
 }
 </script>
 		
@@ -117,7 +117,7 @@ for(var i=2; i<=24; i++) {
 
 				geometry.rotateZ( - Math.PI / 2 );
 
-				var imgUrl = 'https://stdatahk.com/vr/flipped.png';
+				var imgUrl = 'https://stdatahk.com/vr/hd/img/so/SO1.png';
 				if(location.href.indexOf('?') > 0) 
 					imgUrl = location.href.substring(location.href.indexOf('?u=')+3);
 				var texture = new THREE.TextureLoader().load( imgUrl );
