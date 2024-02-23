@@ -119,7 +119,7 @@ for(var i=2; i<=24; i++) {
 
 				var imgUrl = 'https://stdatahk.com/vr/hd/img/so/SO1.png';
 				if(location.href.indexOf('?') > 0) 
-					imgUrl = location.href.substring(location.href.indexOf('?u=')+3);
+					imgUrl = 'https://stdatahk.com/vr/hd/img/so/SO'+ location.href.substring(location.href.indexOf('?')+1) +'.png';
 				var texture = new THREE.TextureLoader().load( imgUrl );
 
 				texture.format = THREE.RGBFormat;
