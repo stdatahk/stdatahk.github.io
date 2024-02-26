@@ -19,7 +19,7 @@
 function isIphone() {return (['iPad','iPhone','iPod'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document));}
 if(isIphone()) {alert("系統判斷到 iOS 用戶. 需要最適化畫面大小嗎? (實驗中)")}
 
-var locNames = "玄關|客/飯廳|廳/房(正中央,關窗簾)|窗簾傍|廁所玄關(開門)|廁所玄關(關門)|廳/房(正中央,開窗簾)|窗口泳池景觀(正中央)|窗口景觀(右)|窗口景觀(左)|開放式廚房|玄關位(開櫃門)|洗手間(開櫃門)|浴室(開門)|浴室(關門)";
+var locNames = "玄關|客/飯廳|廳/房(正中央,關窗簾)|窗簾傍|廁所玄關(開門)|廁所玄關(關門)|廳/房(正中央,開窗簾)|窗口泳池景觀(正中央)|窗口景觀(右)|窗口景觀(左)|開放式廚房|玄關位(開櫃門)|洗手間(開櫃門)|浴室(開門)|浴室(關門)|浴室";
 locNames = locNames.split("|");
 	
 document.write("<a href='ue.html?1'>"+ (locNames[0]=='_'?1:locNames[0]) +"</a>");
@@ -77,7 +77,7 @@ pannellum.viewer('panorama', {
 </script>
 
 <img width=200 style="position:absolute;left:828px;top:703px;"
- onmouseover="this.width=500;this.style.left='528px';this.style.top='463px';" 
+ onmouseover="this.width=500;this.style.left='528px';this.style.top='483px';" 
  onmouseout="this.width=200;this.style.left='828px';this.style.top='703px';" 
  src="https://stdatahk.com/vr/hd/img/ue/floorplan_uppereast.png">
  
