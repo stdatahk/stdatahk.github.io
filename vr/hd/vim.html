@@ -33,7 +33,7 @@
 function isIphone() {return (['iPad','iPhone','iPod'].includes(navigator.platform) || (navigator.userAgent.includes("Mac") && "ontouchend" in document));}
 if(isIphone()) {alert("系統判斷到 iOS 用戶. 需要最適化畫面大小嗎? (實驗中)")}
 
-var locNames = "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25)";
+var locNames = "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19)";
 locNames = locNames.split("|");
 	
 document.write("<a href='vim.html?1'>"+ (locNames[0]=='_'?1:locNames[0]) +"</a>");
@@ -117,9 +117,9 @@ for(var i=2; i<=24; i++) {
 
 				geometry.rotateZ( - Math.PI / 2 );
 
-				var imgUrl = 'https://stdatahk.com/vr/hd/img/so/SO1.png';
+				var imgUrl = 'https://stdatahk.com/vr/hd/img/vim/V1.png';
 				if(location.href.indexOf('?') > 0) 
-					imgUrl = 'https://stdatahk.com/vr/hd/img/so/SO'+ location.href.substring(location.href.indexOf('?')+1) +'.png';
+					imgUrl = 'https://stdatahk.com/vr/hd/img/vim/V'+ location.href.substring(location.href.indexOf('?')+1) +'.png';
 				var texture = new THREE.TextureLoader().load( imgUrl );
 
 				texture.format = THREE.RGBFormat;
