@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<title>FRS | Admin| To-Do</title>
+<title>VR360 | Projects | Add</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
@@ -18,7 +18,7 @@
 
 <table border=0 cellpadding=5 cellspacing=10>
 <tr>
-<td colspan=2><b>新增 DEV 條目：</b></td>
+<td colspan=2><b>新增一個 VR PROJECTS ：</b></td>
 </tr>
 <tr>
 <td>USAGE：</td>
@@ -42,7 +42,7 @@
 <script language="JavaScript">
 <!--
 var gasId = "AKfycbwHLSiDw3M30YfAjThHfy0a7BEbzcbho_YPpPXAFAVFD5pWnvg_";
-var gssId = "184TCQ7AM-GzBAXLmJaBiDdVnzoE-OLGODjETpA_ELOw"; //for dev page
+var gssId = "1TZBtReaafWTVzeyDkQzMGFJd4_bycYOhJOmVNdiAMeU"; //for vrproj
 var gasUrl = "https://script.google.com/macros/s/"+ gasId +"/exec";
 
 $("#btnSubmit").click(function(){
@@ -64,7 +64,7 @@ $("#btnSubmit").click(function(){
 		html = "ary="+html+";";
 		eval(html);
 		alert("已成功儲存紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
-		location.href = 'dev.htm';
+		location.href = 'project.html';
 	  }
 	});
 
