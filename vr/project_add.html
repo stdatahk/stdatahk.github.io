@@ -17,11 +17,11 @@
 <td colspan=2><b>新增一個 VR PROJECTS ：</b></td>
 </tr>
 <tr>
-<td>USAGE：</td>
+<td>PROJECT ID：</td>
 <td><input id="txtTag" size=50 type=text value=""></td>
 </tr>
 <tr>
-<td>KEY/DETAILS：</td>
+<td>PROJECT DETAILS：</td>
 <td>
 	<input id="txtVal" size=50 type=text value="">
 </td>
@@ -65,6 +65,19 @@ $("#btnSubmit").click(function(){
 	});
 
 });
+	
+function yyyymmdd() {
+    var x = new Date();
+    var y = x.getFullYear().toString();
+    var m = (x.getMonth() + 1).toString();
+    var d = x.getDate().toString();
+    (d.length == 1) && (d = '0' + d);
+    (m.length == 1) && (m = '0' + m);
+    var yyyymmdd = y + m + d;
+    return yyyymmdd;
+}	
+
+document.getElementById('txtTag').value = yyyymmdd();
 //-->
 </script>
 
