@@ -37,7 +37,7 @@ var locNames = "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19)";
 locNames = locNames.split("|");
 	
 document.write("<a href='vim.html?1'>"+ (locNames[0]=='_'?1:locNames[0]) +"</a>");
-for(var i=2; i<=24; i++) {
+for(var i=2; i<=19; i++) {
 	if(locNames[i-1]=='_')
 		document.write(" , <a href='vim.html?"+ i +"'>"+ i +"</a>");
 	else
