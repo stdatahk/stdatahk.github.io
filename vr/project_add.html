@@ -27,6 +27,8 @@
 <td>PROJECT DETAILS：</td>
 <td>
 	<input id="txtVal" size=50 type=text value="">
+	<br>
+	<input id="txtFid" size=50 type=text value="">
 	<input type=button value="Upload Floorplan" onClick="window.open('project_upload.html?'+document.getElementById('txtTag').value);">
 	<input type=button value="preview uploaded photos" onClick="window.open('project_dirlist.html?'+document.getElementById('txtTag').value);">
 </td>
@@ -37,7 +39,7 @@
 	<input id="btnSubmit" type=button value="新增" 
 	 style="width:160px;height:50px;">
 	<br>
-	Upload to this folder:
+	上載照片到這個雲端資料夾:
 	<a href="https://drive.google.com/drive/folders/1uLYrLL-gRhtRzvVi9q8Ra82IuJ1czq4y">Google Drive</a>
 </td>
 </tr>
@@ -94,7 +96,7 @@ $("#btnNewFolder").click(function(){
 		html = "fId="+html+";";
 		eval(html);
 		alert("已成功儲存紀錄: "+ fId +" .");
-		document.getElementById('txtVal').value	= fId;	      
+		document.getElementById('txtFid').value	= fId;	      
 		document.getElementsById('btnNewFolder').disabled = true;
 	  	//location.href = 'project.html';
 	  }
