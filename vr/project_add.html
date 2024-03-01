@@ -69,7 +69,8 @@ $("#btnSubmit").click(function(){
 		var ary = null;
 		html = "ary="+html+";";
 		eval(html);
-		alert("已成功儲存紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
+		//alert("已成功儲存紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
+		alert("已成功儲存紀錄: "+ JSON.stringify(ary[1]) );
 		location.href = 'project.html';
 	  }
 	});
@@ -79,9 +80,9 @@ $("#btnSubmit").click(function(){
 var gasId2 = "AKfycbzgfpjXXZyHhbrdw-qYLaYz5wowc4KLE_W-uKEOqsV3Z2Xp-PPbmHWiRkGJUN5JSuBT";
 var gasUrl2 = "https://script.google.com/macros/s/"+ gasId2 +"/exec";
 
-	
 $("#btnNewFolder").click(function(){
 	$('#btnNewFolder').val('正在建立雲端目錄夾，請稍後...');
+	document.getElementById('btnNewFolder').disabled = true;
 	$.ajax({
 	  url: gasUrl2,
 	  cache: false,
@@ -96,8 +97,6 @@ $("#btnNewFolder").click(function(){
 		eval(html);
 		alert("已成功儲存紀錄: "+ fId +" .");
 		document.getElementById('txtFid').value	= fId;	      
-		document.getElementById('btnNewFolder').disabled = true;
-	  	//location.href = 'project.html';
 	  }
 	});
 
