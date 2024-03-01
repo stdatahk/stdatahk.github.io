@@ -62,7 +62,7 @@ $("#btnSubmit").click(function(){
 		id: gssId,  
 		key: 'P@$$w0rd!',
 		tag: $('#txtTag').val(),
-		value: $('#txtVal').val()
+		value: {txt: $('#txtVal').val() , fid: $('#txtFid').val()}
 	  },
 	  dataType: "html",
 	  success: function(html){
