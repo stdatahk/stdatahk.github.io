@@ -28,7 +28,11 @@
 <td>
 	<input id="txtVal" size=50 type=text value="">
 	<br>
-	<input id="txtFid" size=50 type=text value="">
+	<input id="txtFid" size=50 type=text value="" DISABLED>
+	<br>
+	<input id="txtFidFp" size=50 type=text value="" DISABLED>
+	<br>
+	<input id="txtFidCv" size=50 type=text value="" DISABLED>
 	<input type=button value="上載單位的平面圖" onClick="window.open('project_upload.html?'+document.getElementById('txtTag').value);">
 	<input type=button value="預覽360效果" onClick="window.open('project_dirlist.html?'+document.getElementById('txtTag').value);">
 </td>
@@ -70,7 +74,7 @@ $("#btnSubmit").click(function(){
 		html = "ary="+html+";";
 		eval(html);
 		//alert("已成功儲存紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
-		alert("已成功儲存紀錄: "+ JSON.stringify(ary[1]) );
+		alert("已成功儲存紀錄: "+ JSON.stringify(ary) );
 		location.href = 'project.html';
 	  }
 	});
@@ -96,7 +100,9 @@ $("#btnNewFolder").click(function(){
 		html = "fId="+html+";";
 		eval(html);
 		alert("已成功儲存紀錄: "+ fId +" .");
-		document.getElementById('txtFid').value	= JSON.stringify(fId);	      
+		document.getElementById('txtFid').value	= fId.projfdr;	  
+		document.getElementById('txtFidFp').value = fId.fpfdr;	  
+		document.getElementById('txtFidCv').value = fId.confdr;	  
 	  }
 	});
 
