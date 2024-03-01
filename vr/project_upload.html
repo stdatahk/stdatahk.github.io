@@ -39,7 +39,7 @@ function doDisplay(obj) {
     const fr = new FileReader();
     fr.readAsArrayBuffer(file);
     fr.onload = (f) => {
-      const url = "https://script.google.com/macros/s/AKfycbzR5YxMl_UhLG1ZeSa5ElDXDUAUHisF4FwyQvlXdaxkCLt9hKIjvR-MPPYqUi5aE3-o/exec?func=" + location.href.substring(location.href.indexOf('?')+1);
+      const url = "https://script.google.com/macros/s/AKfycbzOWntqkO93ITU8EdKWRoaa6ZFk5i8bNGitT871BAV47BJVw3DwYmt4YOvUSwncD5wx/exec?func=" + location.href.substring(location.href.indexOf('?')+1);
 
       const qs = new URLSearchParams({
         filename: file.name,
