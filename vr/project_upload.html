@@ -28,6 +28,7 @@
 <script>
 function doDisplay(obj) {
 	var str = JSON.stringify(obj);
+	str += "<br>檔案上傳成功<br><input type=button value='返回新增項目頁面' onclick='self.close();'>";
 	var node = document.createTextNode(str);
 	$('body').append(node);
 }
