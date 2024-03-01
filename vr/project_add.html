@@ -45,7 +45,7 @@
 	 style="width:160px;height:50px;">
 	<br>
 	上載照片到這個雲端資料夾:
-	<a target="_new" href="https://drive.google.com/drive/folders/" onclick="this.href+=document.getElementById('txtFid').value);">Google Drive</a>
+	<a id='gDrvUrl' target="_new" href="https://drive.google.com/drive/folders/">Google Drive</a>
 </td>
 </tr>
 </table>
@@ -74,8 +74,7 @@ $("#btnSubmit").click(function(){
 		var ary = null;
 		html = "ary="+html+";";
 		eval(html);
-		//alert("已成功儲存紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
-		alert("已成功儲存紀錄: "+ JSON.stringify(ary) );
+		alert("已成功儲存紀錄: ["+ ary[1] +"],["+ ary[2]+"]");
 		location.href = 'project.html';
 	  }
 	});
@@ -100,10 +99,12 @@ $("#btnNewFolder").click(function(){
 		var fId = null;
 		html = "fId="+html+";";
 		eval(html);
-		alert("已成功儲存紀錄: "+ fId +" .");
+		//alert("已成功儲存紀錄: "+ fId +" .");
+		alert("已成功儲存紀錄: "+ JSON.stringify(fId) );
 		document.getElementById('txtFid').value	= fId.projfdr;	  
 		document.getElementById('txtFidFp').value = fId.fpfdr;	  
 		document.getElementById('txtFidCv').value = fId.confdr;	  
+		document.getElementById('gDrvUrl').href += fId.projfdr;	  
 	  }
 	});
 
