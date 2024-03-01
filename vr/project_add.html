@@ -20,7 +20,7 @@
 <td>PROJECT ID：</td>
 <td>
     <input id="txtTag" size=50 type=text value=""> 
-    <input type=button value="CREATE GDrive FOLDER" onClick="window.open('https://script.google.com/macros/s/AKfycbzhvSeCveYn_FvmOBleUuh_z-7Gh-aIyxw7QcPIbe6yuLXu9l56cq39fm5PZXfHiTs2/exec?func='+document.getElementById('txtTag').value);">
+    <input id='btnNewFolder' type=button value="建立雲端目錄夾" onClick="window.open('https://script.google.com/macros/s/AKfycbzhvSeCveYn_FvmOBleUuh_z-7Gh-aIyxw7QcPIbe6yuLXu9l56cq39fm5PZXfHiTs2/exec?func='+document.getElementById('txtTag').value);">
 </td>
 </tr>
 <tr>
@@ -73,6 +73,34 @@ $("#btnSubmit").click(function(){
 	});
 
 });
+
+
+var gasId2 = "AKfycbzhvSeCveYn_FvmOBleUuh_z-7Gh-aIyxw7QcPIbe6yuLXu9l56cq39fm5PZXfHiTs2";
+var gasUrl2 = "https://script.google.com/macros/s/"+ gasId2 +"/exec";
+
+	
+$("#btnNewFolder").click(function(){
+	$('#btnNewFolder').val('正在建立雲端目錄夾，請稍後...');
+	$.ajax({
+	  url: gasUrl2,
+	  cache: false,
+	  type: "GET",
+	  data: {
+		func: document.getElementById('txtTag').value 
+	  },
+	  dataType: "html",
+	  success: function(html){
+		var fId = null;
+		html = "fId="+html+";";
+		eval(html);
+		alert("已成功儲存紀錄: "+ fId +");
+		document.getElementById('txtVal').value	= fId;	      
+		//location.href = 'project.html';
+	  }
+	});
+
+});
+	
 	
 function yyyymmdd() {
     var x = new Date();
