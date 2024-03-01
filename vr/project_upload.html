@@ -9,7 +9,7 @@
 <h2 style="font-family:Arial;">VR360 PHOTO UPLOAD:</h2>
 
 <div id="theDiv" style="text-align:right;">
-<input style="width:70px;height:30px;" type=button value=" 返回 " onclick="location.href='project_add.html';">
+<input style="width:70px;height:30px;" type=button value=" 返回 " onclick="self.close();">
 	<!--
 &nbsp;&nbsp;
 <input style="width:70px;height:30px;" type=button value="EDIT" onclick="location.href='wip.htm';">
@@ -27,8 +27,7 @@
 
 <script>
 function doDisplay(obj) {
-	var str = JSON.stringify(obj);
-	str += "<br>檔案上傳成功<br><input type=button value='返回新增項目頁面' onclick='self.close();'>";
+	var str = "檔案上傳成功, 按返回回到新增項目頁面. info: "+ JSON.stringify(obj);
 	var node = document.createTextNode(str);
 	$('body').append(node);
 }
