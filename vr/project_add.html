@@ -96,7 +96,7 @@ $("#btnNewFolder").click(function(){
 		html = "fId="+html+";";
 		eval(html);
 		alert("已成功儲存紀錄: "+ fId +" .");
-		document.getElementById('txtFid').value	= fId;	      
+		document.getElementById('txtFid').value	= JSON.stringify(fId);	      
 	  }
 	});
 
