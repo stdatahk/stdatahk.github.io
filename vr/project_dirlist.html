@@ -12,7 +12,7 @@ $(document).ready(function() {
            var filelist = jsondata.output;
            ary = filelist.split(",");
            for(var i=0; i < ary.length; i++) {
-               ary = ary.split("|");
+               ary = ary[i].split("|");
            }
            
           $('#flist').html('<p> File: '+ ary[i][0] +' ; '+ ary[i][1] +'</p>');
