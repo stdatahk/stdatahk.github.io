@@ -77,14 +77,23 @@ $(document).ready(function(){
 		}
 
 		for(var i=0; i<ary.length; i++) {
-			var data = decodeURI(ary[i][1]);
-			data = eval(data);
 			rst += "<tr>";
-			rst += "<td>"+ ary[i][0] +"</td>";
-			rst += "<td>"+ data.txt +"</td>";
-			rst += "<td>"+ data.fid +"</td>";
-			rst += "<td>"+ data.fidFp +"</td>";
-			rst += "<td>"+ data.fidCv +"</td>";
+			var data = decodeURI(ary[i][1]);
+			if(data.indexOf('txt')>0) {
+				data = eval(data);
+				rst += "<td>"+ ary[i][0] +"</td>";
+				rst += "<td>"+ data.txt +"</td>";
+				rst += "<td>"+ data.fid +"</td>";
+				rst += "<td>"+ data.fidFp +"</td>";
+				rst += "<td>"+ data.fidCv +"</td>";
+			}
+			else {
+				rst += "<td>"+ ary[i][0] +"</td>";
+				rst += "<td>"+ data +"</td>";
+				rst += "<td>-</td>";
+				rst += "<td>-</td>";
+				rst += "<td>-</td>";
+			}
 			rst += "</tr>";
 		}
 		$("#tbl").append(rst);
