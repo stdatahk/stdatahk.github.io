@@ -24,6 +24,8 @@
 <td style="font-weight:bold;font-size:20px;">
 	項目詳細內容
 </td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
 <!-- end table header -->
 <tr id='tr0'>
@@ -76,10 +78,13 @@ $(document).ready(function(){
 
 		for(var i=0; i<ary.length; i++) {
 			var data = decodeURI(ary[i][1]);
-			
+			data = eval(data);
 			rst += "<tr>";
 			rst += "<td>"+ ary[i][0] +"</td>";
-			rst += "<td>"+ data +"</td>";
+			rst += "<td>"+ data.txt +"</td>";
+			rst += "<td>"+ data.fid +"</td>";
+			rst += "<td>"+ data.fidFp +"</td>";
+			rst += "<td>"+ data.fidCv +"</td>";
 			rst += "</tr>";
 		}
 		$("#tbl").append(rst);
