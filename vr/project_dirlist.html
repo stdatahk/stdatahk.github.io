@@ -5,7 +5,7 @@
 <script>
 $(document).ready(function() {
     $("#driver").click(function(event){
-       var url = "https://script.google.com/macros/s/AKfycbyqa9LECSFzA17spDjznyN_Wdq1MSZVrycg-J8oh3skDHQEyx8ptMyUJSXb1_4pusc/exec?func=";
+       var url = "https://script.google.com/macros/s/AKfycbzxOjGsjbs4u-Lh8NQWe9gqrGx1Tos_19VDaIBpD0Ak5mRGd2y9-jV75WToaSAP4nn5/exec?func=";
        url += location.href.substring(1+location.href.indexOf('?'));
        $.getJSON(url, function(jd) {
            // {"output":"leopard_skin.jpg|1tY1h4XCAUrf0x4tgjwBce_c8siOnjlxk"}
