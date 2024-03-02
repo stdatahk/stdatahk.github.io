@@ -9,9 +9,9 @@ $(document).ready(function() {
        url += location.href.substring(1+location.href.indexOf('?'));
        $.getJSON(url, function(jd) {
            // {"output":"leopard_skin.jpg|1tY1h4XCAUrf0x4tgjwBce_c8siOnjlxk"}
-          $('#stage').html('<p> Output: ' + jd.output + '</p>');
-          //$('#stage').append('<p>Age : ' + jd.age+ '</p>');
-          //$('#stage').append('<p> Sex: ' + jd.sex+ '</p>');
+          $('#flist').html('<p> Output: ' + jd.output + '</p>');
+          //$('#flist').append('<p>Age : ' + jd.age+ '</p>');
+          //$('#flist').append('<p> Sex: ' + jd.sex+ '</p>');
        });
     });   
 });
@@ -20,8 +20,8 @@ $(document).ready(function() {
 <body>
 
 <p>Click on the button to load JSON file:</p>
-<div id = "stage" style = "background-color:#cc0;">
- STAGE
+<div id = "flist" style = "background-color:#cc0;">
+ File list
 </div>
 <input type = "button" id = "driver" value = "Load Data" />
     
