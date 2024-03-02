@@ -7,13 +7,20 @@ $(document).ready(function() {
     $("#driver").click(function(event){
        var url = "https://script.google.com/macros/s/AKfycbzxOjGsjbs4u-Lh8NQWe9gqrGx1Tos_19VDaIBpD0Ak5mRGd2y9-jV75WToaSAP4nn5/exec?func=";
        url += location.href.substring(1+location.href.indexOf('?'));
-       $.getJSON(url, function(jd) {
-           // {"output":"leopard_skin.jpg|1tY1h4XCAUrf0x4tgjwBce_c8siOnjlxk"}
-          $('#flist').html('<p> Output: ' + jd.output + '</p>');
-          //$('#flist').append('<p>Age : ' + jd.age+ '</p>');
-          //$('#flist').append('<p> Sex: ' + jd.sex+ '</p>');
+       $.getJSON(url, function(jsondata) {
+          // {"output":"ggg22.jpg|1gtUyg_Hg1SNX4lNhrsZ81rUdIOCWhcVq,leopard_skin.jpg|13MumZlE1BgYEHRqDDvNViTnV-4-9zNiH"}
+          $('#flist').html('<p> Output: ' + jsondata.output + '</p>');
+          //$('#flist').append('<p>Age : ' + jsondata.age+ '</p>');
+          //$('#flist').append('<p> Sex: ' + jsondata.sex+ '</p>');
+          
+           var filelist = jsondata.output;
+           ary = filelist.split(",");
+           for(var i=0; i < ary.length; i++) {
+               ary = ary.split("|");
+           }
+                    
        });
-    });   
+    });
 });
 </script>    
 </head>
