@@ -75,10 +75,11 @@ $(document).ready(function(){
 		}
 
 		for(var i=0; i<ary.length; i++) {
-		
+			var data = decodeURI(ary[i][1]);
+			
 			rst += "<tr>";
 			rst += "<td>"+ ary[i][0] +"</td>";
-			rst += "<td>"+ ary[i][1] +"</td>";
+			rst += "<td>"+ data +"</td>";
 			rst += "</tr>";
 		}
 		$("#tbl").append(rst);
