@@ -81,8 +81,11 @@ $(document).ready(function(){
 			var data = ary[i][1];
 			
 			if(data.indexOf('txt')>0) {
+			alert(data);	
 				var data = decodeURI(data);
+			alert(data);	
 				data = eval(data);
+			alert(data);	
 				rst += "<td>"+ ary[i][0] +"</td>";
 				rst += "<td>"+ data.txt +"</td>";
 				rst += "<td>"+ data.fid +"</td>";
