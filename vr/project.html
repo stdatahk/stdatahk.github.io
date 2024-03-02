@@ -68,8 +68,7 @@ $(document).ready(function(){
 		var ary = null;
 		var rst = "";
 		html = "ary="+html+";";
-	    eval(html);
-
+	        eval(html);
 
 		if(ary.length > 0) {
 			$("#tr0").remove();
@@ -84,6 +83,7 @@ $(document).ready(function(){
 			alert(data);	
 				var data = decodeURI(data);
 			alert(data);	
+				data = "data="+data+";";
 				data = eval(data);
 			alert(data);	
 				rst += "<td>"+ ary[i][0] +"</td>";
