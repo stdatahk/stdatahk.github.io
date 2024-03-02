@@ -7,7 +7,7 @@
 <script>
 var url = "https://script.google.com/macros/s/AKfycbyqa9LECSFzA17spDjznyN_Wdq1MSZVrycg-J8oh3skDHQEyx8ptMyUJSXb1_4pusc/exec?func=";
 url += location.href.substring(1+location.href.indexOf('?'));
-head.innerHTML += '<script src = "'+ url +'"><\/script>';  
+document.getElementsByTagName('head').innerHTML += '<script src = "'+ url +'"><\/script>';  
 </script>
 
 </body>
