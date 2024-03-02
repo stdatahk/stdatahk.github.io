@@ -9,14 +9,15 @@ $(document).ready(function() {
        url += location.href.substring(1+location.href.indexOf('?'));
        $.getJSON(url, function(jsondata) {
           // {"output":"ggg22.jpg|1gtUyg_Hg1SNX4lNhrsZ81rUdIOCWhcVq,leopard_skin.jpg|13MumZlE1BgYEHRqDDvNViTnV-4-9zNiH"}
-          $('#flist').html('<p> Output: ' + jsondata.output + '</p>');
-          //$('#flist').append('<p>Age : ' + jsondata.age+ '</p>');
-          //$('#flist').append('<p> Sex: ' + jsondata.sex+ '</p>');
-          
            var filelist = jsondata.output;
            ary = filelist.split(",");
            for(var i=0; i < ary.length; i++) {
                ary = ary.split("|");
+           }
+           
+          $('#flist').html('<p> File: '+ ary[i][0] +' ; '+ ary[i][1] +'</p>');
+           for(var i=0; i < ary.length; i++) {
+              $('#flist').append('<p> File: '+ ary[i][0] +' ; '+ ary[i][1] +'</p>');
            }
                     
        });
