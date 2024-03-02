@@ -12,18 +12,14 @@ $(document).ready(function() {
            var filelist = jsondata.output;
            ary = filelist.split(",");
            for(var i=0; i < ary.length; i++) {
-               //ary = ary[i].split("|");
                var s1 = ary[i].substring(0, ary[i].indexOf('|'));
                var s2 = ary[i].substring(ary[i].indexOf('|')+1);
                ary[i] = "a,a".split(",");
                ary[i][0] = s1;
                ary[i][1] = s2;
-           }
-       alert(ary);    
-       alert(ary[0][0]);    
-       alert(ary[0][1]);    
-          $('#flist').html('<p> File: '+ ary[i][0] +' ; '+ ary[i][1] +'</p>');
-           for(var i=0; i < ary.length; i++) {
+           } 
+           $('#flist').html('<p> File: '+ ary[0][0] +' ; '+ ary[0][1] +'</p>');
+           for(var i=1; i < ary.length; i++) {
               $('#flist').append('<p> File: '+ ary[i][0] +' ; '+ ary[i][1] +'</p>');
            }
                     
