@@ -13,6 +13,11 @@ $(document).ready(function() {
            ary = filelist.split(",");
            for(var i=0; i < ary.length; i++) {
                ary = ary[i].split("|");
+               var s1 = ary[i].substring(0, ary[i].indexOf('|'));
+               var s2 = ary[i].substring(ary[i].indexOf('|')+1);
+               ary[i] = "a,a".split(",");
+               ary[i][0] = s1;
+               ary[i][1] = s2;
            }
        alert(ary);    
        alert(ary[0][0]);    
