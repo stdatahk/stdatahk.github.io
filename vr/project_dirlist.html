@@ -14,7 +14,9 @@ $(document).ready(function() {
            for(var i=0; i < ary.length; i++) {
                ary = ary[i].split("|");
            }
-           
+       alert(ary);    
+       alert(ary[0][0]);    
+       alert(ary[0][1]);    
           $('#flist').html('<p> File: '+ ary[i][0] +' ; '+ ary[i][1] +'</p>');
            for(var i=0; i < ary.length; i++) {
               $('#flist').append('<p> File: '+ ary[i][0] +' ; '+ ary[i][1] +'</p>');
