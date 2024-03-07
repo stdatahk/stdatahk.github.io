@@ -4,9 +4,11 @@
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-       var fldName = location.href.substring(1+location.href.indexOf('?'));
+       var params = location.href.substring(1+location.href.indexOf('?'));
+       var fldId = params.substring(0, params.indexOf('|'));
+       var fldName = params.substring(1+params.indexOf('|'));
        var url = "https://script.google.com/macros/s/AKfycbzxOjGsjbs4u-Lh8NQWe9gqrGx1Tos_19VDaIBpD0Ak5mRGd2y9-jV75WToaSAP4nn5/exec?func=";
-       url += fldName;
+       url += fldId;
        $.getJSON(url, function(jsondata) {
           // {"output":"ggg22.jpg|1gtUyg_Hg1SNX4lNhrsZ81rUdIOCWhcVq,leopard_skin.jpg|13MumZlE1BgYEHRqDDvNViTnV-4-9zNiH"}
            var filelist = jsondata.output;
