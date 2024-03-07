@@ -16,7 +16,7 @@ $(document).ready(function() {
                var s1 = ary[i].substring(0, ary[i].indexOf('|'));
                var s2 = ary[i].substring(ary[i].indexOf('|')+1);
 
-               var s3 = 'hhttps://stdatahk-fast-reporting-system-pdf.on.drv.tw/fps_pdf/vr360/'+ fldName +'/'+ s1;
+               var s3 = 'https://stdatahk-fast-reporting-system-pdf.on.drv.tw/fps_pdf/vr360/'+ fldName +'/'+ s1;
                s3 = '<img src="'+ s3 +'">';
                
                ary[i] = "_,_".split(",");
@@ -35,14 +35,11 @@ $(document).ready(function() {
 </head>
 <body>
 
-<p>Click on the button to load JSON file:</p>
+<p>Image List:</p>
 <br>https://stdatahk-fast-reporting-system-pdf.on.drv.tw/fps_pdf/vr360/SOP.png<br>
 <div id="flist" style="background-color:#cc0;">
  File list
 </div>
-<input type="button" id="driver" value="Load Data" />
-<script>
-document.getElementById('driver').click();    
-</script>    
+  
 </body>    
 </html>
