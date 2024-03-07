@@ -9,7 +9,7 @@
 <h2 style="font-family:Arial;">上載VR360圖片至雲端資料夾：</h2>
 
 <div id="theDiv" style="text-align:right;">
-<input id='btnBack' style="width:70px;height:30px;" type=button value=" 返回 " onclick="self.close();" DISABLED>
+<input id='btnBack' style="width:70px;height:30px;" type=button value=" 返回 " onclick="self.close();">
 </div>
 <br>
 
@@ -20,11 +20,10 @@
 
 <script>
 function doDisplay(obj) {
+	$('#submit').value = "圖片上載成功";
 	var str = "檔案上傳成功, 按返回回到新增項目頁面. info: "+ JSON.stringify(obj);
 	var node = document.createTextNode(str);
 	$('body').append(node);
-	$('#submit').value = "圖片上載成功";
-	$('#btnBack').disabled = false;
 }
 
   const form = document.getElementById("form");
