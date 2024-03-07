@@ -18,7 +18,7 @@ $(document).ready(function() {
                var s2 = ary[i].substring(ary[i].indexOf('|')+1);
 
                var s3 = 'https://stdatahk-fast-reporting-system-pdf.on.drv.tw/fps_pdf/vr360/'+ fldName +'/'+ s1;
-               s3 = '<img src="'+ s3 +'">';
+               s3 = '<a href="convert.html?'+ encodeURIComponent(s3) +'"><img src="'+ s3 +'"></a>';
                
                ary[i] = "_,_".split(",");
                ary[i][0] = s1;
