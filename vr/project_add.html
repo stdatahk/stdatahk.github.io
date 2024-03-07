@@ -102,12 +102,12 @@ $("#btnNewFolder").click(function(){
 		var fId = null;
 		html = "fId="+html+";";
 		eval(html);
-		//alert("已成功儲存紀錄: "+ fId +" .");
 		alert("已成功儲存紀錄: "+ JSON.stringify(fId) );
 		document.getElementById('txtFid').value	= fId.projfdr;	  
 		document.getElementById('txtFidFp').value = fId.fpfdr;	  
 		document.getElementById('txtFidCv').value = fId.confdr;	  
 		document.getElementById('gDrvUrl').href += fId.projfdr;	  
+		$('#btnNewFolder').val('成功建立雲端目錄夾!');
 	  }
 	});
 
