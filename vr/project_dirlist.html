@@ -5,8 +5,9 @@
 <script>
 $(document).ready(function() {
     $("#driver").click(function(event){
+       var fldName = location.href.substring(1+location.href.indexOf('?'));
        var url = "https://script.google.com/macros/s/AKfycbzxOjGsjbs4u-Lh8NQWe9gqrGx1Tos_19VDaIBpD0Ak5mRGd2y9-jV75WToaSAP4nn5/exec?func=";
-       url += location.href.substring(1+location.href.indexOf('?'));
+       url += fldName;
        $.getJSON(url, function(jsondata) {
           // {"output":"ggg22.jpg|1gtUyg_Hg1SNX4lNhrsZ81rUdIOCWhcVq,leopard_skin.jpg|13MumZlE1BgYEHRqDDvNViTnV-4-9zNiH"}
            var filelist = jsondata.output;
@@ -15,12 +16,12 @@ $(document).ready(function() {
                var s1 = ary[i].substring(0, ary[i].indexOf('|'));
                var s2 = ary[i].substring(ary[i].indexOf('|')+1);
 
-               s2 = 'https://drive.usercontent.google.com/download?id='+ s2 +'&export=view&authuser=0';
-               s2 = '<img src="'+ s2 +'">';
+               var s3 = 'hhttps://stdatahk-fast-reporting-system-pdf.on.drv.tw/fps_pdf/vr360/'+ fldName +'/'+ s1;
+               s3 = '<img src="'+ s3 +'">';
                
-               ary[i] = "a,a".split(",");
+               ary[i] = "_,_".split(",");
                ary[i][0] = s1;
-               ary[i][1] = s2;
+               ary[i][1] = s3;
            } 
            $('#flist').html('<p> File: '+ ary[0][0] +' ; '+ ary[0][1] +'</p>');
            for(var i=1; i < ary.length; i++) {
