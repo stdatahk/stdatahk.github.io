@@ -4,7 +4,7 @@
 </head>
 <body style="font-family:Arial;">
 <form>
-Image Location: <input name='ImgUrl' type=text size=45 value='https://stdatahk.com/vr/dualfisheye.jpg'><br>
+Image Location: <input name='ImgUrl' id='ImgUrl' type=text size=45 value='https://stdatahk.com/vr/dualfisheye.jpg'><br>
 <input type=button value=" SHOW " onClick="document.theImg.src=document.forms[0].ImgUrl.value;">&nbsp;&nbsp;&nbsp;&nbsp;	
 <input type=button onclick="doRotate();" value=" FLIP/ROTATE ">&nbsp;&nbsp;&nbsp;&nbsp;
 <button onclick="DownloadCanvasAsImage()"> DOWNLOAD </button>
@@ -19,6 +19,7 @@ Image Location: <input name='ImgUrl' type=text size=45 value='https://stdatahk.c
 <script>
 if(location.href.indexOf('?')>0) {
 	url = location.href.substring(location.href.indexOf('?')+1);
+	document.getElementById('ImgUrl').value = url;
 	document.getElementById('theImg').src = url;
 }
 	
