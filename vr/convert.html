@@ -17,6 +17,11 @@ Image Location: <input name='ImgUrl' type=text size=45 value='https://stdatahk.c
 <canvas id="theCanvas" width="1" height="1" style="border:1px solid #d3d3d3;"></canvas>
 
 <script>
+if(location.href.indexOf('?')>0) {
+	url = location.href.substring(location.href.indexOf('?')+1);
+	document.getElementById('theImg').src = url;
+}
+	
 function doRotate() {
   var c = document.getElementById("theCanvas");
   var ctx = c.getContext("2d");
