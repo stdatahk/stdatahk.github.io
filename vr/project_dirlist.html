@@ -4,7 +4,6 @@
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
 $(document).ready(function() {
-    $("#driver").click(function(event){
        var fldName = location.href.substring(1+location.href.indexOf('?'));
        var url = "https://script.google.com/macros/s/AKfycbzxOjGsjbs4u-Lh8NQWe9gqrGx1Tos_19VDaIBpD0Ak5mRGd2y9-jV75WToaSAP4nn5/exec?func=";
        url += fldName;
@@ -29,7 +28,6 @@ $(document).ready(function() {
            }
                     
        });
-    });
 });
 </script>    
 </head>
