@@ -24,9 +24,9 @@ $(document).ready(function() {
                ary[i][0] = s1;
                ary[i][1] = s3;
            } 
-           $('#flist').html('<p> File: '+ ary[0][0] +' ; '+ ary[0][1] +'</p>');
+           $('#flist').html('<p> File: '+ ary[0][0] +' ;<br> '+ ary[0][1] +'</p>');
            for(var i=1; i < ary.length; i++) {
-              $('#flist').append('<p> File: '+ ary[i][0] +' ;<br>\n '+ ary[i][1] +'</p>');
+              $('#flist').append('<p> File: '+ ary[i][0] +' ;<br> '+ ary[i][1] +'</p>');
            }
                     
        });
