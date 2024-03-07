@@ -30,8 +30,8 @@ function doDisplay(obj) {
 	var str = "檔案上傳成功, 按返回回到新增項目頁面. info: "+ JSON.stringify(obj);
 	var node = document.createTextNode(str);
 	$('body').append(node);
-	$('submit').value = "圖片上載成功";
-	$('btnBack').disabled = false;
+	$('#submit').value = "圖片上載成功";
+	$('#btnBack').disabled = false;
 }
 
   const form = document.getElementById("form");
