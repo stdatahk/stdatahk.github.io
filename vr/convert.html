@@ -65,7 +65,7 @@ function DownloadCanvasAsImage() {
 	var fname = 'Image.png';
 	if(location.href.indexOf('?')>0) {
 		fname = location.href.substring(location.href.lastIndexOf('%2F')+3);
-		fname = decodeURI(fname);
+		fname = decodeURIComponent(fname);
 		fname = fname.substring(0, fname.lastIndexOf('.')) + '.png';
 		fname = fname.split(" ").join("_");
 		fname = 'Image.png';
