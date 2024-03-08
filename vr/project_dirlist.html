@@ -35,7 +35,10 @@ $(document).ready(function() {
 </head>
 <body>
 
-<p>全部已上載的 VR360 照片：</p>
+<p id='pTxt'>全部已上載的 VR360 照片：</p>
+<script>
+document.getElementById('pTxt').innerHTML = "全部關於 "+ location.href.substring(location.href.lastIndexOf('|')+1) +" 已上載的 VR360 照片：";       
+</script>       
 <br>
 <div id="flist" style="background-color:#cc0;">
  File list
