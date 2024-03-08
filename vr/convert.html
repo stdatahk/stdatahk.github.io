@@ -21,6 +21,8 @@ Pls Save File As: <input name='ImgName' id='ImgName' type='text' size=15><br>
 if(location.href.indexOf('?')>0) {
 	url = location.href.substring(location.href.indexOf('?')+1);
 	url = decodeURIComponent(url);
+	if(url.indexOf("ImgUrl=")==0)
+		url = url.substring(7);
 	document.getElementById('ImgUrl').value = url;
 	document.getElementById('theImg').src = url;
 
