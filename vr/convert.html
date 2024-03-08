@@ -57,6 +57,7 @@ function DownloadCanvasAsImage() {
 	var fname = 'Image.png';
 	if(location.href.indexOf('?')>0) {
 		fname = location.href.substring(location.href.lastIndexOf('/')+1);
+		fname = fname.substring(0, fname.lastIndexOf('.')) + '.png';
 	}	
 	let downloadLink = document.createElement('a');
 	downloadLink.setAttribute('download', fname);
