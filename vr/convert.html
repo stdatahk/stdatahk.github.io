@@ -19,6 +19,7 @@ Image Location: <input name='ImgUrl' id='ImgUrl' type=text size=45 value='https:
 <script>
 if(location.href.indexOf('?')>0) {
 	url = location.href.substring(location.href.indexOf('?')+1);
+	url = decodeURIComponent(url);
 	document.getElementById('ImgUrl').value = url;
 	document.getElementById('theImg').src = url;
 }
