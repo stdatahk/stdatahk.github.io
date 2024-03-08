@@ -87,7 +87,7 @@ $(document).ready(function(){
 				rst += "<td>"+ ary[i][0] +"</td>";
 				rst += "<td>"+ data.txt +"</td>";
 				rst += "<td><input type='button' value='顯示360照片' onclick='window.open(\"project_dirlist.html?"+ data.fid +"|"+ ary[i][0] +"\");'></td>";
-				rst += "<td><input type='button' value='打開GDrive資料夾'></td>";
+				rst += "<td><input type='button' value='打開GDrive資料夾' onclick='window.open(\"https://drive.google.com/drive/folders/'+ data.fid +'\");'></td>";
 				rst += "<td><input type='button' value='預覽VR360效果'></td>";
 				rst += "<td>"+ data.fid +"</td>";
 				rst += "<td>"+ data.fidFp +"</td>";
