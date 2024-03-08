@@ -60,6 +60,7 @@ function DownloadCanvasAsImage() {
 		fname = decodeURI(fname);
 		fname = fname.substring(0, fname.lastIndexOf('.')) + '.png';
 		fname = fname.split(" ").join("_");
+		fname = 'Image.png';
 	}	
 		alert(fname);
 	let downloadLink = document.createElement('a');
