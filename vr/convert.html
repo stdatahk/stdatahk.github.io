@@ -56,7 +56,8 @@ function drawRotated(canvas, context, degrees, image, sx,sy,sw,sh,dx,dy,dw,dh){
 function DownloadCanvasAsImage() {
 	var fname = 'Image.png';
 	if(location.href.indexOf('?')>0) {
-		fname = location.href.substring(location.href.lastIndexOf('\/')+1);
+		fname = location.href.substring(location.href.lastIndexOf('%2F')+3);
+		fname = decodeURI(fname);
 		fname = fname.substring(0, fname.lastIndexOf('.')) + '.png';
 	}	
 		alert(fname);
