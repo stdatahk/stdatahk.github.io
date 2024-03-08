@@ -63,8 +63,8 @@ function DownloadCanvasAsImage() {
 	downloadLink.setAttribute('download', fname);
 	let canvas = document.getElementById('theCanvas');
 	let dataURL = canvas.toDataURL('image/png');
-	let url = dataURL.replace(/^data:image\/png/,'data:application/octet-stream');
-	downloadLink.setAttribute('href',url);
+	let dUrl = dataURL.replace(/^data:image\/png/,'data:application/octet-stream');
+	downloadLink.setAttribute('href', dUrl);
 	downloadLink.click();
 }  
 </script>
