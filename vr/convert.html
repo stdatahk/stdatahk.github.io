@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Tool for Quick Fixing VR360 Raw Photo</title>
+<title>Convert VR360 Photos</title>
 </head>
 <body style="font-family:Arial;">
 <form>
@@ -59,6 +59,7 @@ function DownloadCanvasAsImage() {
 		fname = location.href.substring(location.href.lastIndexOf('/')+1);
 		fname = fname.substring(0, fname.lastIndexOf('.')) + '.png';
 	}	
+		alert(fname);
 	let downloadLink = document.createElement('a');
 	downloadLink.setAttribute('download', fname);
 	let canvas = document.getElementById('theCanvas');
