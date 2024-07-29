@@ -1,0 +1,62 @@
+
+<html>
+<head>
+<title>FRS | Admin| Report</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<h2>Report Generation</h2>
+
+<font color='gray'>(WIP) Defect listing to choose from....</font>
+<br><br>
+
+<input id="btnPdf" type=button value="生成 PDF 報告" 
+ style="width:150px;height:50px;">
+&nbsp;&nbsp;
+<input id="btnJpg" type=button value="生成 PNG 圖像" 
+ style="width:150px;height:50px;"  onclick='location.href="png.htm";'>
+
+<br><br>
+一個比較官方正式，方便公司間電郵通訊用。<br>
+另一個比較簡淺易明，方便在中傳送。
+<br><br>
+<hr>
+<input type=button value="返回" onclick="location.href='admin.htm';">
+
+<script type="text/javascript">
+<!--
+$("#btnPdf").click(function(){
+window.jsPDF = window.jspdf.jsPDF;
+	var doc = new jsPDF('landscape')
+	//extra page(?)
+	//  doc.addPage();
+
+	//boundary
+	doc.rect(10, 15, 275, 185);
+	//photo area
+	doc.rect(10, 15, 190, 130);
+	//lower text info area
+	doc.rect(10, 145, 275, 55);
+
+	doc.text("FRS - Site Inspection Report", 10, 10);
+	doc.text("[[[ HD Photo Here ]]]\n   (with markings)", 40, 40);
+	doc.text("[[[ Floorplan Here ]]]\n   (with markings)", 210, 60);
+	doc.text("[[[ Company Logo Here ]]]", 220, 150);
+	doc.text("[[[ QR Here ]]]", 240, 190);
+	doc.text("Site Name: XXXXXX", 15, 155);
+	doc.text("Location: ZZZZZZZ", 15, 165);
+	doc.text("Defect Description: AAAAAA BBBBBB CCCCCC", 15, 175);
+
+	//generate timestamp for filename
+	function pad2(n) { return n < 10 ? '0' + n : n }
+	var date = new Date();
+	var ts = ( date.getFullYear().toString() + pad2(date.getMonth() + 1) + pad2( date.getDate()) +'_'+ pad2( date.getHours() ) + pad2( date.getMinutes() ) + pad2( date.getSeconds() ) );
+	doc.save("P"+ts+".pdf");
+});
+//-->
+</script>
+
+</body>
+</html>
