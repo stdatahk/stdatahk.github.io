@@ -45,9 +45,9 @@ window.jsPDF = window.jspdf.jsPDF;
 	doc.text("[[[ Floorplan Here ]]]\n   (with markings)", 210, 60);
 	doc.text("[[[ Company Logo Here ]]]", 220, 150);
 	doc.text("[[[ QR Here ]]]", 240, 190);
-	doc.text("Site Name: XXXXXX", 15, 155);
-	doc.text("Location: ZZZZZZZ", 15, 165);
-	doc.text("Defect Description: AAAAAA BBBBBB CCCCCC", 15, 175);
+	doc.text("Name: "+ location.href.substring(location.href.indexOf('n=')+2, location.href.indexOf('&m=')), 15, 155);
+	doc.text("Money: "+ location.href.substring(location.href.indexOf('m=')+2, location.href.indexOf('&d=')), 15, 165);
+	doc.text("Date: "+ location.href.substring(location.href.indexOf('d=')+2), 15, 175);
 
 	//generate timestamp for filename
 	function pad2(n) { return n < 10 ? '0' + n : n }
