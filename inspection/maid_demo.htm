@@ -1,8 +1,20 @@
 <html>
 
-Name: <input type=text name="n" value="Mr ABC"><br>
-Money: <input type=text name="m" value="$9999"><br>
-Date: <input type=text name="d" value="" onLoad="this.value=new Date().toDateString();">
-  <input type=button value="GENERATE PDF REPORT">
+Name: <input type=text id="n" value="Mr ABC"><br>
+Money: <input type=text id="m" value="$9999"><br>
+Date: <input type=text id="d" value="">
+  <input type=button value="GENERATE PDF REPORT" onClick="doit();">
+
+<script language="JavaScript">
+  (document.getElementById('d')).value = new Date().toDateString();
+
+  function doit() {
+    var url = 
+  "?n="+ (document.getElementById('n')).value +
+  "&m="+ (document.getElementById('m')).value +
+  "&d="+ (document.getElementById('d')).value ;
+location.href = "maid_demo2.htm"+ url;    
+  }
+</script>
   
 </html>
